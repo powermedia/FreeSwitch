@@ -1817,6 +1817,11 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 				status = skinny_session_answer(session, listener, line_instance);
 			}
 			break;
+		case SOFTKEY_DND:
+		/* DND soft key code */
+			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING, 
+							  "DND SoftKeyEvent: %d.\n", request->data.soft_key_event.event);
+		break;
 		default:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,
 					"Unknown SoftKeyEvent type: %d.\n", request->data.soft_key_event.event);
