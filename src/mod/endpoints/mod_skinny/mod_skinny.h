@@ -151,6 +151,7 @@ struct listener {
 	uint32_t flags;
 	time_t expire_time;
 	struct listener *next;
+	int dnd;
 };
 
 typedef struct listener listener_t;

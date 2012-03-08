@@ -111,7 +111,8 @@ enum skinny_ring_type {
 	SKINNY_RING_OFF = 1,
 	SKINNY_RING_INSIDE = 2,
 	SKINNY_RING_OUTSIDE = 3,
-	SKINNY_RING_FEATURE = 4
+	SKINNY_RING_FEATURE = 4,
+	SKINNY_RING_SILENT = 5
 };
 extern struct skinny_table SKINNY_RING_TYPES[5];
 const char *skinny_ring_type2str(uint32_t id);

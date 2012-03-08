@@ -553,7 +553,13 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 		}
 		skinny_session_send_call_info(helper->tech_pvt->session, listener, line_instance);
 		send_set_lamp(listener, SKINNY_BUTTON_LINE, line_instance, SKINNY_LAMP_BLINK);
-		send_set_ringer(listener, SKINNY_RING_INSIDE, SKINNY_RING_FOREVER, 0, helper->tech_pvt->call_id);
+
+		if(listener->dnd){
+			send_set_ringer(listener, SKINNY_RING_SILENT, SKINNY_RING_FOREVER, line_instance, helper->tech_pvt->call_id);
+		}
+		else
+			send_set_ringer(listener, SKINNY_RING_INSIDE, SKINNY_RING_FOREVER, line_instance, helper->tech_pvt->call_id);
+		
 		switch_channel_mark_ring_ready(channel);
 	}
 	return 0;
@@ -657,13 +663,16 @@ switch_status_t skinny_session_answer(switch_core_session_t *session, listener_t
 	struct skinny_session_answer_helper helper = {0};
 	switch_channel_t *channel = NULL;
 	private_t *tech_pvt = NULL;
-
+	
 	switch_assert(session);
 	switch_assert(listener);
 	switch_assert(listener->profile);
-
+	
 	channel = switch_core_session_get_channel(session);
 	tech_pvt = switch_core_session_get_private(session);
+	
+	switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,
+                      "Answer function.\n");
 
 	send_set_ringer(listener, SKINNY_RING_OFF, SKINNY_RING_FOREVER, 0, tech_pvt->call_id);
 	send_set_speaker_mode(listener, SKINNY_SPEAKER_ON);
@@ -1817,10 +1826,23 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 				status = skinny_session_answer(session, listener, line_instance);
 			}
 			break;
-		case SOFTKEY_DND:
-		/* DND soft key code */
-			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING, 
-							  "DND SoftKeyEvent: %d.\n", request->data.soft_key_event.event);
+	    case SOFTKEY_DND:
+		/* DND soft key code. Set DND state, which is send when call is initiated */
+			send_clear_prompt_status(listener, line_instance, call_id);
+			if(!listener->dnd) {
+				listener->dnd = 1;
+				send_display_prompt_status(listener, 0, "DND ON", line_instance, call_id);
+				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,
+								  "DND SoftKeyEvent: %d, DND state: %d.\n", request->data.soft_key_event.event,
+								  listener->dnd);
+			}
+			else {
+				listener->dnd = 0;
+				send_display_prompt_status(listener, 2, "DND OFF", line_instance, call_id);
+				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,
+								  "DND SoftKeyEvent: %d, DND state: %d.\n", request->data.soft_key_event.event,
+								  listener->dnd);
+			}
 		break;
 		default:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,
@@ -1828,9 +1850,13 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 	}
 
 	if(session) {
+		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING, "***************\n");
+		if(listener->dnd) {
+			send_clear_prompt_status(listener, line_instance, call_id);
+			send_display_prompt_status(listener, 0, "DND ON", line_instance, call_id);
+		}
 		switch_core_session_rwunlock(session);
 	}
-
 	return status;
 }
 
