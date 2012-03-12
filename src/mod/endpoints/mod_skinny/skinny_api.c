@@ -425,6 +425,7 @@ static switch_status_t skinny_api_cmd_profile_device_send_data(const char *profi
 static switch_status_t skinny_api_cmd_profile_set(const char *profile_name, const char *name, const char *value, switch_stream_handle_t *stream)
 {
 	skinny_profile_t *profile;
+	
 
 	if ((profile = skinny_find_profile(profile_name))) {
 		if (skinny_profile_set(profile, name, value) == SWITCH_STATUS_SUCCESS) {
@@ -440,6 +441,55 @@ static switch_status_t skinny_api_cmd_profile_set(const char *profile_name, cons
 	return SWITCH_STATUS_SUCCESS;
 }
 
+static int skinny_api_list_devices_show_callback(void *pArg, int argc, char **argv, char **columnNames)
+{
+	struct match_helper *h = (struct match_helper *) pArg;
+	char *line = argv[0];
+	int i, t_size = 0;
+
+	for(i = 0; i < argc; i++)
+	{
+		t_size += strlen(argv[i]);
+		//strcat(line, argv[i]);
+	}
+
+/*	line = malloc (sizeof(char)*t_size);
+
+	for(i = 0; i < argc; i++)
+	{
+		strcat(line, argv[i]);
+	}
+*/
+	switch_console_push_match(&h->my_matches, line);
+	return 0;
+}
+
+static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream)
+{
+	struct match_helper h = { 0 };
+	char *sql;
+	skinny_profile_t *profile = NULL;
+	switch_console_callback_match_node_t *it;
+
+
+	profile = skinny_find_profile("internal");           // temporary - suppose to be removed
+
+	if(profile)
+		{
+			if((sql = switch_mprintf("SELECT * FROM skinny_devices")))
+				{
+					skinny_execute_sql_callback(profile, profile->sql_mutex, sql, skinny_api_list_devices_show_callback, &h);
+					switch_safe_free(sql);
+				}
+		}
+	for(it = h.my_matches->head; it != NULL; it = it->next)
+		{
+			stream->write_function(stream, "%s\n", it->val);
+		}
+	stream->write_function(stream, "Skinny_device_status_show\n");
+	return SWITCH_STATUS_SUCCESS;
+}
+
 /*****************************************************************************/
 /* API */
 /*****************************************************************************/
@@ -452,6 +502,7 @@ SWITCH_STANDARD_API(skinny_function)
 	const char *usage_string = "USAGE:\n"
 		"--------------------------------------------------------------------------------\n"
 		"skinny help\n"
+		"skinny show devices\n"
 		"skinny status profile <profile_name>\n"
 		"skinny status profile <profile_name> device <device_name>\n"
 		"skinny profile <profile_name> device <device_name> send ResetMessage [DeviceReset|DeviceRestart]\n"
@@ -482,7 +533,10 @@ SWITCH_STANDARD_API(skinny_function)
 	}
 
 	if (!strcasecmp(argv[0], "help")) {/* skinny help */
-		stream->write_function(stream, "%s", usage_string);
+		stream->write_function(stream, "%s aaaa", usage_string);
+	} else if (argc == 2 && !strcasecmp(argv[0], "show") && !strcasecmp(argv[1], "devices")) {
+		stream->write_function(stream, "Show devices function hangled here\n");
+		skinny_device_status_show(stream);
 	} else if (argc == 3 && !strcasecmp(argv[0], "status") && !strcasecmp(argv[1], "profile")) {
 		/* skinny status profile <profile_name> */
 		status = skinny_api_cmd_status_profile(argv[2], stream);
@@ -565,6 +619,7 @@ switch_status_t skinny_api_register(switch_loadable_module_interface_t **module_
 	switch_console_set_complete("add skinny profile ::skinny::list_profiles device ::skinny::list_devices send UserToDeviceDataMessage");
 	switch_console_set_complete("add skinny profile ::skinny::list_profiles device ::skinny::list_devices send UserToDeviceDataVersion1Message");
 	switch_console_set_complete("add skinny profile ::skinny::list_profiles set ::skinny::list_settings");
+	switch_console_set_complete("add skinny show devices");
 
 	switch_console_add_complete_func("::skinny::list_profiles", skinny_api_list_profiles);
 	switch_console_add_complete_func("::skinny::list_devices", skinny_api_list_devices);
