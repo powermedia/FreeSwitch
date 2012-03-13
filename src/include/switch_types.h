@@ -1814,6 +1814,21 @@ struct switch_console_callback_match {
 };
 typedef struct switch_console_callback_match switch_console_callback_match_t;
 
+struct switch_console_callback_device_node {
+	char **val;
+	struct switch_console_callback_device_node *next;
+};
+typedef struct switch_console_callback_device_node switch_console_callback_device_node_t;
+
+struct switch_console_callback_device {
+	struct switch_console_callback_device_node *head;
+	struct switch_console_callback_device_node *end;
+	int count;
+	int dynamic;
+};
+typedef struct switch_console_callback_device switch_console_callback_device_t;
+
+
 typedef void (*switch_cap_callback_t) (const char *var, const char *val, void *user_data);
 typedef switch_status_t (*switch_console_complete_callback_t) (const char *, const char *, switch_console_callback_match_t **matches);
 typedef switch_bool_t (*switch_media_bug_callback_t) (switch_media_bug_t *, void *, switch_abc_type_t);

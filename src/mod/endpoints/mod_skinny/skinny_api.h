@@ -33,6 +33,12 @@
 #ifndef _SKINNY_API_H
 #define _SKINNY_API_H
 
+/*typedef enum {
+	NAME = 0,
+	IP = 3,
+	PORT = 6
+};*/
+
 switch_status_t skinny_api_register(switch_loadable_module_interface_t **module_interface);
 switch_status_t skinny_api_unregister();
 

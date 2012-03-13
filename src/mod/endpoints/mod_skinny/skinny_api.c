@@ -69,6 +69,10 @@ struct match_helper {
 	switch_console_callback_match_t *my_matches;
 };
 
+struct device_show_helper {
+	switch_console_callback_device_t *my_devices;
+};
+
 static int skinny_api_list_devices_callback(void *pArg, int argc, char **argv, char **columnNames)
 {
 	struct match_helper *h = (struct match_helper *) pArg;
@@ -444,49 +448,57 @@ static switch_status_t skinny_api_cmd_profile_set(const char *profile_name, cons
 static int skinny_api_list_devices_show_callback(void *pArg, int argc, char **argv, char **columnNames)
 {
 	struct match_helper *h = (struct match_helper *) pArg;
-	char *line = argv[0];
-	int i, t_size = 0;
+	int i;
 
-	for(i = 0; i < argc; i++)
-	{
-		t_size += strlen(argv[i]);
-		//strcat(line, argv[i]);
+	for(i = 0; i < argc; i++){
+		if(argv[i] == NULL) argv[i] = "0\0";
+		switch_console_push_match(&h->my_matches, argv[i]);
 	}
-
-/*	line = malloc (sizeof(char)*t_size);
-
-	for(i = 0; i < argc; i++)
-	{
-		strcat(line, argv[i]);
-	}
-*/
-	switch_console_push_match(&h->my_matches, line);
 	return 0;
 }
 
 static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream)
 {
-	struct match_helper h = { 0 };
+	struct device_show_helper h = { 0 };
 	char *sql;
+	const int ind = 4;									// temporary - suppose to be changed - number of values from DB
+	int i;
 	skinny_profile_t *profile = NULL;
-	switch_console_callback_match_node_t *it;
-
-
+	switch_console_callback_device_node_t *it;
+	listener_t *listener = NULL;
 	profile = skinny_find_profile("internal");           // temporary - suppose to be removed
 
 	if(profile)
+	{
+		//if((sql = switch_mprintf("SELECT user_id, ip, port, name  FROM skinny_devices")))
+		if((sql = switch_mprintf("SELECT skinny_lines.caller_name, skinny_devices.ip, "
+				"skinny_devices.port, skinny_devices.name from skinny_lines "
+				"LEFT JOIN skinny_devices "
+				"ON skinny_lines.device_name = skinny_devices.name")))
+			{
+				skinny_execute_sql_callback(profile, profile->sql_mutex, sql, skinny_api_list_devices_show_callback, &h);
+				switch_safe_free(sql);
+			}
+	}
+
+	stream->write_function(stream, "%-25s", "|Caller");
+	stream->write_function(stream, "%-25s", "|IP");
+	stream->write_function(stream, "%-25s", "|Port");
+	stream->write_function(stream, "%-25s", "|MAC");
+	stream->write_function(stream, "%-25s\n", "|DND|");
+
+	for(it = h.my_devices->head, i = 1; it != NULL; it = it->next, i++)
+	{
+		stream->write_function(stream, "|%-25s", it->val);
+		if(i%ind == 0)
 		{
-			if((sql = switch_mprintf("SELECT * FROM skinny_devices")))
-				{
-					skinny_execute_sql_callback(profile, profile->sql_mutex, sql, skinny_api_list_devices_show_callback, &h);
-					switch_safe_free(sql);
-				}
+			skinny_profile_find_listener_by_device_name(profile, (const char*)(it->val), &listener);
+			if(listener)
+				stream->write_function(stream, "%-25s\n", listener->dnd?"Y":"N");
+			else
+				stream->write_function(stream, "|listener not found|\n");
 		}
-	for(it = h.my_matches->head; it != NULL; it = it->next)
-		{
-			stream->write_function(stream, "%s\n", it->val);
-		}
-	stream->write_function(stream, "Skinny_device_status_show\n");
+	}
 	return SWITCH_STATUS_SUCCESS;
 }
 
