@@ -243,9 +243,25 @@ static switch_status_t skinny_api_list_settings(const char *line, const char *cu
 	return status;
 }
 
+static switch_status_t skinny_api_list_dnd_states(const char *line, const char *cursor, switch_console_callback_match_t **matches)
+{
+	switch_status_t status = SWITCH_STATUS_FALSE;
+	switch_console_callback_match_t *my_matches = NULL;
+
+	switch_console_push_match(&my_matches, "ON");
+	switch_console_push_match(&my_matches, "OFF");
+
+	if (my_matches) {
+		*matches = my_matches;
+		status = SWITCH_STATUS_SUCCESS;
+	}
+	return status;
+}
+
 /*****************************************************************************/
 /* skinny_api_cmd_* */
 /*****************************************************************************/
+
 static switch_status_t skinny_api_cmd_status_profile(const char *profile_name, switch_stream_handle_t *stream)
 {
 	skinny_profile_t *profile;
@@ -457,7 +473,7 @@ static int skinny_api_list_devices_show_callback(void *pArg, int argc, char **ar
 	return 0;
 }
 
-static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream)
+static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream, const char *profile_name)
 {
 	struct device_show_helper h = { 0 };
 	char *sql;
@@ -466,7 +482,7 @@ static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream)
 	skinny_profile_t *profile = NULL;
 	switch_console_callback_device_node_t *it;
 	listener_t *listener = NULL;
-	profile = skinny_find_profile("internal");           // temporary - suppose to be removed
+	profile = skinny_find_profile(profile_name);           // temporary - suppose to be removed
 
 	if(profile)
 	{
@@ -507,6 +523,30 @@ static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream)
 	return SWITCH_STATUS_SUCCESS;
 }
 
+static switch_status_t skinny_api_set_dnd(switch_stream_handle_t *stream, const char *profile_name, const char* state, const char *device_name)
+{
+	skinny_profile_t *profile = skinny_find_profile(profile_name);
+	listener_t *listener = NULL;
+	if(profile)
+	{
+		skinny_profile_find_listener_by_device_name(profile, device_name, &listener);
+		if(listener)
+			{
+				if(!strcasecmp(state, "ON")) {
+					listener->dnd = 1;
+					send_display_prompt_status(listener, 0, "DND ON", 0, 0);
+				} else if (!strcasecmp(state, "OFF")) {
+					listener->dnd = 0;
+					send_display_prompt_status(listener, 2, "DND OFF", 0, 0);
+				}
+
+			}
+	}
+	return SWITCH_STATUS_SUCCESS;
+}
+
+
+
 /*****************************************************************************/
 /* API */
 /*****************************************************************************/
@@ -519,7 +559,7 @@ SWITCH_STANDARD_API(skinny_function)
 	const char *usage_string = "USAGE:\n"
 		"--------------------------------------------------------------------------------\n"
 		"skinny help\n"
-		"skinny show devices\n"
+		"skinny show devices <profile_name>\n"
 		"skinny status profile <profile_name>\n"
 		"skinny status profile <profile_name> device <device_name>\n"
 		"skinny profile <profile_name> device <device_name> send ResetMessage [DeviceReset|DeviceRestart]\n"
@@ -529,6 +569,7 @@ SWITCH_STANDARD_API(skinny_function)
 		"skinny profile <profile_name> device <device_name> send CallStateMessage <call_state> <line_instance> <call_id>\n"
 		"skinny profile <profile_name> device <device_name> send <UserToDeviceDataMessage|UserToDeviceDataVersion1Message> [ <param>=<value>;... ] <data>\n"
 		"skinny profile <profile_name> set <name> <value>\n"
+		"skinny profile <profile_name> set DND state <dnd_state> device <device_name>\n"
 		"--------------------------------------------------------------------------------\n";
 	if (session) {
 		return SWITCH_STATUS_FALSE;
@@ -551,8 +592,10 @@ SWITCH_STANDARD_API(skinny_function)
 
 	if (!strcasecmp(argv[0], "help")) {/* skinny help */
 		stream->write_function(stream, "%s", usage_string);
-	} else if (argc == 2 && !strcasecmp(argv[0], "show") && !strcasecmp(argv[1], "devices")) {
-		skinny_device_status_show(stream);
+	} else if (argc == 3 && !strcasecmp(argv[0], "show") && !strcasecmp(argv[1], "devices")) {
+		skinny_device_status_show(stream, argv[2]);
+	} else if(argc == 8 && !strcasecmp(argv[0], "profile") && !strcasecmp(argv[3], "DND")) {
+		skinny_api_set_dnd(stream, argv[1], argv[5], argv[7]);
 	} else if (argc == 3 && !strcasecmp(argv[0], "status") && !strcasecmp(argv[1], "profile")) {
 		/* skinny status profile <profile_name> */
 		status = skinny_api_cmd_status_profile(argv[2], stream);
@@ -635,7 +678,8 @@ switch_status_t skinny_api_register(switch_loadable_module_interface_t **module_
 	switch_console_set_complete("add skinny profile ::skinny::list_profiles device ::skinny::list_devices send UserToDeviceDataMessage");
 	switch_console_set_complete("add skinny profile ::skinny::list_profiles device ::skinny::list_devices send UserToDeviceDataVersion1Message");
 	switch_console_set_complete("add skinny profile ::skinny::list_profiles set ::skinny::list_settings");
-	switch_console_set_complete("add skinny show devices");
+	switch_console_set_complete("add skinny profile ::skinny::list_profiles set DND state ::skinny::list_dnd_states device ::skinny::list_devices");
+	switch_console_set_complete("add skinny show devices ::skinny::list_profiles");
 
 	switch_console_add_complete_func("::skinny::list_profiles", skinny_api_list_profiles);
 	switch_console_add_complete_func("::skinny::list_devices", skinny_api_list_devices);
@@ -650,6 +694,7 @@ switch_status_t skinny_api_register(switch_loadable_module_interface_t **module_
 	switch_console_add_complete_func("::skinny::list_line_instances", skinny_api_list_line_instances);
 	switch_console_add_complete_func("::skinny::list_call_ids", skinny_api_list_call_ids);
 	switch_console_add_complete_func("::skinny::list_settings", skinny_api_list_settings);
+	switch_console_add_complete_func("::skinny::list_dnd_states", skinny_api_list_dnd_states);
 	return SWITCH_STATUS_SUCCESS;
 }
 

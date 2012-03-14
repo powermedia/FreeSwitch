@@ -1814,6 +1814,13 @@ struct switch_console_callback_match {
 };
 typedef struct switch_console_callback_match switch_console_callback_match_t;
 
+enum DND_STATE {
+	ON = 1,
+	OFF = 0
+};
+
+typedef enum DND_STATE DND_STATE;
+
 struct switch_console_callback_device_node {
 	char **val;
 	struct switch_console_callback_device_node *next;
