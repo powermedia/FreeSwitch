@@ -470,7 +470,6 @@ static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream)
 
 	if(profile)
 	{
-		//if((sql = switch_mprintf("SELECT user_id, ip, port, name  FROM skinny_devices")))
 		if((sql = switch_mprintf("SELECT skinny_lines.caller_name, skinny_devices.ip, "
 				"skinny_devices.port, skinny_devices.name from skinny_lines "
 				"LEFT JOIN skinny_devices "
@@ -480,24 +479,30 @@ static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream)
 				switch_safe_free(sql);
 			}
 	}
-
-	stream->write_function(stream, "%-25s", "|Caller");
-	stream->write_function(stream, "%-25s", "|IP");
-	stream->write_function(stream, "%-25s", "|Port");
-	stream->write_function(stream, "%-25s", "|MAC");
-	stream->write_function(stream, "%-25s\n", "|DND|");
-
-	for(it = h.my_devices->head, i = 1; it != NULL; it = it->next, i++)
+	if(h.my_devices != NULL)		// Print values received from sql
 	{
-		stream->write_function(stream, "|%-25s", it->val);
-		if(i%ind == 0)
+		stream->write_function(stream, "|%-25s", "Caller");
+		stream->write_function(stream, "|%-25s", "IP");
+		stream->write_function(stream, "|%-25s", "Port");
+		stream->write_function(stream, "|%-25s", "MAC");
+		stream->write_function(stream, "|%-25s|\n", "DND");
+
+		for(it = h.my_devices->head, i = 1; it != NULL; it = it->next, i++)
 		{
-			skinny_profile_find_listener_by_device_name(profile, (const char*)(it->val), &listener);
-			if(listener)
-				stream->write_function(stream, "%-25s\n", listener->dnd?"Y":"N");
-			else
-				stream->write_function(stream, "|listener not found|\n");
+			stream->write_function(stream, "|%-25s", it->val);
+			if(i%ind == 0)
+			{
+				skinny_profile_find_listener_by_device_name(profile, (const char*)(it->val), &listener);
+				if(listener)
+					stream->write_function(stream, "|%-25s|\n", listener->dnd?"Y":"N");
+				else
+					stream->write_function(stream, "|listener not found|\n");
+			}
 		}
+	}
+	else
+	{
+		stream->write_function(stream, "*** No phones registered! ***\n");
 	}
 	return SWITCH_STATUS_SUCCESS;
 }
@@ -545,9 +550,8 @@ SWITCH_STANDARD_API(skinny_function)
 	}
 
 	if (!strcasecmp(argv[0], "help")) {/* skinny help */
-		stream->write_function(stream, "%s aaaa", usage_string);
+		stream->write_function(stream, "%s", usage_string);
 	} else if (argc == 2 && !strcasecmp(argv[0], "show") && !strcasecmp(argv[1], "devices")) {
-		stream->write_function(stream, "Show devices function hangled here\n");
 		skinny_device_status_show(stream);
 	} else if (argc == 3 && !strcasecmp(argv[0], "status") && !strcasecmp(argv[1], "profile")) {
 		/* skinny status profile <profile_name> */
