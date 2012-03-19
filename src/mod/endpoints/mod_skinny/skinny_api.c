@@ -482,7 +482,7 @@ static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream,
 	skinny_profile_t *profile = NULL;
 	switch_console_callback_device_node_t *it;
 	listener_t *listener = NULL;
-	profile = skinny_find_profile(profile_name);           // temporary - suppose to be removed
+	profile = skinny_find_profile(profile_name);
 
 	if(profile)
 	{

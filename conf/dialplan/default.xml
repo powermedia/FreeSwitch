@@ -13,6 +13,12 @@
 <include>
   <context name="default">
 
+    <extension name="Local_Extension_Skinny">
+      <condition field="destination_number" expression="^(1[0-9][0-9][0-9])$">
+        <action application="bridge" data="skinny/internal/${destination_number}"/>
+      </condition>
+    </extension>
+
     <extension name="unloop">
       <condition field="${unroll_loops}" expression="^true$"/>
       <condition field="${sip_looped_call}" expression="^true$">
@@ -766,5 +772,9 @@
       </condition>
     </extension>
 
+
   </context>
+
+
+
 </include>

@@ -1,7 +1,7 @@
 <profile name="internal">
   <settings>
     <param name="domain" value="$${domain}"/>
-    <param name="ip" value="$${local_ip_v4}"/>
+    <param name="ip" value=""/>
     <param name="port" value="2000"/>
     <param name="patterns-dialplan" value="XML"/>
     <param name="patterns-context" value="skinny-patterns"/>
@@ -15,7 +15,7 @@
   </settings>
   <soft-key-set-sets>
     <soft-key-set-set name="default">
-      <soft-key-set name="KeySetOnHook" value="SoftkeyNewcall,SoftkeyRedial"/>
+      <soft-key-set name="KeySetOnHook" value="SoftkeyNewcall,SoftkeyRedial,SoftkeyDnd"/>
       <soft-key-set name="KeySetConnected" value="SoftkeyEndcall,SoftkeyHold,SoftkeyNewcall,SoftkeyTransfer"/>
       <soft-key-set name="KeySetOnHold" value="SoftkeyNewcall,SoftkeyResume,SoftkeyEndcall"/>
       <soft-key-set name="KeySetRingIn" value="SoftkeyAnswer,SoftkeyEndcall,SoftkeyNewcall"/>

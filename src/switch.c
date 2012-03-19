@@ -335,6 +335,7 @@ void daemonize(int do_wait)
 /* the main application entry point */
 int main(int argc, char *argv[])
 {
+	int overflow = 0x55AACCFF;
 	char pid_path[256] = "";	/* full path to the pid file */
 	char pid_buffer[32] = "";	/* pid string */
 	char old_pid_buffer[32] = "";	/* pid string */
@@ -375,6 +376,8 @@ int main(int argc, char *argv[])
 	struct rlimit rlp;
 	int waste = 0;
 #endif
+
+	printf("%d", overflow);
 
 	for (x = 0; x < argc; x++) {
 		local_argv[x] = argv[x];

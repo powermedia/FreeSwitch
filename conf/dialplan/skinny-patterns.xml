@@ -12,19 +12,21 @@
 <!-- http://wiki.freeswitch.org/wiki/Mod_skinny -->
 <include>
   <context name="skinny-patterns">
-    <!--
-    Wait 10 seconds for another digit by default
-    -->
-    <extension name="Default">
-      <condition>
-        <action application="skinny-wait" data="10"/>
-      </condition>
-    </extension>
 
     <!--
 	You can place files in the skinny-patterns directory to get included.
     -->
     <X-PRE-PROCESS cmd="include" data="skinny-patterns/*.xml"/>
+
+    <!--
+    Wait 10 seconds for another digit by default
+    -->
+    <extension name="Default">
+      <condition>
+        <action application="skinny-wait" data="5"/>
+      </condition>
+    </extension>
+
     
   </context>
 </include>

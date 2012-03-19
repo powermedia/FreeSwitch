@@ -24,6 +24,9 @@
       affect the sip authentication.  Please review conf/directory/default.xml for more
       information on this topic.
   -->
+  <!--IP Adress-->
+  <!-- <X-PRE-PROCESS cmd="set" data="local_ip_v4=10.5.5.208"/> -->
+
   <X-PRE-PROCESS cmd="set" data="domain=$${local_ip_v4}"/>
   <X-PRE-PROCESS cmd="set" data="domain_name=$${domain}"/>
   <X-PRE-PROCESS cmd="set" data="hold_music=local_stream://moh"/>
@@ -191,7 +194,7 @@
        outbound callerid name and number.
   -->
   <X-PRE-PROCESS cmd="set" data="outbound_caller_name=FreeSWITCH"/>
-  <X-PRE-PROCESS cmd="set" data="outbound_caller_id=0000000000"/>
+  <X-PRE-PROCESS cmd="set" data="outbound_caller_id=3340"/>
 
   <!-- various debug and defaults -->
   <X-PRE-PROCESS cmd="set" data="call_debug=false"/>

@@ -320,11 +320,13 @@ static void *SWITCH_THREAD_FUNC log_thread(switch_thread_t *t, void *obj)
 SWITCH_DECLARE(void) switch_log_printf(switch_text_channel_t channel, const char *file, const char *func, int line,
 									   const char *userdata, switch_log_level_t level, const char *fmt, ...)
 {
+
 	va_list ap;
 
 	va_start(ap, fmt);
 	switch_log_vprintf(channel, file, func, line, userdata, level, fmt, ap);
 	va_end(ap);
+
 }
 
 #define do_mods (LOG_QUEUE && THREAD_RUNNING)
