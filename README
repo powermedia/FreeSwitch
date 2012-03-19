@@ -1,0 +1,3 @@
+configure options:
+
+./configure --with-rundir=$HOME/work/freeswitch/run --with-logfiledir=$HOME/work/freeswitch/log --localstatedir=$HOME/work/freeswitch --prefix=$HOME/work/freeswitch --with-modinstdir=$HOME/work/freeswitch/mod --sysconfdir=$HOME/work/freeswitch/conf
