@@ -482,8 +482,11 @@ static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream,
 	skinny_profile_t *profile = NULL;
 	switch_console_callback_device_node_t *it;
 	listener_t *listener = NULL;
-	profile = skinny_find_profile(profile_name);
+	
+	char *fmt[] = {"|%-30s", "|%-14s", "|%-5s", "|%-16s", "|%-5s|\n"};
 
+	profile = skinny_find_profile(profile_name);
+	
 	if(profile)
 	{
 		if((sql = switch_mprintf("SELECT skinny_lines.caller_name, skinny_devices.ip, "
@@ -497,23 +500,27 @@ static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream,
 	}
 	if(h.my_devices != NULL)		// Print values received from sql
 	{
-		stream->write_function(stream, "|%-25s", "Caller");
-		stream->write_function(stream, "|%-25s", "IP");
-		stream->write_function(stream, "|%-25s", "Port");
-		stream->write_function(stream, "|%-25s", "MAC");
-		stream->write_function(stream, "|%-25s|\n", "DND");
+		stream->write_function(stream, fmt[0], "Caller");
+		stream->write_function(stream, fmt[1], "IP");
+		stream->write_function(stream, fmt[2], "Port");
+		stream->write_function(stream, fmt[3], "MAC");
+		stream->write_function(stream, fmt[4], "DND");
+		
+		stream->write_function(stream, "----------------------------------------------------------------------------\n");
 
 		for(it = h.my_devices->head, i = 1; it != NULL; it = it->next, i++)
 		{
-			stream->write_function(stream, "|%-25s", it->val);
+			stream->write_function(stream, fmt[i-1], it->val);
+			
 			if(i%ind == 0)
-			{
-				skinny_profile_find_listener_by_device_name(profile, (const char*)(it->val), &listener);
-				if(listener)
-					stream->write_function(stream, "|%-25s|\n", listener->dnd?"Y":"N");
-				else
-					stream->write_function(stream, "|listener not found|\n");
-			}
+				{					
+					skinny_profile_find_listener_by_device_name(profile, (const char*)(it->val), &listener);
+					if(listener)
+						stream->write_function(stream, fmt[i++], listener->dnd?"Y":"N");
+					else
+						stream->write_function(stream, "|listener not found|\n");
+					i = 0;
+				}			
 		}
 	}
 	else
