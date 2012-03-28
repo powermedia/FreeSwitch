@@ -641,7 +641,7 @@ int channel_on_routing_callback(void *pArg, int argc, char **argv, char **column
 
 	skinny_profile_find_listener_by_device_name_and_instance(helper->tech_pvt->profile, device_name, device_instance, &listener);
 	if(listener) {
-		if(!strcmp(device_name, helper->listener->device_name) 
+		if(!strcmp(device_name, helper->listener->device_name)
 				&& (device_instance == helper->listener->device_instance)
 				&& (line_instance == helper->line_instance)) {/* the calling line */
 			helper->tech_pvt->caller_profile->dialplan = switch_core_strdup(helper->tech_pvt->caller_profile->pool, listener->profile->dialplan);
@@ -775,6 +775,7 @@ int channel_on_hangup_callback(void *pArg, int argc, char **argv, char **columnN
 			send_clear_prompt_status(listener, line_instance, call_id); 
 		}
 		send_set_lamp(listener, SKINNY_BUTTON_LINE, line_instance, SKINNY_LAMP_OFF);
+
 		switch (helper->cause) {
 			case SWITCH_CAUSE_UNALLOCATED_NUMBER:
 				send_start_tone(listener, SKINNY_TONE_REORDER, 0, line_instance, call_id);
@@ -1087,7 +1088,7 @@ switch_call_cause_t channel_outgoing_channel(switch_core_session_t *session, swi
 					"SELECT device_name, device_instance, line_instance, '%s', %d, %d "
 					"FROM skinny_lines "
 					"WHERE value='%s'",
-					switch_core_session_get_uuid(nsession), tech_pvt->call_id, SKINNY_ON_HOOK, dest
+					switch_core_session_get_uuid(nsession), tech_pvt->call_id, SKINNY_OFF_HOOK, dest
 				 ))) {
 		skinny_execute_sql(profile, sql, profile->sql_mutex);
 		switch_safe_free(sql);

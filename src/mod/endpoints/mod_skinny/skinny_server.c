@@ -161,7 +161,7 @@ switch_status_t skinny_create_incoming_session(listener_t *listener, uint32_t *l
 	send_set_lamp(listener, SKINNY_BUTTON_LINE, *line_instance_p, SKINNY_LAMP_ON);
 	skinny_line_set_state(listener, *line_instance_p, tech_pvt->call_id, SKINNY_OFF_HOOK);
 	send_select_soft_keys(listener, *line_instance_p, tech_pvt->call_id, SKINNY_KEY_SET_OFF_HOOK, 0xffff);
-	send_display_prompt_status(listener, 0, "\200\000",
+	send_display_prompt_status(listener, 0, "Type number",
 			*line_instance_p, tech_pvt->call_id);
 	send_activate_call_plane(listener, *line_instance_p);
 	if (switch_channel_get_state(channel) == CS_NEW) {
@@ -493,6 +493,7 @@ struct skinny_ring_lines_helper {
 	private_t *tech_pvt;
 	switch_core_session_t *remote_session;
 	uint32_t lines_count;
+	int phone_is_busy;
 };
 
 int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnNames)
@@ -523,7 +524,13 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 	skinny_profile_find_listener_by_device_name_and_instance(helper->tech_pvt->profile, 
 			device_name, device_instance, &listener);
 	if(listener) {
+
 		switch_channel_t *channel = switch_core_session_get_channel(helper->tech_pvt->session);
+		if(listener->dnd){
+			helper->phone_is_busy = 1;
+			return SWITCH_STATUS_FALSE;
+		}
+
 		helper->lines_count++;
 		switch_channel_set_variable(channel, "effective_callee_id_number", value);
 		switch_channel_set_variable(channel, "effective_callee_id_name", caller_name);
@@ -584,9 +591,11 @@ switch_call_cause_t skinny_ring_lines(private_t *tech_pvt, switch_core_session_t
 
 	if (status != SWITCH_STATUS_SUCCESS) {
 		return SWITCH_CAUSE_DESTINATION_OUT_OF_ORDER;
+	} else if (helper.phone_is_busy == 1) {
+		return SWITCH_CAUSE_USER_BUSY;
 	} else if (helper.lines_count == 0) {
 		return SWITCH_CAUSE_UNALLOCATED_NUMBER;
-	} else {
+	}	else {
 		return SWITCH_CAUSE_SUCCESS;
 	}
 }
