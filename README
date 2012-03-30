@@ -1,3 +1,10 @@
 configure options:
 
 ./configure --with-rundir=$HOME/work/freeswitch/run --with-logfiledir=$HOME/work/freeswitch/log --localstatedir=$HOME/work/freeswitch --prefix=$HOME/work/freeswitch --with-modinstdir=$HOME/work/freeswitch/mod --sysconfdir=$HOME/work/freeswitch/conf
+
+
+TODO:
+
+-test busy tone to work with fifo queue (automatic test)
+-finish call flowchart diagram & send to Math
+-check whether caller is removed from sql skinny_active_lines, once callee does not answer
