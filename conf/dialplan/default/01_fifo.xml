@@ -1,0 +1,60 @@
+<!-- Agent login extension: 6*[0-9] -->
+  <extension name="Agent Login">
+    <condition field="destination_number" expression="^6\*(\d)$">
+      <action application="answer"/>
+      <action application="set" data="result=${fifo_member(add FIFO$1 {fifo_member_wait=nowait}loopback/${caller_id_number})}"/>
+      <!-- use the following line instead if you want to have group_confirm for the agent
+      <action application="set" data="result=${fifo_member(add FIFO$1 {fifo_member_wait=nowait,group_confirm_file=ivr/ivr-accept_reject_voicemail.wav,group_confirm_key=1}loopback/${user_name} )"/>   
+      -->
+
+      <action application="log" data="INFO Add FIFO agent result: ${result}"/>
+      <action application="log" data="INFO User Login: FIFO$1 User: ${caller_id_number}"/>
+      <!-- No error checking, just assuming login went well... -->
+      <action application="playback" data="ivr/ivr-you_are_now_logged_in.wav"/>
+    </condition>
+  </extension>
+
+  <!-- Agent logout extension: 6#[0-9] -->
+  <extension name="Agent Logout">
+    <condition field="destination_number" expression="^6(#|\*\*)(\d)$">
+      <action application="answer"/>
+      <action application="set" data="result=${fifo_member(del FIFO$2 {fifo_member_wait=nowait}loopback/${caller_id_number})}"/>
+      <!-- Use this line instead if you are using group_group confirm
+      <action application="set" data="result=${fifo_member(del FIFO$2 {fifo_member_wait=nowait,group_confirm_file=ivr/ivr-accept_reject_voicemail.wav,group_confirm_key=1}loopback/${user_name} )"/>
+      -->
+      
+
+      <action application="log" data="INFO Del FIFO agent result: ${result}"/>
+      <action application="log" data="INFO User Logout: FIFO$1 User: ${caller_id_number}"/>
+      <!-- No error checking, just assuming logout went well... -->
+      <action application="playback" data="ivr/ivr-you_are_now_logged_out.wav"/>
+    </condition>
+  </extension>
+
+
+  <!-- Send a call to FIFO[0-9] -->
+  <extension name="send caller to FIFO">
+    <condition field="destination_number" expression="^610(\d)$">
+      <action application="answer"/>
+      <action application="set" data="fifo_music=$${hold_music}"/>
+      <action application="playback" data="ivr/ivr-hold_connect_call.wav"/>
+      <action application="log" data="INFO FIFO queue nr: $1"/>
+      <action application="fifo" data="FIFO$1 in"/>
+    </condition>
+  </extension>
+
+  <extension name="cool_fifo">
+    <condition field="destination_number" expression="^999$">
+      <action application="answer"/>
+      <action application="set" data="fifo_music=$${hold_music}"/>
+      <action application="playback" data="ivr/ivr-hold_connect_call.wav"/>
+      <action application="log" data="INFO Joining FIFO queue"/>
+      <action application="set" data="fifo_orbit_exten=1901:45"/>
+      <action application="set" data="fifo_caller_exit_key=2"/>
+      <action application="set" data="fifo_caller_exit_to_orbit=true"/>
+      <action application="fifo" data="sales in"/>
+    </condition>
+  </extension>
+
+
+</include>

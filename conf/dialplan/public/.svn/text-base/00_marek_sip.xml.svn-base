@@ -1,0 +1,31 @@
+<include>
+
+    <extension name="public_marek_sip">
+      <condition field="destination_number" expression="^(111)$">
+        <action application="set" data="sip_h_Alert-Info=<Bellcore-dr2>"/>
+        <action application="bridge" data="sofia/internal/111@192.168.0.106"/>
+      </condition>
+    </extension>
+
+    <extension name="public_marek_sip">
+      <condition field="destination_number" expression="^(222)$">
+        <action application="set" data="sip_h_Alert-Info=<Bellcore-dr2>"/>
+        <action application="bridge" data="sofia/internal/222@192.168.0.123"/>
+      </condition>
+    </extension>
+
+    <extension name="public_marek_sip">
+      <condition field="destination_number" expression="^(333)$">
+        <action application="set" data="sip_h_Alert-Info=<Bellcore-dr2>"/>
+        <action application="bridge" data="sofia/internal/333@192.168.0.106"/>
+      </condition>
+    </extension>
+
+    <extension name="public_marek_sip">
+      <condition field="destination_number" expression="^(444)$">
+        <action application="set" data="sip_h_Alert-Info=<Bellcore-dr2>"/>
+        <action application="bridge" data="sofia/internal/444@192.168.0.123"/>
+      </condition>
+    </extension>
+
+</include>

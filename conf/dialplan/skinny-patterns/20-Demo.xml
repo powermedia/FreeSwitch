@@ -4,5 +4,43 @@
       <action application="skinny-process"/>
     </condition>
   </extension>
+
+  <extension name="AdminLogIn">
+    <condition field="destination_number" expression="^6\*(\d)$">
+      <action application="skinny-process"/>
+    </condition>
+  </extension>
+
+ <extension name="AdminLogOut">
+    <condition field="destination_number" expression="^6(#|\*\*)(\d)$">
+      <action application="skinny-process"/>
+    </condition>
+ </extension>
+
+ <extension name="JoinQueue">
+    <condition field="destination_number" expression="^610(\d)$">
+      <action application="skinny-process"/>
+    </condition>
+ </extension>
+
+ <extension name="JoinQueue">
+    <condition field="destination_number" expression="^610(\d)$">
+      <action application="skinny-process"/>
+    </condition>
+ </extension>
+
+ <extension name="JoinQueue">
+    <condition field="destination_number" expression="^10$">
+      <action application="skinny-process"/>
+    </condition>
+ </extension>
+
+<extension name="JoinStaticQueue">
+    <condition field="destination_number" expression="^999$">
+      <action application="skinny-process"/>
+    </condition>
+</extension>                                                                                                                                                                                                        
+                
+ 
 </include>
 

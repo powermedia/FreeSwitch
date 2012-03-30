@@ -1,0 +1,44 @@
+<include>
+
+  <extension name="default_marek_sip">
+    <condition field="destination_number" expression="^(111)$">
+      <action application="bridge" data="sofia/internal/111@192.168.0.106"/>
+    </condition>
+  </extension>
+
+  <extension name="default_marek_sip">
+    <condition field="destination_number" expression="^(222)$">
+      <action application="bridge" data="sofia/internal/222@192.168.0.123"/>
+    </condition>
+  </extension>
+
+  <extension name="default_marek_sip">
+    <condition field="destination_number" expression="^(333)$">
+      <action application="bridge" data="sofia/internal/333@192.168.0.106"/>
+    </condition>
+  </extension>
+
+  <extension name="default_marek_sip">
+
+    <condition field="destination_number" expression="^(444)$">
+      <action application="bridge" data="sofia/internal/444@192.168.0.123"/>
+    </condition>
+  </extension>
+
+  <extension name="default_marek_sip">
+
+    <condition field="destination_number" expression="^(555)$">
+      <action application="answer"/>
+      <action application="set" data="domain_name=$${domain}"/>
+      <action application="set" data="brand=1"/>
+      <action application="set" data="queue=default_queue"/>
+      <action application="set" data="allow_voicemail=true"/>
+      <action application="erlang_sendmsg" data="freeswitch_media_manager openacd@127.0.0.1 inivr ${uuid}"/>
+      <action application="playback" data="/home/mwiewiorski/Downloads/voices/hello-world.wav"/>
+      <action application="erlang" data="freeswitch_media_manager:! openacd@127.0.0.1"/>
+    </condition>
+
+
+  </extension>
+
+</include>

@@ -795,7 +795,7 @@ int channel_on_hangup_callback(void *pArg, int argc, char **argv, char **columnN
 		if((call_state == SKINNY_PROCEED) || (call_state == SKINNY_RING_OUT) || (call_state == SKINNY_CONNECTED)) { /* calling parties */
 			skinny_session_stop_media(helper->tech_pvt->session, listener, line_instance);
 		}
-
+		listener->active_lines_count--;  // decrease active lines for phone.
 		skinny_line_set_state(listener, line_instance, call_id, SKINNY_ON_HOOK);
 		send_select_soft_keys(listener, line_instance, call_id, SKINNY_KEY_SET_ON_HOOK, 0xffff);
 		send_define_current_time_date(listener);
@@ -1072,7 +1072,7 @@ switch_call_cause_t channel_outgoing_channel(switch_core_session_t *session, swi
 	}
 
 	snprintf(name, sizeof(name), "SKINNY/%s/%s", profile->name, dest);
-
+	
 	nchannel = switch_core_session_get_channel(nsession);
 	switch_channel_set_name(nchannel, name);
 

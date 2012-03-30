@@ -152,7 +152,7 @@ struct listener {
 	time_t expire_time;
 	struct listener *next;
 	int dnd;
-	int busy;
+	int active_lines_count;
 };
 
 typedef struct listener listener_t;

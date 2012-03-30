@@ -1,0 +1,42 @@
+<include>
+	<user id="111">
+		<params>
+			<param name="password" value="supersecret" />
+		</params>
+	</user>
+
+	<user id="222">
+		<params>
+			<param name="password" value="supersecret" />
+		</params>
+	</user>
+
+	<user id="333">
+		<params>
+			<param name="password" value="supersecret" />
+		</params>
+	</user>
+
+	<user id="444">
+		<params>
+			<param name="password" value="supersecret" />
+		</params>
+                <variables>
+                  <variable name="user_context" value="default"/>
+                </variables>
+
+	</user>
+
+
+	<user id="777">
+		<params>
+			<param name="password" value="supersecret" />
+		</params>
+                <variables>
+                  <variable name="user_context" value="default"/>
+                </variables>
+
+	</user>
+
+
+</include>

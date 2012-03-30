@@ -12,7 +12,6 @@
 <!-- http://wiki.freeswitch.org/wiki/Mod_skinny -->
 <include>
   <context name="skinny-patterns">
-
     <!--
 	You can place files in the skinny-patterns directory to get included.
     -->
@@ -26,7 +25,7 @@
         <action application="skinny-wait" data="5"/>
       </condition>
     </extension>
-
-    
   </context>
 </include>
+
+

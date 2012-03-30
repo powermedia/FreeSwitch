@@ -13,6 +13,8 @@
 <include>
   <context name="default">
 
+
+
     <extension name="Local_Extension_Skinny">
       <condition field="destination_number" expression="^(1[0-9][0-9][0-9])$">
         <action application="bridge" data="skinny/internal/${destination_number}"/>
@@ -772,6 +774,20 @@
       </condition>
     </extension>
 
+     <extension name="limit_exceeded">
+        <condition field="destination_number" expression="^limit_exceeded$">
+          <action application="log" data="DB limit: ${max_calls} username: "/>
+          <action application="playback" data="/sounds/overthelimit.wav"/>
+          <action application="hangup"/>
+        </condition>
+     </extension>
+
+     <extension name="limit" continue="true">
+       <condition>
+          <action application="limit" data="db $${domain} 1901 ${max_calls}"/>
+          <action application="log" data="DB limit: ${max_calls} username: "/>
+        </condition>
+     </extension>
 
   </context>
 
