@@ -182,6 +182,7 @@ error:
 
 done:
 	*session = nsession;
+	listener->active_lines_count++;
 	listener->profile->ib_calls++;
 	return SWITCH_STATUS_SUCCESS;
 }

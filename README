@@ -7,4 +7,5 @@ TODO:
 
 -test busy tone to work with fifo queue (automatic test)
 -finish call flowchart diagram & send to Math
--check whether caller is removed from sql skinny_active_lines, once callee does not answer
++check whether caller is removed from sql skinny_active_lines, once callee does not answer
+-caller_id once tranfer
