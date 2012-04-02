@@ -1117,6 +1117,14 @@ switch_call_cause_t channel_outgoing_channel(switch_core_session_t *session, swi
 	goto done;
 
 error:
+	if ((sql = switch_mprintf(
+							  "DELETE FROM skinny_active_lines "
+							  "WHERE channel_uuid='%s'",
+							  switch_core_session_get_uuid(nsession)
+							  ))) {
+		skinny_execute_sql(profile, sql, profile->sql_mutex);
+		switch_safe_free(sql);
+	}
 	if (nsession) {
 		switch_core_session_destroy(&nsession);
 	}

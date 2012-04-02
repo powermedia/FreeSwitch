@@ -493,11 +493,22 @@ struct skinny_ring_lines_helper {
 	private_t *tech_pvt;
 	switch_core_session_t *remote_session;
 	uint32_t lines_count;
+	int phone_is_busy;
 };
+
+static int skinny_active_lines_callback(void *pArg, int argc, char **argv, char **columnNames)
+{
+	int *x = (int *)pArg;
+	*x = *x + 1;
+	return 0;
+}
+
 
 int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnNames)
 {
 	struct skinny_ring_lines_helper *helper = pArg;
+	int active_lines = 0;
+	
 	char *tmp;
 
 	char *device_name = argv[0];
@@ -517,14 +528,28 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 	/* char *channel_uuid = argv[14]; */
 	/* uint32_t call_id = atoi(argv[15]); */
 	/* uint32_t call_state = atoi(argv[16]); */
-
+	char *sql;
+	
 	listener_t *listener = NULL;
 
 	skinny_profile_find_listener_by_device_name_and_instance(helper->tech_pvt->profile, 
 			device_name, device_instance, &listener);
 	if(listener) {
 		switch_channel_t *channel = switch_core_session_get_channel(helper->tech_pvt->session);
+		if ((sql = switch_mprintf(
+								  "SELECT device_name from skinny_active_lines "
+								  "where device_name='%s'", listener->device_name))) {
+			skinny_execute_sql_callback(listener->profile, listener->profile->sql_mutex, sql, skinny_active_lines_callback, &active_lines);
+			switch_safe_free(sql);
+		}
+		
+		if(active_lines > 1) {
+			helper->phone_is_busy = 1;
+			return SWITCH_STATUS_FALSE;
+		}
+		
 		helper->lines_count++;
+		
 		switch_channel_set_variable(channel, "effective_callee_id_number", value);
 		switch_channel_set_variable(channel, "effective_callee_id_name", caller_name);
 		if (helper->remote_session) {
@@ -584,6 +609,8 @@ switch_call_cause_t skinny_ring_lines(private_t *tech_pvt, switch_core_session_t
 
 	if (status != SWITCH_STATUS_SUCCESS) {
 		return SWITCH_CAUSE_DESTINATION_OUT_OF_ORDER;
+	} else if (helper.phone_is_busy == 1) {
+		return SWITCH_CAUSE_USER_BUSY;
 	} else if (helper.lines_count == 0) {
 		return SWITCH_CAUSE_UNALLOCATED_NUMBER;
 	} else {
