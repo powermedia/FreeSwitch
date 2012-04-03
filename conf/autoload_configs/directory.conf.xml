@@ -5,7 +5,7 @@
   </settings>
   <profiles>
     <profile name="default">
-      <param name="max-menu-attempts" value="3"/>
+      <param name="max-menu-attempts" value="1"/>
       <param name="min-search-digits" value="3"/>
       <param name="terminator-key" value="#"/>
       <param name="digit-timeout" value="3000"/>

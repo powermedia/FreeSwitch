@@ -1,10 +1,17 @@
 <configuration name="fifo.conf" description="FIFO Configuration">
   <settings>
-    <param name="delete-all-outbound-member-on-startup" value="false"/>
+    <param name="delete-all-outbound-member-on-startup" value="true"/>
   </settings>
   <fifos>
     <fifo name="cool_fifo@$${domain}" importance="0">
-      <!--<member timeout="60" simo="1" lag="20">{member_wait=nowait}user/1005@$${domain}</member>-->
+      <member timeout="5" simo="1" lag="0">{fifo_member_wait=wait}loopback/1904</member>
+      <member timeout="5" simo="1" lag="0">{fifo_member_wait=wait}loopback/1903</member>
+      <member timeout="5" simo="1" lag="0">{fifo_member_wait=wait}loopback/1901</member>
+    </fifo>
+    <fifo name="sales" importance="0" outbound-strategy="ringall" outbound_per_cycle="3">
+      <member timeout="60" simo="10" lag="0">{fifo_member_wait=wait,ignore_early_media=true}loopback/1904</member>
+      <member timeout="60" simo="10" lag="0">{fifo_member_wait=wait,ignore_early_media=true}loopback/1903</member>
+      <member timeout="60" simo="10" lag="0">{fifo_member_wait=wait,ignore_early_media=true}loopback/1901</member>
     </fifo>
   </fifos>
 </configuration>

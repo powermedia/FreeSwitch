@@ -1,0 +1,80 @@
+<include>
+
+  <!-- Agent login extension: 6*[0-9] -->
+  <extension name="Agent Login">
+    <condition field="destination_number" expression="^6\*(\d)">
+      <!-- <action application="set" data="queue_name=FIFO$1"/> -->
+      <action application="answer"/>
+      <action application="set" data="result=${fifo_member(add FIFO$1 {fifo_member_wait=nowait}loopback/${user_name}/default/XML)}"/>
+      <!-- use the following line instead if you want to have group_confirm for the agent 
+	<action application="set" data="result=${fifo_member(add FIFO$1 {fifo_member_wait=nowait,group_confirm_file=ivr/ivr-accept_reject_voicemail.wav,group_confirm_key=1}user/${user_name} )"/>   
+      -->
+
+      <action application="log" data="INFO Add FIFO agent result: ${result}"/>
+      <action application="log" data="INFO User Login: FIFO$1 User: ${user_name}"/>
+      <!-- No error checking, just assuming login went well... -->
+      <action application="playback" data="ivr/ivr-you_are_now_logged_in.wav"/>
+    </condition>
+  </extension>
+
+  <!-- Agent logout extension: 6#[0-9] -->
+  <extension name="Agent Logout">
+    <condition field="destination_number" expression="^6(#|\*\*)(\d)">
+     <!-- <action application="set" data="queue_name=FIFO$1"/> -->
+      <action application="answer"/>
+      <action application="set" data="result=${fifo_member(del FIFO$2 {fifo_member_wait=nowait}loopback/${user_name}/default/XML)}"/>
+      <!-- Use this line instead if you are using group_group confirm
+	   <action application="set" data="result=${fifo_member(del FIFO$2 {fifo_member_wait=nowait,group_confirm_file=ivr/ivr-accept_reject_voicemail.wav,group_confirm_key=1}user/${user_name} )"/>
+       -->
+
+      <action application="log" data="INFO Del FIFO agent result: ${result}"/>
+      <action application="log" data="INFO User Logout: FIFO$2 User: ${user_name}"/>
+      <!-- No error checking, just assuming logout went well... -->
+      <action application="playback" data="ivr/ivr-you_are_now_logged_out.wav"/>
+    </condition>
+  </extension>
+
+
+  <!-- Send a call to FIFO[0-9] -->
+  <extension name="send caller to FIFO">
+    <condition field="destination_number" expression="^610(\d)$">
+      <action application="answer"/>
+      <action application="set" data="fifo_music=$${hold_music}"/>
+      <action application="playback" data="ivr/ivr-hold_connect_call.wav"/>
+      <action application="fifo" data="FIFO$1 in"/>
+    </condition>
+  </extension>
+
+
+<extension name="Lua fifo">
+  <condition field="destination_number" expression="^(\*16\*.*)$">
+
+
+    <action application="set" data="queue_caller_id_name=Queue-${destination_number:4}-${effective_caller_id_name}"/>
+
+    <action application="set" data="queue_name=cool_fifo"/>
+    <action application="set" data="fifo_music=$${hold_music}"/>
+    <action application="set" data="fifo_chime_list=/var/spool/voiceprompts/${uuid}.wav"/>
+    <action application="set" data="fifo_chime_freq=5"/>
+    <action application="set" data="result=${fifo_member(add ${queue_name} {fifo_member_wait=nowait,used_domain=${used_domain},source=queue,origination_caller_id_name=${queue_caller_id_name}}loopback/${queue_name}/default/XML 1 20 5))}"/>
+    <action application="set" data="continue_on_fail=false"/>
+    <action application="answer" />
+    <action application="playback" data="/var/spool/voiceprompts/${queue_name}.wav"/>
+    <action application="log" data="INFO playback ${queue_name}.wav"/>
+    <action application="set" data="result=${luarun(voiceprompts.lua  ${uuid} ${queue_name})}"/>
+    <action application="fifo" data="${queue_name} in"/>
+
+
+  </condition>
+</extension>
+
+<extension name="Lua hello">
+  <condition field="destination_number" expression="^(666)$">
+
+    <action application="lua" data="sample.lua"/> 
+
+  </condition>
+</extension>
+
+
+</include>

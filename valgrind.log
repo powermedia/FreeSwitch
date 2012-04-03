@@ -1,0 +1,205 @@
+==9511== exp-ptrcheck, a heap, stack and global array overrun detector
+==9511== NOTE: This is an Experimental-Class Valgrind Tool
+==9511== Copyright (C) 2003-2010, and GNU GPL'd, by OpenWorks Ltd et al.
+==9511== Using Valgrind-3.6.1-Debian and LibVEX; rerun with -h for copyright info
+==9511== Command: ./freeswitch -nc -nf
+==9511== Parent PID: 9510
+==9511== 
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+--9511-- warning: evaluate_Dwarf3_Expr: unhandled DW_OP_ 0x93
+==9515== 
+==9515== For counts of detected and suppressed errors, rerun with: -v
+==9515== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==9514== 
+==9514== For counts of detected and suppressed errors, rerun with: -v
+==9514== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==9516== 
+==9516== For counts of detected and suppressed errors, rerun with: -v
+==9516== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==9518== 
+==9518== For counts of detected and suppressed errors, rerun with: -v
+==9518== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==9517== 
+==9517== For counts of detected and suppressed errors, rerun with: -v
+==9517== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==9520== 
+==9520== For counts of detected and suppressed errors, rerun with: -v
+==9520== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+get_IntRegInfo(x86):failing on (20,2)
+
+exp-ptrcheck: h_main.c:1383 (get_IntRegInfo): the 'impossible' happened.
+==9523==    at 0x38014EDE: report_and_quit (m_libcassert.c:193)
+==9523==    by 0x38015126: vgPlain_assert_fail (m_libcassert.c:267)
+==9523==    by 0x38001E52: get_IntRegInfo (h_main.c:1383)
+==9523==    by 0x380095D6: h_instrument (h_main.c:5089)
+==9523==    by 0x380B21A7: LibVEX_Translate (main_main.c:521)
+==9523==    by 0x3802F2A1: vgPlain_translate (m_translate.c:1518)
+==9523==    by 0x3805596C: vgPlain_scheduler (scheduler.c:867)
+==9523==    by 0x380682C8: run_a_thread_NORETURN (syswrap-linux.c:94)
+
+sched status:
+  running_tid=1
+
+Thread 1: status = VgTs_Runnable
+==9523==    at 0x80B2275: ??? (in /bin/bash)
+==9523==    by 0x80B2369: ??? (in /bin/bash)
+==9523==    by 0x80B26B3: cd_builtin (in /bin/bash)
+==9523==    by 0x8071CD4: ??? (in /bin/bash)
+==9523==    by 0x8074EA9: execute_command_internal (in /bin/bash)
+==9523==    by 0x8077580: execute_command (in /bin/bash)
+==9523==    by 0x8077C84: ??? (in /bin/bash)
+==9523==    by 0x80736EC: execute_command_internal (in /bin/bash)
+==9523==    by 0x80B698B: parse_and_execute (in /bin/bash)
+==9523==    by 0x808D98D: command_substitute (in /bin/bash)
+==9523==    by 0x8094111: ??? (in /bin/bash)
+==9523==    by 0x80953DB: ??? (in /bin/bash)
+==9523==    by 0x8095556: expand_string_assignment (in /bin/bash)
+==9523==    by 0x808EC86: ??? (in /bin/bash)
+==9523==    by 0x808F107: ??? (in /bin/bash)
+==9523==    by 0x8096BEC: ??? (in /bin/bash)
+==9523==    by 0x807443F: execute_command_internal (in /bin/bash)
+==9523==    by 0x8077D74: ??? (in /bin/bash)
+==9523==    by 0x80736EC: execute_command_internal (in /bin/bash)
+==9523==    by 0x8077580: execute_command (in /bin/bash)
+==9523==    by 0x8077D34: ??? (in /bin/bash)
+==9523==    by 0x80736EC: execute_command_internal (in /bin/bash)
+==9523==    by 0x8077580: execute_command (in /bin/bash)
+==9523==    by 0x8077D34: ??? (in /bin/bash)
+==9523==    by 0x80736EC: execute_command_internal (in /bin/bash)
+==9523==    by 0x8077580: execute_command (in /bin/bash)
+==9523==    by 0x8077D34: ??? (in /bin/bash)
+==9523==    by 0x80736EC: execute_command_internal (in /bin/bash)
+==9523==    by 0x8077580: execute_command (in /bin/bash)
+==9523==    by 0x8077D34: ??? (in /bin/bash)
+==9523==    by 0x80736EC: execute_command_internal (in /bin/bash)
+==9523==    by 0x8077580: execute_command (in /bin/bash)
+==9523==    by 0x8077D34: ??? (in /bin/bash)
+==9523==    by 0x80736EC: execute_command_internal (in /bin/bash)
+==9523==    by 0x8077580: execute_command (in /bin/bash)
+==9523==    by 0x8077B53: ??? (in /bin/bash)
+==9523==    by 0x8073B6B: execute_command_internal (in /bin/bash)
+==9523==    by 0x8077580: execute_command (in /bin/bash)
+==9523==    by 0x4088112: (below main) (libc-start.c:226)
+
+
+Note: see also the FAQ in the source distribution.
+It contains workarounds to several common problems.
+In particular, if Valgrind aborted or crashed after
+identifying problems in your program, there's a good chance
+that fixing those problems will prevent Valgrind aborting or
+crashing, especially if it happened in m_mallocfree.c.
+
+If that doesn't help, please report this bug to: www.valgrind.org
+
+In the bug report, send all the above text, the valgrind
+version, and what OS and version you are using.  Thanks.
+
+==9524== 
+==9524== For counts of detected and suppressed errors, rerun with: -v
+==9524== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

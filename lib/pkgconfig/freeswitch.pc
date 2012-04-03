@@ -1,0 +1,23 @@
+prefix=/home/kwyrozumski/work/freeswitch
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+libexecdir=${exec_prefix}/libexec
+includedir=${prefix}/include
+modulesdir=/home/kwyrozumski/work/freeswitch/mod
+runtimedir=/home/kwyrozumski/work/freeswitch/run
+logfiledir=/home/kwyrozumski/work/freeswitch/log
+sysconfdir=/home/kwyrozumski/work/freeswitch/conf
+dbdir=/home/kwyrozumski/work/freeswitch/db
+htdocsdir=/home/kwyrozumski/work/freeswitch/htdocs
+localstatedir=/home/kwyrozumski/work/freeswitch
+grammardir=/home/kwyrozumski/work/freeswitch/grammar
+soundsdir=/home/kwyrozumski/work/freeswitch/sounds
+scriptdir=/home/kwyrozumski/work/freeswitch/scripts
+recordingsdir=/home/kwyrozumski/work/freeswitch/recordings
+bindir=${exec_prefix}/bin
+
+Name: freeswitch
+Version: 1.0.head
+Description: FreeSWITCH open source telephony platform
+Libs: -L${libdir} -lfreeswitch
+Cflags: -I${includedir}

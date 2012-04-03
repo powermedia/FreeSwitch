@@ -1,0 +1,2094 @@
+process 17656
+cmdline = '/home/kwyrozumski/work/freeswitch/.libs/lt-freeswitch'
+cwd = '/home/kwyrozumski/work/freeswitch'
+exe = '/home/kwyrozumski/work/freeswitch/.libs/lt-freeswitch'
+Mapped address spaces:
+
+	Start Addr   End Addr       Size     Offset objfile
+	  0x110000   0x12e000    0x1e000          0    /lib/i386-linux-gnu/ld-2.13.so
+	  0x12e000   0x12f000     0x1000    0x1d000    /lib/i386-linux-gnu/ld-2.13.so
+	  0x12f000   0x130000     0x1000    0x1e000    /lib/i386-linux-gnu/ld-2.13.so
+	  0x130000   0x131000     0x1000          0           [vdso]
+	  0x131000   0x346000   0x215000          0     /home/kwyrozumski/work/freeswitch/.libs/libfreeswitch.so.1.0.0
+	  0x346000   0x349000     0x3000   0x214000     /home/kwyrozumski/work/freeswitch/.libs/libfreeswitch.so.1.0.0
+	  0x349000   0x34f000     0x6000   0x217000     /home/kwyrozumski/work/freeswitch/.libs/libfreeswitch.so.1.0.0
+	  0x34f000   0x366000    0x17000          0        
+	  0x366000   0x37d000    0x17000          0    /lib/i386-linux-gnu/libpthread-2.13.so
+	  0x37d000   0x37e000     0x1000    0x16000    /lib/i386-linux-gnu/libpthread-2.13.so
+	  0x37e000   0x37f000     0x1000    0x17000    /lib/i386-linux-gnu/libpthread-2.13.so
+	  0x37f000   0x381000     0x2000          0        
+	  0x381000   0x4f7000   0x176000          0    /lib/i386-linux-gnu/libc-2.13.so
+	  0x4f7000   0x4f9000     0x2000   0x176000    /lib/i386-linux-gnu/libc-2.13.so
+	  0x4f9000   0x4fa000     0x1000   0x178000    /lib/i386-linux-gnu/libc-2.13.so
+	  0x4fa000   0x4fd000     0x3000          0        
+	  0x4fd000   0x500000     0x3000          0    /lib/i386-linux-gnu/libdl-2.13.so
+	  0x500000   0x501000     0x1000     0x2000    /lib/i386-linux-gnu/libdl-2.13.so
+	  0x501000   0x502000     0x1000     0x3000    /lib/i386-linux-gnu/libdl-2.13.so
+	  0x502000   0x50a000     0x8000          0    /lib/i386-linux-gnu/libcrypt-2.13.so
+	  0x50a000   0x50b000     0x1000     0x7000    /lib/i386-linux-gnu/libcrypt-2.13.so
+	  0x50b000   0x50c000     0x1000     0x8000    /lib/i386-linux-gnu/libcrypt-2.13.so
+	  0x50c000   0x533000    0x27000          0        
+	  0x533000   0x53a000     0x7000          0    /lib/i386-linux-gnu/librt-2.13.so
+	  0x53a000   0x53b000     0x1000     0x6000    /lib/i386-linux-gnu/librt-2.13.so
+	  0x53b000   0x53c000     0x1000     0x7000    /lib/i386-linux-gnu/librt-2.13.so
+	  0x53c000   0x584000    0x48000          0    /lib/i386-linux-gnu/libssl.so.1.0.0
+	  0x584000   0x586000     0x2000    0x47000    /lib/i386-linux-gnu/libssl.so.1.0.0
+	  0x586000   0x589000     0x3000    0x49000    /lib/i386-linux-gnu/libssl.so.1.0.0
+	  0x589000   0x716000   0x18d000          0    /lib/i386-linux-gnu/libcrypto.so.1.0.0
+	  0x716000   0x724000     0xe000   0x18c000    /lib/i386-linux-gnu/libcrypto.so.1.0.0
+	  0x724000   0x72a000     0x6000   0x19a000    /lib/i386-linux-gnu/libcrypto.so.1.0.0
+	  0x72a000   0x72d000     0x3000          0        
+	  0x72d000   0x749000    0x1c000          0    /lib/libtinfo.so.5.9
+	  0x749000   0x74b000     0x2000    0x1b000    /lib/libtinfo.so.5.9
+	  0x74b000   0x74c000     0x1000    0x1d000    /lib/libtinfo.so.5.9
+	  0x74c000   0x82a000    0xde000          0      /usr/lib/i386-linux-gnu/libstdc++.so.6.0.16
+	  0x82a000   0x82b000     0x1000    0xde000      /usr/lib/i386-linux-gnu/libstdc++.so.6.0.16
+	  0x82b000   0x82f000     0x4000    0xde000      /usr/lib/i386-linux-gnu/libstdc++.so.6.0.16
+	  0x82f000   0x830000     0x1000    0xe2000      /usr/lib/i386-linux-gnu/libstdc++.so.6.0.16
+	  0x830000   0x837000     0x7000          0        
+	  0x837000   0x85f000    0x28000          0    /lib/i386-linux-gnu/libm-2.13.so
+	  0x85f000   0x860000     0x1000    0x28000    /lib/i386-linux-gnu/libm-2.13.so
+	  0x860000   0x861000     0x1000    0x29000    /lib/i386-linux-gnu/libm-2.13.so
+	  0x861000   0x87d000    0x1c000          0    /lib/i386-linux-gnu/libgcc_s.so.1
+	  0x87d000   0x87e000     0x1000    0x1b000    /lib/i386-linux-gnu/libgcc_s.so.1
+	  0x87e000   0x87f000     0x1000    0x1c000    /lib/i386-linux-gnu/libgcc_s.so.1
+	  0x87f000   0x8e5000    0x66000          0      /usr/lib/libodbc.so.1.0.0
+	  0x8e5000   0x8e6000     0x1000    0x65000      /usr/lib/libodbc.so.1.0.0
+	  0x8e6000   0x8ea000     0x4000    0x66000      /usr/lib/libodbc.so.1.0.0
+	  0x8ea000   0x8eb000     0x1000          0        
+	  0x8eb000   0x8fe000    0x13000          0    /lib/i386-linux-gnu/libz.so.1.2.3.4
+	  0x8fe000   0x8ff000     0x1000    0x12000    /lib/i386-linux-gnu/libz.so.1.2.3.4
+	  0x8ff000   0x900000     0x1000    0x13000    /lib/i386-linux-gnu/libz.so.1.2.3.4
+	  0x900000   0x908000     0x8000          0      /usr/lib/libltdl.so.7.3.0
+	  0x908000   0x909000     0x1000     0x8000      /usr/lib/libltdl.so.7.3.0
+	  0x909000   0x90a000     0x1000     0x9000      /usr/lib/libltdl.so.7.3.0
+	  0x90a000   0x90c000     0x2000          0     /home/kwyrozumski/work/freeswitch/mod/mod_console.so
+	  0x90c000   0x90d000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_console.so
+	  0x90d000   0x90e000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_console.so
+	  0x90e000   0x90f000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/mod/mod_console.so
+	  0x90f000   0x912000     0x3000          0     /home/kwyrozumski/work/freeswitch/mod/mod_logfile.so
+	  0x912000   0x913000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_logfile.so
+	  0x913000   0x914000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/mod/mod_logfile.so
+	  0x914000   0x94c000    0x38000          0     /home/kwyrozumski/work/freeswitch/mod/mod_enum.so
+	  0x94c000   0x94d000     0x1000    0x37000     /home/kwyrozumski/work/freeswitch/mod/mod_enum.so
+	  0x94d000   0x950000     0x3000    0x38000     /home/kwyrozumski/work/freeswitch/mod/mod_enum.so
+	  0x950000   0x954000     0x4000          0     /home/kwyrozumski/work/freeswitch/mod/mod_cdr_csv.so
+	  0x954000   0x955000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/mod/mod_cdr_csv.so
+	  0x955000   0x956000     0x1000     0x4000     /home/kwyrozumski/work/freeswitch/mod/mod_cdr_csv.so
+	  0x956000   0x963000     0xd000          0     /home/kwyrozumski/work/freeswitch/mod/mod_event_socket.so
+	  0x963000   0x964000     0x1000     0xc000     /home/kwyrozumski/work/freeswitch/mod/mod_event_socket.so
+	  0x964000   0x965000     0x1000     0xd000     /home/kwyrozumski/work/freeswitch/mod/mod_event_socket.so
+	  0x965000   0x96b000     0x6000          0     /home/kwyrozumski/work/freeswitch/mod/mod_loopback.so
+	  0x96b000   0x96c000     0x1000     0x5000     /home/kwyrozumski/work/freeswitch/mod/mod_loopback.so
+	  0x96c000   0x96d000     0x1000     0x6000     /home/kwyrozumski/work/freeswitch/mod/mod_loopback.so
+	  0x991000   0x9ac000    0x1b000          0     /home/kwyrozumski/work/freeswitch/mod/mod_commands.so
+	  0x9ac000   0x9ad000     0x1000    0x1a000     /home/kwyrozumski/work/freeswitch/mod/mod_commands.so
+	  0x9ad000   0x9ae000     0x1000    0x1b000     /home/kwyrozumski/work/freeswitch/mod/mod_commands.so
+	  0x9ae000   0x9d0000    0x22000          0     /home/kwyrozumski/work/freeswitch/mod/mod_conference.so
+	  0x9d0000   0x9d1000     0x1000    0x22000     /home/kwyrozumski/work/freeswitch/mod/mod_conference.so
+	  0x9d1000   0x9d2000     0x1000    0x22000     /home/kwyrozumski/work/freeswitch/mod/mod_conference.so
+	  0x9d2000   0x9d3000     0x1000    0x23000     /home/kwyrozumski/work/freeswitch/mod/mod_conference.so
+	  0x9d3000   0x9d7000     0x4000          0     /home/kwyrozumski/work/freeswitch/mod/mod_db.so
+	  0x9d7000   0x9d8000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/mod/mod_db.so
+	  0x9d8000   0x9d9000     0x1000     0x4000     /home/kwyrozumski/work/freeswitch/mod/mod_db.so
+	  0x9d9000   0x9f2000    0x19000          0     /home/kwyrozumski/work/freeswitch/mod/mod_dptools.so
+	  0x9f2000   0x9f3000     0x1000    0x18000     /home/kwyrozumski/work/freeswitch/mod/mod_dptools.so
+	  0x9f3000   0x9f4000     0x1000    0x19000     /home/kwyrozumski/work/freeswitch/mod/mod_dptools.so
+	  0x9f4000   0x9fd000     0x9000          0     /home/kwyrozumski/work/freeswitch/mod/mod_expr.so
+	  0x9fd000   0x9fe000     0x1000     0x8000     /home/kwyrozumski/work/freeswitch/mod/mod_expr.so
+	  0x9fe000   0x9ff000     0x1000     0x9000     /home/kwyrozumski/work/freeswitch/mod/mod_expr.so
+	  0x9ff000   0xa16000    0x17000          0     /home/kwyrozumski/work/freeswitch/mod/mod_fifo.so
+	  0xa16000   0xa17000     0x1000    0x16000     /home/kwyrozumski/work/freeswitch/mod/mod_fifo.so
+	  0xa17000   0xa18000     0x1000    0x17000     /home/kwyrozumski/work/freeswitch/mod/mod_fifo.so
+	  0xa18000   0xa29000    0x11000          0     /home/kwyrozumski/work/freeswitch/mod/mod_hash.so
+	  0xa29000   0xa2a000     0x1000    0x10000     /home/kwyrozumski/work/freeswitch/mod/mod_hash.so
+	  0xa2a000   0xa2b000     0x1000    0x11000     /home/kwyrozumski/work/freeswitch/mod/mod_hash.so
+	  0xa2b000   0xa4a000    0x1f000          0     /home/kwyrozumski/work/freeswitch/mod/mod_voicemail.so
+	  0xa4a000   0xa4b000     0x1000    0x1e000     /home/kwyrozumski/work/freeswitch/mod/mod_voicemail.so
+	  0xa4b000   0xa4c000     0x1000    0x1f000     /home/kwyrozumski/work/freeswitch/mod/mod_voicemail.so
+	  0xa4c000   0xa4e000     0x2000          0     /home/kwyrozumski/work/freeswitch/mod/mod_esf.so
+	  0xa4e000   0xa4f000     0x1000     0x1000     /home/kwyrozumski/work/freeswitch/mod/mod_esf.so
+	  0xa4f000   0xa50000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_esf.so
+	  0xa50000   0xa53000     0x3000          0     /home/kwyrozumski/work/freeswitch/mod/mod_fsv.so
+	  0xa53000   0xa54000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_fsv.so
+	  0xa54000   0xa55000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/mod/mod_fsv.so
+	  0xa55000   0xa5b000     0x6000          0     /home/kwyrozumski/work/freeswitch/mod/mod_valet_parking.so
+	  0xa5b000   0xa5c000     0x1000     0x5000     /home/kwyrozumski/work/freeswitch/mod/mod_valet_parking.so
+	  0xa5c000   0xa5d000     0x1000     0x6000     /home/kwyrozumski/work/freeswitch/mod/mod_valet_parking.so
+	  0xa5d000   0xa6b000     0xe000          0     /home/kwyrozumski/work/freeswitch/mod/mod_httapi.so
+	  0xa6b000   0xa6c000     0x1000     0xd000     /home/kwyrozumski/work/freeswitch/mod/mod_httapi.so
+	  0xa6c000   0xa6d000     0x1000     0xe000     /home/kwyrozumski/work/freeswitch/mod/mod_httapi.so
+	  0xa6d000   0xa71000     0x4000          0     /home/kwyrozumski/work/freeswitch/mod/mod_dialplan_xml.so
+	  0xa71000   0xa72000     0x1000     0x4000     /home/kwyrozumski/work/freeswitch/mod/mod_dialplan_xml.so
+	  0xa72000   0xa73000     0x1000     0x5000     /home/kwyrozumski/work/freeswitch/mod/mod_dialplan_xml.so
+	  0xa73000   0xa76000     0x3000          0     /home/kwyrozumski/work/freeswitch/mod/mod_dialplan_asterisk.so
+	  0xa76000   0xa77000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_dialplan_asterisk.so
+	  0xa77000   0xa78000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/mod/mod_dialplan_asterisk.so
+	  0xa78000   0xb70000    0xf8000          0     /home/kwyrozumski/work/freeswitch/mod/mod_spandsp.so
+	  0xb70000   0xb74000     0x4000    0xf7000     /home/kwyrozumski/work/freeswitch/mod/mod_spandsp.so
+	  0xb74000   0xb76000     0x2000    0xfb000     /home/kwyrozumski/work/freeswitch/mod/mod_spandsp.so
+	  0xb76000   0xc66000    0xf0000          0        
+	  0xc66000   0xc88000    0x22000          0      /usr/lib/i386-linux-gnu/libjpeg.so.62.0.0
+	  0xc88000   0xc89000     0x1000    0x22000      /usr/lib/i386-linux-gnu/libjpeg.so.62.0.0
+	  0xc89000   0xc8a000     0x1000    0x23000      /usr/lib/i386-linux-gnu/libjpeg.so.62.0.0
+	  0xc8a000   0xc8b000     0x1000          0     /home/kwyrozumski/work/freeswitch/mod/mod_g723_1.so
+	  0xc8b000   0xc8c000     0x1000          0     /home/kwyrozumski/work/freeswitch/mod/mod_g723_1.so
+	  0xc8c000   0xc8d000     0x1000     0x1000     /home/kwyrozumski/work/freeswitch/mod/mod_g723_1.so
+	  0xc8d000   0xc8e000     0x1000          0     /home/kwyrozumski/work/freeswitch/mod/mod_g729.so
+	  0xc8e000   0xc8f000     0x1000          0     /home/kwyrozumski/work/freeswitch/mod/mod_g729.so
+	  0xc8f000   0xc90000     0x1000     0x1000     /home/kwyrozumski/work/freeswitch/mod/mod_g729.so
+	  0xc90000   0xc91000     0x1000          0     /home/kwyrozumski/work/freeswitch/mod/mod_amr.so
+	  0xc91000   0xc92000     0x1000          0     /home/kwyrozumski/work/freeswitch/mod/mod_amr.so
+	  0xc92000   0xc93000     0x1000     0x1000     /home/kwyrozumski/work/freeswitch/mod/mod_amr.so
+	  0xc93000   0xca1000     0xe000          0     /home/kwyrozumski/work/freeswitch/mod/mod_ilbc.so
+	  0xca1000   0xca2000     0x1000     0xd000     /home/kwyrozumski/work/freeswitch/mod/mod_ilbc.so
+	  0xca2000   0xca3000     0x1000     0xe000     /home/kwyrozumski/work/freeswitch/mod/mod_ilbc.so
+	  0xca3000   0xcb9000    0x16000          0     /home/kwyrozumski/work/freeswitch/mod/mod_speex.so
+	  0xcb9000   0xcba000     0x1000    0x16000     /home/kwyrozumski/work/freeswitch/mod/mod_speex.so
+	  0xcba000   0xcbb000     0x1000    0x16000     /home/kwyrozumski/work/freeswitch/mod/mod_speex.so
+	  0xcbb000   0xcbc000     0x1000    0x17000     /home/kwyrozumski/work/freeswitch/mod/mod_speex.so
+	  0xcbc000   0xcbe000     0x2000          0     /home/kwyrozumski/work/freeswitch/mod/mod_h26x.so
+	  0xcbe000   0xcbf000     0x1000     0x1000     /home/kwyrozumski/work/freeswitch/mod/mod_h26x.so
+	  0xcbf000   0xcc0000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_h26x.so
+	  0xcc0000   0xccf000     0xf000          0     /home/kwyrozumski/work/freeswitch/mod/mod_siren.so
+	  0xccf000   0xcd0000     0x1000     0xe000     /home/kwyrozumski/work/freeswitch/mod/mod_siren.so
+	  0xcd0000   0xcd1000     0x1000     0xf000     /home/kwyrozumski/work/freeswitch/mod/mod_siren.so
+	  0xcd1000   0xd35000    0x64000          0     /home/kwyrozumski/work/freeswitch/mod/mod_sndfile.so
+	  0xd35000   0xd36000     0x1000    0x64000     /home/kwyrozumski/work/freeswitch/mod/mod_sndfile.so
+	  0xd36000   0xd37000     0x1000    0x64000     /home/kwyrozumski/work/freeswitch/mod/mod_sndfile.so
+	  0xd37000   0xd38000     0x1000    0x65000     /home/kwyrozumski/work/freeswitch/mod/mod_sndfile.so
+	  0xd38000   0xd3c000     0x4000          0        
+	  0xd3c000   0xd3e000     0x2000          0     /home/kwyrozumski/work/freeswitch/mod/mod_native_file.so
+	  0xd3e000   0xd3f000     0x1000     0x1000     /home/kwyrozumski/work/freeswitch/mod/mod_native_file.so
+	  0xd3f000   0xd40000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_native_file.so
+	  0xd40000   0xd45000     0x5000          0     /home/kwyrozumski/work/freeswitch/mod/mod_local_stream.so
+	  0xd45000   0xd46000     0x1000     0x4000     /home/kwyrozumski/work/freeswitch/mod/mod_local_stream.so
+	  0xd46000   0xd47000     0x1000     0x5000     /home/kwyrozumski/work/freeswitch/mod/mod_local_stream.so
+	  0xd47000   0xd49000     0x2000          0     /home/kwyrozumski/work/freeswitch/mod/mod_tone_stream.so
+	  0xd49000   0xd4a000     0x1000     0x1000     /home/kwyrozumski/work/freeswitch/mod/mod_tone_stream.so
+	  0xd4a000   0xd4b000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_tone_stream.so
+	  0xd4b000   0xd96000    0x4b000          0     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey.so
+	  0xd96000   0xd97000     0x1000    0x4a000     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey.so
+	  0xd97000   0xd99000     0x2000    0x4b000     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey.so
+	  0xd99000   0xe5c000    0xc3000          0     /home/kwyrozumski/work/freeswitch/lib/libjs.so.1.0.6
+	  0xe5c000   0xe5e000     0x2000    0xc2000     /home/kwyrozumski/work/freeswitch/lib/libjs.so.1.0.6
+	  0xe5e000   0xe62000     0x4000    0xc4000     /home/kwyrozumski/work/freeswitch/lib/libjs.so.1.0.6
+	  0xe62000   0xe8e000    0x2c000          0     /home/kwyrozumski/work/freeswitch/lib/libnspr4.so
+	  0xe8e000   0xe8f000     0x1000    0x2c000     /home/kwyrozumski/work/freeswitch/lib/libnspr4.so
+	  0xe8f000   0xe90000     0x1000    0x2c000     /home/kwyrozumski/work/freeswitch/lib/libnspr4.so
+	  0xe90000   0xe91000     0x1000    0x2d000     /home/kwyrozumski/work/freeswitch/lib/libnspr4.so
+	  0xe91000   0xe92000     0x1000          0        
+	  0xe92000   0xe95000     0x3000          0     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_teletone.so
+	  0xe95000   0xe96000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_teletone.so
+	  0xe96000   0xe97000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_teletone.so
+	  0xe97000   0xe9a000     0x3000          0     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_core_db.so
+	  0xe9a000   0xe9b000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_core_db.so
+	  0xe9b000   0xe9c000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_core_db.so
+	  0xe9c000   0xe9f000     0x3000          0     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_socket.so
+	  0xe9f000   0xea0000     0x1000     0x2000     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_socket.so
+	  0xea0000   0xea1000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_socket.so
+	  0xea1000   0xef3000    0x52000          0     /home/kwyrozumski/work/freeswitch/mod/mod_lua.so
+	  0xef3000   0xef4000     0x1000    0x51000     /home/kwyrozumski/work/freeswitch/mod/mod_lua.so
+	  0xef4000   0xef6000     0x2000    0x52000     /home/kwyrozumski/work/freeswitch/mod/mod_lua.so
+	  0xef6000   0xefa000     0x4000          0     /home/kwyrozumski/work/freeswitch/mod/mod_say_en.so
+	  0xefa000   0xefb000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/mod/mod_say_en.so
+	  0xefb000   0xefc000     0x1000     0x4000     /home/kwyrozumski/work/freeswitch/mod/mod_say_en.so
+	 0x8048000  0x804c000     0x4000          0     /home/kwyrozumski/work/freeswitch/.libs/lt-freeswitch
+	 0x804c000  0x804d000     0x1000     0x3000     /home/kwyrozumski/work/freeswitch/.libs/lt-freeswitch
+	 0x804d000  0x804e000     0x1000     0x4000     /home/kwyrozumski/work/freeswitch/.libs/lt-freeswitch
+	 0x804e000  0x8336000   0x2e8000          0           [heap]
+	0xb7400000 0xb7523000   0x123000          0        
+	0xb7523000 0xb7600000    0xdd000          0        
+	0xb7600000 0xb7668000    0x68000          0        
+	0xb7668000 0xb7700000    0x98000          0        
+	0xb775c000 0xb775d000     0x1000          0        
+	0xb775d000 0xb7798000    0x3b000          0        
+	0xb7798000 0xb7799000     0x1000          0        
+	0xb7799000 0xb77d4000    0x3b000          0        
+	0xb77d4000 0xb77d5000     0x1000          0        
+	0xb77d5000 0xb7810000    0x3b000          0        
+	0xb7810000 0xb7811000     0x1000          0        
+	0xb7811000 0xb784c000    0x3b000          0        
+	0xb784c000 0xb784d000     0x1000          0        
+	0xb784d000 0xb7888000    0x3b000          0        
+	0xb7888000 0xb7889000     0x1000          0        
+	0xb7889000 0xb78c4000    0x3b000          0        
+	0xb78c4000 0xb78c5000     0x1000          0        
+	0xb78c5000 0xb7900000    0x3b000          0        
+	0xb7900000 0xb7a00000   0x100000          0        
+	0xb7a02000 0xb7a34000    0x32000          0        
+	0xb7a34000 0xb7a35000     0x1000          0        
+	0xb7a35000 0xb7a70000    0x3b000          0        
+	0xb7a70000 0xb7a71000     0x1000          0        
+	0xb7a71000 0xb7aac000    0x3b000          0        
+	0xb7aac000 0xb7aad000     0x1000          0        
+	0xb7aad000 0xb7bae000   0x101000          0        
+	0xb7bae000 0xb7baf000     0x1000          0        
+	0xb7baf000 0xb7bea000    0x3b000          0        
+	0xb7bea000 0xb7beb000     0x1000          0        
+	0xb7beb000 0xb7c26000    0x3b000          0        
+	0xb7c26000 0xb7c27000     0x1000          0        
+	0xb7c27000 0xb7cc5000    0x9e000          0        
+	0xb7d25000 0xb7d26000     0x1000          0        
+	0xb7d26000 0xb7d61000    0x3b000          0        
+	0xb7d61000 0xb7d62000     0x1000          0        
+	0xb7d62000 0xb7d9d000    0x3b000          0        
+	0xb7d9d000 0xb7d9e000     0x1000          0        
+	0xb7d9e000 0xb7dd9000    0x3b000          0        
+	0xb7dd9000 0xb7dda000     0x1000          0        
+	0xb7dda000 0xb7f3e000   0x164000          0        
+	0xb7f3e000 0xb7f3f000     0x1000          0        
+	0xb7f3f000 0xb7fe4000    0xa5000          0        
+	0xb7ffd000 0xb8000000     0x3000          0        
+	0xbffdf000 0xc0000000    0x21000          0           [stack]
+Name:	lt-freeswitch
+State:	t (tracing stop)
+Tgid:	17656
+Pid:	17656
+PPid:	17650
+TracerPid:	17650
+Uid:	2313	2313	2313	2313
+Gid:	100	100	100	100
+FDSize:	32
+Groups:	27 100 120 10013 10028 10036 10062 10111 10165 10403 10405 10428 10776 10987 
+VmPeak:	   28820 kB
+VmSize:	   28676 kB
+VmLck:	       0 kB
+VmHWM:	   14180 kB
+VmRSS:	   14180 kB
+VmData:	   15700 kB
+VmStk:	     136 kB
+VmExe:	      16 kB
+VmLib:	   12144 kB
+VmPTE:	      36 kB
+VmSwap:	       0 kB
+Threads:	18
+SigQ:	0/15997
+SigPnd:	0000000000000000
+ShdPnd:	0000000000000000
+SigBlk:	0000000000000000
+SigIgn:	0000000011001006
+SigCgt:	0000000180004209
+CapInh:	0000000000000000
+CapPrm:	0000000000000000
+CapEff:	0000000000000000
+CapBnd:	ffffffffffffffff
+Cpus_allowed:	f
+Cpus_allowed_list:	0-3
+Mems_allowed:	1
+Mems_allowed_list:	0
+voluntary_ctxt_switches:	619
+nonvoluntary_ctxt_switches:	1056
+Process: 17656
+Exec file: lt-freeswitch
+State: t
+Parent process: 17650
+Process group: 17656
+Session id: 12959
+TTY: 34818
+TTY owner process group: 17650
+Flags: 0x2000
+Minor faults (no memory page): 8147
+Minor faults, children: 0
+Major faults (memory page faults): 0
+Major faults, children: 0
+utime: 329
+stime: 624
+utime, children: 0
+stime, children: 0
+jiffies remaining in current time slice: 20
+'nice' value: 0
+jiffies until next timeout: 18
+jiffies until next SIGALRM: 0
+start time (jiffies since system boot): 2656973
+Virtual memory size: 29364224
+Resident set size: 3545
+rlim: 4294967295
+Start of text: 0x8048000
+End of text: 0x804b900
+Start of stack: 0xbffff3a0
+#0  apr_cpystrn (dst=0x818121c "\330\004$\b", src=0x984b92 <Address 0x984b92 out of bounds>, dst_size=80) at strings/apr_cpystrn.c:58
+#1  0x0016e2b3 in switch_copy_string (dst=0x818121c "\330\004$\b", src=0x984b92 <Address 0x984b92 out of bounds>, dst_size=80) at src/switch_apr.c:229
+#2  0x0020147a in switch_log_vprintf (channel=SWITCH_CHANNEL_ID_LOG, file=0x984b92 <Address 0x984b92 out of bounds>, func=0x98681b <Address 0x98681b out of bounds>, line=1584, userdata=0x0, 
+    level=SWITCH_LOG_NOTICE, fmt=<optimized out>, ap=0xb7aab2fc "\270ٛ\267\320\a") at src/switch_log.c:476
+#3  0x00201653 in switch_log_printf (channel=SWITCH_CHANNEL_ID_LOG, file=0x984b92 <Address 0x984b92 out of bounds>, func=0x98681b <Address 0x98681b out of bounds>, line=1584, userdata=0x0, 
+    level=SWITCH_LOG_NOTICE, fmt=0x984d74 <Address 0x984d74 out of bounds>) at src/switch_log.c:326
+#4  0x00971adb in ?? ()
+#5  0x00000000 in ?? ()
+Exec file:
+    `/home/kwyrozumski/work/freeswitch/.libs/lt-freeswitch', file type elf32-i386.
+  Object file: /home/kwyrozumski/work/freeswitch/.libs/lt-freeswitch
+    0x8048154->0x8048167 at 0x00000154: .interp ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8048168->0x8048188 at 0x00000168: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8048188->0x80481ac at 0x00000188: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x80481ac->0x80481e8 at 0x000001ac: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x80481e8->0x8048648 at 0x000001e8: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8048648->0x8048a53 at 0x00000648: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8048a54->0x8048ae0 at 0x00000a54: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8048ae0->0x8048b60 at 0x00000ae0: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8048b60->0x8048b80 at 0x00000b60: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8048b80->0x8048d58 at 0x00000b80: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8048d58->0x8048d86 at 0x00000d58: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8048d90->0x8049150 at 0x00000d90: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8049150->0x804aa1c at 0x00001150: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x804aa1c->0x804aa36 at 0x00002a1c: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x804aa38->0x804b71b at 0x00002a38: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x804b71c->0x804b780 at 0x0000371c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x804b780->0x804b900 at 0x00003780: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x804cef0->0x804cef8 at 0x00003ef0: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x804cef8->0x804cf00 at 0x00003ef8: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x804cf00->0x804cf04 at 0x00003f00: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x804cf04->0x804cfe4 at 0x00003f04: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x804cfe4->0x804cff4 at 0x00003fe4: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x804cff4->0x804d0ec at 0x00003ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x804d0ec->0x804d0f4 at 0x000040ec: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x804d0f4->0x804d100 at 0x000040f4: .bss ALLOC
+  Object file: /lib/ld-linux.so.2
+    0x110114->0x110138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x110138->0x1101f4 at 0x00000138: .hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x1101f4->0x1102d4 at 0x000001f4: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x1102d4->0x110494 at 0x000002d4: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x110494->0x110612 at 0x00000494: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x110612->0x11064a at 0x00000612: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x11064c->0x110714 at 0x0000064c: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x110714->0x110784 at 0x00000714: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x110784->0x1107b4 at 0x00000784: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x1107c0->0x110830 at 0x000007c0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x110830->0x1275cf at 0x00000830: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x1275e0->0x12b240 at 0x000175e0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x12b240->0x12b85c at 0x0001b240: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x12b85c->0x12dae8 at 0x0001b85c: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x12eca0->0x12ef1c at 0x0001dca0: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x12ef1c->0x12efd4 at 0x0001df1c: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x12efd4->0x12efe0 at 0x0001dfd4: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x12eff4->0x12f018 at 0x0001dff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x12f020->0x12f854 at 0x0001e020: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x12f858->0x12f918 at 0x0001e854: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/.libs/libfreeswitch.so.1
+    0x131114->0x131138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x131138->0x137234 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x137234->0x1451a4 at 0x00006234: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x1451a4->0x157538 at 0x000141a4: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x157538->0x159126 at 0x00026538: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x159128->0x159338 at 0x00028128: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x159338->0x15c518 at 0x00028338: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x15c518->0x161098 at 0x0002b518: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x161098->0x1610c6 at 0x00030098: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x1610d0->0x16a7e0 at 0x000300d0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x16a7e0->0x2e4648 at 0x000397e0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x2e4648->0x2e4662 at 0x001b3648: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x2e4680->0x312918 at 0x001b3680: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x312918->0x31a23c at 0x001e1918: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x31a23c->0x3455c8 at 0x001e923c: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x3455c8->0x3455da at 0x002145c8: .gcc_except_table ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x346968->0x346970 at 0x00214968: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x346970->0x346978 at 0x00214970: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x346978->0x34697c at 0x00214978: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x346980->0x348cf8 at 0x00214980: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x348cf8->0x348e10 at 0x00216cf8: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x348e10->0x348fe8 at 0x00216e10: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x348ff4->0x34b5c0 at 0x00216ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x34b5c0->0x34e018 at 0x002195c0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x34e020->0x3653fc at 0x0021c018: .bss ALLOC
+  Object file: /usr/lib/debug/lib/i386-linux-gnu/libpthread-2.13.so
+    0x366154->0x366178 at 0x00000154: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x366178->0x366198 at 0x00000178: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x366198->0x366ec4 at 0x00000198: .gnu.hash ALLOC READONLY
+    0x366ec4->0x368404 at 0x00000198: .dynsym ALLOC READONLY
+    0x368404->0x369770 at 0x00000198: .dynstr ALLOC READONLY
+    0x369770->0x369a18 at 0x00000198: .gnu.version ALLOC READONLY
+    0x369a18->0x369c24 at 0x00000198: .gnu.version_d ALLOC READONLY
+    0x369c24->0x369cd4 at 0x00000198: .gnu.version_r ALLOC READONLY
+    0x369cd4->0x369f04 at 0x00000198: .rel.dyn ALLOC READONLY
+    0x369f04->0x36a14c at 0x00000198: .rel.plt ALLOC READONLY
+    0x36a150->0x36a160 at 0x00000198: .init ALLOC READONLY CODE
+    0x36a160->0x36a600 at 0x00000198: .plt ALLOC READONLY CODE
+    0x36a600->0x376ad8 at 0x00000198: .text ALLOC READONLY CODE
+    0x376ae0->0x376b40 at 0x00000198: __libc_freeres_fn ALLOC READONLY CODE
+    0x376b40->0x376b53 at 0x00000198: .fini ALLOC READONLY CODE
+    0x376b60->0x377b20 at 0x00000198: .rodata ALLOC READONLY
+    0x377b20->0x377b33 at 0x00000198: .interp ALLOC READONLY
+    0x377b34->0x3785e0 at 0x00000198: .eh_frame_hdr ALLOC READONLY
+    0x3785e0->0x37bb70 at 0x00000198: .eh_frame ALLOC READONLY
+    0x37bb70->0x37bbfc at 0x00000198: .gcc_except_table ALLOC READONLY
+    0x37bbfc->0x37cb88 at 0x00000198: .hash ALLOC READONLY
+    0x37ddc4->0x37ddcc at 0x00000dc4: .ctors ALLOC
+    0x37ddcc->0x37ddd4 at 0x00000dc4: .dtors ALLOC
+    0x37ddd4->0x37ddd8 at 0x00000dc4: .jcr ALLOC
+    0x37dde0->0x37deb4 at 0x00000dc4: .data.rel.ro ALLOC
+    0x37deb4->0x37dfac at 0x00000dc4: .dynamic ALLOC
+    0x37dfac->0x37dfd8 at 0x00000dc4: .got ALLOC
+    0x37dff4->0x37e124 at 0x00000dc4: .got.plt ALLOC
+    0x37e124->0x37e148 at 0x00000dc4: .data ALLOC
+    0x37e160->0x380208 at 0x00000dc4: .bss ALLOC
+  Object file: /lib/i386-linux-gnu/libpthread.so.0
+    0x366154->0x366178 at 0x00000154: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x366178->0x366198 at 0x00000178: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x366198->0x366ec4 at 0x00000198: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x366ec4->0x368404 at 0x00000ec4: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x368404->0x369770 at 0x00002404: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x369770->0x369a18 at 0x00003770: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x369a18->0x369c24 at 0x00003a18: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x369c24->0x369cd4 at 0x00003c24: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x369cd4->0x369f04 at 0x00003cd4: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x369f04->0x36a14c at 0x00003f04: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x36a150->0x36a160 at 0x00004150: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x36a160->0x36a600 at 0x00004160: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x36a600->0x376ad8 at 0x00004600: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x376ae0->0x376b40 at 0x00010ae0: __libc_freeres_fn ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x376b40->0x376b53 at 0x00010b40: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x376b60->0x377b20 at 0x00010b60: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x377b20->0x377b33 at 0x00011b20: .interp ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x377b34->0x3785e0 at 0x00011b34: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x3785e0->0x37bb70 at 0x000125e0: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x37bb70->0x37bbfc at 0x00015b70: .gcc_except_table ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x37bbfc->0x37cb88 at 0x00015bfc: .hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x37ddc4->0x37ddcc at 0x00016dc4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x37ddcc->0x37ddd4 at 0x00016dcc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x37ddd4->0x37ddd8 at 0x00016dd4: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x37dde0->0x37deb4 at 0x00016de0: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x37deb4->0x37dfac at 0x00016eb4: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x37dfac->0x37dfd8 at 0x00016fac: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x37dff4->0x37e124 at 0x00016ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x37e124->0x37e148 at 0x00017124: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x37e160->0x380208 at 0x00017148: .bss ALLOC
+  Object file: /usr/lib/debug/lib/i386-linux-gnu/libc-2.13.so
+    0x381174->0x381198 at 0x00000174: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x381198->0x3811b8 at 0x00000198: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x3811b8->0x384df0 at 0x000001b8: .gnu.hash ALLOC READONLY
+    0x384df0->0x38dff0 at 0x000001b8: .dynsym ALLOC READONLY
+    0x38dff0->0x393abd at 0x000001b8: .dynstr ALLOC READONLY
+    0x393abe->0x394cfe at 0x000001b8: .gnu.version ALLOC READONLY
+    0x394d00->0x3950d8 at 0x000001b8: .gnu.version_d ALLOC READONLY
+    0x3950d8->0x395118 at 0x000001b8: .gnu.version_r ALLOC READONLY
+    0x395118->0x397b28 at 0x000001b8: .rel.dyn ALLOC READONLY
+    0x397b28->0x397b60 at 0x000001b8: .rel.plt ALLOC READONLY
+    0x397b60->0x397be0 at 0x000001b8: .plt ALLOC READONLY CODE
+    0x397be0->0x4a4784 at 0x000001b8: .text ALLOC READONLY CODE
+    0x4a4790->0x4a56a7 at 0x000001b8: __libc_freeres_fn ALLOC READONLY CODE
+    0x4a56b0->0x4a5846 at 0x000001b8: __libc_thread_freeres_fn ALLOC READONLY CODE
+    0x4a5860->0x4c3428 at 0x000001b8: .rodata ALLOC READONLY
+    0x4c3428->0x4c343b at 0x000001b8: .interp ALLOC READONLY
+    0x4c343c->0x4ca7f0 at 0x000001b8: .eh_frame_hdr ALLOC READONLY
+    0x4ca7f0->0x4f3464 at 0x000001b8: .eh_frame ALLOC READONLY
+    0x4f3464->0x4f3a0c at 0x000001b8: .gcc_except_table ALLOC READONLY
+    0x4f3a0c->0x4f6e90 at 0x000001b8: .hash ALLOC READONLY
+    0x4f71e4->0x4f71ec at 0x000001e4: .tdata ALLOC
+    0x4f71ec->0x4f7224 at 0x000001e4: .tbss ALLOC
+    0x4f71ec->0x4f71f8 at 0x000001e4: .init_array ALLOC
+    0x4f71f8->0x4f7268 at 0x000001e4: __libc_subfreeres ALLOC
+    0x4f7268->0x4f726c at 0x000001e4: __libc_atexit ALLOC
+    0x4f726c->0x4f7278 at 0x000001e4: __libc_thread_subfreeres ALLOC
+    0x4f7280->0x4f8d7c at 0x000001e4: .data.rel.ro ALLOC
+    0x4f8d7c->0x4f8e6c at 0x000001e4: .dynamic ALLOC
+    0x4f8e6c->0x4f8fe0 at 0x000001e4: .got ALLOC
+    0x4f8ff4->0x4f901c at 0x000001e4: .got.plt ALLOC
+    0x4f9020->0x4f99bc at 0x000001e4: .data ALLOC
+    0x4f99c0->0x4fca18 at 0x000001e4: .bss ALLOC
+  Object file: /lib/i386-linux-gnu/libc.so.6
+    0x381174->0x381198 at 0x00000174: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x381198->0x3811b8 at 0x00000198: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x3811b8->0x384df0 at 0x000001b8: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x384df0->0x38dff0 at 0x00003df0: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x38dff0->0x393abd at 0x0000cff0: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x393abe->0x394cfe at 0x00012abe: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x394d00->0x3950d8 at 0x00013d00: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x3950d8->0x395118 at 0x000140d8: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x395118->0x397b28 at 0x00014118: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x397b28->0x397b60 at 0x00016b28: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x397b60->0x397be0 at 0x00016b60: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x397be0->0x4a4784 at 0x00016be0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x4a4790->0x4a56a7 at 0x00123790: __libc_freeres_fn ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x4a56b0->0x4a5846 at 0x001246b0: __libc_thread_freeres_fn ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x4a5860->0x4c3428 at 0x00124860: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4c3428->0x4c343b at 0x00142428: .interp ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4c343c->0x4ca7f0 at 0x0014243c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4ca7f0->0x4f3464 at 0x001497f0: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4f3464->0x4f3a0c at 0x00172464: .gcc_except_table ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4f3a0c->0x4f6e90 at 0x00172a0c: .hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4f71e4->0x4f71ec at 0x001761e4: .tdata ALLOC LOAD DATA HAS_CONTENTS
+    0x4f71ec->0x4f7224 at 0x001761ec: .tbss ALLOC
+    0x4f71ec->0x4f71f8 at 0x001761ec: .init_array ALLOC LOAD DATA HAS_CONTENTS
+    0x4f71f8->0x4f7268 at 0x001761f8: __libc_subfreeres ALLOC LOAD DATA HAS_CONTENTS
+    0x4f7268->0x4f726c at 0x00176268: __libc_atexit ALLOC LOAD DATA HAS_CONTENTS
+    0x4f726c->0x4f7278 at 0x0017626c: __libc_thread_subfreeres ALLOC LOAD DATA HAS_CONTENTS
+    0x4f7280->0x4f8d7c at 0x00176280: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x4f8d7c->0x4f8e6c at 0x00177d7c: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x4f8e6c->0x4f8fe0 at 0x00177e6c: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x4f8ff4->0x4f901c at 0x00177ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x4f9020->0x4f99bc at 0x00178020: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x4f99c0->0x4fca18 at 0x001789bc: .bss ALLOC
+  Object file: /usr/lib/debug/lib/i386-linux-gnu/libdl-2.13.so
+    0x4fd154->0x4fd178 at 0x00000154: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd178->0x4fd198 at 0x00000178: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd198->0x4fd250 at 0x00000198: .gnu.hash ALLOC READONLY
+    0x4fd250->0x4fd4d0 at 0x00000198: .dynsym ALLOC READONLY
+    0x4fd4d0->0x4fd6a8 at 0x00000198: .dynstr ALLOC READONLY
+    0x4fd6a8->0x4fd6f8 at 0x00000198: .gnu.version ALLOC READONLY
+    0x4fd6f8->0x4fd7c0 at 0x00000198: .gnu.version_d ALLOC READONLY
+    0x4fd7c0->0x4fd830 at 0x00000198: .gnu.version_r ALLOC READONLY
+    0x4fd830->0x4fd8a0 at 0x00000198: .rel.dyn ALLOC READONLY
+    0x4fd8a0->0x4fd920 at 0x00000198: .rel.plt ALLOC READONLY
+    0x4fd920->0x4fd94e at 0x00000198: .init ALLOC READONLY CODE
+    0x4fd950->0x4fda60 at 0x00000198: .plt ALLOC READONLY CODE
+    0x4fda60->0x4fea08 at 0x00000198: .text ALLOC READONLY CODE
+    0x4fea08->0x4fea22 at 0x00000198: .fini ALLOC READONLY CODE
+    0x4fea24->0x4feac7 at 0x00000198: .rodata ALLOC READONLY
+    0x4feac7->0x4feada at 0x00000198: .interp ALLOC READONLY
+    0x4feadc->0x4febb0 at 0x00000198: .eh_frame_hdr ALLOC READONLY
+    0x4febb0->0x4fefb0 at 0x00000198: .eh_frame ALLOC READONLY
+    0x4fefb0->0x4ff15c at 0x00000198: .hash ALLOC READONLY
+    0x500ea4->0x500ea8 at 0x00000ea4: .init_array ALLOC
+    0x500ea8->0x500eac at 0x00000ea4: .fini_array ALLOC
+    0x500eac->0x500eb4 at 0x00000ea4: .ctors ALLOC
+    0x500eb4->0x500ebc at 0x00000ea4: .dtors ALLOC
+    0x500ebc->0x500ec0 at 0x00000ea4: .jcr ALLOC
+    0x500ec0->0x500fc8 at 0x00000ea4: .dynamic ALLOC
+    0x500fc8->0x500ff4 at 0x00000ea4: .got ALLOC
+    0x500ff4->0x501040 at 0x00000ea4: .got.plt ALLOC
+    0x501040->0x501044 at 0x00000ea4: .data ALLOC
+    0x501044->0x501078 at 0x00000ea4: .bss ALLOC
+  Object file: /lib/i386-linux-gnu/libdl.so.2
+    0x4fd154->0x4fd178 at 0x00000154: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd178->0x4fd198 at 0x00000178: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd198->0x4fd250 at 0x00000198: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd250->0x4fd4d0 at 0x00000250: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd4d0->0x4fd6a8 at 0x000004d0: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd6a8->0x4fd6f8 at 0x000006a8: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd6f8->0x4fd7c0 at 0x000006f8: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd7c0->0x4fd830 at 0x000007c0: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd830->0x4fd8a0 at 0x00000830: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd8a0->0x4fd920 at 0x000008a0: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fd920->0x4fd94e at 0x00000920: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x4fd950->0x4fda60 at 0x00000950: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x4fda60->0x4fea08 at 0x00000a60: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x4fea08->0x4fea22 at 0x00001a08: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x4fea24->0x4feac7 at 0x00001a24: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4feac7->0x4feada at 0x00001ac7: .interp ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4feadc->0x4febb0 at 0x00001adc: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4febb0->0x4fefb0 at 0x00001bb0: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x4fefb0->0x4ff15c at 0x00001fb0: .hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x500ea4->0x500ea8 at 0x00002ea4: .init_array ALLOC LOAD DATA HAS_CONTENTS
+    0x500ea8->0x500eac at 0x00002ea8: .fini_array ALLOC LOAD DATA HAS_CONTENTS
+    0x500eac->0x500eb4 at 0x00002eac: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x500eb4->0x500ebc at 0x00002eb4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x500ebc->0x500ec0 at 0x00002ebc: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x500ec0->0x500fc8 at 0x00002ec0: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x500fc8->0x500ff4 at 0x00002fc8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x500ff4->0x501040 at 0x00002ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x501040->0x501044 at 0x00003040: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x501044->0x501078 at 0x00003044: .bss ALLOC
+  Object file: /usr/lib/debug/lib/i386-linux-gnu/libcrypt-2.13.so
+    0x502154->0x502178 at 0x00000154: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x502178->0x502198 at 0x00000178: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x502198->0x50220c at 0x00000198: .gnu.hash ALLOC READONLY
+    0x50220c->0x5023ac at 0x00000198: .dynsym ALLOC READONLY
+    0x5023ac->0x5024ce at 0x00000198: .dynstr ALLOC READONLY
+    0x5024ce->0x502502 at 0x00000198: .gnu.version ALLOC READONLY
+    0x502504->0x50253c at 0x00000198: .gnu.version_d ALLOC READONLY
+    0x50253c->0x50256c at 0x00000198: .gnu.version_r ALLOC READONLY
+    0x50256c->0x5025a4 at 0x00000198: .rel.dyn ALLOC READONLY
+    0x5025a4->0x502624 at 0x00000198: .rel.plt ALLOC READONLY
+    0x502624->0x502652 at 0x00000198: .init ALLOC READONLY CODE
+    0x502660->0x502770 at 0x00000198: .plt ALLOC READONLY CODE
+    0x502770->0x507a58 at 0x00000198: .text ALLOC READONLY CODE
+    0x507a58->0x507a72 at 0x00000198: .fini ALLOC READONLY CODE
+    0x507a80->0x508fe0 at 0x00000198: .rodata ALLOC READONLY
+    0x508fe0->0x508ff3 at 0x00000198: .interp ALLOC READONLY
+    0x508ff4->0x509138 at 0x00000198: .eh_frame_hdr ALLOC READONLY
+    0x509138->0x509890 at 0x00000198: .eh_frame ALLOC READONLY
+    0x509890->0x5099a4 at 0x00000198: .hash ALLOC READONLY
+    0x50aee8->0x50aef0 at 0x00000ee8: .ctors ALLOC
+    0x50aef0->0x50aef8 at 0x00000ee8: .dtors ALLOC
+    0x50aef8->0x50aefc at 0x00000ee8: .jcr ALLOC
+    0x50aefc->0x50afdc at 0x00000ee8: .dynamic ALLOC
+    0x50afdc->0x50aff4 at 0x00000ee8: .got ALLOC
+    0x50aff4->0x50b040 at 0x00000ee8: .got.plt ALLOC
+    0x50b040->0x50b044 at 0x00000ee8: .data ALLOC
+    0x50b060->0x53213c at 0x00000ee8: .bss ALLOC
+  Object file: /lib/i386-linux-gnu/libcrypt.so.1
+    0x502154->0x502178 at 0x00000154: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x502178->0x502198 at 0x00000178: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x502198->0x50220c at 0x00000198: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x50220c->0x5023ac at 0x0000020c: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5023ac->0x5024ce at 0x000003ac: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5024ce->0x502502 at 0x000004ce: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x502504->0x50253c at 0x00000504: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x50253c->0x50256c at 0x0000053c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x50256c->0x5025a4 at 0x0000056c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5025a4->0x502624 at 0x000005a4: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x502624->0x502652 at 0x00000624: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x502660->0x502770 at 0x00000660: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x502770->0x507a58 at 0x00000770: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x507a58->0x507a72 at 0x00005a58: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x507a80->0x508fe0 at 0x00005a80: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x508fe0->0x508ff3 at 0x00006fe0: .interp ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x508ff4->0x509138 at 0x00006ff4: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x509138->0x509890 at 0x00007138: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x509890->0x5099a4 at 0x00007890: .hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x50aee8->0x50aef0 at 0x00007ee8: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x50aef0->0x50aef8 at 0x00007ef0: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x50aef8->0x50aefc at 0x00007ef8: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x50aefc->0x50afdc at 0x00007efc: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x50afdc->0x50aff4 at 0x00007fdc: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x50aff4->0x50b040 at 0x00007ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x50b040->0x50b044 at 0x00008040: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x50b060->0x53213c at 0x00008044: .bss ALLOC
+  Object file: /usr/lib/debug/lib/i386-linux-gnu/librt-2.13.so
+    0x533154->0x533178 at 0x00000154: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x533178->0x533198 at 0x00000178: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x533198->0x5333c0 at 0x00000198: .gnu.hash ALLOC READONLY
+    0x5333c0->0x533aa0 at 0x00000198: .dynsym ALLOC READONLY
+    0x533aa0->0x534004 at 0x00000198: .dynstr ALLOC READONLY
+    0x534004->0x5340e0 at 0x00000198: .gnu.version ALLOC READONLY
+    0x5340e0->0x5341a8 at 0x00000198: .gnu.version_d ALLOC READONLY
+    0x5341a8->0x534268 at 0x00000198: .gnu.version_r ALLOC READONLY
+    0x534268->0x5342b0 at 0x00000198: .rel.dyn ALLOC READONLY
+    0x5342b0->0x534498 at 0x00000198: .rel.plt ALLOC READONLY
+    0x534498->0x5344c6 at 0x00000198: .init ALLOC READONLY CODE
+    0x5344d0->0x5348b0 at 0x00000198: .plt ALLOC READONLY CODE
+    0x5348b0->0x538558 at 0x00000198: .text ALLOC READONLY CODE
+    0x538560->0x5385dc at 0x00000198: __libc_freeres_fn ALLOC READONLY CODE
+    0x5385dc->0x5385f6 at 0x00000198: .fini ALLOC READONLY CODE
+    0x5385f8->0x538904 at 0x00000198: .rodata ALLOC READONLY
+    0x538904->0x538917 at 0x00000198: .interp ALLOC READONLY
+    0x538918->0x538b64 at 0x00000198: .eh_frame_hdr ALLOC READONLY
+    0x538b64->0x539780 at 0x00000198: .eh_frame ALLOC READONLY
+    0x539780->0x539795 at 0x00000198: .gcc_except_table ALLOC READONLY
+    0x539798->0x539cbc at 0x00000198: .hash ALLOC READONLY
+    0x53aed4->0x53aedc at 0x00000ed4: .ctors ALLOC
+    0x53aedc->0x53aee4 at 0x00000ed4: .dtors ALLOC
+    0x53aee4->0x53aee8 at 0x00000ed4: .jcr ALLOC
+    0x53aee8->0x53aef0 at 0x00000ed4: __libc_subfreeres ALLOC
+    0x53aef0->0x53afe0 at 0x00000ed4: .dynamic ALLOC
+    0x53afe0->0x53aff4 at 0x00000ed4: .got ALLOC
+    0x53aff4->0x53b0f4 at 0x00000ed4: .got.plt ALLOC
+    0x53b100->0x53b168 at 0x00000ed4: .data ALLOC
+    0x53b180->0x53b254 at 0x00000ed4: .bss ALLOC
+  Object file: /lib/i386-linux-gnu/librt.so.1
+    0x533154->0x533178 at 0x00000154: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x533178->0x533198 at 0x00000178: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x533198->0x5333c0 at 0x00000198: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5333c0->0x533aa0 at 0x000003c0: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x533aa0->0x534004 at 0x00000aa0: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x534004->0x5340e0 at 0x00001004: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5340e0->0x5341a8 at 0x000010e0: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5341a8->0x534268 at 0x000011a8: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x534268->0x5342b0 at 0x00001268: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5342b0->0x534498 at 0x000012b0: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x534498->0x5344c6 at 0x00001498: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x5344d0->0x5348b0 at 0x000014d0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x5348b0->0x538558 at 0x000018b0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x538560->0x5385dc at 0x00005560: __libc_freeres_fn ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x5385dc->0x5385f6 at 0x000055dc: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x5385f8->0x538904 at 0x000055f8: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x538904->0x538917 at 0x00005904: .interp ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x538918->0x538b64 at 0x00005918: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x538b64->0x539780 at 0x00005b64: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x539780->0x539795 at 0x00006780: .gcc_except_table ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x539798->0x539cbc at 0x00006798: .hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x53aed4->0x53aedc at 0x00006ed4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x53aedc->0x53aee4 at 0x00006edc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x53aee4->0x53aee8 at 0x00006ee4: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x53aee8->0x53aef0 at 0x00006ee8: __libc_subfreeres ALLOC LOAD DATA HAS_CONTENTS
+    0x53aef0->0x53afe0 at 0x00006ef0: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x53afe0->0x53aff4 at 0x00006fe0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x53aff4->0x53b0f4 at 0x00006ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x53b100->0x53b168 at 0x00007100: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x53b180->0x53b254 at 0x00007168: .bss ALLOC
+  Object file: /lib/i386-linux-gnu/libssl.so.1.0.0
+    0x53c114->0x53c138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x53c138->0x53c900 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x53c900->0x53ebf0 at 0x00000900: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x53ebf0->0x541364 at 0x00002bf0: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x541364->0x5417c2 at 0x00005364: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5417c4->0x5417fc at 0x000057c4: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5417fc->0x54186c at 0x000057fc: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x54186c->0x5438dc at 0x0000586c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5438dc->0x5442ec at 0x000078dc: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5442ec->0x54431a at 0x000082ec: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x544320->0x545750 at 0x00008320: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x545750->0x577c78 at 0x00009750: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x577c78->0x577c92 at 0x0003bc78: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x577ca0->0x57cfcc at 0x0003bca0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x57cfcc->0x57df70 at 0x00040fcc: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x57df70->0x58314c at 0x00041f70: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x584c04->0x584c0c at 0x00047c04: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x584c0c->0x584c14 at 0x00047c0c: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x584c14->0x584c18 at 0x00047c14: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x584c20->0x585eb4 at 0x00047c20: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x585eb4->0x585f94 at 0x00048eb4: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x585f94->0x585fdc at 0x00048f94: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x585ff4->0x586508 at 0x00048ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x586520->0x588740 at 0x00049520: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x588740->0x5887b4 at 0x0004b740: .bss ALLOC
+  Object file: /lib/i386-linux-gnu/libcrypto.so.1.0.0
+    0x589114->0x589138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x589138->0x58f7a8 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x58f7a8->0x59d7e8 at 0x000067a8: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x59d7e8->0x5adcdd at 0x000147e8: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5adcde->0x5af8e6 at 0x00024cde: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5af8e8->0x5af920 at 0x000268e8: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5af920->0x5af9d0 at 0x00026920: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5af9d0->0x5bed60 at 0x000269d0: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5bed60->0x5bf0c0 at 0x00035d60: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x5bf0c0->0x5bf0ee at 0x000360c0: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x5bf0f0->0x5bf7c0 at 0x000360f0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x5bf7c0->0x6b9c68 at 0x000367c0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x6b9c68->0x6b9c82 at 0x00130c68: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x6b9ca0->0x6e1c6c at 0x00130ca0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x6e1c6c->0x6ea5a8 at 0x00158c6c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x6ea5a8->0x71505c at 0x001615a8: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x7161a8->0x7161b0 at 0x0018c1a8: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x7161b0->0x7161b8 at 0x0018c1b0: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x7161b8->0x7161bc at 0x0018c1b8: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x7161c0->0x723a48 at 0x0018c1c0: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x723a48->0x723b30 at 0x00199a48: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x723b30->0x723fe8 at 0x00199b30: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x723ff4->0x7241b0 at 0x00199ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x7241c0->0x729148 at 0x0019a1c0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x729160->0x72c3b0 at 0x0019f148: .bss ALLOC
+  Object file: /lib/libtinfo.so.5
+    0x72d114->0x72d138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x72d138->0x72d6b0 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x72d6b0->0x72e590 at 0x000006b0: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x72e590->0x72f00d at 0x00001590: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x72f00e->0x72f1ea at 0x0000200e: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x72f1ec->0x72f26c at 0x000021ec: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x72f26c->0x73223c at 0x0000226c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x73223c->0x7323d4 at 0x0000523c: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x7323d4->0x732402 at 0x000053d4: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x732410->0x732750 at 0x00005410: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x732750->0x73ca78 at 0x00005750: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x73ca78->0x73ca92 at 0x0000fa78: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x73caa0->0x7460c5 at 0x0000faa0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x7460c8->0x74664c at 0x000190c8: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x74664c->0x748450 at 0x0001964c: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x7496d0->0x7496d8 at 0x0001b6d0: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x7496d8->0x7496e0 at 0x0001b6d8: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x7496e0->0x7496e4 at 0x0001b6e0: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x749700->0x74aeb4 at 0x0001b700: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x74aeb4->0x74af7c at 0x0001ceb4: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x74af7c->0x74aff4 at 0x0001cf7c: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x74aff4->0x74b0cc at 0x0001cff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x74b0e0->0x74b388 at 0x0001d0e0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x74b3a0->0x74b74c at 0x0001d388: .bss ALLOC
+  Object file: /usr/lib/i386-linux-gnu/libstdc++.so.6
+    0x74c134->0x74c158 at 0x00000134: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x74c158->0x7519c8 at 0x00000158: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x7519c8->0x7603b8 at 0x000059c8: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x7603b8->0x786b26 at 0x000143b8: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x786b26->0x788864 at 0x0003ab26: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x788864->0x788bac at 0x0003c864: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x788bac->0x788ccc at 0x0003cbac: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x788ccc->0x78df4c at 0x0003cccc: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x78df4c->0x78f434 at 0x00041f4c: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x78f434->0x78f462 at 0x00043434: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x78f470->0x791e50 at 0x00043470: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x791e50->0x8043a8 at 0x00045e50: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8043a8->0x8043c2 at 0x000b83a8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8043e0->0x8098ec at 0x000b83e0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8098ec->0x80e668 at 0x000bd8ec: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x80e668->0x824cd8 at 0x000c2668: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x824cd8->0x8294e4 at 0x000d8cd8: .gcc_except_table ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x82b3c0->0x82b3d0 at 0x000de3c0: .tbss ALLOC
+    0x82b3c0->0x82b3dc at 0x000de3c0: .init_array ALLOC LOAD DATA HAS_CONTENTS
+    0x82b3dc->0x82b3e4 at 0x000de3dc: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x82b3e4->0x82b3ec at 0x000de3e4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x82b3ec->0x82b3f0 at 0x000de3ec: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x82b400->0x82e90c at 0x000de400: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x82e90c->0x82ea0c at 0x000e190c: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x82ea0c->0x82efd8 at 0x000e1a0c: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x82eff4->0x82fa74 at 0x000e1ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x82fa80->0x82fc04 at 0x000e2a80: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x82fc20->0x836628 at 0x000e2c04: .bss ALLOC
+  Object file: /usr/lib/debug/lib/i386-linux-gnu/libm-2.13.so
+    0x837154->0x837178 at 0x00000154: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x837178->0x837198 at 0x00000178: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x837198->0x8381f4 at 0x00000198: .gnu.hash ALLOC READONLY
+    0x8381f4->0x839764 at 0x00000198: .dynsym ALLOC READONLY
+    0x839764->0x839f3a at 0x00000198: .dynstr ALLOC READONLY
+    0x839f3a->0x83a1e8 at 0x00000198: .gnu.version ALLOC READONLY
+    0x83a1e8->0x83a28c at 0x00000198: .gnu.version_d ALLOC READONLY
+    0x83a28c->0x83a2ec at 0x00000198: .gnu.version_r ALLOC READONLY
+    0x83a2ec->0x83a32c at 0x00000198: .rel.dyn ALLOC READONLY
+    0x83a32c->0x83a394 at 0x00000198: .rel.plt ALLOC READONLY
+    0x83a394->0x83a3c2 at 0x00000198: .init ALLOC READONLY CODE
+    0x83a3d0->0x83a4b0 at 0x00000198: .plt ALLOC READONLY CODE
+    0x83a4b0->0x855ab8 at 0x00000198: .text ALLOC READONLY CODE
+    0x855ab8->0x855ad2 at 0x00000198: .fini ALLOC READONLY CODE
+    0x855ae0->0x859718 at 0x00000198: .rodata ALLOC READONLY
+    0x859718->0x85972b at 0x00000198: .interp ALLOC READONLY
+    0x85972c->0x85a430 at 0x00000198: .eh_frame_hdr ALLOC READONLY
+    0x85a430->0x85e078 at 0x00000198: .eh_frame ALLOC READONLY
+    0x85e078->0x85ef50 at 0x00000198: .hash ALLOC READONLY
+    0x85fedc->0x85fee4 at 0x00000edc: .ctors ALLOC
+    0x85fee4->0x85feec at 0x00000edc: .dtors ALLOC
+    0x85feec->0x85fef0 at 0x00000edc: .jcr ALLOC
+    0x85fef0->0x85ffd8 at 0x00000edc: .dynamic ALLOC
+    0x85ffd8->0x85fff4 at 0x00000edc: .got ALLOC
+    0x85fff4->0x860034 at 0x00000edc: .got.plt ALLOC
+    0x860034->0x86003c at 0x00000edc: .data ALLOC
+    0x860040->0x860080 at 0x00000edc: .bss ALLOC
+  Object file: /lib/i386-linux-gnu/libm.so.6
+    0x837154->0x837178 at 0x00000154: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x837178->0x837198 at 0x00000178: .note.ABI-tag ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x837198->0x8381f4 at 0x00000198: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8381f4->0x839764 at 0x000011f4: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x839764->0x839f3a at 0x00002764: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x839f3a->0x83a1e8 at 0x00002f3a: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x83a1e8->0x83a28c at 0x000031e8: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x83a28c->0x83a2ec at 0x0000328c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x83a2ec->0x83a32c at 0x000032ec: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x83a32c->0x83a394 at 0x0000332c: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x83a394->0x83a3c2 at 0x00003394: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x83a3d0->0x83a4b0 at 0x000033d0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x83a4b0->0x855ab8 at 0x000034b0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x855ab8->0x855ad2 at 0x0001eab8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x855ae0->0x859718 at 0x0001eae0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x859718->0x85972b at 0x00022718: .interp ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x85972c->0x85a430 at 0x0002272c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x85a430->0x85e078 at 0x00023430: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x85e078->0x85ef50 at 0x00027078: .hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x85fedc->0x85fee4 at 0x00028edc: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x85fee4->0x85feec at 0x00028ee4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x85feec->0x85fef0 at 0x00028eec: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x85fef0->0x85ffd8 at 0x00028ef0: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x85ffd8->0x85fff4 at 0x00028fd8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x85fff4->0x860034 at 0x00028ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x860034->0x86003c at 0x00029034: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x860040->0x860080 at 0x0002903c: .bss ALLOC
+  Object file: /lib/i386-linux-gnu/libgcc_s.so.1
+    0x861114->0x861138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x861138->0x8615e8 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8615e8->0x861f78 at 0x000005e8: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x861f78->0x862786 at 0x00000f78: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x862786->0x8628b8 at 0x00001786: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8628b8->0x862a58 at 0x000018b8: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x862a58->0x862a98 at 0x00001a58: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x862a98->0x862ad8 at 0x00001a98: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x862ad8->0x862c40 at 0x00001ad8: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x862c40->0x862c6e at 0x00001c40: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x862c70->0x862f50 at 0x00001c70: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x862f50->0x879cf8 at 0x00001f50: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x879cf8->0x879d12 at 0x00018cf8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x879d20->0x87a540 at 0x00018d20: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x87a540->0x87aa4c at 0x00019540: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x87aa4c->0x87c4e0 at 0x00019a4c: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x87def4->0x87defc at 0x0001bef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x87defc->0x87df04 at 0x0001befc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x87df04->0x87df08 at 0x0001bf04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x87df08->0x87dfe0 at 0x0001bf08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x87dfe0->0x87dff4 at 0x0001bfe0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x87dff4->0x87e0b4 at 0x0001bff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x87e0b8->0x87e0d0 at 0x0001c0b8: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x87e0e0->0x87e230 at 0x0001c0d0: .bss ALLOC
+  Object file: /usr/lib/libodbc.so.1
+    0x87f0f4->0x87f118 at 0x000000f4: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x87f118->0x87f638 at 0x00000118: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x87f638->0x8804a8 at 0x00000638: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8804a8->0x881191 at 0x000014a8: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x881192->0x881360 at 0x00002192: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x881360->0x8813f0 at 0x00002360: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8813f0->0x882450 at 0x000023f0: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x882450->0x8827a8 at 0x00003450: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8827a8->0x8827d8 at 0x000037a8: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8827d8->0x882e98 at 0x000037d8: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x882ea0->0x8dcab8 at 0x00003ea0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8dcab8->0x8dcad4 at 0x0005dab8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8dcae0->0x8e413d at 0x0005dae0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8e4140->0x8e4144 at 0x00065140: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8e5df4->0x8e5dfc at 0x00065df4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x8e5dfc->0x8e5e04 at 0x00065dfc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x8e5e04->0x8e5e08 at 0x00065e04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x8e5e20->0x8e5ed8 at 0x00065e20: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x8e5ed8->0x8e5fb0 at 0x00065ed8: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x8e5fb0->0x8e5fe4 at 0x00065fb0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x8e5ff4->0x8e61ac at 0x00065ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x8e61c0->0x8e9950 at 0x000661c0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x8e9960->0x8ea6c0 at 0x00069950: .bss ALLOC
+  Object file: /lib/i386-linux-gnu/libz.so.1
+    0x8eb114->0x8eb138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8eb138->0x8eb3bc at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8eb3bc->0x8eba4c at 0x000003bc: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8eba4c->0x8ebefa at 0x00000a4c: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8ebefa->0x8ebfcc at 0x00000efa: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8ebfcc->0x8ec100 at 0x00000fcc: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8ec100->0x8ec160 at 0x00001100: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8ec160->0x8ec270 at 0x00001160: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8ec270->0x8ec400 at 0x00001270: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8ec400->0x8ec430 at 0x00001400: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8ec430->0x8ec760 at 0x00001430: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8ec760->0x8f9c98 at 0x00001760: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8f9c98->0x8f9cb4 at 0x0000ec98: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x8f9cc0->0x8fdd9e at 0x0000ecc0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8fdda0->0x8fddb4 at 0x00012da0: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8fddb4->0x8fde08 at 0x00012db4: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x8fee1c->0x8fee24 at 0x00012e1c: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x8fee24->0x8fee2c at 0x00012e24: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x8fee2c->0x8fee30 at 0x00012e2c: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x8fee40->0x8feee8 at 0x00012e40: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x8feee8->0x8fefc0 at 0x00012ee8: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x8fefc0->0x8fefe0 at 0x00012fc0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x8feff4->0x8ff0c8 at 0x00012ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x8ff0c8->0x8ff108 at 0x000130c8: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x8ff108->0x8ff110 at 0x00013108: .bss ALLOC
+  Object file: /usr/lib/libltdl.so.7
+    0x900114->0x900138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x900138->0x9003b8 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9003b8->0x900af8 at 0x000003b8: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x900af8->0x90112a at 0x00000af8: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90112a->0x901212 at 0x0000112a: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x901214->0x9012b4 at 0x00001214: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9012b4->0x901324 at 0x000012b4: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x901324->0x901464 at 0x00001324: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x901464->0x901494 at 0x00001464: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x901494->0x901724 at 0x00001494: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x901730->0x9061ac at 0x00001730: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9061ac->0x9061c8 at 0x000061ac: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9061e0->0x906ba3 at 0x000061e0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x906ba4->0x906eb0 at 0x00006ba4: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x906eb0->0x907f08 at 0x00006eb0: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x908ecc->0x908ed4 at 0x00008ecc: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x908ed4->0x908edc at 0x00008ed4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x908edc->0x908ee0 at 0x00008edc: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x908ee0->0x908f00 at 0x00008ee0: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x908f00->0x908fd0 at 0x00008f00: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x908fd0->0x908ff0 at 0x00008fd0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x908ff4->0x9090a0 at 0x00008ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x9090a0->0x9090ac at 0x000090a0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x9090ac->0x9090dc at 0x000090ac: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_console.so
+    0x90a114->0x90a138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90a138->0x90a174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90a174->0x90a3c4 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90a3c4->0x90a6d3 at 0x000003c4: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90a6d4->0x90a71e at 0x000006d4: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90a720->0x90a760 at 0x00000720: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90a760->0x90a7d0 at 0x00000760: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90a7d0->0x90a8b8 at 0x000007d0: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90a8b8->0x90a8e6 at 0x000008b8: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x90a8f0->0x90aad0 at 0x000008f0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x90aad0->0x90b778 at 0x00000ad0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x90b778->0x90b792 at 0x00001778: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x90b794->0x90be6a at 0x00001794: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90be6c->0x90bea8 at 0x00001e6c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90bea8->0x90bfcc at 0x00001ea8: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90deb4->0x90debc at 0x00002eb4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x90debc->0x90dec4 at 0x00002ebc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x90dec4->0x90dec8 at 0x00002ec4: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x90dee0->0x90df00 at 0x00002ee0: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x90df00->0x90dfe0 at 0x00002f00: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x90dfe0->0x90dfec at 0x00002fe0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x90dff4->0x90e074 at 0x00002ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x90e074->0x90e090 at 0x00003074: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x90e090->0x90e0ac at 0x00003090: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_logfile.so
+    0x90f114->0x90f138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90f138->0x90f174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90f174->0x90f524 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90f524->0x90f9f8 at 0x00000524: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90f9f8->0x90fa6e at 0x000009f8: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90fa70->0x90fac0 at 0x00000a70: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90fac0->0x90faf8 at 0x00000ac0: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90faf8->0x90fc88 at 0x00000af8: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x90fc88->0x90fcb6 at 0x00000c88: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x90fcc0->0x90fff0 at 0x00000cc0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x90fff0->0x9117d8 at 0x00000ff0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9117d8->0x9117f2 at 0x000027d8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9117f4->0x911a60 at 0x000027f4: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x911a60->0x911ac4 at 0x00002a60: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x911ac4->0x911d3c at 0x00002ac4: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x912ef0->0x912ef8 at 0x00002ef0: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x912ef8->0x912f00 at 0x00002ef8: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x912f00->0x912f04 at 0x00002f00: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x912f04->0x912fe4 at 0x00002f04: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x912fe4->0x912ff4 at 0x00002fe4: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x912ff4->0x9130c8 at 0x00002ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x9130c8->0x9130e0 at 0x000030c8: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x9130e0->0x9130fc at 0x000030e0: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_enum.so
+    0x914114->0x914138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x914138->0x9154dc at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9154dc->0x91813c at 0x000014dc: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x91813c->0x91b9b1 at 0x0000413c: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x91b9b2->0x91bf3e at 0x000079b2: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x91bf40->0x91bfd0 at 0x00007f40: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x91bfd0->0x91d3f0 at 0x00007fd0: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x91d3f0->0x91e448 at 0x000093f0: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x91e448->0x91e476 at 0x0000a448: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x91e480->0x920540 at 0x0000a480: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x920540->0x940e78 at 0x0000c540: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x940e78->0x940e92 at 0x0002ce78: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x940ea0->0x944461 at 0x0002cea0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x944464->0x945828 at 0x00030464: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x945828->0x94bca0 at 0x00031828: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x94cebc->0x94cec4 at 0x00037ebc: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x94cec4->0x94cecc at 0x00037ec4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x94cecc->0x94ced0 at 0x00037ecc: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x94ced0->0x94cfb0 at 0x00037ed0: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x94cfb0->0x94cff4 at 0x00037fb0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x94cff4->0x94d82c at 0x00037ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x94d840->0x94f838 at 0x00038840: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x94f840->0x94f88c at 0x0003a838: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_cdr_csv.so
+    0x950114->0x950138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x950138->0x950174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x950174->0x9505c4 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9505c4->0x950bb2 at 0x000005c4: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x950bb2->0x950c3c at 0x00000bb2: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x950c3c->0x950c9c at 0x00000c3c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x950c9c->0x950ce4 at 0x00000c9c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x950ce4->0x950ec4 at 0x00000ce4: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x950ec4->0x950ef2 at 0x00000ec4: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x950f00->0x9512d0 at 0x00000f00: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9512d0->0x952988 at 0x000012d0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x952988->0x9529a2 at 0x00002988: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9529a4->0x952f0b at 0x000029a4: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x952f0c->0x952f70 at 0x00002f0c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x952f70->0x9531cc at 0x00002f70: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x954ef0->0x954ef8 at 0x00003ef0: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x954ef8->0x954f00 at 0x00003ef8: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x954f00->0x954f04 at 0x00003f00: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x954f04->0x954fe4 at 0x00003f04: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x954fe4->0x954ff4 at 0x00003fe4: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x954ff4->0x9550f0 at 0x00003ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x955100->0x95519c at 0x00004100: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x9551a0->0x9551e8 at 0x0000419c: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_event_socket.so
+    0x956114->0x956138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x956138->0x956174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x956174->0x956a84 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x956a84->0x95778e at 0x00000a84: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x95778e->0x9578b0 at 0x0000178e: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9578b0->0x957910 at 0x000018b0: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x957910->0x957958 at 0x00001910: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x957958->0x957d90 at 0x00001958: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x957d90->0x957dbe at 0x00001d90: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x957dc0->0x958640 at 0x00001dc0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x958640->0x960608 at 0x00002640: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x960608->0x960622 at 0x0000a608: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x960624->0x961cb7 at 0x0000a624: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x961cb8->0x961d9c at 0x0000bcb8: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x961d9c->0x962354 at 0x0000bd9c: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x963eec->0x963ef4 at 0x0000ceec: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x963ef4->0x963efc at 0x0000cef4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x963efc->0x963f00 at 0x0000cefc: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x963f00->0x963fe0 at 0x0000cf00: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x963fe0->0x963ff4 at 0x0000cfe0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x963ff4->0x96421c at 0x0000cff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x96421c->0x964234 at 0x0000d21c: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x964240->0x964430 at 0x0000d234: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_loopback.so
+    0x965114->0x965138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x965138->0x965174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x965174->0x965704 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x965704->0x96608a at 0x00000704: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x96608a->0x96613c at 0x0000108a: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x96613c->0x96617c at 0x0000113c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x96617c->0x96622c at 0x0000117c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x96622c->0x9664b4 at 0x0000122c: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9664b4->0x9664e2 at 0x000014b4: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9664f0->0x966a10 at 0x000014f0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x966a10->0x969858 at 0x00001a10: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x969858->0x969872 at 0x00004858: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x969880->0x969ec3 at 0x00004880: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x969ec4->0x969f98 at 0x00004ec4: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x969f98->0x96a430 at 0x00004f98: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x96bef4->0x96befc at 0x00005ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x96befc->0x96bf04 at 0x00005efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x96bf04->0x96bf08 at 0x00005f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x96bf08->0x96bfe8 at 0x00005f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x96bfe8->0x96bff4 at 0x00005fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x96bff4->0x96c144 at 0x00005ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x96c160->0x96c23c at 0x00006160: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x96c23c->0x96c24c at 0x0000623c: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_commands.so
+    0x991114->0x991138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x991138->0x991174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x991174->0x991f24 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x991f24->0x9933b2 at 0x00000f24: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9933b2->0x993568 at 0x000023b2: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x993568->0x9935b8 at 0x00002568: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9935b8->0x993600 at 0x000025b8: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x993600->0x993c80 at 0x00002600: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x993c80->0x993cae at 0x00002c80: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x993cb0->0x9949c0 at 0x00002cb0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9949c0->0x9a4ba8 at 0x000039c0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9a4ba8->0x9a4bc2 at 0x00013ba8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9a4bc4->0x9a95f0 at 0x00013bc4: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9a95f0->0x9a99d4 at 0x000185f0: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9a99d4->0x9ab050 at 0x000189d4: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9acee8->0x9acef0 at 0x0001aee8: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x9acef0->0x9acef8 at 0x0001aef0: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x9acef8->0x9acefc at 0x0001aef8: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x9acefc->0x9acfdc at 0x0001aefc: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x9acfdc->0x9acff4 at 0x0001afdc: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x9acff4->0x9ad340 at 0x0001aff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x9ad340->0x9ad358 at 0x0001b340: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x9ad358->0x9ad368 at 0x0001b358: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_conference.so
+    0x9ae114->0x9ae138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9ae138->0x9ae174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9ae174->0x9aee34 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9aee34->0x9b01ce at 0x00000e34: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9b01ce->0x9b0366 at 0x000021ce: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9b0368->0x9b03c8 at 0x00002368: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9b03c8->0x9b0930 at 0x000023c8: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9b0930->0x9b0f38 at 0x00002930: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9b0f38->0x9b0f66 at 0x00002f38: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9b0f70->0x9b1b90 at 0x00002f70: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9b1b90->0x9cb6f8 at 0x00003b90: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9cb6f8->0x9cb712 at 0x0001d6f8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9cb720->0x9ce694 at 0x0001d720: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9ce694->0x9ce9a0 at 0x00020694: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9ce9a0->0x9cfd48 at 0x000209a0: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d1bb4->0x9d1bbc at 0x00022bb4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x9d1bbc->0x9d1bc4 at 0x00022bbc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x9d1bc4->0x9d1bc8 at 0x00022bc4: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x9d1be0->0x9d1ef0 at 0x00022be0: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0x9d1ef0->0x9d1fd0 at 0x00022ef0: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x9d1fd0->0x9d1fe8 at 0x00022fd0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x9d1ff4->0x9d2304 at 0x00022ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x9d2304->0x9d231c at 0x00023304: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x9d2320->0x9d2370 at 0x0002331c: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_db.so
+    0x9d3114->0x9d3138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d3138->0x9d3174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d3174->0x9d3474 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d3474->0x9d38dc at 0x00000474: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d38dc->0x9d393c at 0x000008dc: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d393c->0x9d397c at 0x0000093c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d397c->0x9d39dc at 0x0000097c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d39dc->0x9d3b1c at 0x000009dc: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d3b1c->0x9d3b4a at 0x00000b1c: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9d3b50->0x9d3de0 at 0x00000b50: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9d3de0->0x9d5a48 at 0x00000de0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9d5a48->0x9d5a62 at 0x00002a48: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9d5a64->0x9d63c5 at 0x00002a64: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d63c8->0x9d646c at 0x000033c8: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d646c->0x9d67a4 at 0x0000346c: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d7ef4->0x9d7efc at 0x00003ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x9d7efc->0x9d7f04 at 0x00003efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x9d7f04->0x9d7f08 at 0x00003f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x9d7f08->0x9d7fe8 at 0x00003f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x9d7fe8->0x9d7ff4 at 0x00003fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x9d7ff4->0x9d80a0 at 0x00003ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x9d80a0->0x9d8308 at 0x000040a0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x9d8320->0x9d8460 at 0x00004308: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_dptools.so
+    0x9d9114->0x9d9138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d9138->0x9d9174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d9174->0x9d9fb4 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9d9fb4->0x9db75d at 0x00000fb4: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9db75e->0x9db926 at 0x0000275e: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9db928->0x9db978 at 0x00002928: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9db978->0x9db9d8 at 0x00002978: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9db9d8->0x9dc098 at 0x000029d8: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9dc098->0x9dc0c6 at 0x00003098: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9dc0d0->0x9dce60 at 0x000030d0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9dce60->0x9ec508 at 0x00003e60: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9ec508->0x9ec522 at 0x00013508: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9ec540->0x9ef9ec at 0x00013540: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9ef9ec->0x9efe38 at 0x000169ec: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9efe38->0x9f1574 at 0x00016e38: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9f2ee4->0x9f2eec at 0x00018ee4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x9f2eec->0x9f2ef4 at 0x00018eec: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x9f2ef4->0x9f2ef8 at 0x00018ef4: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x9f2ef8->0x9f2fd8 at 0x00018ef8: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x9f2fd8->0x9f2ff4 at 0x00018fd8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x9f2ff4->0x9f3360 at 0x00018ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x9f3360->0x9f34ac at 0x00019360: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x9f34c0->0x9f35b4 at 0x000194ac: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_expr.so
+    0x9f4114->0x9f4138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9f4138->0x9f4174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9f4174->0x9f4494 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9f4494->0x9f4718 at 0x00000494: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9f4718->0x9f477c at 0x00000718: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9f477c->0x9f480c at 0x0000077c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9f480c->0x9f4834 at 0x0000080c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9f4834->0x9f4984 at 0x00000834: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9f4984->0x9f49b2 at 0x00000984: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9f49c0->0x9f4c70 at 0x000009c0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9f4c70->0x9fb108 at 0x00000c70: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9fb108->0x9fb122 at 0x00007108: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0x9fb128->0x9fb5fc at 0x00007128: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9fb5fc->0x9fb7e0 at 0x000075fc: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9fb7e0->0x9fc160 at 0x000077e0: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9fdeec->0x9fdef4 at 0x00008eec: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0x9fdef4->0x9fdefc at 0x00008ef4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0x9fdefc->0x9fdf00 at 0x00008efc: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0x9fdf00->0x9fdfe8 at 0x00008f00: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0x9fdfe8->0x9fdff4 at 0x00008fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0x9fdff4->0x9fe0a8 at 0x00008ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0x9fe0a8->0x9fe0c0 at 0x000090a8: .data ALLOC LOAD DATA HAS_CONTENTS
+    0x9fe0c0->0x9fe0cc at 0x000090c0: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_fifo.so
+    0x9ff114->0x9ff138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9ff138->0x9ff174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9ff174->0x9ffb94 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0x9ffb94->0xa00b8b at 0x00000b94: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa00b8c->0xa00cd0 at 0x00001b8c: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa00cd0->0xa00d10 at 0x00001cd0: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa00d10->0xa00d50 at 0x00001d10: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa00d50->0xa01210 at 0x00001d50: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa01210->0xa0123e at 0x00002210: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa01240->0xa01bd0 at 0x00002240: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa01bd0->0xa11608 at 0x00002bd0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa11608->0xa11622 at 0x00012608: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa11640->0xa14591 at 0x00012640: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa14594->0xa14760 at 0x00015594: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa14760->0xa15320 at 0x00015760: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa16eec->0xa16ef4 at 0x00016eec: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xa16ef4->0xa16efc at 0x00016ef4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xa16efc->0xa16f00 at 0x00016efc: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xa16f00->0xa16fe0 at 0x00016f00: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xa16fe0->0xa16ff4 at 0x00016fe0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xa16ff4->0xa17260 at 0x00016ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xa17260->0xa1727c at 0x00017260: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xa17280->0xa177f8 at 0x0001727c: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_hash.so
+    0xa18114->0xa18138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa18138->0xa184fc at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa184fc->0xa1925c at 0x000004fc: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa1925c->0xa1a23e at 0x0000125c: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa1a23e->0xa1a3ea at 0x0000223e: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa1a3ec->0xa1a48c at 0x000023ec: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa1a48c->0xa1a7e4 at 0x0000248c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa1a7e4->0xa1acdc at 0x000027e4: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa1acdc->0xa1ad0a at 0x00002cdc: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa1ad10->0xa1b710 at 0x00002d10: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa1b710->0xa24f28 at 0x00003710: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa24f28->0xa24f42 at 0x0000cf28: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa24f60->0xa264a0 at 0x0000cf60: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa264a0->0xa268fc at 0x0000e4a0: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa268fc->0xa282d4 at 0x0000e8fc: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa29d3c->0xa29d44 at 0x00010d3c: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xa29d44->0xa29d4c at 0x00010d44: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xa29d4c->0xa29d50 at 0x00010d4c: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xa29d60->0xa29ee4 at 0x00010d60: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xa29ee4->0xa29fc4 at 0x00010ee4: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xa29fc4->0xa29fec at 0x00010fc4: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xa29ff4->0xa2a27c at 0x00010ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xa2a27c->0xa2a2b0 at 0x0001127c: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xa2a2b0->0xa2a2d8 at 0x000112b0: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_voicemail.so
+    0xa2b114->0xa2b138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa2b138->0xa2b174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa2b174->0xa2bbe4 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa2bbe4->0xa2cb1c at 0x00000be4: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa2cb1c->0xa2cc6a at 0x00001b1c: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa2cc6c->0xa2ccac at 0x00001c6c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa2ccac->0xa2cd7c at 0x00001cac: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa2cd7c->0xa2d25c at 0x00001d7c: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa2d25c->0xa2d28a at 0x0000225c: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa2d290->0xa2dc60 at 0x00002290: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa2dc60->0xa440b8 at 0x00002c60: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa440b8->0xa440d2 at 0x000190b8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa440e0->0xa4845b at 0x000190e0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4845c->0xa48690 at 0x0001d45c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa48690->0xa49490 at 0x0001d690: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4ae9c->0xa4aea4 at 0x0001ee9c: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xa4aea4->0xa4aeac at 0x0001eea4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xa4aeac->0xa4aeb0 at 0x0001eeac: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xa4aec0->0xa4aef0 at 0x0001eec0: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xa4aef0->0xa4afd0 at 0x0001eef0: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xa4afd0->0xa4afe8 at 0x0001efd0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xa4aff4->0xa4b270 at 0x0001eff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xa4b280->0xa4b600 at 0x0001f280: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xa4b600->0xa4b648 at 0x0001f600: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_esf.so
+    0xa4c114->0xa4c138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4c138->0xa4c174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4c174->0xa4c444 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4c444->0xa4c893 at 0x00000444: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4c894->0xa4c8ee at 0x00000894: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4c8f0->0xa4c930 at 0x000008f0: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4c930->0xa4c958 at 0x00000930: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4c958->0xa4ca80 at 0x00000958: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4ca80->0xa4caae at 0x00000a80: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa4cab0->0xa4cd10 at 0x00000ab0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa4cd10->0xa4dae8 at 0x00000d10: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa4dae8->0xa4db02 at 0x00001ae8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa4db04->0xa4dcce at 0x00001b04: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4dcd0->0xa4dcfc at 0x00001cd0: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4dcfc->0xa4ddbc at 0x00001cfc: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa4eef4->0xa4eefc at 0x00001ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xa4eefc->0xa4ef04 at 0x00001efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xa4ef04->0xa4ef08 at 0x00001f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xa4ef08->0xa4efe8 at 0x00001f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xa4efe8->0xa4eff4 at 0x00001fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xa4eff4->0xa4f094 at 0x00001ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xa4f094->0xa4f0ac at 0x00002094: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xa4f0ac->0xa4f0b4 at 0x000020ac: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_fsv.so
+    0xa50114->0xa50138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa50138->0xa50174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa50174->0xa50544 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa50544->0xa50b48 at 0x00000544: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa50b48->0xa50bc2 at 0x00000b48: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa50bc4->0xa50c24 at 0x00000bc4: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa50c24->0xa50c4c at 0x00000c24: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa50c4c->0xa50df4 at 0x00000c4c: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa50df4->0xa50e22 at 0x00000df4: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa50e30->0xa51190 at 0x00000e30: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa51190->0xa52928 at 0x00001190: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa52928->0xa52942 at 0x00002928: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa52944->0xa52c8a at 0x00002944: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa52c8c->0xa52cc8 at 0x00002c8c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa52cc8->0xa52e0c at 0x00002cc8: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa53ef4->0xa53efc at 0x00002ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xa53efc->0xa53f04 at 0x00002efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xa53f04->0xa53f08 at 0x00002f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xa53f08->0xa53fe8 at 0x00002f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xa53fe8->0xa53ff4 at 0x00002fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xa53ff4->0xa540d4 at 0x00002ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xa540d4->0xa540ec at 0x000030d4: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xa540ec->0xa540f4 at 0x000030ec: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_valet_parking.so
+    0xa55114->0xa55138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa55138->0xa55174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa55174->0xa555d4 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa555d4->0xa55c34 at 0x000005d4: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa55c34->0xa55cc0 at 0x00000c34: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa55cc0->0xa55d00 at 0x00000cc0: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa55d00->0xa55d28 at 0x00000d00: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa55d28->0xa55f18 at 0x00000d28: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa55f18->0xa55f46 at 0x00000f18: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa55f50->0xa56340 at 0x00000f50: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa56340->0xa59bf8 at 0x00001340: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa59bf8->0xa59c12 at 0x00004bf8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa59c14->0xa5a289 at 0x00004c14: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5a28c->0xa5a2f0 at 0x0000528c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5a2f0->0xa5a508 at 0x000052f0: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5bef4->0xa5befc at 0x00005ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xa5befc->0xa5bf04 at 0x00005efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xa5bf04->0xa5bf08 at 0x00005f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xa5bf08->0xa5bfe8 at 0x00005f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xa5bfe8->0xa5bff4 at 0x00005fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xa5bff4->0xa5c0f8 at 0x00005ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xa5c0f8->0xa5c110 at 0x000060f8: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xa5c110->0xa5c130 at 0x00006110: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_httapi.so
+    0xa5d114->0xa5d138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5d138->0xa5d174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5d174->0xa5da44 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5da44->0xa5e66c at 0x00000a44: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5e66c->0xa5e786 at 0x0000166c: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5e788->0xa5e808 at 0x00001788: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5e808->0xa5e858 at 0x00001808: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5e858->0xa5ec68 at 0x00001858: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa5ec68->0xa5ec96 at 0x00001c68: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa5eca0->0xa5f4d0 at 0x00001ca0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa5f4d0->0xa69048 at 0x000024d0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa69048->0xa69062 at 0x0000c048: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa69064->0xa69fc5 at 0x0000c064: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa69fc8->0xa6a10c at 0x0000cfc8: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa6a10c->0xa6a94c at 0x0000d10c: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa6bee8->0xa6bef0 at 0x0000dee8: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xa6bef0->0xa6bef8 at 0x0000def0: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xa6bef8->0xa6befc at 0x0000def8: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xa6befc->0xa6bfdc at 0x0000defc: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xa6bfdc->0xa6bff4 at 0x0000dfdc: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xa6bff4->0xa6c208 at 0x0000dff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xa6c220->0xa6c29c at 0x0000e220: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xa6c2a0->0xa6c428 at 0x0000e29c: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_dialplan_xml.so
+    0xa6d114->0xa6d138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa6d138->0xa6d174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa6d174->0xa6d524 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa6d524->0xa6dab5 at 0x00000524: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa6dab6->0xa6db2c at 0x00000ab6: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa6db2c->0xa6db6c at 0x00000b2c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa6db6c->0xa6db9c at 0x00000b6c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa6db9c->0xa6dd2c at 0x00000b9c: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa6dd2c->0xa6dd5a at 0x00000d2c: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa6dd60->0xa6e090 at 0x00000d60: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa6e090->0xa70898 at 0x00001090: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa70898->0xa708b2 at 0x00003898: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa708b4->0xa70e59 at 0x000038b4: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa70e5c->0xa70e98 at 0x00003e5c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa70e98->0xa70fc8 at 0x00003e98: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa71ef0->0xa71ef8 at 0x00004ef0: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xa71ef8->0xa71f00 at 0x00004ef8: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xa71f00->0xa71f04 at 0x00004f00: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xa71f04->0xa71fe4 at 0x00004f04: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xa71fe4->0xa71ff4 at 0x00004fe4: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xa71ff4->0xa720c8 at 0x00004ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xa720c8->0xa720e0 at 0x000050c8: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xa720e0->0xa720e8 at 0x000050e0: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_dialplan_asterisk.so
+    0xa73114->0xa73138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa73138->0xa73174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa73174->0xa73494 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa73494->0xa73994 at 0x00000494: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa73994->0xa739f8 at 0x00000994: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa739f8->0xa73a38 at 0x000009f8: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa73a38->0xa73a70 at 0x00000a38: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa73a70->0xa73bc0 at 0x00000a70: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa73bc0->0xa73bee at 0x00000bc0: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa73bf0->0xa73ea0 at 0x00000bf0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa73ea0->0xa74fe8 at 0x00000ea0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa74fe8->0xa75002 at 0x00001fe8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa75004->0xa752af at 0x00002004: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa752b0->0xa75304 at 0x000022b0: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa75304->0xa754d8 at 0x00002304: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa76ef4->0xa76efc at 0x00002ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xa76efc->0xa76f04 at 0x00002efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xa76f04->0xa76f08 at 0x00002f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xa76f08->0xa76fe8 at 0x00002f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xa76fe8->0xa76ff4 at 0x00002fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xa76ff4->0xa770a8 at 0x00002ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xa770c0->0xa771ac at 0x000030c0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xa771ac->0xa771bc at 0x000031ac: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_spandsp.so
+    0xa78114->0xa78138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa78138->0xa79a68 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa79a68->0xa7dce8 at 0x00001a68: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa7dce8->0xa82ae6 at 0x00005ce8: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa82ae6->0xa83336 at 0x0000aae6: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa83338->0xa83428 at 0x0000b338: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa83428->0xa86828 at 0x0000b428: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa86828->0xa87c38 at 0x0000e828: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xa87c38->0xa87c66 at 0x0000fc38: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa87c70->0xa8a4a0 at 0x0000fc70: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xa8a4a0->0xb02478 at 0x000124a0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xb02478->0xb02492 at 0x0008a478: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xb024a0->0xb5adfe at 0x0008a4a0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xb5ae00->0xb5e5ac at 0x000e2e00: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xb5e5ac->0xb6f508 at 0x000e65ac: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xb70aec->0xb70af4 at 0x000f7aec: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xb70af4->0xb70afc at 0x000f7af4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xb70afc->0xb70b00 at 0x000f7afc: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xb70b00->0xb73e10 at 0x000f7b00: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xb73e10->0xb73f00 at 0x000fae10: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xb73f00->0xb73ff0 at 0x000faf00: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xb73ff4->0xb74a08 at 0x000faff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xb74a20->0xb75018 at 0x000fba20: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xb75020->0xc658bc at 0x000fc018: .bss ALLOC
+  Object file: /usr/lib/i386-linux-gnu/libjpeg.so.62
+    0xc66114->0xc66138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc66138->0xc66500 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc66500->0xc66d40 at 0x00000500: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc66d40->0xc67681 at 0x00000d40: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc67682->0xc6778a at 0x00001682: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc6778c->0xc677c4 at 0x0000178c: .gnu.version_d ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc677c4->0xc67834 at 0x000017c4: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc67834->0xc67c9c at 0x00001834: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc67c9c->0xc67f0c at 0x00001c9c: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc67f0c->0xc67f3a at 0x00001f0c: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc67f40->0xc68430 at 0x00001f40: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc68430->0xc820f8 at 0x00002430: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc820f8->0xc82112 at 0x0001c0f8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc82120->0xc83d80 at 0x0001c120: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc83d80->0xc8466c at 0x0001dd80: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8466c->0xc87f50 at 0x0001e66c: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc88cb8->0xc88cc0 at 0x00022cb8: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xc88cc0->0xc88cc8 at 0x00022cc0: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xc88cc8->0xc88ccc at 0x00022cc8: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xc88ce0->0xc88ed4 at 0x00022ce0: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xc88ed4->0xc88fac at 0x00022ed4: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xc88fac->0xc88fec at 0x00022fac: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xc88ff4->0xc89138 at 0x00022ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xc89138->0xc8913c at 0x00023138: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xc8913c->0xc89144 at 0x0002313c: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_g723_1.so
+    0xc8a114->0xc8a138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8a138->0xc8a174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8a174->0xc8a274 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8a274->0xc8a40c at 0x00000274: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8a40c->0xc8a42c at 0x0000040c: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8a42c->0xc8a44c at 0x0000042c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8a44c->0xc8a474 at 0x0000044c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8a474->0xc8a4b4 at 0x00000474: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8a4b4->0xc8a4e2 at 0x000004b4: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc8a4f0->0xc8a580 at 0x000004f0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc8a580->0xc8a9e8 at 0x00000580: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc8a9e8->0xc8aa02 at 0x000009e8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc8aa20->0xc8abab at 0x00000a20: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8abac->0xc8abe8 at 0x00000bac: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8abe8->0xc8acd8 at 0x00000be8: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8bef4->0xc8befc at 0x00000ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xc8befc->0xc8bf04 at 0x00000efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xc8bf04->0xc8bf08 at 0x00000f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xc8bf08->0xc8bfe8 at 0x00000f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xc8bfe8->0xc8bff4 at 0x00000fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xc8bff4->0xc8c020 at 0x00000ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xc8c020->0xc8c038 at 0x00001020: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xc8c038->0xc8c040 at 0x00001038: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_g729.so
+    0xc8d114->0xc8d138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8d138->0xc8d174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8d174->0xc8d274 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8d274->0xc8d408 at 0x00000274: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8d408->0xc8d428 at 0x00000408: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8d428->0xc8d448 at 0x00000428: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8d448->0xc8d470 at 0x00000448: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8d470->0xc8d4b0 at 0x00000470: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8d4b0->0xc8d4de at 0x000004b0: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc8d4e0->0xc8d570 at 0x000004e0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc8d570->0xc8d9f8 at 0x00000570: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc8d9f8->0xc8da12 at 0x000009f8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc8da20->0xc8db9c at 0x00000a20: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8db9c->0xc8dbd8 at 0x00000b9c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8dbd8->0xc8dcd4 at 0x00000bd8: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc8eef4->0xc8eefc at 0x00000ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xc8eefc->0xc8ef04 at 0x00000efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xc8ef04->0xc8ef08 at 0x00000f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xc8ef08->0xc8efe8 at 0x00000f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xc8efe8->0xc8eff4 at 0x00000fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xc8eff4->0xc8f020 at 0x00000ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xc8f020->0xc8f038 at 0x00001020: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xc8f038->0xc8f040 at 0x00001038: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_amr.so
+    0xc90114->0xc90138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc90138->0xc90174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc90174->0xc90274 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc90274->0xc90406 at 0x00000274: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc90406->0xc90426 at 0x00000406: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc90428->0xc90448 at 0x00000428: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc90448->0xc90470 at 0x00000448: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc90470->0xc904b0 at 0x00000470: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc904b0->0xc904de at 0x000004b0: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc904e0->0xc90570 at 0x000004e0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc90570->0xc90948 at 0x00000570: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc90948->0xc90962 at 0x00000948: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc90980->0xc90ad9 at 0x00000980: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc90adc->0xc90b18 at 0x00000adc: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc90b18->0xc90c14 at 0x00000b18: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc91ef4->0xc91efc at 0x00000ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xc91efc->0xc91f04 at 0x00000efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xc91f04->0xc91f08 at 0x00000f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xc91f08->0xc91fe8 at 0x00000f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xc91fe8->0xc91ff4 at 0x00000fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xc91ff4->0xc92020 at 0x00000ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xc92020->0xc92038 at 0x00001020: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xc92038->0xc92040 at 0x00001038: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_ilbc.so
+    0xc93114->0xc93138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc93138->0xc933dc at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc933dc->0xc93a1c at 0x000003dc: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc93a1c->0xc93fb3 at 0x00000a1c: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc93fb4->0xc9407c at 0x00000fb4: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc9407c->0xc940bc at 0x0000107c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc940bc->0xc941bc at 0x000010bc: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc941bc->0xc943bc at 0x000011bc: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc943bc->0xc943ea at 0x000013bc: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc943f0->0xc94800 at 0x000013f0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc94800->0xc9d448 at 0x00001800: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc9d448->0xc9d462 at 0x0000a448: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xc9d480->0xc9fb8c at 0x0000a480: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc9fb8c->0xc9fd98 at 0x0000cb8c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xc9fd98->0xca0bbc at 0x0000cd98: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xca1e88->0xca1e90 at 0x0000de88: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xca1e90->0xca1e98 at 0x0000de90: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xca1e98->0xca1e9c at 0x0000de98: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xca1e9c->0xca1f7c at 0x0000de9c: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xca1f7c->0xca1ff4 at 0x0000df7c: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xca1ff4->0xca2100 at 0x0000dff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xca2100->0xca2118 at 0x0000e100: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xca2118->0xca2120 at 0x0000e118: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_speex.so
+    0xca3114->0xca3138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xca3138->0xca32e8 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xca32e8->0xca3868 at 0x000002e8: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xca3868->0xca3ee1 at 0x00000868: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xca3ee2->0xca3f92 at 0x00000ee2: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xca3f94->0xca3fe4 at 0x00000f94: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xca3fe4->0xca450c at 0x00000fe4: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xca450c->0xca46bc at 0x0000150c: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xca46bc->0xca46ea at 0x000016bc: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xca46f0->0xca4a60 at 0x000016f0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xca4a60->0xcb33f8 at 0x00001a60: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcb33f8->0xcb3412 at 0x000103f8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcb3420->0xcb6dc0 at 0x00010420: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcb6dc0->0xcb71bc at 0x00013dc0: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcb71bc->0xcb880c at 0x000141bc: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcba7f0->0xcba7f8 at 0x000167f0: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xcba7f8->0xcba800 at 0x000167f8: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xcba800->0xcba804 at 0x00016800: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xcba820->0xcbaec0 at 0x00016820: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xcbaec0->0xcbafa0 at 0x00016ec0: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xcbafa0->0xcbaff0 at 0x00016fa0: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xcbaff4->0xcbb0d8 at 0x00016ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xcbb0e0->0xcbb154 at 0x000170e0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xcbb154->0xcbb15c at 0x00017154: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_h26x.so
+    0xcbc114->0xcbc138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbc138->0xcbc174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbc174->0xcbc264 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbc264->0xcbc3e6 at 0x00000264: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbc3e6->0xcbc404 at 0x000003e6: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbc404->0xcbc424 at 0x00000404: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbc424->0xcbc44c at 0x00000424: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbc44c->0xcbc484 at 0x0000044c: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbc484->0xcbc4b2 at 0x00000484: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcbc4c0->0xcbc540 at 0x000004c0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcbc540->0xcbcdd8 at 0x00000540: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcbcdd8->0xcbcdf2 at 0x00000dd8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcbce00->0xcbcfa5 at 0x00000e00: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbcfa8->0xcbcfe4 at 0x00000fa8: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbcfe4->0xcbd0c4 at 0x00000fe4: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcbeef4->0xcbeefc at 0x00001ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xcbeefc->0xcbef04 at 0x00001efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xcbef04->0xcbef08 at 0x00001f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xcbef08->0xcbefe8 at 0x00001f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xcbefe8->0xcbeff4 at 0x00001fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xcbeff4->0xcbf01c at 0x00001ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xcbf01c->0xcbf034 at 0x0000201c: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xcbf034->0xcbf03c at 0x00002034: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_siren.so
+    0xcc0114->0xcc0138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcc0138->0xcc03c4 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcc03c4->0xcc09c4 at 0x000003c4: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcc09c4->0xcc11b6 at 0x000009c4: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcc11b6->0xcc1276 at 0x000011b6: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcc1278->0xcc12b8 at 0x00001278: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcc12b8->0xcc1470 at 0x000012b8: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcc1470->0xcc1580 at 0x00001470: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcc1580->0xcc15ae at 0x00001580: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcc15b0->0xcc17e0 at 0x000015b0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcc17e0->0xcc4d18 at 0x000017e0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcc4d18->0xcc4d32 at 0x00004d18: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcc4d40->0xcce140 at 0x00004d40: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcce140->0xcce264 at 0x0000e140: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcce264->0xcce924 at 0x0000e264: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xccfea0->0xccfea8 at 0x0000eea0: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xccfea8->0xccfeb0 at 0x0000eea8: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xccfeb0->0xccfeb4 at 0x0000eeb0: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xccfeb4->0xccff94 at 0x0000eeb4: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xccff94->0xccfff4 at 0x0000ef94: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xccfff4->0xcd0088 at 0x0000eff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xcd00a0->0xcd0140 at 0x0000f0a0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xcd0140->0xcd0148 at 0x0000f140: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_sndfile.so
+    0xcd1114->0xcd1138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcd1138->0xcd18b8 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcd18b8->0xcd2a28 at 0x000008b8: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcd2a28->0xcd39bb at 0x00001a28: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcd39bc->0xcd3bea at 0x000029bc: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcd3bec->0xcd3cac at 0x00002bec: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcd3cac->0xcd4844 at 0x00002cac: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcd4844->0xcd4f4c at 0x00003844: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xcd4f4c->0xcd4f7a at 0x00003f4c: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcd4f80->0xcd5da0 at 0x00003f80: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xcd5da0->0xd1faf8 at 0x00004da0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd1faf8->0xd1fb12 at 0x0004eaf8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd1fb20->0xd2bae8 at 0x0004eb20: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd2bae8->0xd2cd3c at 0x0005aae8: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd2cd3c->0xd34e8c at 0x0005bd3c: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd364a0->0xd364a8 at 0x000644a0: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xd364a8->0xd364b0 at 0x000644a8: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xd364b0->0xd364b4 at 0x000644b0: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xd364c0->0xd36ebc at 0x000644c0: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xd36ebc->0xd36f9c at 0x00064ebc: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xd36f9c->0xd36fe0 at 0x00064f9c: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xd36ff4->0xd37384 at 0x00064ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xd373a0->0xd37670 at 0x000653a0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xd37680->0xd3b838 at 0x00065670: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_native_file.so
+    0xd3c114->0xd3c138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3c138->0xd3c174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3c174->0xd3c2e4 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3c2e4->0xd3c509 at 0x000002e4: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3c50a->0xd3c538 at 0x0000050a: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3c538->0xd3c568 at 0x00000538: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3c568->0xd3c590 at 0x00000568: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3c590->0xd3c608 at 0x00000590: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3c608->0xd3c636 at 0x00000608: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd3c640->0xd3c740 at 0x00000640: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd3c740->0xd3cd88 at 0x00000740: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd3cd88->0xd3cda2 at 0x00000d88: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd3cda4->0xd3ce6d at 0x00000da4: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3ce70->0xd3cecc at 0x00000e70: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3cecc->0xd3d044 at 0x00000ecc: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd3eef4->0xd3eefc at 0x00001ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xd3eefc->0xd3ef04 at 0x00001efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xd3ef04->0xd3ef08 at 0x00001f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xd3ef08->0xd3efe8 at 0x00001f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xd3efe8->0xd3eff4 at 0x00001fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xd3eff4->0xd3f03c at 0x00001ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xd3f03c->0xd3f054 at 0x0000203c: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xd3f060->0xd3f14c at 0x00002054: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_local_stream.so
+    0xd40114->0xd40138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd40138->0xd40174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd40174->0xd40664 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd40664->0xd40cb1 at 0x00000664: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd40cb2->0xd40d50 at 0x00000cb2: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd40d50->0xd40db0 at 0x00000d50: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd40db0->0xd40de0 at 0x00000db0: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd40de0->0xd41018 at 0x00000de0: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd41018->0xd41046 at 0x00001018: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd41050->0xd414d0 at 0x00001050: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd414d0->0xd44248 at 0x000014d0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd44248->0xd44262 at 0x00004248: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd44264->0xd449bc at 0x00004264: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd449bc->0xd44a38 at 0x000049bc: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd44a38->0xd44cf4 at 0x00004a38: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd45ef4->0xd45efc at 0x00004ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xd45efc->0xd45f04 at 0x00004efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xd45f04->0xd45f08 at 0x00004f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xd45f08->0xd45fe8 at 0x00004f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xd45fe8->0xd45ff4 at 0x00004fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xd45ff4->0xd4611c at 0x00004ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xd4611c->0xd46138 at 0x0000511c: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xd46140->0xd46238 at 0x00005138: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_tone_stream.so
+    0xd47114->0xd47138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd47138->0xd47174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd47174->0xd473a4 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd473a4->0xd47688 at 0x000003a4: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd47688->0xd476ce at 0x00000688: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd476d0->0xd47730 at 0x000006d0: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd47730->0xd47758 at 0x00000730: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd47758->0xd47830 at 0x00000758: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd47830->0xd4785e at 0x00000830: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd47860->0xd47a20 at 0x00000860: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd47a20->0xd48178 at 0x00000a20: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd48178->0xd48192 at 0x00001178: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd48194->0xd48289 at 0x00001194: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd4828c->0xd482f0 at 0x0000128c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd482f0->0xd484b0 at 0x000012f0: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd49ef4->0xd49efc at 0x00001ef4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xd49efc->0xd49f04 at 0x00001efc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xd49f04->0xd49f08 at 0x00001f04: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xd49f08->0xd49fe8 at 0x00001f08: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xd49fe8->0xd49ff4 at 0x00001fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xd49ff4->0xd4a06c at 0x00001ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xd4a06c->0xd4a084 at 0x0000206c: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xd4a0a0->0xd4a268 at 0x00002084: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey.so
+    0xd4b114->0xd4b138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd4b138->0xd4bab0 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd4bab0->0xd4e2c0 at 0x00000ab0: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd4e2c0->0xd50f48 at 0x000032c0: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd50f48->0xd5144a at 0x00005f48: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd5144c->0xd5154c at 0x0000644c: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd5154c->0xd52274 at 0x0000654c: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd52274->0xd533f4 at 0x00007274: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd533f4->0xd53422 at 0x000083f4: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd53430->0xd55740 at 0x00008430: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd55740->0xd88278 at 0x0000a740: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd88278->0xd88292 at 0x0003d278: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xd882a0->0xd8e8dc at 0x0003d2a0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd8e8dc->0xd8f7a8 at 0x000438dc: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd8f7a8->0xd9505c at 0x000447a8: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd96ae0->0xd96ae8 at 0x0004aae0: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xd96ae8->0xd96af0 at 0x0004aae8: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xd96af0->0xd96af4 at 0x0004aaf0: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xd96b00->0xd96e30 at 0x0004ab00: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xd96e30->0xd96f30 at 0x0004ae30: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xd96f30->0xd96ff0 at 0x0004af30: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xd96ff4->0xd978c0 at 0x0004aff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xd978c0->0xd98118 at 0x0004b8c0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xd98120->0xd9821c at 0x0004c118: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/lib/libjs.so.1
+    0xd99114->0xd99138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd99138->0xd9ad64 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd9ad64->0xd9f234 at 0x00001d64: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xd9f234->0xda3da3 at 0x00006234: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xda3da4->0xda463e at 0x0000ada4: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xda4640->0xda46c0 at 0x0000b640: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xda46c0->0xda7f60 at 0x0000b6c0: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xda7f60->0xda9408 at 0x0000ef60: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xda9408->0xda9436 at 0x00010408: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xda9440->0xdabda0 at 0x00010440: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xdabda0->0xe3d4b8 at 0x00012da0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe3d4b8->0xe3d4d2 at 0x000a44b8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe3d4e0->0xe46c18 at 0x000a44e0: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe46c18->0xe49d44 at 0x000adc18: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe49d44->0xe5b4f4 at 0x000b0d44: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe5cd38->0xe5cd40 at 0x000c2d38: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xe5cd40->0xe5cd48 at 0x000c2d40: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xe5cd48->0xe5cd4c at 0x000c2d48: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xe5cd60->0xe5dd04 at 0x000c2d60: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xe5dd04->0xe5ddcc at 0x000c3d04: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xe5ddcc->0xe5dff0 at 0x000c3dcc: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xe5dff4->0xe5ea54 at 0x000c3ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xe5ea60->0xe61aa4 at 0x000c4a60: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xe61ac0->0xe61b98 at 0x000c7aa4: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/lib/libnspr4.so
+    0xe62114->0xe62138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe62138->0xe62e0c at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe62e0c->0xe651ac at 0x00000e0c: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe651ac->0xe6751f at 0x000031ac: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe67520->0xe67994 at 0x00005520: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe67994->0xe67aa4 at 0x00005994: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe67aa4->0xe685d4 at 0x00005aa4: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe685d4->0xe68f74 at 0x000065d4: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe68f74->0xe68fa2 at 0x00006f74: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe68fb0->0xe6a300 at 0x00006fb0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe6a300->0xe85428 at 0x00008300: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe85428->0xe85442 at 0x00023428: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe85460->0xe87af4 at 0x00023460: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe87af4->0xe88b58 at 0x00025af4: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe88b58->0xe8df8c at 0x00026b58: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe8fd30->0xe8fd38 at 0x0002cd30: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xe8fd38->0xe8fd40 at 0x0002cd38: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xe8fd40->0xe8fd44 at 0x0002cd40: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xe8fd60->0xe8fe10 at 0x0002cd60: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xe8fe10->0xe8fee8 at 0x0002ce10: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xe8fee8->0xe8fff0 at 0x0002cee8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xe8fff4->0xe904d0 at 0x0002cff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xe904e0->0xe909f0 at 0x0002d4e0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xe90a00->0xe91e00 at 0x0002d9f0: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_teletone.so
+    0xe92114->0xe92138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe92138->0xe92174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe92174->0xe92594 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe92594->0xe92b4e at 0x00000594: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe92b4e->0xe92bd2 at 0x00000b4e: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe92bd4->0xe92c14 at 0x00000bd4: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe92c14->0xe92cd4 at 0x00000c14: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe92cd4->0xe92e7c at 0x00000cd4: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe92e7c->0xe92eaa at 0x00000e7c: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe92eb0->0xe93210 at 0x00000eb0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe93210->0xe941e8 at 0x00001210: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe941e8->0xe94202 at 0x000021e8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe94204->0xe943e4 at 0x00002204: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe943e4->0xe94460 at 0x000023e4: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe94460->0xe946a8 at 0x00002460: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe95ed4->0xe95edc at 0x00002ed4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xe95edc->0xe95ee4 at 0x00002edc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xe95ee4->0xe95ee8 at 0x00002ee4: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xe95ee8->0xe95ef4 at 0x00002ee8: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xe95ef4->0xe95fe4 at 0x00002ef4: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xe95fe4->0xe95ff4 at 0x00002fe4: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xe95ff4->0xe960d4 at 0x00002ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xe960e0->0xe961b0 at 0x000030e0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xe961b0->0xe961b8 at 0x000031b0: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_core_db.so
+    0xe97114->0xe97138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe97138->0xe97174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe97174->0xe97524 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe97524->0xe979f2 at 0x00000524: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe979f2->0xe97a68 at 0x000009f2: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe97a68->0xe97aa8 at 0x00000a68: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe97aa8->0xe97bb8 at 0x00000aa8: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe97bb8->0xe97d28 at 0x00000bb8: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe97d28->0xe97d56 at 0x00000d28: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe97d60->0xe98050 at 0x00000d60: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe98050->0xe992f8 at 0x00001050: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe992f8->0xe99312 at 0x000022f8: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe99314->0xe99514 at 0x00002314: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe99514->0xe995c8 at 0x00002514: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe995c8->0xe99904 at 0x000025c8: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9aed4->0xe9aedc at 0x00002ed4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xe9aedc->0xe9aee4 at 0x00002edc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xe9aee4->0xe9aee8 at 0x00002ee4: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xe9aee8->0xe9aef4 at 0x00002ee8: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xe9aef4->0xe9afe4 at 0x00002ef4: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xe9afe4->0xe9aff4 at 0x00002fe4: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xe9aff4->0xe9b0b8 at 0x00002ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xe9b0c0->0xe9b1cc at 0x000030c0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xe9b1cc->0xe9b1d4 at 0x000031cc: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_socket.so
+    0xe9c114->0xe9c138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9c138->0xe9c174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9c174->0xe9c474 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9c474->0xe9c830 at 0x00000474: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9c830->0xe9c890 at 0x00000830: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9c890->0xe9c8c0 at 0x00000890: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9c8c0->0xe9c9a8 at 0x000008c0: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9c9a8->0xe9cac0 at 0x000009a8: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9cac0->0xe9caee at 0x00000ac0: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe9caf0->0xe9cd30 at 0x00000af0: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe9cd30->0xe9dd08 at 0x00000d30: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe9dd08->0xe9dd22 at 0x00001d08: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xe9dd24->0xe9df46 at 0x00001d24: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9df48->0xe9dfc4 at 0x00001f48: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9dfc4->0xe9e220 at 0x00001fc4: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xe9fed4->0xe9fedc at 0x00002ed4: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xe9fedc->0xe9fee4 at 0x00002edc: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xe9fee4->0xe9fee8 at 0x00002ee4: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xe9fee8->0xe9fef4 at 0x00002ee8: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xe9fef4->0xe9ffe4 at 0x00002ef4: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xe9ffe4->0xe9fff4 at 0x00002fe4: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xe9fff4->0xea008c at 0x00002ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xea00a0->0xea01a8 at 0x000030a0: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xea01a8->0xea01b0 at 0x000031a8: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_lua.so
+    0xea1114->0xea1138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xea1138->0xea15e0 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xea15e0->0xea2d60 at 0x000005e0: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xea2d60->0xea4738 at 0x00001d60: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xea4738->0xea4a28 at 0x00003738: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xea4a28->0xea4b28 at 0x00003a28: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xea4b28->0xea6900 at 0x00003b28: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xea6900->0xea73d0 at 0x00005900: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xea73d0->0xea73fe at 0x000063d0: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xea7400->0xea89b0 at 0x00006400: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xea89b0->0xee2b18 at 0x000079b0: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xee2b18->0xee2b32 at 0x00041b18: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xee2b40->0xee6f9c at 0x00041b40: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xee6f9c->0xee8888 at 0x00045f9c: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xee8888->0xef1ec4 at 0x00047888: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef1ec4->0xef2002 at 0x00050ec4: .gcc_except_table ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef3634->0xef363c at 0x00051634: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xef363c->0xef3644 at 0x0005163c: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xef3644->0xef3648 at 0x00051644: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xef3660->0xef3ec8 at 0x00051660: .data.rel.ro ALLOC LOAD DATA HAS_CONTENTS
+    0xef3ec8->0xef3fb8 at 0x00051ec8: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xef3fb8->0xef3fe4 at 0x00051fb8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xef3ff4->0xef4568 at 0x00051ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xef4580->0xef541c at 0x00052580: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xef5420->0xef554c at 0x0005341c: .bss ALLOC
+  Object file: /home/kwyrozumski/work/freeswitch/mod/mod_say_en.so
+    0xef6114->0xef6138 at 0x00000114: .note.gnu.build-id ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef6138->0xef6174 at 0x00000138: .gnu.hash ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef6174->0xef63f4 at 0x00000174: .dynsym ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef63f4->0xef675d at 0x000003f4: .dynstr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef675e->0xef67ae at 0x0000075e: .gnu.version ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef67b0->0xef6820 at 0x000007b0: .gnu.version_r ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef6820->0xef6848 at 0x00000820: .rel.dyn ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef6848->0xef6948 at 0x00000848: .rel.plt ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef6948->0xef6976 at 0x00000948: .init ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xef6980->0xef6b90 at 0x00000980: .plt ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xef6b90->0xef8b38 at 0x00000b90: .text ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xef8b38->0xef8b52 at 0x00002b38: .fini ALLOC LOAD READONLY CODE HAS_CONTENTS
+    0xef8b54->0xef8e18 at 0x00002b54: .rodata ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef8e18->0xef8e9c at 0x00002e18: .eh_frame_hdr ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xef8e9c->0xef9174 at 0x00002e9c: .eh_frame ALLOC LOAD READONLY DATA HAS_CONTENTS
+    0xefaeec->0xefaef4 at 0x00003eec: .ctors ALLOC LOAD DATA HAS_CONTENTS
+    0xefaef4->0xefaefc at 0x00003ef4: .dtors ALLOC LOAD DATA HAS_CONTENTS
+    0xefaefc->0xefaf00 at 0x00003efc: .jcr ALLOC LOAD DATA HAS_CONTENTS
+    0xefaf00->0xefafe8 at 0x00003f00: .dynamic ALLOC LOAD DATA HAS_CONTENTS
+    0xefafe8->0xefaff4 at 0x00003fe8: .got ALLOC LOAD DATA HAS_CONTENTS
+    0xefaff4->0xefb080 at 0x00003ff4: .got.plt ALLOC LOAD DATA HAS_CONTENTS
+    0xefb080->0xefb098 at 0x00004080: .data ALLOC LOAD DATA HAS_CONTENTS
+    0xefb098->0xefb0a0 at 0x00004098: .bss ALLOC
+Breakpoint 2 at 0x17f550: file src/switch_console.c, line 342.
+Continuing.
+[Thread 0xb77d3b70 (LWP 17683) exited]
+[Thread 0xb780fb70 (LWP 17682) exited]
+[Thread 0xb7887b70 (LWP 17681) exited]
+[Thread 0xb784bb70 (LWP 17680) exited]
+[Thread 0xb78c3b70 (LWP 17679) exited]
+[Thread 0xb78ffb70 (LWP 17674) exited]
+[Thread 0xb7a6fb70 (LWP 17673) exited]
+[Thread 0xb7ae7b70 (LWP 17671) exited]
+[Thread 0xb7c25b70 (LWP 17670) exited]
+[Thread 0xb7be9b70 (LWP 17669) exited]
+[Thread 0xb7c61b70 (LWP 17666) exited]
+[Thread 0xb7d60b70 (LWP 17664) exited]
+[Thread 0xb7d9cb70 (LWP 17663) exited]
+[Thread 0xb7dd8b70 (LWP 17662) exited]
+[Thread 0xb7e14b70 (LWP 17661) exited]
+[Thread 0xb7f79b70 (LWP 17660) exited]
+[Thread 0xb7aabb70 (LWP 17720) exited]
+
+Program terminated with signal SIGSEGV, Segmentation fault.
+The program no longer exists.
+Starting program: /home/kwyrozumski/work/freeswitch/.libs/lt-freeswitch 
+[Thread debugging using libthread_db enabled]
+
+Breakpoint 1, main (argc=1, argv=0xbffff3a4) at src/switch.c:337
+337	{
+Continuing.
+process 18411 is executing new program: /home/kwyrozumski/work/freeswitch/.libs/lt-freeswitch
+[Thread debugging using libthread_db enabled]
+
+Breakpoint 1, main (argc=1, argv=0xbffff3a4) at src/switch.c:337
+337	{
+Continuing.
+[New Thread 0xb7f79b70 (LWP 18412)]
+[New Thread 0xb7e14b70 (LWP 18413)]
+[New Thread 0xb7dd8b70 (LWP 18414)]
+[New Thread 0xb7d9cb70 (LWP 18415)]
+[New Thread 0xb7d60b70 (LWP 18416)]
+[New Thread 0xb7c61b70 (LWP 18423)]
+[New Thread 0xb7c25b70 (LWP 18424)]
+[New Thread 0xb7be9b70 (LWP 18425)]
+[Thread 0xb7c25b70 (LWP 18424) exited]
+[Thread 0xb7be9b70 (LWP 18425) exited]
+[New Thread 0xb7be9b70 (LWP 18426)]
+[New Thread 0xb7c25b70 (LWP 18427)]
+[New Thread 0xb7ae7b70 (LWP 18428)]
+[New Thread 0xb7aabb70 (LWP 18429)]
+[New Thread 0xb7a6fb70 (LWP 18430)]
+[New Thread 0xb7a01b70 (LWP 18431)]
+[New Thread 0xb79c5b70 (LWP 18432)]
+[New Thread 0xb7989b70 (LWP 18433)]
+[Thread 0xb79c5b70 (LWP 18432) exited]
+[New Thread 0xb794db70 (LWP 18434)]
+[Thread 0xb7989b70 (LWP 18433) exited]
+[New Thread 0xb79c5b70 (LWP 18435)]
+[Thread 0xb794db70 (LWP 18434) exited]
+[Thread 0xb79c5b70 (LWP 18435) exited]
+[New Thread 0xb79c5b70 (LWP 18436)]
+[New Thread 0xb794db70 (LWP 18437)]
+[New Thread 0xb7989b70 (LWP 18438)]
+[New Thread 0xb77ffb70 (LWP 18439)]
+[New Thread 0xb77c3b70 (LWP 18440)]
+[New Thread 0xb7787b70 (LWP 18441)]
+[Thread 0xb7787b70 (LWP 18441) exited]
+[Switching to Thread 0xb77c3b70 (LWP 18440)]
+
+Breakpoint 2, switch_console_execute (xcmd=0x8178550 "uload mod_skinny ", rec=0, istream=0xb77c32cc) at src/switch_console.c:342
+342	{
+337	
+338	}
+339	
+340	
+341	SWITCH_DECLARE(switch_status_t) switch_console_execute(char *xcmd, int rec, switch_stream_handle_t *istream)
+342	{
+343		char *arg = NULL, *alias = NULL;
+344	
+345		char *delim = ";;";
+346		int argc;
+Print value of expression EXP.
+Variables accessible are those of the lexical environment of the selected
+stack frame, plus all those whose scope is global or an entire file.
+
+$NUM gets previous value number NUM.  $ and $$ are the last two values.
+$$NUM refers to NUM'th value back from the last one.
+Names starting with $ refer to registers (with the values they would have
+if the program were to return to the stack frame now selected, restoring
+all registers saved by frames farther in) or else to debugger
+"convenience" variables (any such name not a known register).
+Use assignment expressions to give values to convenience variables.
+
+{TYPE}ADREXP refers to a datum of data type TYPE, located at address ADREXP.
+@ is a binary operator for treating consecutive data objects
+anywhere in memory as an array.  FOO@NUM gives an array whose first
+element is FOO, whose second element is stored in the space following
+where FOO is stored, etc.  FOO must be an expression whose value
+resides in memory.
+
+EXP may be preceded with /FMT, where FMT is a format letter
+but no count or size letter (see "x" command).
+The history is empty.
+$1 = 117 'u'
+No symbol "xcdm" in current context.
+No symbol "xcdm" in current context.
+No symbol "xcdm" in current context.
+Invalid character ';' in expression.
+$2 = {write_function = 0x17ee30 <switch_console_stream_write>, raw_write_function = 0x17efc0 <switch_console_stream_raw_write>, data = 0x81a5f30, end = 0x81a5f30, data_size = 1024, data_len = 0, 
+  alloc_len = 1024, alloc_chunk = 1024, param_event = 0x0}
+$3 = 135946032
+349		char *dup = strdup(xcmd);
+355		if (rec > 100) {
+349		char *dup = strdup(xcmd);
+355		if (rec > 100) {
+360		if (!strncasecmp(xcmd, "alias", 5)) {
+355		if (rec > 100) {
+356			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_CRIT, "Too much recursion!\n");
+357			goto end;
+358		}
+359	
+360		if (!strncasecmp(xcmd, "alias", 5)) {
+361			argc = 1;
+362			argv[0] = xcmd;
+363		} else {
+364			argc = switch_separate_string_string(dup, delim, argv, 128);
+Ambiguous command "m": macro, maintenance, make, mem, monitor, mt.
+364			argc = switch_separate_string_string(dup, delim, argv, 128);
+352		switch_status_t status = SWITCH_STATUS_FALSE;
+364			argc = switch_separate_string_string(dup, delim, argv, 128);
+A debugging session is active.
+
+	Inferior 1 [process 18411] will be killed.
+
+Quit anyway? (y or n) 
