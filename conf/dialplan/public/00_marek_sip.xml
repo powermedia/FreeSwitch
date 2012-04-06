@@ -29,11 +29,17 @@
     </extension>
 
     <extension name="public_marek_sip">
+      <condition field="destination_number" expression="^(1902)$">
+        <action application="set" data="sip_h_Alert-Info=<Bellcore-dr2>"/>
+        <action application="bridge" data="SKINNY/internal/1902"/>
+      </condition>
+    </extension>
+
+    <extension name="public_marek_sip">
       <condition field="destination_number" expression="^(1901)$">
         <action application="set" data="sip_h_Alert-Info=<Bellcore-dr2>"/>
         <action application="bridge" data="SKINNY/internal/1901"/>
       </condition>
     </extension>
-
 
 </include>

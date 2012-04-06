@@ -640,7 +640,58 @@ SWITCH_DECLARE(switch_status_t) switch_channel_api_on(switch_channel_t *channel,
 SWITCH_DECLARE(switch_caller_extension_t *) switch_channel_get_queued_extension(switch_channel_t *channel);
 SWITCH_DECLARE(void) switch_channel_transfer_to_extension(switch_channel_t *channel, switch_caller_extension_t *caller_extension);
 
+typedef enum {
+	OCF_HANGUP = (1 << 0)
+} opaque_channel_flag_t;
+
+typedef enum {
+	LP_NEITHER,
+	LP_ORIGINATOR,
+	LP_ORIGINATEE
+} switch_originator_type_t;
+
+
+struct switch_channel {
+	char *name;
+	switch_call_direction_t direction;
+	switch_queue_t *dtmf_queue;
+	switch_queue_t *dtmf_log_queue;
+	switch_mutex_t *dtmf_mutex;
+	switch_mutex_t *flag_mutex;
+	switch_mutex_t *state_mutex;
+	switch_mutex_t *profile_mutex;
+	switch_core_session_t *session;
+	switch_channel_state_t state;
+	switch_channel_state_t running_state;
+	switch_channel_callstate_t callstate;
+	uint32_t flags[CF_FLAG_MAX];
+	uint32_t caps[CC_FLAG_MAX];
+	uint8_t state_flags[CF_FLAG_MAX];
+	uint32_t private_flags;
+	switch_caller_profile_t *caller_profile;
+	const switch_state_handler_table_t *state_handlers[SWITCH_MAX_STATE_HANDLERS];
+	int state_handler_index;
+	switch_event_t *variables;
+	switch_event_t *scope_variables;
+	switch_hash_t *private_hash;
+	switch_hash_t *app_flag_hash;
+	switch_call_cause_t hangup_cause;
+	int vi;
+	int event_count;
+	int profile_index;
+	opaque_channel_flag_t opaque_flags;
+	switch_originator_type_t last_profile_type;
+	switch_caller_extension_t *queued_extension;
+	switch_event_t *app_list;
+	switch_event_t *api_list;
+	switch_event_t *var_list;
+};
+
+
 SWITCH_END_EXTERN_C
+
+
+
 #endif
 /* For Emacs:
  * Local Variables:

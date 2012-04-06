@@ -315,38 +315,56 @@ switch_status_t skinny_session_send_call_info(switch_core_session_t *session, li
 
 	switch_assert(tech_pvt->caller_profile != NULL);
 
-	/* Calling party */
-	if (zstr((caller_party_name = switch_channel_get_variable(channel, "effective_caller_id_name"))) &&
-			zstr((caller_party_name = switch_channel_get_variable(channel, "caller_id_name"))) &&
-			zstr((caller_party_name = switch_channel_get_variable_partner(channel, "effective_caller_id_name"))) &&
-			zstr((caller_party_name = switch_channel_get_variable_partner(channel, "caller_id_name")))) {
-		caller_party_name = SWITCH_DEFAULT_CLID_NAME;
-	}
-	if (zstr((caller_party_number = switch_channel_get_variable(channel, "effective_caller_id_number"))) &&
-			zstr((caller_party_number = switch_channel_get_variable(channel, "caller_id_number"))) &&
-			zstr((caller_party_number = switch_channel_get_variable_partner(channel, "effective_caller_id_number"))) &&
-			zstr((caller_party_number = switch_channel_get_variable_partner(channel, "caller_id_number")))) {
-		caller_party_number = "0000000000";
-	}
-	/* Called party */
-	if (zstr((called_party_name = switch_channel_get_variable(channel, "effective_callee_id_name"))) &&
-			zstr((called_party_name = switch_channel_get_variable(channel, "callee_id_name"))) &&
-			zstr((called_party_name = switch_channel_get_variable_partner(channel, "effective_callee_id_name"))) &&
-			zstr((called_party_name = switch_channel_get_variable_partner(channel, "callee_id_name")))) {
-		called_party_name = SWITCH_DEFAULT_CLID_NAME;
-	}
-	if (zstr((called_party_number = switch_channel_get_variable(channel, "effective_callee_id_number"))) &&
-			zstr((called_party_number = switch_channel_get_variable(channel, "callee_id_number"))) &&
-			zstr((called_party_number = switch_channel_get_variable_partner(channel, "effective_callee_id_number"))) &&
-			zstr((called_party_number = switch_channel_get_variable_partner(channel, "callee_id_number"))) &&
-			zstr((called_party_number = switch_channel_get_variable(channel, "destination_number")))) {
-		called_party_number = "0000000000";
-	}
 	if (switch_channel_direction(channel) == SWITCH_CALL_DIRECTION_OUTBOUND) {
 		call_type = SKINNY_INBOUND_CALL;
 	} else {
 		call_type = SKINNY_OUTBOUND_CALL;
 	}
+	struct switch_caller_profile *originatee = NULL;
+	switch_caller_profile_t* caller_profile = NULL;
+	
+	if(channel != NULL){
+		caller_profile = channel->caller_profile;
+		if(caller_profile->originatee_caller_profile != NULL)
+			originatee = caller_profile->originatee_caller_profile;
+	}
+
+	if (originatee != NULL){
+		caller_party_name = originatee->caller_id_name;
+		caller_party_number = originatee->caller_id_number;
+		called_party_name = originatee->caller_id_name;
+		called_party_number = originatee->caller_id_number;
+	}
+	else {
+		// Calling party
+		if (zstr((caller_party_name = switch_channel_get_variable(channel, "effective_caller_id_name"))) &&
+			zstr((caller_party_name = switch_channel_get_variable(channel, "caller_id_name"))) &&
+			zstr((caller_party_name = switch_channel_get_variable_partner(channel, "effective_caller_id_name"))) &&
+			zstr((caller_party_name = switch_channel_get_variable_partner(channel, "caller_id_name")))) {
+			caller_party_name = SWITCH_DEFAULT_CLID_NAME;
+		}
+		if (zstr((caller_party_number = switch_channel_get_variable(channel, "effective_caller_id_number"))) &&
+			zstr((caller_party_number = switch_channel_get_variable(channel, "caller_id_number"))) &&
+			zstr((caller_party_number = switch_channel_get_variable_partner(channel, "effective_caller_id_number"))) &&
+			zstr((caller_party_number = switch_channel_get_variable_partner(channel, "caller_id_number")))) {
+			caller_party_number = "0000000000";
+		}
+		// Called party
+		if (zstr((called_party_name = switch_channel_get_variable(channel, "effective_callee_id_name"))) &&
+			zstr((called_party_name = switch_channel_get_variable(channel, "callee_id_name"))) &&
+			zstr((called_party_name = switch_channel_get_variable_partner(channel, "effective_callee_id_name"))) &&
+			zstr((called_party_name = switch_channel_get_variable_partner(channel, "callee_id_name")))) {
+			called_party_name = SWITCH_DEFAULT_CLID_NAME;
+		}
+		if (zstr((called_party_number = switch_channel_get_variable(channel, "effective_callee_id_number"))) &&
+			zstr((called_party_number = switch_channel_get_variable(channel, "callee_id_number"))) &&
+			zstr((called_party_number = switch_channel_get_variable_partner(channel, "effective_callee_id_number"))) &&
+			zstr((called_party_number = switch_channel_get_variable_partner(channel, "callee_id_number"))) &&
+			zstr((called_party_number = switch_channel_get_variable(channel, "destination_number")))) {
+			called_party_number = "0000000000";
+		}
+	}
+
 	skinny_send_call_info(listener,
 			caller_party_name, /* char calling_party_name[40], */
 			caller_party_number, /* char calling_party[24], */
