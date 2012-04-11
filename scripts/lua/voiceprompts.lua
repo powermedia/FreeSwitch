@@ -19,7 +19,7 @@ while (times<1000) do
   if (string.sub(position,1,4)~="-ERR") then
     position = tonumber(position)
     times = times + 1
-    -- We anly announce the position when the caller is number two, as number one may already be on the way to be helped.
+    -- We anly announce the position when the caller is number two, as number one may already be on the way to be helped. 
     position = position - 1
     if (position > 3) then position = 3 end
     symlinkcommand = "ln -s -f /var/spool/voiceprompts/"..position..".wav /var/spool/voiceprompts/"..caller_uuid..".wav"

@@ -109,7 +109,7 @@ static void change_pos(switch_event_t *event, int pos)
 
 	if (!(session = switch_core_session_locate(uuid))) {
 		return;
-	}
+	} 
 
 	channel = switch_core_session_get_channel(session);
 
@@ -476,6 +476,13 @@ static void node_remove_uuid(fifo_node_t *node, const char *uuid)
 }
 
 #define MAX_CHIME 25
+struct fifo_chime_treshold {
+	char *list[MAX_CHIME];
+	int total;
+};
+
+typedef struct fifo_chime_treshold fifo_chime_treshold_t;
+
 struct fifo_chime_data {
 	char *list[MAX_CHIME];
 	int total;
@@ -489,6 +496,7 @@ struct fifo_chime_data {
 	char *orbit_dialplan;
 	char *orbit_context;
 	char *exit_key;
+	fifo_chime_treshold_t ct;
 };
 
 typedef struct fifo_chime_data fifo_chime_data_t;
@@ -509,7 +517,11 @@ static switch_status_t chime_read_frame_callback(switch_core_session_t *session,
 static switch_status_t caller_read_frame_callback(switch_core_session_t *session, switch_frame_t *frame, void *user_data)
 {
 	fifo_chime_data_t *cd = (fifo_chime_data_t *) user_data;
+	switch_channel_t *channel = switch_core_session_get_channel(session);
 
+	const char* position = switch_channel_get_variable(channel, "fifo_position");
+	if(position)
+		;
 	if (!cd) {
 		return SWITCH_STATUS_SUCCESS;
 	}
@@ -530,7 +542,16 @@ static switch_status_t caller_read_frame_callback(switch_core_session_t *session
 			args.read_frame_callback = chime_read_frame_callback;
 			args.user_data = user_data;
 			
-			status = switch_ivr_play_file(session, NULL, cd->list[cd->index], &args);
+			//			status = switch_ivr_play_file(session, NULL, cd->list[cd->index], &args);
+			int i;
+			if(cd->ct.total != 0){
+				for (i = 1; i < cd->ct.total; i++) {
+					if (position < cd->ct.list[i])
+						status = switch_ivr_play_file(session, NULL, cd->list[i-1], &args);
+				}
+			}
+			else 
+				status = switch_ivr_play_file(session, NULL, cd->list[cd->index], &args);
 			
 			if (match_key(cd->exit_key, *buf)) {
 				cd->abort = 1;
@@ -2394,11 +2415,15 @@ SWITCH_STANDARD_APP(fifo_function)
 		int p = 0;
 		int aborted = 0;
 		fifo_chime_data_t cd = { {0} };
+
 		const char *chime_list = switch_channel_get_variable(channel, "fifo_chime_list");
 		const char *chime_freq = switch_channel_get_variable(channel, "fifo_chime_freq");
 		const char *orbit_exten = switch_channel_get_variable(channel, "fifo_orbit_exten");
 		const char *orbit_dialplan = switch_channel_get_variable(channel, "fifo_orbit_dialplan");
 		const char *orbit_context = switch_channel_get_variable(channel, "fifo_orbit_context");
+		const char *chime_treshold = switch_channel_get_variable(channel, "fifo_chime_treshold");
+		
+		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "fifo_chime_treshold: %s\n", chime_treshold);
 
 		const char *orbit_ann = switch_channel_get_variable(channel, "fifo_orbit_announce");
 		const char *caller_exit_key = switch_channel_get_variable(channel, "fifo_caller_exit_key");
@@ -2487,6 +2512,21 @@ SWITCH_STANDARD_APP(fifo_function)
 			cd.freq = freq;
 			cd.next = switch_epoch_time_now(NULL) + cd.freq;
 			cd.exit_key = (char *) switch_channel_get_variable(channel, "fifo_caller_exit_key");
+		}
+		if(chime_treshold){
+			char *tresh_dup = switch_core_session_strdup(session, chime_treshold);
+			cd.ct.total = switch_separate_string(tresh_dup, ',', cd.ct.list, (sizeof(cd.ct.list) / sizeof(cd.ct.list[0])));
+			
+			if(cd.ct.total != cd.total) {
+				cd.ct.total = 0;
+			}
+			int i;
+			for (i = 1; i < cd.ct.total; i++) {
+				if(cd.ct.list[i] < cd.ct.list[i-1]) {
+					cd.ct.total = 0;
+					break;
+				}
+			}
 		}
 
 		send_presence(node);

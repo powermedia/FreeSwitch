@@ -925,15 +925,8 @@
     <param name="delete-all-outbound-member-on-startup" value="true"/>
   </settings>
   <fifos>
-    <fifo name="cool_fifo@10.5.0.186" importance="0">
-      <member timeout="5" simo="1" lag="0">{fifo_member_wait=wait}loopback/1904</member>
-      <member timeout="5" simo="1" lag="0">{fifo_member_wait=wait}loopback/1903</member>
-      <member timeout="5" simo="1" lag="0">{fifo_member_wait=wait}loopback/1901</member>
-    </fifo>
-    <fifo name="sales" importance="0" outbound-strategy="ringall" outbound_per_cycle="3">
-      <member timeout="60" simo="10" lag="0">{fifo_member_wait=wait,ignore_early_media=true}loopback/1904</member>
-      <member timeout="60" simo="10" lag="0">{fifo_member_wait=wait,ignore_early_media=true}loopback/1903</member>
-      <member timeout="60" simo="10" lag="0">{fifo_member_wait=wait,ignore_early_media=true}loopback/1901</member>
+    <fifo name="sales" importance="0" outbound-strategy="ringall" outbound_per_cycle="2">
+      <member timeout="60" simo="10" lag="0">{fifo_member_wait=wait,ignore_early_media=true}loopback/1905</member>
     </fifo>
   </fifos>
 </configuration>
@@ -5068,13 +5061,14 @@ SELECT l.digits AS lcr_digits,
 
   <extension name="cool_fifo">
     <condition field="destination_number" expression="^999$">
-      <action application="answer"/>
       <action application="set" data="fifo_music=local_stream://moh"/>
-      <action application="playback" data="ivr/ivr-hold_connect_call.wav"/>
+      <action application="set" data="fifo_chime_list=digits/8000/0.wav,digits/8000/1.wav,digits/8000/2.wav"/>
+      <action application="set" data="fifo_chime_freq=30"/>
+      <action application="set" data="fifo_chime_treshold=1,4,8"/>
+      <action application="answer"/>
       <action application="log" data="INFO Joining FIFO queue"/>
-      <action application="set" data="fifo_orbit_exten=1901:45"/>
-      <action application="set" data="fifo_caller_exit_key=2"/>
-      <action application="set" data="fifo_caller_exit_to_orbit=true"/>
+      <action application="lua" data="tellposition.lua  ${uuid}"/>
+      <action application="playback" data="ivr/ivr-hold_connect_call.wav"/>
       <action application="fifo" data="sales in"/>
     </condition>
   </extension>
@@ -5971,17 +5965,24 @@ SELECT l.digits AS lcr_digits,
     </buttons>
    </skinny>
   </user>
+ <user id="SEP000000000000">
+   <skinny>
+    <buttons>
+      <button position="1" type="Line" label="Line 1" value="1905" caller-name="Calling as 1905"/>
+    </buttons>
+   </skinny>
+  </user>
  <user id="SEP000000000001">
    <skinny>
     <buttons>
-      <button position="1" type="Line" label="Line 1" value="1002" caller-name="Calling as 1002"/>
+      <button position="1" type="Line" label="Line 1" value="1906" caller-name="Calling as 1906"/>
     </buttons>
    </skinny>
   </user>
  <user id="SEP000000000002">
    <skinny>
     <buttons>
-      <button position="1" type="Line" label="Line 1" value="1003" caller-name="Calling as 1003"/>
+      <button position="1" type="Line" label="Line 1" value="1907" caller-name="Calling as 1907"/>
     </buttons>
    </skinny>
   </user>

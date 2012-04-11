@@ -20,17 +20,24 @@
     </buttons>
    </skinny>
   </user>
+ <user id="SEP000000000000">
+   <skinny>
+    <buttons>
+      <button position="1" type="Line" label="Line 1" value="1905" caller-name="Calling as 1905"/>
+    </buttons>
+   </skinny>
+  </user>
  <user id="SEP000000000001">
    <skinny>
     <buttons>
-      <button position="1" type="Line" label="Line 1" value="1002" caller-name="Calling as 1002"/>
+      <button position="1" type="Line" label="Line 1" value="1906" caller-name="Calling as 1906"/>
     </buttons>
    </skinny>
   </user>
  <user id="SEP000000000002">
    <skinny>
     <buttons>
-      <button position="1" type="Line" label="Line 1" value="1003" caller-name="Calling as 1003"/>
+      <button position="1" type="Line" label="Line 1" value="1907" caller-name="Calling as 1907"/>
     </buttons>
    </skinny>
   </user>
