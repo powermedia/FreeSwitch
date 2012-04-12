@@ -545,12 +545,15 @@ static switch_status_t caller_read_frame_callback(switch_core_session_t *session
 			//			status = switch_ivr_play_file(session, NULL, cd->list[cd->index], &args);
 			int i;
 			if(cd->ct.total != 0){
-				for (i = 1; i < cd->ct.total; i++) {
-					if (position < cd->ct.list[i])
-						status = switch_ivr_play_file(session, NULL, cd->list[i-1], &args);
+				for (i = cd->ct.total - 1; i >= 0; i--) {
+					if (atoi(position) >= atoi(cd->ct.list[i])) {
+						status = switch_ivr_play_file(session, NULL, cd->list[i], &args);
+						switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "position: %d, cd->ct.list[i] = %s, cd->list[i] = %s\n", atoi(position), cd->ct.list[i], cd->list[i]);
+						break;
+					}
 				}
 			}
-			else 
+			else
 				status = switch_ivr_play_file(session, NULL, cd->list[cd->index], &args);
 			
 			if (match_key(cd->exit_key, *buf)) {

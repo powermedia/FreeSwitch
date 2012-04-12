@@ -5063,11 +5063,10 @@ SELECT l.digits AS lcr_digits,
     <condition field="destination_number" expression="^999$">
       <action application="set" data="fifo_music=local_stream://moh"/>
       <action application="set" data="fifo_chime_list=digits/8000/0.wav,digits/8000/1.wav,digits/8000/2.wav"/>
-      <action application="set" data="fifo_chime_freq=30"/>
-      <action application="set" data="fifo_chime_treshold=1,4,8"/>
+      <action application="set" data="fifo_chime_freq=10"/>
+      <action application="set" data="fifo_chime_treshold=1,2,3"/>
       <action application="answer"/>
       <action application="log" data="INFO Joining FIFO queue"/>
-      <action application="lua" data="tellposition.lua  ${uuid}"/>
       <action application="playback" data="ivr/ivr-hold_connect_call.wav"/>
       <action application="fifo" data="sales in"/>
     </condition>

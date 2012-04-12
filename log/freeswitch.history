@@ -60,3 +60,16 @@ reloadxml\012
 reloadxml\012
 reloadxml\012
 shutdown\012
+reloadxml\012
+reload\040mod_fifo\012
+reload\040mod_fifo\012
+reload\040mod_fifo\012
+reloadxmlreloadxml\012
+reloadxml\012
+2B2A2A\012
+reload\040mod_fifo\012
+reloadxml\012
+reload\040mod_fifo\012
+reload\040mod_fifo\012
+fifo\040count\012
+shutdown\012
