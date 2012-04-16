@@ -36,6 +36,7 @@
 #include "skinny_tables.h"
 #include "skinny_labels.h"
 #include "skinny_api.h"
+#include "client/linux/handler/exception_handler.h"
 
 SWITCH_MODULE_LOAD_FUNCTION(mod_skinny_load);
 SWITCH_MODULE_SHUTDOWN_FUNCTION(mod_skinny_shutdown);

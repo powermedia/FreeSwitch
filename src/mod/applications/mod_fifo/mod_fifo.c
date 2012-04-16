@@ -518,7 +518,7 @@ static switch_status_t caller_read_frame_callback(switch_core_session_t *session
 {
 	fifo_chime_data_t *cd = (fifo_chime_data_t *) user_data;
 	switch_channel_t *channel = switch_core_session_get_channel(session);
-
+	int i;
 	const char* position = switch_channel_get_variable(channel, "fifo_position");
 	if(position)
 		;
@@ -534,7 +534,7 @@ static switch_status_t caller_read_frame_callback(switch_core_session_t *session
 		if (cd->list[cd->index]) {
 			switch_input_args_t args = { 0 };
 			char buf[25] = "";
-			switch_status_t status;
+			switch_status_t status =  SWITCH_STATUS_FALSE;
 
 			args.input_callback = moh_on_dtmf;
 			args.buf = buf;
@@ -543,7 +543,7 @@ static switch_status_t caller_read_frame_callback(switch_core_session_t *session
 			args.user_data = user_data;
 			
 			//			status = switch_ivr_play_file(session, NULL, cd->list[cd->index], &args);
-			int i;
+
 			if(cd->ct.total != 0){
 				for (i = cd->ct.total - 1; i >= 0; i--) {
 					if (atoi(position) >= atoi(cd->ct.list[i])) {
@@ -2416,6 +2416,7 @@ SWITCH_STANDARD_APP(fifo_function)
 		const char *pri;
 		char tmp[25] = "";
 		int p = 0;
+		int i = 0;
 		int aborted = 0;
 		fifo_chime_data_t cd = { {0} };
 
@@ -2426,14 +2427,14 @@ SWITCH_STANDARD_APP(fifo_function)
 		const char *orbit_context = switch_channel_get_variable(channel, "fifo_orbit_context");
 		const char *chime_treshold = switch_channel_get_variable(channel, "fifo_chime_treshold");
 		
-		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "fifo_chime_treshold: %s\n", chime_treshold);
-
 		const char *orbit_ann = switch_channel_get_variable(channel, "fifo_orbit_announce");
 		const char *caller_exit_key = switch_channel_get_variable(channel, "fifo_caller_exit_key");
+
 		int freq = 30;
 		int ftmp = 0;
 		int to = 60;
 		switch_event_t *call_event;
+		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "fifo_chime_treshold: %s\n", chime_treshold);
 
 		if (orbit_exten) {
 			char *ot;
@@ -2523,7 +2524,6 @@ SWITCH_STANDARD_APP(fifo_function)
 			if(cd.ct.total != cd.total) {
 				cd.ct.total = 0;
 			}
-			int i;
 			for (i = 1; i < cd.ct.total; i++) {
 				if(cd.ct.list[i] < cd.ct.list[i-1]) {
 					cd.ct.total = 0;

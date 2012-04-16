@@ -5062,7 +5062,7 @@ SELECT l.digits AS lcr_digits,
   <extension name="cool_fifo">
     <condition field="destination_number" expression="^999$">
       <action application="set" data="fifo_music=local_stream://moh"/>
-      <action application="set" data="fifo_chime_list=digits/8000/0.wav,digits/8000/1.wav,digits/8000/2.wav"/>
+      <action application="set" data="fifo_chime_list=digits/8000/1.wav,digits/8000/2.wav,digits/8000/3.wav"/>
       <action application="set" data="fifo_chime_freq=10"/>
       <action application="set" data="fifo_chime_treshold=1,2,3"/>
       <action application="answer"/>
@@ -5943,6 +5943,13 @@ SELECT l.digits AS lcr_digits,
     </params>
   </user>
 
+ <user id="SEP080027DF0C0F">
+   <skinny>
+    <buttons>
+      <button position="1" type="Line" label="Line 1" value="1904" caller-name="Calling as 1911"/>
+    </buttons>
+   </skinny>
+ </user>
  <user id="SEP0014A9725877">
    <skinny>
     <buttons>
