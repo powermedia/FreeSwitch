@@ -8811,3 +8811,1328 @@ XI (FastTracker 2)  (extension "xi")
 2012-04-16 10:48:27.349137 [NOTICE] switch_loadable_module.c:146 Adding Endpoint 'skinny'
 2012-04-16 10:48:27.349137 [INFO] mod_skinny.c:1573 Socket up listening on 0.0.0.0:2000
 2012-04-16 10:48:27.349137 [NOTICE] switch_loadable_module.c:298 Adding API Function 'skinny'
+2012-04-20 13:15:26.494572 [NOTICE] switch_loadable_module.c:214 Adding Dialplan 'enum'
+2012-04-20 13:15:26.494649 [NOTICE] switch_loadable_module.c:254 Adding Application 'enum'
+2012-04-20 13:15:26.494712 [NOTICE] switch_loadable_module.c:298 Adding API Function 'enum'
+2012-04-20 13:15:26.494771 [NOTICE] switch_loadable_module.c:298 Adding API Function 'enum_auto'
+2012-04-20 13:15:26.505955 [DEBUG] mod_cdr_csv.c:339 Adding default template.
+2012-04-20 13:15:26.505986 [DEBUG] mod_cdr_csv.c:386 Adding template sql.
+2012-04-20 13:15:26.505999 [DEBUG] mod_cdr_csv.c:386 Adding template example.
+2012-04-20 13:15:26.506011 [DEBUG] mod_cdr_csv.c:386 Adding template snom.
+2012-04-20 13:15:26.506022 [DEBUG] mod_cdr_csv.c:386 Adding template linksys.
+2012-04-20 13:15:26.506033 [DEBUG] mod_cdr_csv.c:386 Adding template asterisk.
+2012-04-20 13:15:26.506736 [NOTICE] switch_loadable_module.c:298 Adding API Function 'cdr_csv'
+2012-04-20 13:15:26.529597 [NOTICE] switch_loadable_module.c:254 Adding Application 'socket'
+2012-04-20 13:15:26.529744 [NOTICE] switch_loadable_module.c:298 Adding API Function 'event_sink'
+2012-04-20 13:15:26.591796 [DEBUG] sofia.c:3738 debug [0]
+2012-04-20 13:15:26.591810 [DEBUG] sofia.c:3738 sip-trace [no]
+2012-04-20 13:15:26.591838 [DEBUG] sofia.c:3738 sip-capture [no]
+2012-04-20 13:15:26.591846 [DEBUG] sofia.c:3738 rfc2833-pt [101]
+2012-04-20 13:15:26.591853 [DEBUG] sofia.c:3738 sip-port [5080]
+2012-04-20 13:15:26.591860 [DEBUG] sofia.c:3738 dialplan [XML]
+2012-04-20 13:15:26.591867 [DEBUG] sofia.c:3738 context [public]
+2012-04-20 13:15:26.591878 [DEBUG] sofia.c:3738 dtmf-duration [2000]
+2012-04-20 13:15:26.591890 [DEBUG] sofia.c:3738 inbound-codec-prefs [G7221@32000h,G7221@16000h,G722,PCMU,PCMA,GSM]
+2012-04-20 13:15:26.591902 [DEBUG] sofia.c:3738 outbound-codec-prefs [PCMU,PCMA,GSM]
+2012-04-20 13:15:26.591911 [DEBUG] sofia.c:3738 hold-music [local_stream://moh]
+2012-04-20 13:15:26.591919 [DEBUG] sofia.c:3738 rtp-timer-name [soft]
+2012-04-20 13:15:26.591925 [DEBUG] sofia.c:3738 local-network-acl [localnet.auto]
+2012-04-20 13:15:26.591931 [DEBUG] sofia.c:3738 manage-presence [false]
+2012-04-20 13:15:26.591941 [DEBUG] sofia.c:3738 inbound-codec-negotiation [generous]
+2012-04-20 13:15:26.591948 [DEBUG] sofia.c:3738 nonce-ttl [60]
+2012-04-20 13:15:26.591957 [DEBUG] sofia.c:3738 auth-calls [false]
+2012-04-20 13:15:26.591964 [DEBUG] sofia.c:3738 rtp-ip [10.5.0.186]
+2012-04-20 13:15:26.591973 [DEBUG] sofia.c:3738 sip-ip [10.5.0.186]
+2012-04-20 13:15:26.591979 [DEBUG] sofia.c:3738 ext-rtp-ip [auto-nat]
+2012-04-20 13:15:26.591985 [DEBUG] sofia.c:3738 ext-sip-ip [auto-nat]
+2012-04-20 13:15:26.591992 [DEBUG] sofia.c:3738 rtp-timeout-sec [300]
+2012-04-20 13:15:26.592000 [DEBUG] sofia.c:3738 rtp-hold-timeout-sec [1800]
+2012-04-20 13:15:26.592006 [DEBUG] sofia.c:3738 tls [false]
+2012-04-20 13:15:26.592013 [DEBUG] sofia.c:3738 tls-only [false]
+2012-04-20 13:15:26.592021 [DEBUG] sofia.c:3738 tls-bind-params [transport=tls]
+2012-04-20 13:15:26.592028 [DEBUG] sofia.c:3738 tls-sip-port [5081]
+2012-04-20 13:15:26.592036 [DEBUG] sofia.c:3738 tls-cert-dir [/home/kwyrozumski/work/freeswitch/conf/ssl]
+2012-04-20 13:15:26.592046 [DEBUG] sofia.c:3738 tls-passphrase []
+2012-04-20 13:15:26.592055 [DEBUG] sofia.c:3738 tls-verify-date [true]
+2012-04-20 13:15:26.592064 [DEBUG] sofia.c:3738 tls-verify-policy [none]
+2012-04-20 13:15:26.603816 [DEBUG] sofia.c:3738 tls-verify-depth [2]
+2012-04-20 13:15:26.603844 [DEBUG] sofia.c:3738 tls-verify-in-subjects []
+2012-04-20 13:15:26.603861 [DEBUG] sofia.c:3738 tls-version [tlsv1]
+2012-04-20 13:15:26.603965 [NOTICE] sofia.c:4645 Started Profile external [sofia_reg_external]
+2012-04-20 13:15:26.603995 [DEBUG] sofia.c:3738 debug [0]
+2012-04-20 13:15:26.604000 [DEBUG] sofia.c:3738 sip-trace [no]
+2012-04-20 13:15:26.604072 [DEBUG] sofia.c:3738 sip-capture [no]
+2012-04-20 13:15:26.604080 [DEBUG] sofia.c:3738 watchdog-enabled [no]
+2012-04-20 13:15:26.604085 [DEBUG] sofia.c:3738 watchdog-step-timeout [30000]
+2012-04-20 13:15:26.604090 [DEBUG] sofia.c:3738 watchdog-event-timeout [30000]
+2012-04-20 13:15:26.604094 [DEBUG] sofia.c:3738 log-auth-failures [false]
+2012-04-20 13:15:26.604099 [DEBUG] sofia.c:3738 forward-unsolicited-mwi-notify [false]
+2012-04-20 13:15:26.604103 [DEBUG] sofia.c:3738 context [public]
+2012-04-20 13:15:26.604110 [DEBUG] sofia.c:3738 rfc2833-pt [101]
+2012-04-20 13:15:26.604115 [DEBUG] sofia.c:3738 sip-port [5060]
+2012-04-20 13:15:26.604121 [DEBUG] sofia.c:3738 dialplan [XML]
+2012-04-20 13:15:26.604129 [DEBUG] sofia.c:3738 dtmf-duration [2000]
+2012-04-20 13:15:26.604136 [DEBUG] sofia.c:3738 inbound-codec-prefs [G7221@32000h,G7221@16000h,G722,PCMU,PCMA,GSM]
+2012-04-20 13:15:26.604145 [DEBUG] sofia.c:3738 outbound-codec-prefs [G7221@32000h,G7221@16000h,G722,PCMU,PCMA,GSM]
+2012-04-20 13:15:26.604155 [DEBUG] sofia.c:3738 rtp-timer-name [soft]
+2012-04-20 13:15:26.604161 [DEBUG] sofia.c:3738 rtp-ip [10.5.0.186]
+2012-04-20 13:15:26.604169 [DEBUG] sofia.c:3738 sip-ip [192.168.0.2]
+2012-04-20 13:15:26.604175 [DEBUG] sofia.c:3738 hold-music [local_stream://moh]
+2012-04-20 13:15:26.604184 [DEBUG] sofia.c:3738 apply-nat-acl [nat.auto]
+2012-04-20 13:15:26.604199 [DEBUG] sofia.c:3738 apply-inbound-acl [domains]
+2012-04-20 13:15:26.604209 [DEBUG] sofia.c:3738 local-network-acl [localnet.auto]
+2012-04-20 13:15:26.604216 [DEBUG] sofia.c:3738 record-path [/home/kwyrozumski/work/freeswitch/recordings]
+2012-04-20 13:15:26.604224 [DEBUG] sofia.c:3738 record-template [${caller_id_number}.${target_domain}.${strftime(%Y-%m-%d-%H-%M-%S)}.wav]
+2012-04-20 13:15:26.604236 [DEBUG] sofia.c:3738 manage-presence [true]
+2012-04-20 13:15:26.604243 [DEBUG] sofia.c:3738 presence-hosts [10.5.0.186,10.5.0.186]
+2012-04-20 13:15:26.604251 [DEBUG] sofia.c:3738 presence-privacy [false]
+2012-04-20 13:15:26.604257 [DEBUG] sofia.c:3738 inbound-codec-negotiation [generous]
+2012-04-20 13:15:26.604264 [DEBUG] sofia.c:3738 tls [false]
+2012-04-20 13:15:26.604274 [DEBUG] sofia.c:3738 tls-only [false]
+2012-04-20 13:15:26.604283 [DEBUG] sofia.c:3738 tls-bind-params [transport=tls]
+2012-04-20 13:15:26.604293 [DEBUG] sofia.c:3738 tls-sip-port [5061]
+2012-04-20 13:15:26.604303 [DEBUG] sofia.c:3738 tls-cert-dir [/home/kwyrozumski/work/freeswitch/conf/ssl]
+2012-04-20 13:15:26.604313 [DEBUG] sofia.c:3738 tls-passphrase []
+2012-04-20 13:15:26.604323 [DEBUG] sofia.c:3738 tls-verify-date [true]
+2012-04-20 13:15:26.604332 [DEBUG] sofia.c:3738 tls-verify-policy [none]
+2012-04-20 13:15:26.604340 [DEBUG] sofia.c:3738 tls-verify-depth [2]
+2012-04-20 13:15:26.604349 [DEBUG] sofia.c:3738 tls-verify-in-subjects []
+2012-04-20 13:15:26.604357 [DEBUG] sofia.c:3738 tls-version [tlsv1]
+2012-04-20 13:15:26.604367 [DEBUG] sofia.c:3738 nonce-ttl [60]
+2012-04-20 13:15:26.604374 [DEBUG] sofia.c:3738 auth-calls [true]
+2012-04-20 13:15:26.604383 [DEBUG] sofia.c:3738 inbound-reg-force-matching-username [true]
+2012-04-20 13:15:26.604390 [DEBUG] sofia.c:3738 auth-all-packets [false]
+2012-04-20 13:15:26.604397 [DEBUG] sofia.c:3738 ext-rtp-ip [auto-nat]
+2012-04-20 13:15:26.604404 [DEBUG] sofia.c:3738 ext-sip-ip [auto-nat]
+2012-04-20 13:15:26.604410 [DEBUG] sofia.c:3738 rtp-timeout-sec [300]
+2012-04-20 13:15:26.604415 [DEBUG] sofia.c:3738 rtp-hold-timeout-sec [1800]
+2012-04-20 13:15:26.604424 [DEBUG] sofia.c:3738 force-register-domain [10.5.0.186]
+2012-04-20 13:15:26.604430 [DEBUG] sofia.c:3738 force-subscription-domain [10.5.0.186]
+2012-04-20 13:15:26.604439 [DEBUG] sofia.c:3738 force-register-db-domain [10.5.0.186]
+2012-04-20 13:15:26.604445 [DEBUG] sofia.c:3738 challenge-realm [auto_from]
+2012-04-20 13:15:26.604492 [NOTICE] sofia.c:4645 Started Profile internal [sofia_reg_internal]
+2012-04-20 13:15:26.604506 [DEBUG] mod_sofia.c:5390 Waiting for profiles to start
+2012-04-20 13:15:26.604797 [DEBUG] sofia.c:1841 Creating agent for external
+2012-04-20 13:15:26.604931 [DEBUG] sofia.c:1841 Creating agent for internal
+2012-04-20 13:15:26.625991 [DEBUG] sofia.c:1926 Created agent for external
+2012-04-20 13:15:26.626046 [DEBUG] sofia.c:1963 Set params for external
+2012-04-20 13:15:26.626056 [DEBUG] sofia.c:2006 Activated db for external
+2012-04-20 13:15:26.626133 [DEBUG] sofia.c:2029 Starting thread for external
+2012-04-20 13:15:26.626146 [DEBUG] sofia.c:1742 Launching worker thread for external
+2012-04-20 13:15:26.626390 [NOTICE] sofia_reg.c:2878 Added gateway 'example.com' to profile 'external'
+2012-04-20 13:15:26.645058 [DEBUG] sofia.c:1926 Created agent for internal
+2012-04-20 13:15:26.645091 [DEBUG] sofia.c:1963 Set params for internal
+2012-04-20 13:15:26.645096 [DEBUG] sofia.c:2006 Activated db for internal
+2012-04-20 13:15:26.645140 [DEBUG] sofia.c:2029 Starting thread for internal
+2012-04-20 13:15:26.645148 [DEBUG] sofia.c:1742 Launching worker thread for internal
+2012-04-20 13:15:26.645252 [NOTICE] sofia.c:2729 Adding Alias [10.5.0.186] for profile [internal]
+2012-04-20 13:15:28.124870 [NOTICE] switch_loadable_module.c:146 Adding Endpoint 'sofia'
+2012-04-20 13:15:28.125135 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sofia'
+2012-04-20 13:15:28.125207 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sofia_gateway_data'
+2012-04-20 13:15:28.125275 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sofia_username_of'
+2012-04-20 13:15:28.125340 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sofia_contact'
+2012-04-20 13:15:28.125404 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sofia_count_reg'
+2012-04-20 13:15:28.125467 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sofia_dig'
+2012-04-20 13:15:28.125527 [NOTICE] switch_loadable_module.c:403 Adding Chat interface 'sip'
+2012-04-20 13:15:28.125584 [NOTICE] switch_loadable_module.c:447 Adding Management interface 'mod_sofia' OID[.1.3.6.1.4.1.27880.1001]
+2012-04-20 13:15:28.134739 [NOTICE] switch_loadable_module.c:146 Adding Endpoint 'loopback'
+2012-04-20 13:15:28.159913 [INFO] mod_skinny.c:1573 Socket up listening on 0.0.0.0:2000
+2012-04-20 13:15:28.159984 [NOTICE] switch_loadable_module.c:146 Adding Endpoint 'skinny'
+2012-04-20 13:15:28.160072 [NOTICE] switch_loadable_module.c:298 Adding API Function 'skinny'
+2012-04-20 13:15:28.236979 [NOTICE] switch_loadable_module.c:298 Adding API Function 'acl'
+2012-04-20 13:15:28.237126 [NOTICE] switch_loadable_module.c:298 Adding API Function 'alias'
+2012-04-20 13:15:28.237161 [NOTICE] switch_loadable_module.c:298 Adding API Function 'banner'
+2012-04-20 13:15:28.237192 [NOTICE] switch_loadable_module.c:298 Adding API Function 'bgapi'
+2012-04-20 13:15:28.237328 [NOTICE] switch_loadable_module.c:298 Adding API Function 'bg_system'
+2012-04-20 13:15:28.237438 [NOTICE] switch_loadable_module.c:298 Adding API Function 'break'
+2012-04-20 13:15:28.237504 [NOTICE] switch_loadable_module.c:298 Adding API Function 'complete'
+2012-04-20 13:15:28.237596 [NOTICE] switch_loadable_module.c:298 Adding API Function 'cond'
+2012-04-20 13:15:28.237685 [NOTICE] switch_loadable_module.c:298 Adding API Function 'console_complete'
+2012-04-20 13:15:28.237718 [NOTICE] switch_loadable_module.c:298 Adding API Function 'console_complete_xml'
+2012-04-20 13:15:28.237745 [NOTICE] switch_loadable_module.c:298 Adding API Function 'create_uuid'
+2012-04-20 13:15:28.237771 [NOTICE] switch_loadable_module.c:298 Adding API Function 'db_cache'
+2012-04-20 13:15:28.237949 [NOTICE] switch_loadable_module.c:298 Adding API Function 'domain_exists'
+2012-04-20 13:15:28.238018 [NOTICE] switch_loadable_module.c:298 Adding API Function 'echo'
+2012-04-20 13:15:28.238110 [NOTICE] switch_loadable_module.c:298 Adding API Function 'escape'
+2012-04-20 13:15:28.238200 [NOTICE] switch_loadable_module.c:298 Adding API Function 'eval'
+2012-04-20 13:15:28.238290 [NOTICE] switch_loadable_module.c:298 Adding API Function 'expand'
+2012-04-20 13:15:28.238382 [NOTICE] switch_loadable_module.c:298 Adding API Function 'find_user_xml'
+2012-04-20 13:15:28.238477 [NOTICE] switch_loadable_module.c:298 Adding API Function 'fsctl'
+2012-04-20 13:15:28.238569 [NOTICE] switch_loadable_module.c:298 Adding API Function '...'
+2012-04-20 13:15:28.238681 [NOTICE] switch_loadable_module.c:298 Adding API Function 'shutdown'
+2012-04-20 13:15:28.238776 [NOTICE] switch_loadable_module.c:298 Adding API Function 'version'
+2012-04-20 13:15:28.238866 [NOTICE] switch_loadable_module.c:298 Adding API Function 'global_getvar'
+2012-04-20 13:15:28.238959 [NOTICE] switch_loadable_module.c:298 Adding API Function 'global_setvar'
+2012-04-20 13:15:28.239051 [NOTICE] switch_loadable_module.c:298 Adding API Function 'group_call'
+2012-04-20 13:15:28.239143 [NOTICE] switch_loadable_module.c:298 Adding API Function 'help'
+2012-04-20 13:15:28.239236 [NOTICE] switch_loadable_module.c:298 Adding API Function 'host_lookup'
+2012-04-20 13:15:28.239328 [NOTICE] switch_loadable_module.c:298 Adding API Function 'hostname'
+2012-04-20 13:15:28.239419 [NOTICE] switch_loadable_module.c:298 Adding API Function 'switchname'
+2012-04-20 13:15:28.239520 [NOTICE] switch_loadable_module.c:298 Adding API Function 'hupall'
+2012-04-20 13:15:28.239613 [NOTICE] switch_loadable_module.c:298 Adding API Function 'in_group'
+2012-04-20 13:15:28.239706 [NOTICE] switch_loadable_module.c:298 Adding API Function 'is_lan_addr'
+2012-04-20 13:15:28.239801 [NOTICE] switch_loadable_module.c:298 Adding API Function 'limit_usage'
+2012-04-20 13:15:28.239893 [NOTICE] switch_loadable_module.c:298 Adding API Function 'limit_hash_usage'
+2012-04-20 13:15:28.239989 [NOTICE] switch_loadable_module.c:298 Adding API Function 'limit_status'
+2012-04-20 13:15:28.240084 [NOTICE] switch_loadable_module.c:298 Adding API Function 'limit_reset'
+2012-04-20 13:15:28.240176 [NOTICE] switch_loadable_module.c:298 Adding API Function 'limit_interval_reset'
+2012-04-20 13:15:28.240271 [NOTICE] switch_loadable_module.c:298 Adding API Function 'load'
+2012-04-20 13:15:28.240366 [NOTICE] switch_loadable_module.c:298 Adding API Function 'log'
+2012-04-20 13:15:28.240474 [NOTICE] switch_loadable_module.c:298 Adding API Function 'md5'
+2012-04-20 13:15:28.240504 [NOTICE] switch_loadable_module.c:298 Adding API Function 'module_exists'
+2012-04-20 13:15:28.240530 [NOTICE] switch_loadable_module.c:298 Adding API Function 'msleep'
+2012-04-20 13:15:28.240555 [NOTICE] switch_loadable_module.c:298 Adding API Function 'nat_map'
+2012-04-20 13:15:28.240580 [NOTICE] switch_loadable_module.c:298 Adding API Function 'originate'
+2012-04-20 13:15:28.240607 [NOTICE] switch_loadable_module.c:298 Adding API Function 'pause'
+2012-04-20 13:15:28.240632 [NOTICE] switch_loadable_module.c:298 Adding API Function 'regex'
+2012-04-20 13:15:28.240657 [NOTICE] switch_loadable_module.c:298 Adding API Function 'reloadacl'
+2012-04-20 13:15:28.240683 [NOTICE] switch_loadable_module.c:298 Adding API Function 'reload'
+2012-04-20 13:15:28.240709 [NOTICE] switch_loadable_module.c:298 Adding API Function 'reloadxml'
+2012-04-20 13:15:28.240736 [NOTICE] switch_loadable_module.c:298 Adding API Function 'replace'
+2012-04-20 13:15:28.240760 [NOTICE] switch_loadable_module.c:298 Adding API Function 'say_string'
+2012-04-20 13:15:28.240792 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sched_api'
+2012-04-20 13:15:28.240816 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sched_broadcast'
+2012-04-20 13:15:28.240847 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sched_del'
+2012-04-20 13:15:28.240876 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sched_hangup'
+2012-04-20 13:15:28.240902 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sched_transfer'
+2012-04-20 13:15:28.240928 [NOTICE] switch_loadable_module.c:298 Adding API Function 'show'
+2012-04-20 13:15:28.240954 [NOTICE] switch_loadable_module.c:298 Adding API Function 'sql_escape'
+2012-04-20 13:15:28.240980 [NOTICE] switch_loadable_module.c:298 Adding API Function 'status'
+2012-04-20 13:15:28.241005 [NOTICE] switch_loadable_module.c:298 Adding API Function 'strftime_tz'
+2012-04-20 13:15:28.241028 [NOTICE] switch_loadable_module.c:298 Adding API Function 'stun'
+2012-04-20 13:15:28.241053 [NOTICE] switch_loadable_module.c:298 Adding API Function 'system'
+2012-04-20 13:15:28.241077 [NOTICE] switch_loadable_module.c:298 Adding API Function 'time_test'
+2012-04-20 13:15:28.241102 [NOTICE] switch_loadable_module.c:298 Adding API Function 'timer_test'
+2012-04-20 13:15:28.241125 [NOTICE] switch_loadable_module.c:298 Adding API Function 'tone_detect'
+2012-04-20 13:15:28.241151 [NOTICE] switch_loadable_module.c:298 Adding API Function 'unload'
+2012-04-20 13:15:28.241182 [NOTICE] switch_loadable_module.c:298 Adding API Function 'unsched_api'
+2012-04-20 13:15:28.241209 [NOTICE] switch_loadable_module.c:298 Adding API Function 'reg_url'
+2012-04-20 13:15:28.241239 [NOTICE] switch_loadable_module.c:298 Adding API Function 'url_decode'
+2012-04-20 13:15:28.241318 [NOTICE] switch_loadable_module.c:298 Adding API Function 'url_encode'
+2012-04-20 13:15:28.241346 [NOTICE] switch_loadable_module.c:298 Adding API Function 'user_data'
+2012-04-20 13:15:28.241427 [NOTICE] switch_loadable_module.c:298 Adding API Function 'user_exists'
+2012-04-20 13:15:28.242081 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_audio'
+2012-04-20 13:15:28.242147 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_break'
+2012-04-20 13:15:28.242243 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_bridge'
+2012-04-20 13:15:28.242335 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_broadcast'
+2012-04-20 13:15:28.242427 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_buglist'
+2012-04-20 13:15:28.242520 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_chat'
+2012-04-20 13:15:28.242614 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_debug_audio'
+2012-04-20 13:15:28.242707 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_deflect'
+2012-04-20 13:15:28.242800 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_displace'
+2012-04-20 13:15:28.242893 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_display'
+2012-04-20 13:15:28.243023 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_dump'
+2012-04-20 13:15:28.243086 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_exists'
+2012-04-20 13:15:28.243179 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_fileman'
+2012-04-20 13:15:28.243271 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_flush_dtmf'
+2012-04-20 13:15:28.243372 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_getvar'
+2012-04-20 13:15:28.243511 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_hold'
+2012-04-20 13:15:28.243681 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_kill'
+2012-04-20 13:15:28.243849 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_send_info'
+2012-04-20 13:15:28.244018 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_outgoing_answer'
+2012-04-20 13:15:28.244195 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_limit'
+2012-04-20 13:15:28.244366 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_limit_release'
+2012-04-20 13:15:28.244550 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_loglevel'
+2012-04-20 13:15:28.244728 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_media'
+2012-04-20 13:15:28.245056 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_park'
+2012-04-20 13:15:28.245225 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_phone_event'
+2012-04-20 13:15:28.245404 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_preprocess'
+2012-04-20 13:15:28.245644 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_record'
+2012-04-20 13:15:28.245765 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_recovery_refresh'
+2012-04-20 13:15:28.245945 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_recv_dtmf'
+2012-04-20 13:15:28.246122 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_send_dtmf'
+2012-04-20 13:15:28.246298 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_session_heartbeat'
+2012-04-20 13:15:28.246475 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_setvar_multi'
+2012-04-20 13:15:28.246653 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_setvar'
+2012-04-20 13:15:28.246828 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_transfer'
+2012-04-20 13:15:28.247002 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_dual_transfer'
+2012-04-20 13:15:28.247186 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_simplify'
+2012-04-20 13:15:28.247371 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_jitterbuffer'
+2012-04-20 13:15:28.247558 [NOTICE] switch_loadable_module.c:298 Adding API Function 'uuid_zombie_exec'
+2012-04-20 13:15:28.247738 [NOTICE] switch_loadable_module.c:298 Adding API Function 'xml_flush_cache'
+2012-04-20 13:15:28.247914 [NOTICE] switch_loadable_module.c:298 Adding API Function 'xml_locate'
+2012-04-20 13:15:28.248083 [NOTICE] switch_loadable_module.c:298 Adding API Function 'xml_wrap'
+2012-04-20 13:15:28.248255 [NOTICE] switch_loadable_module.c:298 Adding API Function 'file_exists'
+2012-04-20 13:15:28.280251 [NOTICE] switch_loadable_module.c:254 Adding Application 'conference'
+2012-04-20 13:15:28.280355 [NOTICE] switch_loadable_module.c:254 Adding Application 'conference_set_auto_outcall'
+2012-04-20 13:15:28.280449 [NOTICE] switch_loadable_module.c:298 Adding API Function 'conference'
+2012-04-20 13:15:28.280550 [NOTICE] switch_loadable_module.c:403 Adding Chat interface 'conf'
+2012-04-20 13:15:28.303223 [NOTICE] switch_loadable_module.c:254 Adding Application 'db'
+2012-04-20 13:15:28.303417 [NOTICE] switch_loadable_module.c:254 Adding Application 'group'
+2012-04-20 13:15:28.303636 [NOTICE] switch_loadable_module.c:298 Adding API Function 'db'
+2012-04-20 13:15:28.303789 [NOTICE] switch_loadable_module.c:298 Adding API Function 'group'
+2012-04-20 13:15:28.303931 [NOTICE] switch_loadable_module.c:473 Adding Limit interface 'db'
+2012-04-20 13:15:28.316652 [NOTICE] switch_loadable_module.c:146 Adding Endpoint 'error'
+2012-04-20 13:15:28.316760 [NOTICE] switch_loadable_module.c:146 Adding Endpoint 'group'
+2012-04-20 13:15:28.316840 [NOTICE] switch_loadable_module.c:146 Adding Endpoint 'user'
+2012-04-20 13:15:28.316916 [NOTICE] switch_loadable_module.c:214 Adding Dialplan 'inline'
+2012-04-20 13:15:28.316995 [NOTICE] switch_loadable_module.c:254 Adding Application 'bind_digit_action'
+2012-04-20 13:15:28.317087 [NOTICE] switch_loadable_module.c:254 Adding Application 'capture'
+2012-04-20 13:15:28.317171 [NOTICE] switch_loadable_module.c:254 Adding Application 'clear_digit_action'
+2012-04-20 13:15:28.317261 [NOTICE] switch_loadable_module.c:254 Adding Application 'digit_action_set_realm'
+2012-04-20 13:15:28.317344 [NOTICE] switch_loadable_module.c:254 Adding Application 'privacy'
+2012-04-20 13:15:28.317425 [NOTICE] switch_loadable_module.c:254 Adding Application 'set_audio_level'
+2012-04-20 13:15:28.317509 [NOTICE] switch_loadable_module.c:254 Adding Application 'set_mute'
+2012-04-20 13:15:28.317590 [NOTICE] switch_loadable_module.c:254 Adding Application 'flush_dtmf'
+2012-04-20 13:15:28.317671 [NOTICE] switch_loadable_module.c:254 Adding Application 'hold'
+2012-04-20 13:15:28.317752 [NOTICE] switch_loadable_module.c:254 Adding Application 'unhold'
+2012-04-20 13:15:28.317835 [NOTICE] switch_loadable_module.c:254 Adding Application 'transfer'
+2012-04-20 13:15:28.317920 [NOTICE] switch_loadable_module.c:254 Adding Application 'check_acl'
+2012-04-20 13:15:28.318004 [NOTICE] switch_loadable_module.c:254 Adding Application 'verbose_events'
+2012-04-20 13:15:28.318087 [NOTICE] switch_loadable_module.c:254 Adding Application 'cng_plc'
+2012-04-20 13:15:28.318170 [NOTICE] switch_loadable_module.c:254 Adding Application 'early_hangup'
+2012-04-20 13:15:28.318252 [NOTICE] switch_loadable_module.c:254 Adding Application 'sleep'
+2012-04-20 13:15:28.318333 [NOTICE] switch_loadable_module.c:254 Adding Application 'delay_echo'
+2012-04-20 13:15:28.318416 [NOTICE] switch_loadable_module.c:254 Adding Application 'strftime'
+2012-04-20 13:15:28.318497 [NOTICE] switch_loadable_module.c:254 Adding Application 'phrase'
+2012-04-20 13:15:28.318578 [NOTICE] switch_loadable_module.c:254 Adding Application 'eval'
+2012-04-20 13:15:28.318658 [NOTICE] switch_loadable_module.c:254 Adding Application 'stop'
+2012-04-20 13:15:28.318737 [NOTICE] switch_loadable_module.c:254 Adding Application 'set_zombie_exec'
+2012-04-20 13:15:28.318820 [NOTICE] switch_loadable_module.c:254 Adding Application 'pre_answer'
+2012-04-20 13:15:28.318902 [NOTICE] switch_loadable_module.c:254 Adding Application 'answer'
+2012-04-20 13:15:28.318982 [NOTICE] switch_loadable_module.c:254 Adding Application 'hangup'
+2012-04-20 13:15:28.319065 [NOTICE] switch_loadable_module.c:254 Adding Application 'set_name'
+2012-04-20 13:15:28.319145 [NOTICE] switch_loadable_module.c:254 Adding Application 'presence'
+2012-04-20 13:15:28.319231 [NOTICE] switch_loadable_module.c:254 Adding Application 'log'
+2012-04-20 13:15:28.319315 [NOTICE] switch_loadable_module.c:254 Adding Application 'info'
+2012-04-20 13:15:28.319396 [NOTICE] switch_loadable_module.c:254 Adding Application 'event'
+2012-04-20 13:15:28.319496 [NOTICE] switch_loadable_module.c:254 Adding Application 'sound_test'
+2012-04-20 13:15:28.319579 [NOTICE] switch_loadable_module.c:254 Adding Application 'export'
+2012-04-20 13:15:28.319662 [NOTICE] switch_loadable_module.c:254 Adding Application 'bridge_export'
+2012-04-20 13:15:28.319745 [NOTICE] switch_loadable_module.c:254 Adding Application 'set'
+2012-04-20 13:15:28.319827 [NOTICE] switch_loadable_module.c:254 Adding Application 'push'
+2012-04-20 13:15:28.319908 [NOTICE] switch_loadable_module.c:254 Adding Application 'unshift'
+2012-04-20 13:15:28.319988 [NOTICE] switch_loadable_module.c:254 Adding Application 'set_global'
+2012-04-20 13:15:28.320070 [NOTICE] switch_loadable_module.c:254 Adding Application 'set_profile_var'
+2012-04-20 13:15:28.320153 [NOTICE] switch_loadable_module.c:254 Adding Application 'unset'
+2012-04-20 13:15:28.320233 [NOTICE] switch_loadable_module.c:254 Adding Application 'ring_ready'
+2012-04-20 13:15:28.320314 [NOTICE] switch_loadable_module.c:254 Adding Application 'remove_bugs'
+2012-04-20 13:15:28.320395 [NOTICE] switch_loadable_module.c:254 Adding Application 'break'
+2012-04-20 13:15:28.320473 [NOTICE] switch_loadable_module.c:254 Adding Application 'detect_speech'
+2012-04-20 13:15:28.320572 [NOTICE] switch_loadable_module.c:254 Adding Application 'play_and_detect_speech'
+2012-04-20 13:15:28.320660 [NOTICE] switch_loadable_module.c:254 Adding Application 'ivr'
+2012-04-20 13:15:28.320740 [NOTICE] switch_loadable_module.c:254 Adding Application 'redirect'
+2012-04-20 13:15:28.320822 [NOTICE] switch_loadable_module.c:254 Adding Application 'send_info'
+2012-04-20 13:15:28.320901 [NOTICE] switch_loadable_module.c:254 Adding Application 'jitterbuffer'
+2012-04-20 13:15:28.320983 [NOTICE] switch_loadable_module.c:254 Adding Application 'send_display'
+2012-04-20 13:15:28.321064 [NOTICE] switch_loadable_module.c:254 Adding Application 'respond'
+2012-04-20 13:15:28.321144 [NOTICE] switch_loadable_module.c:254 Adding Application 'deflect'
+2012-04-20 13:15:28.321225 [NOTICE] switch_loadable_module.c:254 Adding Application 'recovery_refresh'
+2012-04-20 13:15:28.321308 [NOTICE] switch_loadable_module.c:254 Adding Application 'queue_dtmf'
+2012-04-20 13:15:28.321389 [NOTICE] switch_loadable_module.c:254 Adding Application 'send_dtmf'
+2012-04-20 13:15:28.321470 [NOTICE] switch_loadable_module.c:254 Adding Application 'sched_cancel'
+2012-04-20 13:15:28.321552 [NOTICE] switch_loadable_module.c:254 Adding Application 'sched_hangup'
+2012-04-20 13:15:28.321634 [NOTICE] switch_loadable_module.c:254 Adding Application 'sched_broadcast'
+2012-04-20 13:15:28.321723 [NOTICE] switch_loadable_module.c:254 Adding Application 'sched_transfer'
+2012-04-20 13:15:28.321808 [NOTICE] switch_loadable_module.c:254 Adding Application 'execute_extension'
+2012-04-20 13:15:28.321900 [NOTICE] switch_loadable_module.c:254 Adding Application 'sched_heartbeat'
+2012-04-20 13:15:28.321984 [NOTICE] switch_loadable_module.c:254 Adding Application 'enable_heartbeat'
+2012-04-20 13:15:28.322067 [NOTICE] switch_loadable_module.c:254 Adding Application 'mkdir'
+2012-04-20 13:15:28.322148 [NOTICE] switch_loadable_module.c:254 Adding Application 'soft_hold'
+2012-04-20 13:15:28.322231 [NOTICE] switch_loadable_module.c:254 Adding Application 'bind_meta_app'
+2012-04-20 13:15:28.322314 [NOTICE] switch_loadable_module.c:254 Adding Application 'unbind_meta_app'
+2012-04-20 13:15:28.322397 [NOTICE] switch_loadable_module.c:254 Adding Application 'block_dfmf'
+2012-04-20 13:15:28.322478 [NOTICE] switch_loadable_module.c:254 Adding Application 'unblock_dtmf'
+2012-04-20 13:15:28.322560 [NOTICE] switch_loadable_module.c:254 Adding Application 'intercept'
+2012-04-20 13:15:28.322640 [NOTICE] switch_loadable_module.c:254 Adding Application 'eavesdrop'
+2012-04-20 13:15:28.322721 [NOTICE] switch_loadable_module.c:254 Adding Application 'three_way'
+2012-04-20 13:15:28.322802 [NOTICE] switch_loadable_module.c:254 Adding Application 'set_user'
+2012-04-20 13:15:28.322883 [NOTICE] switch_loadable_module.c:254 Adding Application 'stop_dtmf'
+2012-04-20 13:15:28.322963 [NOTICE] switch_loadable_module.c:254 Adding Application 'start_dtmf'
+2012-04-20 13:15:28.323044 [NOTICE] switch_loadable_module.c:254 Adding Application 'stop_dtmf_generate'
+2012-04-20 13:15:28.323127 [NOTICE] switch_loadable_module.c:254 Adding Application 'start_dtmf_generate'
+2012-04-20 13:15:28.323209 [NOTICE] switch_loadable_module.c:254 Adding Application 'stop_tone_detect'
+2012-04-20 13:15:28.323291 [NOTICE] switch_loadable_module.c:254 Adding Application 'fax_detect'
+2012-04-20 13:15:28.323371 [NOTICE] switch_loadable_module.c:254 Adding Application 'tone_detect'
+2012-04-20 13:15:28.323460 [NOTICE] switch_loadable_module.c:254 Adding Application 'echo'
+2012-04-20 13:15:28.323540 [NOTICE] switch_loadable_module.c:254 Adding Application 'park'
+2012-04-20 13:15:28.323620 [NOTICE] switch_loadable_module.c:254 Adding Application 'park_state'
+2012-04-20 13:15:28.323699 [NOTICE] switch_loadable_module.c:254 Adding Application 'gentones'
+2012-04-20 13:15:28.323781 [NOTICE] switch_loadable_module.c:254 Adding Application 'playback'
+2012-04-20 13:15:28.323861 [NOTICE] switch_loadable_module.c:254 Adding Application 'endless_playback'
+2012-04-20 13:15:28.323944 [NOTICE] switch_loadable_module.c:254 Adding Application 'att_xfer'
+2012-04-20 13:15:28.324024 [NOTICE] switch_loadable_module.c:254 Adding Application 'read'
+2012-04-20 13:15:28.324109 [NOTICE] switch_loadable_module.c:254 Adding Application 'play_and_get_digits'
+2012-04-20 13:15:28.324203 [NOTICE] switch_loadable_module.c:254 Adding Application 'stop_record_session'
+2012-04-20 13:15:28.324285 [NOTICE] switch_loadable_module.c:254 Adding Application 'record_session'
+2012-04-20 13:15:28.324368 [NOTICE] switch_loadable_module.c:254 Adding Application 'record'
+2012-04-20 13:15:28.324452 [NOTICE] switch_loadable_module.c:254 Adding Application 'preprocess'
+2012-04-20 13:15:28.324533 [NOTICE] switch_loadable_module.c:254 Adding Application 'stop_displace_session'
+2012-04-20 13:15:28.324616 [NOTICE] switch_loadable_module.c:254 Adding Application 'displace_session'
+2012-04-20 13:15:28.324699 [NOTICE] switch_loadable_module.c:254 Adding Application 'speak'
+2012-04-20 13:15:28.324781 [NOTICE] switch_loadable_module.c:254 Adding Application 'clear_speech_cache'
+2012-04-20 13:15:28.324864 [NOTICE] switch_loadable_module.c:254 Adding Application 'bridge'
+2012-04-20 13:15:28.324945 [NOTICE] switch_loadable_module.c:254 Adding Application 'system'
+2012-04-20 13:15:28.325026 [NOTICE] switch_loadable_module.c:254 Adding Application 'say'
+2012-04-20 13:15:28.325110 [NOTICE] switch_loadable_module.c:254 Adding Application 'wait_for_silence'
+2012-04-20 13:15:28.325196 [NOTICE] switch_loadable_module.c:254 Adding Application 'session_loglevel'
+2012-04-20 13:15:28.325278 [NOTICE] switch_loadable_module.c:254 Adding Application 'limit'
+2012-04-20 13:15:28.328736 [NOTICE] switch_loadable_module.c:254 Adding Application 'limit_hash'
+2012-04-20 13:15:28.328881 [NOTICE] switch_loadable_module.c:254 Adding Application 'limit_execute'
+2012-04-20 13:15:28.328989 [NOTICE] switch_loadable_module.c:254 Adding Application 'limit_hash_execute'
+2012-04-20 13:15:28.329096 [NOTICE] switch_loadable_module.c:298 Adding API Function 'strepoch'
+2012-04-20 13:15:28.329199 [NOTICE] switch_loadable_module.c:298 Adding API Function 'strmicroepoch'
+2012-04-20 13:15:28.329303 [NOTICE] switch_loadable_module.c:298 Adding API Function 'chat'
+2012-04-20 13:15:28.329405 [NOTICE] switch_loadable_module.c:298 Adding API Function 'strftime'
+2012-04-20 13:15:28.329508 [NOTICE] switch_loadable_module.c:298 Adding API Function 'presence'
+2012-04-20 13:15:28.329610 [NOTICE] switch_loadable_module.c:322 Adding File Format 'file_string'
+2012-04-20 13:15:28.329713 [NOTICE] switch_loadable_module.c:403 Adding Chat interface 'event'
+2012-04-20 13:15:28.329815 [NOTICE] switch_loadable_module.c:403 Adding Chat interface 'api'
+2012-04-20 13:15:28.365506 [NOTICE] switch_loadable_module.c:298 Adding API Function 'expr'
+2012-04-20 13:15:28.372631 [INFO] mod_fifo.c:4261 sales configured
+2012-04-20 13:15:28.376741 [NOTICE] switch_loadable_module.c:254 Adding Application 'fifo'
+2012-04-20 13:15:28.376851 [NOTICE] switch_loadable_module.c:254 Adding Application 'fifo_track_call'
+2012-04-20 13:15:28.376960 [NOTICE] switch_loadable_module.c:298 Adding API Function 'fifo'
+2012-04-20 13:15:28.376995 [NOTICE] switch_loadable_module.c:298 Adding API Function 'fifo_member'
+2012-04-20 13:15:28.377061 [NOTICE] switch_loadable_module.c:298 Adding API Function 'fifo_add_outbound'
+2012-04-20 13:15:28.377131 [NOTICE] switch_loadable_module.c:298 Adding API Function 'fifo_check_bridge'
+2012-04-20 13:15:28.387682 [DEBUG] switch_scheduler.c:214 Added task 3 limit_hash_cleanup (mod_hash) to run at 1334921428
+2012-04-20 13:15:28.390315 [NOTICE] switch_loadable_module.c:254 Adding Application 'hash'
+2012-04-20 13:15:28.390429 [NOTICE] switch_loadable_module.c:298 Adding API Function 'hash'
+2012-04-20 13:15:28.390460 [NOTICE] switch_loadable_module.c:298 Adding API Function 'hash_dump'
+2012-04-20 13:15:28.390554 [NOTICE] switch_loadable_module.c:298 Adding API Function 'hash_remote'
+2012-04-20 13:15:28.390658 [NOTICE] switch_loadable_module.c:473 Adding Limit interface 'hash'
+2012-04-20 13:15:28.427574 [INFO] mod_voicemail.c:748 Added Profile default
+2012-04-20 13:15:28.427651 [NOTICE] switch_loadable_module.c:254 Adding Application 'voicemail'
+2012-04-20 13:15:28.427710 [NOTICE] switch_loadable_module.c:298 Adding API Function 'voicemail'
+2012-04-20 13:15:28.427748 [NOTICE] switch_loadable_module.c:298 Adding API Function 'voicemail_inject'
+2012-04-20 13:15:28.427786 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_inject'
+2012-04-20 13:15:28.427826 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_boxcount'
+2012-04-20 13:15:28.427861 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_prefs'
+2012-04-20 13:15:28.427897 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_delete'
+2012-04-20 13:15:28.427932 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_read'
+2012-04-20 13:15:28.427968 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_list'
+2012-04-20 13:15:28.428003 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_auth_login'
+2012-04-20 13:15:28.428039 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_msg_count'
+2012-04-20 13:15:28.428073 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_msg_list'
+2012-04-20 13:15:28.428106 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_msg_get'
+2012-04-20 13:15:28.428140 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_msg_delete'
+2012-04-20 13:15:28.428175 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_msg_undelete'
+2012-04-20 13:15:28.428211 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_msg_email'
+2012-04-20 13:15:28.428247 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_msg_purge'
+2012-04-20 13:15:28.428281 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_msg_save'
+2012-04-20 13:15:28.428315 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_msg_forward'
+2012-04-20 13:15:28.428382 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_pref_greeting_set'
+2012-04-20 13:15:28.428446 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_pref_recname_set'
+2012-04-20 13:15:28.428508 [NOTICE] switch_loadable_module.c:298 Adding API Function 'vm_fsdb_pref_password_set'
+2012-04-20 13:15:28.434845 [NOTICE] switch_loadable_module.c:254 Adding Application 'esf_page_group'
+2012-04-20 13:15:28.436662 [NOTICE] switch_loadable_module.c:254 Adding Application 'play_fsv'
+2012-04-20 13:15:28.436741 [NOTICE] switch_loadable_module.c:254 Adding Application 'record_fsv'
+2012-04-20 13:15:28.437314 [CRIT] switch_loadable_module.c:1290 Error Loading module /home/kwyrozumski/work/freeswitch/mod/mod_cluechoo.so
+**/home/kwyrozumski/work/freeswitch/mod/mod_cluechoo.so: undefined symbol: waddch**
+2012-04-20 13:15:28.438542 [NOTICE] switch_loadable_module.c:254 Adding Application 'valet_park'
+2012-04-20 13:15:28.438621 [NOTICE] switch_loadable_module.c:298 Adding API Function 'valet_info'
+2012-04-20 13:15:28.442656 [NOTICE] mod_httapi.c:2061 Profile [default] JSON Function [http://www.freeswitch.org/api/index.cgi]
+2012-04-20 13:15:28.443599 [NOTICE] switch_loadable_module.c:254 Adding Application 'httapi'
+2012-04-20 13:15:28.443689 [NOTICE] switch_loadable_module.c:298 Adding API Function 'httapi'
+2012-04-20 13:15:28.443720 [NOTICE] switch_loadable_module.c:322 Adding File Format 'http'
+2012-04-20 13:15:28.450226 [NOTICE] switch_loadable_module.c:214 Adding Dialplan 'XML'
+2012-04-20 13:15:28.459921 [NOTICE] switch_loadable_module.c:146 Adding Endpoint 'SIP'
+2012-04-20 13:15:28.459997 [NOTICE] switch_loadable_module.c:146 Adding Endpoint 'IAX2'
+2012-04-20 13:15:28.460055 [NOTICE] switch_loadable_module.c:214 Adding Dialplan 'asterisk'
+2012-04-20 13:15:28.460112 [NOTICE] switch_loadable_module.c:254 Adding Application 'Dial'
+2012-04-20 13:15:28.460171 [NOTICE] switch_loadable_module.c:254 Adding Application 'Goto'
+2012-04-20 13:15:28.460232 [NOTICE] switch_loadable_module.c:254 Adding Application 'AvoidingDeadlock'
+2012-04-20 13:15:28.485127 [DEBUG] mod_spandsp.c:449 Adding tone_descriptor: 1
+2012-04-20 13:15:28.485169 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 1, tone: CED_TONE(0)
+2012-04-20 13:15:28.485184 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: CED_TONE(0), element (2100, 0, 500, 0)
+2012-04-20 13:15:28.487455 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 1, tone: SIT(1)
+2012-04-20 13:15:28.487476 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: SIT(1), element (950, 0, 256, 400)
+2012-04-20 13:15:28.487489 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: SIT(1), element (1400, 0, 256, 400)
+2012-04-20 13:15:28.487501 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: SIT(1), element (1800, 0, 256, 400)
+2012-04-20 13:15:28.487518 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 1, tone: REORDER_TONE(2)
+2012-04-20 13:15:28.487529 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: REORDER_TONE(2), element (480, 620, 224, 272)
+2012-04-20 13:15:28.487540 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: REORDER_TONE(2), element (0, 0, 224, 272)
+2012-04-20 13:15:28.487551 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 1, tone: BUSY_TONE(3)
+2012-04-20 13:15:28.487560 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: BUSY_TONE(3), element (480, 620, 464, 516)
+2012-04-20 13:15:28.487574 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: BUSY_TONE(3), element (0, 0, 464, 516)
+2012-04-20 13:15:28.487585 [DEBUG] mod_spandsp.c:449 Adding tone_descriptor: 44
+2012-04-20 13:15:28.487603 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 44, tone: CED_TONE(0)
+2012-04-20 13:15:28.487616 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: CED_TONE(0), element (2100, 0, 500, 0)
+2012-04-20 13:15:28.487627 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 44, tone: SIT(1)
+2012-04-20 13:15:28.487636 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: SIT(1), element (950, 0, 256, 400)
+2012-04-20 13:15:28.487654 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: SIT(1), element (1400, 0, 256, 400)
+2012-04-20 13:15:28.487666 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: SIT(1), element (1800, 0, 256, 400)
+2012-04-20 13:15:28.487682 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 44, tone: REORDER_TONE(2)
+2012-04-20 13:15:28.487692 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: REORDER_TONE(2), element (400, 0, 368, 416)
+2012-04-20 13:15:28.487703 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: REORDER_TONE(2), element (0, 0, 336, 368)
+2012-04-20 13:15:28.487717 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: REORDER_TONE(2), element (400, 0, 256, 288)
+2012-04-20 13:15:28.487728 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: REORDER_TONE(2), element (0, 0, 512, 544)
+2012-04-20 13:15:28.487740 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 44, tone: BUSY_TONE(3)
+2012-04-20 13:15:28.487750 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: BUSY_TONE(3), element (400, 0, 352, 384)
+2012-04-20 13:15:28.487765 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: BUSY_TONE(3), element (0, 0, 352, 384)
+2012-04-20 13:15:28.487776 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: BUSY_TONE(3), element (400, 0, 352, 384)
+2012-04-20 13:15:28.487789 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: BUSY_TONE(3), element (0, 0, 352, 384)
+2012-04-20 13:15:28.487799 [DEBUG] mod_spandsp.c:449 Adding tone_descriptor: 49
+2012-04-20 13:15:28.487840 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 49, tone: CED_TONE(0)
+2012-04-20 13:15:28.487855 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: CED_TONE(0), element (2100, 0, 500, 0)
+2012-04-20 13:15:28.487867 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 49, tone: SIT(1)
+2012-04-20 13:15:28.487878 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: SIT(1), element (900, 0, 256, 400)
+2012-04-20 13:15:28.487893 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: SIT(1), element (1400, 0, 256, 400)
+2012-04-20 13:15:28.487904 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: SIT(1), element (1800, 0, 256, 400)
+2012-04-20 13:15:28.487919 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 49, tone: REORDER_TONE(2)
+2012-04-20 13:15:28.487929 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: REORDER_TONE(2), element (425, 0, 224, 272)
+2012-04-20 13:15:28.487942 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: REORDER_TONE(2), element (0, 0, 224, 272)
+2012-04-20 13:15:28.487955 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 49, tone: BUSY_TONE(3)
+2012-04-20 13:15:28.487964 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: BUSY_TONE(3), element (425, 0, 464, 516)
+2012-04-20 13:15:28.487976 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: BUSY_TONE(3), element (0, 0, 464, 516)
+2012-04-20 13:15:28.488059 [DEBUG] mod_spandsp_fax.c:192 FAX timer thread started.
+2012-04-20 13:15:28.509157 [DEBUG] mod_spandsp.c:574 mod_spandsp loaded, using spandsp library version [20100724 163333]
+2012-04-20 13:15:28.509218 [NOTICE] switch_loadable_module.c:146 Adding Endpoint 'modem'
+2012-04-20 13:15:28.509427 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 6 ADPCM (IMA) 16000hz 10ms 64000bps
+2012-04-20 13:15:28.509446 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 6 ADPCM (IMA) 16000hz 20ms 64000bps
+2012-04-20 13:15:28.509457 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 6 ADPCM (IMA) 16000hz 30ms 64000bps
+2012-04-20 13:15:28.509466 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 6 ADPCM (IMA) 16000hz 40ms 64000bps
+2012-04-20 13:15:28.509476 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 6 ADPCM (IMA) 16000hz 50ms 64000bps
+2012-04-20 13:15:28.509486 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 6 ADPCM (IMA) 16000hz 60ms 64000bps
+2012-04-20 13:15:28.509498 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 10ms 32000bps
+2012-04-20 13:15:28.509509 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 20ms 32000bps
+2012-04-20 13:15:28.509518 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 30ms 32000bps
+2012-04-20 13:15:28.509833 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 40ms 32000bps
+2012-04-20 13:15:28.509846 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 50ms 32000bps
+2012-04-20 13:15:28.510071 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 60ms 32000bps
+2012-04-20 13:15:28.510150 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 70ms 32000bps
+2012-04-20 13:15:28.510223 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 80ms 32000bps
+2012-04-20 13:15:28.510295 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 90ms 32000bps
+2012-04-20 13:15:28.510367 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 100ms 32000bps
+2012-04-20 13:15:28.510438 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 110ms 32000bps
+2012-04-20 13:15:28.510509 [NOTICE] switch_loadable_module.c:187 Adding Codec DVI4 5 ADPCM (IMA) 8000hz 120ms 32000bps
+2012-04-20 13:15:28.510628 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 10ms 16000bps
+2012-04-20 13:15:28.510703 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 20ms 16000bps
+2012-04-20 13:15:28.510776 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 30ms 16000bps
+2012-04-20 13:15:28.510849 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 40ms 16000bps
+2012-04-20 13:15:28.510921 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 50ms 16000bps
+2012-04-20 13:15:28.510992 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 60ms 16000bps
+2012-04-20 13:15:28.511064 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 70ms 16000bps
+2012-04-20 13:15:28.511135 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 80ms 16000bps
+2012-04-20 13:15:28.511206 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 90ms 16000bps
+2012-04-20 13:15:28.511278 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 100ms 16000bps
+2012-04-20 13:15:28.511350 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 110ms 16000bps
+2012-04-20 13:15:28.511421 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-16 124 G.726 16k (AAL2) 8000hz 120ms 16000bps
+2012-04-20 13:15:28.511581 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 10ms 16000bps
+2012-04-20 13:15:28.511652 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 20ms 16000bps
+2012-04-20 13:15:28.511725 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 30ms 16000bps
+2012-04-20 13:15:28.511793 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 40ms 16000bps
+2012-04-20 13:15:28.512104 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 50ms 16000bps
+2012-04-20 13:15:28.512174 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 60ms 16000bps
+2012-04-20 13:15:28.512240 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 70ms 16000bps
+2012-04-20 13:15:28.512309 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 80ms 16000bps
+2012-04-20 13:15:28.512380 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 90ms 16000bps
+2012-04-20 13:15:28.512450 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 100ms 16000bps
+2012-04-20 13:15:28.512521 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 110ms 16000bps
+2012-04-20 13:15:28.512592 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-16 124 G.726 16k 8000hz 120ms 16000bps
+2012-04-20 13:15:28.512705 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 10ms 24000bps
+2012-04-20 13:15:28.512779 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 20ms 24000bps
+2012-04-20 13:15:28.512856 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 30ms 24000bps
+2012-04-20 13:15:28.512928 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 40ms 24000bps
+2012-04-20 13:15:28.513000 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 50ms 24000bps
+2012-04-20 13:15:28.513072 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 60ms 24000bps
+2012-04-20 13:15:28.513144 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 70ms 24000bps
+2012-04-20 13:15:28.513215 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 80ms 24000bps
+2012-04-20 13:15:28.513287 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 90ms 24000bps
+2012-04-20 13:15:28.513359 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 100ms 24000bps
+2012-04-20 13:15:28.513431 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 110ms 24000bps
+2012-04-20 13:15:28.513503 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-24 123 G.726 24k (AAL2) 8000hz 120ms 24000bps
+2012-04-20 13:15:28.513616 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 10ms 24000bps
+2012-04-20 13:15:28.513686 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 20ms 24000bps
+2012-04-20 13:15:28.513759 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 30ms 24000bps
+2012-04-20 13:15:28.513830 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 40ms 24000bps
+2012-04-20 13:15:28.513901 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 50ms 24000bps
+2012-04-20 13:15:28.513972 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 60ms 24000bps
+2012-04-20 13:15:28.514043 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 70ms 24000bps
+2012-04-20 13:15:28.514113 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 80ms 24000bps
+2012-04-20 13:15:28.514184 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 90ms 24000bps
+2012-04-20 13:15:28.514266 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 100ms 24000bps
+2012-04-20 13:15:28.514292 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 110ms 24000bps
+2012-04-20 13:15:28.514304 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-24 123 G.726 24k 8000hz 120ms 24000bps
+2012-04-20 13:15:28.514414 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 10ms 32000bps
+2012-04-20 13:15:28.514429 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 20ms 32000bps
+2012-04-20 13:15:28.514439 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 30ms 32000bps
+2012-04-20 13:15:28.514449 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 40ms 32000bps
+2012-04-20 13:15:28.514458 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 50ms 32000bps
+2012-04-20 13:15:28.514467 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 60ms 32000bps
+2012-04-20 13:15:28.514477 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 70ms 32000bps
+2012-04-20 13:15:28.514508 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 80ms 32000bps
+2012-04-20 13:15:28.514518 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 90ms 32000bps
+2012-04-20 13:15:28.514527 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 100ms 32000bps
+2012-04-20 13:15:28.514536 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 110ms 32000bps
+2012-04-20 13:15:28.514545 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-32 122 G.726 32k (AAL2) 8000hz 120ms 32000bps
+2012-04-20 13:15:28.514655 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 10ms 32000bps
+2012-04-20 13:15:28.514669 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 20ms 32000bps
+2012-04-20 13:15:28.514678 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 30ms 32000bps
+2012-04-20 13:15:28.514686 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 40ms 32000bps
+2012-04-20 13:15:28.514695 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 50ms 32000bps
+2012-04-20 13:15:28.514717 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 60ms 32000bps
+2012-04-20 13:15:28.514727 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 70ms 32000bps
+2012-04-20 13:15:28.514736 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 80ms 32000bps
+2012-04-20 13:15:28.514744 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 90ms 32000bps
+2012-04-20 13:15:28.514753 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 100ms 32000bps
+2012-04-20 13:15:28.514761 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 110ms 32000bps
+2012-04-20 13:15:28.514770 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-32 122 G.726 32k 8000hz 120ms 32000bps
+2012-04-20 13:15:28.514875 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 10ms 40000bps
+2012-04-20 13:15:28.514889 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 20ms 40000bps
+2012-04-20 13:15:28.514901 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 30ms 40000bps
+2012-04-20 13:15:28.514910 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 40ms 40000bps
+2012-04-20 13:15:28.514919 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 50ms 40000bps
+2012-04-20 13:15:28.514929 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 60ms 40000bps
+2012-04-20 13:15:28.514938 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 70ms 40000bps
+2012-04-20 13:15:28.514947 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 80ms 40000bps
+2012-04-20 13:15:28.514956 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 90ms 40000bps
+2012-04-20 13:15:28.514965 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 100ms 40000bps
+2012-04-20 13:15:28.514974 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 110ms 40000bps
+2012-04-20 13:15:28.514983 [NOTICE] switch_loadable_module.c:187 Adding Codec AAL2-G726-40 121 G.726 40k (AAL2) 8000hz 120ms 40000bps
+2012-04-20 13:15:28.515086 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 10ms 40000bps
+2012-04-20 13:15:28.515100 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 20ms 40000bps
+2012-04-20 13:15:28.515110 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 30ms 40000bps
+2012-04-20 13:15:28.515119 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 40ms 40000bps
+2012-04-20 13:15:28.515127 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 50ms 40000bps
+2012-04-20 13:15:28.515136 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 60ms 40000bps
+2012-04-20 13:15:28.515145 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 70ms 40000bps
+2012-04-20 13:15:28.515154 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 80ms 40000bps
+2012-04-20 13:15:28.515163 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 90ms 40000bps
+2012-04-20 13:15:28.515172 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 100ms 40000bps
+2012-04-20 13:15:28.515181 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 110ms 40000bps
+2012-04-20 13:15:28.515189 [NOTICE] switch_loadable_module.c:187 Adding Codec G726-40 121 G.726 40k 8000hz 120ms 40000bps
+2012-04-20 13:15:28.515290 [NOTICE] switch_loadable_module.c:187 Adding Codec G722 9 G.722 16000hz 10ms 64000bps
+2012-04-20 13:15:28.515304 [NOTICE] switch_loadable_module.c:187 Adding Codec G722 9 G.722 16000hz 20ms 64000bps
+2012-04-20 13:15:28.515313 [NOTICE] switch_loadable_module.c:187 Adding Codec G722 9 G.722 16000hz 30ms 64000bps
+2012-04-20 13:15:28.515322 [NOTICE] switch_loadable_module.c:187 Adding Codec G722 9 G.722 16000hz 40ms 64000bps
+2012-04-20 13:15:28.515331 [NOTICE] switch_loadable_module.c:187 Adding Codec G722 9 G.722 16000hz 50ms 64000bps
+2012-04-20 13:15:28.515340 [NOTICE] switch_loadable_module.c:187 Adding Codec G722 9 G.722 16000hz 60ms 64000bps
+2012-04-20 13:15:28.515454 [NOTICE] switch_loadable_module.c:187 Adding Codec GSM 3 GSM 8000hz 20ms 13200bps
+2012-04-20 13:15:28.515468 [NOTICE] switch_loadable_module.c:187 Adding Codec GSM 3 GSM 8000hz 40ms 13200bps
+2012-04-20 13:15:28.515477 [NOTICE] switch_loadable_module.c:187 Adding Codec GSM 3 GSM 8000hz 60ms 13200bps
+2012-04-20 13:15:28.515486 [NOTICE] switch_loadable_module.c:187 Adding Codec GSM 3 GSM 8000hz 80ms 13200bps
+2012-04-20 13:15:28.515495 [NOTICE] switch_loadable_module.c:187 Adding Codec GSM 3 GSM 8000hz 100ms 13200bps
+2012-04-20 13:15:28.515503 [NOTICE] switch_loadable_module.c:187 Adding Codec GSM 3 GSM 8000hz 120ms 13200bps
+2012-04-20 13:15:28.515603 [NOTICE] switch_loadable_module.c:187 Adding Codec LPC 7 LPC-10 8000hz 90ms 2400bps
+2012-04-20 13:15:28.515710 [NOTICE] switch_loadable_module.c:254 Adding Application 't38_gateway'
+2012-04-20 13:15:28.515884 [NOTICE] switch_loadable_module.c:254 Adding Application 'rxfax'
+2012-04-20 13:15:28.515997 [NOTICE] switch_loadable_module.c:254 Adding Application 'txfax'
+2012-04-20 13:15:28.516107 [NOTICE] switch_loadable_module.c:254 Adding Application 'spandsp_stop_dtmf'
+2012-04-20 13:15:28.516217 [NOTICE] switch_loadable_module.c:254 Adding Application 'spandsp_start_dtmf'
+2012-04-20 13:15:28.516326 [NOTICE] switch_loadable_module.c:254 Adding Application 'spandsp_start_fax_detect'
+2012-04-20 13:15:28.516439 [NOTICE] switch_loadable_module.c:254 Adding Application 'spandsp_stop_fax_detect'
+2012-04-20 13:15:28.516575 [NOTICE] switch_loadable_module.c:254 Adding Application 'start_tone_detect'
+2012-04-20 13:15:28.516691 [NOTICE] switch_loadable_module.c:254 Adding Application 'stop_tone_detect'
+2012-04-20 13:15:28.516804 [NOTICE] switch_loadable_module.c:298 Adding API Function 'start_tone_detect'
+2012-04-20 13:15:28.516917 [NOTICE] switch_loadable_module.c:298 Adding API Function 'stop_tone_detect'
+2012-04-20 13:15:28.527336 [NOTICE] switch_loadable_module.c:187 Adding Codec G723 4 G.723.1 6.3k 8000hz 120ms 6300bps
+2012-04-20 13:15:28.527352 [NOTICE] switch_loadable_module.c:187 Adding Codec G723 4 G.723.1 6.3k 8000hz 90ms 6300bps
+2012-04-20 13:15:28.527362 [NOTICE] switch_loadable_module.c:187 Adding Codec G723 4 G.723.1 6.3k 8000hz 60ms 6300bps
+2012-04-20 13:15:28.527372 [NOTICE] switch_loadable_module.c:187 Adding Codec G723 4 G.723.1 6.3k 8000hz 30ms 6300bps
+2012-04-20 13:15:28.535203 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 10ms 8000bps
+2012-04-20 13:15:28.535217 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 20ms 8000bps
+2012-04-20 13:15:28.535227 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 30ms 8000bps
+2012-04-20 13:15:28.535236 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 40ms 8000bps
+2012-04-20 13:15:28.535245 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 50ms 8000bps
+2012-04-20 13:15:28.535254 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 60ms 8000bps
+2012-04-20 13:15:28.535263 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 70ms 8000bps
+2012-04-20 13:15:28.535272 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 80ms 8000bps
+2012-04-20 13:15:28.535281 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 90ms 8000bps
+2012-04-20 13:15:28.535290 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 100ms 8000bps
+2012-04-20 13:15:28.535299 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 110ms 8000bps
+2012-04-20 13:15:28.535308 [NOTICE] switch_loadable_module.c:187 Adding Codec G729 18 G.729 8000hz 120ms 8000bps
+2012-04-20 13:15:28.544353 [NOTICE] switch_loadable_module.c:187 Adding Codec AMR 96 AMR 8000hz 20ms 12200bps
+2012-04-20 13:15:28.556357 [NOTICE] switch_loadable_module.c:187 Adding Codec iLBC 97 iLBC 8000hz 30ms 13330bps
+2012-04-20 13:15:28.556367 [NOTICE] switch_loadable_module.c:187 Adding Codec iLBC 98 iLBC 8000hz 20ms 15200bps
+2012-04-20 13:15:28.566128 [NOTICE] switch_loadable_module.c:187 Adding Codec SPEEX 99 Speex 32000hz 20ms 44000bps
+2012-04-20 13:15:28.566138 [NOTICE] switch_loadable_module.c:187 Adding Codec SPEEX 99 Speex 16000hz 20ms 42200bps
+2012-04-20 13:15:28.566144 [NOTICE] switch_loadable_module.c:187 Adding Codec SPEEX 99 Speex 8000hz 20ms 24600bps
+2012-04-20 13:15:28.571637 [NOTICE] switch_loadable_module.c:187 Adding Codec H264 99 H.264 Video (passthru) 90000hz 0ms 0bps
+2012-04-20 13:15:28.571733 [NOTICE] switch_loadable_module.c:187 Adding Codec H263 34 H.263 Video (passthru) 90000hz 0ms 0bps
+2012-04-20 13:15:28.571814 [NOTICE] switch_loadable_module.c:187 Adding Codec H263-1998 115 H.263+ Video (passthru) 90000hz 0ms 0bps
+2012-04-20 13:15:28.571894 [NOTICE] switch_loadable_module.c:187 Adding Codec H263-2000 121 H.263++ Video (passthru) 90000hz 0ms 0bps
+2012-04-20 13:15:28.571973 [NOTICE] switch_loadable_module.c:187 Adding Codec H261 31 H.261 Video (passthru) 90000hz 0ms 0bps
+2012-04-20 13:15:28.576745 [INFO] mod_siren.c:155 Audio coding: ITU-T Rec. G.722.1, licensed from Polycom(R)
+2012-04-20 13:15:28.576768 [INFO] mod_siren.c:156 Audio coding: ITU-T Rec. G.722.1 Annex C, licensed from Polycom(R)
+2012-04-20 13:15:28.576898 [NOTICE] switch_loadable_module.c:187 Adding Codec G7221 115 Polycom(R) G722.1/G722.1C 32000hz 20ms 48000bps
+2012-04-20 13:15:28.576961 [NOTICE] switch_loadable_module.c:187 Adding Codec G7221 115 Polycom(R) G722.1/G722.1C 32000hz 40ms 48000bps
+2012-04-20 13:15:28.576970 [NOTICE] switch_loadable_module.c:187 Adding Codec G7221 115 Polycom(R) G722.1/G722.1C 32000hz 60ms 48000bps
+2012-04-20 13:15:28.577084 [NOTICE] switch_loadable_module.c:187 Adding Codec G7221 107 Polycom(R) G722.1/G722.1C 16000hz 20ms 32000bps
+2012-04-20 13:15:28.577098 [NOTICE] switch_loadable_module.c:187 Adding Codec G7221 107 Polycom(R) G722.1/G722.1C 16000hz 40ms 32000bps
+2012-04-20 13:15:28.577106 [NOTICE] switch_loadable_module.c:187 Adding Codec G7221 107 Polycom(R) G722.1/G722.1C 16000hz 60ms 32000bps
+2012-04-20 13:15:28.577112 [NOTICE] switch_loadable_module.c:187 Adding Codec G7221 107 Polycom(R) G722.1/G722.1C 16000hz 20ms 24000bps
+2012-04-20 13:15:28.577231 [NOTICE] switch_loadable_module.c:187 Adding Codec G7221 107 Polycom(R) G722.1/G722.1C 16000hz 40ms 24000bps
+2012-04-20 13:15:28.577240 [NOTICE] switch_loadable_module.c:187 Adding Codec G7221 107 Polycom(R) G722.1/G722.1C 16000hz 60ms 24000bps
+2012-04-20 13:15:28.592456 [INFO] mod_sndfile.c:358 
+LibSndFile Version : libsndfile-1.0.19 Supported Formats
+================================================================================
+AIFF (Apple/SGI)  (extension "aiff")
+AU (Sun/NeXT)  (extension "au")
+AVR (Audio Visual Research)  (extension "avr")
+CAF (Apple Core Audio File)  (extension "caf")
+HTK (HMM Tool Kit)  (extension "htk")
+IFF (Amiga IFF/SVX8/SV16)  (extension "iff")
+MAT4 (GNU Octave 2.0 / Matlab 4.2)  (extension "mat")
+MAT5 (GNU Octave 2.1 / Matlab 5.0)  (extension "mat")
+PAF (Ensoniq PARIS)  (extension "paf")
+PVF (Portable Voice Format)  (extension "pvf")
+RAW (header-less)  (extension "raw")
+SD2 (Sound Designer II)  (extension "sd2")
+SDS (Midi Sample Dump Standard)  (extension "sds")
+SF (Berkeley/IRCAM/CARL)  (extension "sf")
+VOC (Creative Labs)  (extension "voc")
+W64 (SoundFoundry WAVE 64)  (extension "w64")
+WAV (Microsoft)  (extension "wav")
+WAV (NIST Sphere)  (extension "wav")
+WAVEX (Microsoft)  (extension "wav")
+WVE (Psion Series 3)  (extension "wve")
+XI (FastTracker 2)  (extension "xi")
+================================================================================
+2012-04-20 13:15:28.593456 [NOTICE] switch_loadable_module.c:322 Adding File Format 'aiff'
+2012-04-20 13:15:28.593554 [NOTICE] switch_loadable_module.c:322 Adding File Format 'au'
+2012-04-20 13:15:28.593594 [NOTICE] switch_loadable_module.c:322 Adding File Format 'avr'
+2012-04-20 13:15:28.593633 [NOTICE] switch_loadable_module.c:322 Adding File Format 'caf'
+2012-04-20 13:15:28.593669 [NOTICE] switch_loadable_module.c:322 Adding File Format 'htk'
+2012-04-20 13:15:28.593702 [NOTICE] switch_loadable_module.c:322 Adding File Format 'iff'
+2012-04-20 13:15:28.593735 [NOTICE] switch_loadable_module.c:322 Adding File Format 'mat'
+2012-04-20 13:15:28.593770 [NOTICE] switch_loadable_module.c:322 Adding File Format 'paf'
+2012-04-20 13:15:28.593806 [NOTICE] switch_loadable_module.c:322 Adding File Format 'pvf'
+2012-04-20 13:15:28.593836 [NOTICE] switch_loadable_module.c:322 Adding File Format 'raw'
+2012-04-20 13:15:28.593872 [NOTICE] switch_loadable_module.c:322 Adding File Format 'sd2'
+2012-04-20 13:15:28.593909 [NOTICE] switch_loadable_module.c:322 Adding File Format 'sds'
+2012-04-20 13:15:28.593941 [NOTICE] switch_loadable_module.c:322 Adding File Format 'sf'
+2012-04-20 13:15:28.593973 [NOTICE] switch_loadable_module.c:322 Adding File Format 'voc'
+2012-04-20 13:15:28.594007 [NOTICE] switch_loadable_module.c:322 Adding File Format 'w64'
+2012-04-20 13:15:28.594041 [NOTICE] switch_loadable_module.c:322 Adding File Format 'wav'
+2012-04-20 13:15:28.594073 [NOTICE] switch_loadable_module.c:322 Adding File Format 'wve'
+2012-04-20 13:15:28.594105 [NOTICE] switch_loadable_module.c:322 Adding File Format 'xi'
+2012-04-20 13:15:28.594136 [NOTICE] switch_loadable_module.c:322 Adding File Format 'r8'
+2012-04-20 13:15:28.594169 [NOTICE] switch_loadable_module.c:322 Adding File Format 'r16'
+2012-04-20 13:15:28.594201 [NOTICE] switch_loadable_module.c:322 Adding File Format 'r24'
+2012-04-20 13:15:28.594235 [NOTICE] switch_loadable_module.c:322 Adding File Format 'r32'
+2012-04-20 13:15:28.594270 [NOTICE] switch_loadable_module.c:322 Adding File Format 'gsm'
+2012-04-20 13:15:28.594302 [NOTICE] switch_loadable_module.c:322 Adding File Format 'ul'
+2012-04-20 13:15:28.594338 [NOTICE] switch_loadable_module.c:322 Adding File Format 'ulaw'
+2012-04-20 13:15:28.594370 [NOTICE] switch_loadable_module.c:322 Adding File Format 'al'
+2012-04-20 13:15:28.594404 [NOTICE] switch_loadable_module.c:322 Adding File Format 'alaw'
+2012-04-20 13:15:28.594435 [NOTICE] switch_loadable_module.c:322 Adding File Format 'adpcm'
+2012-04-20 13:15:28.605243 [NOTICE] switch_loadable_module.c:322 Adding File Format 'G7221'
+2012-04-20 13:15:28.605345 [NOTICE] switch_loadable_module.c:322 Adding File Format 'AMR'
+2012-04-20 13:15:28.605424 [NOTICE] switch_loadable_module.c:322 Adding File Format 'SPEEX'
+2012-04-20 13:15:28.605509 [NOTICE] switch_loadable_module.c:322 Adding File Format 'G729'
+2012-04-20 13:15:28.605587 [NOTICE] switch_loadable_module.c:322 Adding File Format 'G726-16'
+2012-04-20 13:15:28.605664 [NOTICE] switch_loadable_module.c:322 Adding File Format 'AAL2-G726-16'
+2012-04-20 13:15:28.605740 [NOTICE] switch_loadable_module.c:322 Adding File Format 'PCMA'
+2012-04-20 13:15:28.605815 [NOTICE] switch_loadable_module.c:322 Adding File Format 'DVI4'
+2012-04-20 13:15:28.605889 [NOTICE] switch_loadable_module.c:322 Adding File Format 'G726-24'
+2012-04-20 13:15:28.605966 [NOTICE] switch_loadable_module.c:322 Adding File Format 'PCMU'
+2012-04-20 13:15:28.606041 [NOTICE] switch_loadable_module.c:322 Adding File Format 'L16'
+2012-04-20 13:15:28.606116 [NOTICE] switch_loadable_module.c:322 Adding File Format 'PROXY'
+2012-04-20 13:15:28.606190 [NOTICE] switch_loadable_module.c:322 Adding File Format 'AAL2-G726-24'
+2012-04-20 13:15:28.606267 [NOTICE] switch_loadable_module.c:322 Adding File Format 'AAL2-G726-32'
+2012-04-20 13:15:28.606343 [NOTICE] switch_loadable_module.c:322 Adding File Format 'G726-32'
+2012-04-20 13:15:28.606418 [NOTICE] switch_loadable_module.c:322 Adding File Format 'G722'
+2012-04-20 13:15:28.606493 [NOTICE] switch_loadable_module.c:322 Adding File Format 'AAL2-G726-40'
+2012-04-20 13:15:28.606568 [NOTICE] switch_loadable_module.c:322 Adding File Format 'G726-40'
+2012-04-20 13:15:28.606643 [NOTICE] switch_loadable_module.c:322 Adding File Format 'GSM'
+2012-04-20 13:15:28.606718 [NOTICE] switch_loadable_module.c:322 Adding File Format 'LPC'
+2012-04-20 13:15:28.606792 [NOTICE] switch_loadable_module.c:322 Adding File Format 'H263'
+2012-04-20 13:15:28.606937 [NOTICE] switch_loadable_module.c:322 Adding File Format 'H263-2000'
+2012-04-20 13:15:28.607016 [NOTICE] switch_loadable_module.c:322 Adding File Format 'H264'
+2012-04-20 13:15:28.607091 [NOTICE] switch_loadable_module.c:322 Adding File Format 'H261'
+2012-04-20 13:15:28.607166 [NOTICE] switch_loadable_module.c:322 Adding File Format 'H263-1998'
+2012-04-20 13:15:28.607241 [NOTICE] switch_loadable_module.c:322 Adding File Format 'iLBC'
+2012-04-20 13:15:28.607316 [NOTICE] switch_loadable_module.c:322 Adding File Format 'G723'
+2012-04-20 13:15:28.607391 [NOTICE] switch_loadable_module.c:322 Adding File Format 'PROXY-VID'
+2012-04-20 13:15:28.616730 [NOTICE] switch_loadable_module.c:298 Adding API Function 'stop_local_stream'
+2012-04-20 13:15:28.616796 [NOTICE] switch_loadable_module.c:298 Adding API Function 'start_local_stream'
+2012-04-20 13:15:28.616849 [NOTICE] switch_loadable_module.c:298 Adding API Function 'show_local_stream'
+2012-04-20 13:15:28.616902 [NOTICE] switch_loadable_module.c:322 Adding File Format 'local_stream'
+2012-04-20 13:15:28.627710 [NOTICE] switch_loadable_module.c:322 Adding File Format 'tone_stream'
+2012-04-20 13:15:28.627749 [NOTICE] switch_loadable_module.c:322 Adding File Format 'silence_stream'
+2012-04-20 13:15:28.684931 [DEBUG] switch_loadable_module.c:1251 Loading module with global namespace at request of module
+2012-04-20 13:15:28.697399 [DEBUG] mod_spidermonkey.c:954 Successfully Loaded [/home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_teletone.so]
+2012-04-20 13:15:28.703501 [DEBUG] mod_spidermonkey.c:954 Successfully Loaded [/home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_core_db.so]
+2012-04-20 13:15:28.713892 [DEBUG] mod_spidermonkey.c:954 Successfully Loaded [/home/kwyrozumski/work/freeswitch/mod/mod_spidermonkey_socket.so]
+2012-04-20 13:15:28.713972 [NOTICE] switch_loadable_module.c:254 Adding Application 'javascript'
+2012-04-20 13:15:28.714210 [NOTICE] switch_loadable_module.c:298 Adding API Function 'jsrun'
+2012-04-20 13:15:28.714425 [NOTICE] switch_loadable_module.c:298 Adding API Function 'jsapi'
+2012-04-20 13:15:28.731626 [DEBUG] switch_loadable_module.c:1251 Loading module with global namespace at request of module
+2012-04-20 13:15:28.731699 [NOTICE] switch_loadable_module.c:214 Adding Dialplan 'LUA'
+2012-04-20 13:15:28.731807 [NOTICE] switch_loadable_module.c:254 Adding Application 'lua'
+2012-04-20 13:15:28.731906 [NOTICE] switch_loadable_module.c:276 Adding Chat Application 'lua'
+2012-04-20 13:15:28.732000 [NOTICE] switch_loadable_module.c:298 Adding API Function 'luarun'
+2012-04-20 13:15:28.732110 [NOTICE] switch_loadable_module.c:298 Adding API Function 'lua'
+2012-04-20 13:15:28.733350 [NOTICE] switch_loadable_module.c:423 Adding Say interface 'en'
+2012-04-20 13:15:28.733733 [INFO] switch_time.c:423 Clock synchronized to system time.
+2012-04-20 13:15:28.733871 [DEBUG] mod_event_socket.c:2784 Socket up listening on 127.0.0.1:8021
+2012-04-20 13:15:28.733891 [NOTICE] switch_core.c:1102 Created ip list rfc1918.auto default (deny)
+2012-04-20 13:15:28.733904 [NOTICE] switch_utils.c:295 Adding 10.0.0.0/8 (allow) [] to list rfc1918.auto
+2012-04-20 13:15:28.733912 [NOTICE] switch_utils.c:295 Adding 172.16.0.0/12 (allow) [] to list rfc1918.auto
+2012-04-20 13:15:28.733977 [NOTICE] switch_utils.c:295 Adding 192.168.0.0/16 (allow) [] to list rfc1918.auto
+2012-04-20 13:15:28.733984 [NOTICE] switch_core.c:1110 Created ip list wan.auto default (allow)
+2012-04-20 13:15:28.734060 [NOTICE] switch_utils.c:295 Adding 10.0.0.0/8 (deny) [] to list wan.auto
+2012-04-20 13:15:28.734070 [NOTICE] switch_utils.c:295 Adding 172.16.0.0/12 (deny) [] to list wan.auto
+2012-04-20 13:15:28.734076 [NOTICE] switch_utils.c:295 Adding 192.168.0.0/16 (deny) [] to list wan.auto
+2012-04-20 13:15:28.734150 [NOTICE] switch_core.c:1118 Created ip list nat.auto default (deny)
+2012-04-20 13:15:28.734162 [NOTICE] switch_core.c:1120 Adding 10.5.0.186/255.255.0.0 (deny) to list nat.auto
+2012-04-20 13:15:28.734168 [NOTICE] switch_utils.c:295 Adding 10.0.0.0/8 (allow) [] to list nat.auto
+2012-04-20 13:15:28.734235 [NOTICE] switch_utils.c:295 Adding 172.16.0.0/12 (allow) [] to list nat.auto
+2012-04-20 13:15:28.734242 [NOTICE] switch_utils.c:295 Adding 192.168.0.0/16 (allow) [] to list nat.auto
+2012-04-20 13:15:28.734301 [NOTICE] switch_core.c:1129 Created ip list loopback.auto default (deny)
+2012-04-20 13:15:28.734308 [NOTICE] switch_utils.c:295 Adding 127.0.0.0/8 (allow) [] to list loopback.auto
+2012-04-20 13:15:28.734368 [NOTICE] switch_core.c:1135 Created ip list localnet.auto default (deny)
+2012-04-20 13:15:28.734374 [NOTICE] switch_core.c:1138 Adding 10.5.0.186/255.255.0.0 (allow) to list localnet.auto
+2012-04-20 13:15:28.734496 [NOTICE] switch_utils.c:295 Adding 192.168.42.0/24 (deny) [] to list lan
+2012-04-20 13:15:28.734504 [NOTICE] switch_core.c:1234 Adding 192.168.42.0/24 (deny) to list lan
+2012-04-20 13:15:28.734511 [NOTICE] switch_utils.c:295 Adding 192.168.42.42/32 (allow) [] to list lan
+2012-04-20 13:15:28.734568 [NOTICE] switch_core.c:1234 Adding 192.168.42.42/32 (allow) to list lan
+2012-04-20 13:15:28.734709 [NOTICE] switch_utils.c:295 Adding 192.0.2.0/24 (allow) [brian@10.5.0.186] to list domains
+2012-04-20 13:15:28.736176 [DEBUG] switch_loadable_module.c:621 Chat Thread Started
+2012-04-20 13:15:28.736201 [DEBUG] switch_loadable_module.c:621 Chat Thread Started
+2012-04-20 16:51:11.895466 [WARNING] switch_scheduler.c:114 Task was executed late by 5 seconds 1 heartbeat (core)
+2012-04-20 16:53:30.075447 [DEBUG] mod_spandsp.c:449 Adding tone_descriptor: 1
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 1, tone: CED_TONE(0)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: CED_TONE(0), element (2100, 0, 500, 0)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 1, tone: SIT(1)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: SIT(1), element (950, 0, 256, 400)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: SIT(1), element (1400, 0, 256, 400)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: SIT(1), element (1800, 0, 256, 400)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 1, tone: REORDER_TONE(2)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: REORDER_TONE(2), element (480, 620, 224, 272)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: REORDER_TONE(2), element (0, 0, 224, 272)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 1, tone: BUSY_TONE(3)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: BUSY_TONE(3), element (480, 620, 464, 516)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 1, tone: BUSY_TONE(3), element (0, 0, 464, 516)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:449 Adding tone_descriptor: 44
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 44, tone: CED_TONE(0)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: CED_TONE(0), element (2100, 0, 500, 0)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 44, tone: SIT(1)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: SIT(1), element (950, 0, 256, 400)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: SIT(1), element (1400, 0, 256, 400)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: SIT(1), element (1800, 0, 256, 400)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 44, tone: REORDER_TONE(2)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: REORDER_TONE(2), element (400, 0, 368, 416)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: REORDER_TONE(2), element (0, 0, 336, 368)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: REORDER_TONE(2), element (400, 0, 256, 288)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: REORDER_TONE(2), element (0, 0, 512, 544)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 44, tone: BUSY_TONE(3)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: BUSY_TONE(3), element (400, 0, 352, 384)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: BUSY_TONE(3), element (0, 0, 352, 384)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: BUSY_TONE(3), element (400, 0, 352, 384)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 44, tone: BUSY_TONE(3), element (0, 0, 352, 384)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:449 Adding tone_descriptor: 49
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 49, tone: CED_TONE(0)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: CED_TONE(0), element (2100, 0, 500, 0)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 49, tone: SIT(1)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: SIT(1), element (900, 0, 256, 400)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: SIT(1), element (1400, 0, 256, 400)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: SIT(1), element (1800, 0, 256, 400)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 49, tone: REORDER_TONE(2)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: REORDER_TONE(2), element (425, 0, 224, 272)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: REORDER_TONE(2), element (0, 0, 224, 272)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:470 Adding tone_descriptor: 49, tone: BUSY_TONE(3)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: BUSY_TONE(3), element (425, 0, 464, 516)
+2012-04-20 16:53:30.099090 [DEBUG] mod_spandsp.c:505 Adding tone_descriptor: 49, tone: BUSY_TONE(3), element (0, 0, 464, 516)
+2012-04-20 16:53:30.115454 [INFO] mod_enum.c:812 ENUM Reloaded
+2012-04-20 16:53:30.115454 [INFO] switch_time.c:1035 Timezone reloaded 530 definitions
+2012-04-20 16:53:30.195456 [CRIT] switch_loadable_module.c:1290 Error Loading module /home/kwyrozumski/work/freeswitch/mod/mod_dialplan_.so
+**/home/kwyrozumski/work/freeswitch/mod/mod_dialplan_.so: cannot open shared object file: No such file or directory**
+2012-04-20 17:18:16.375440 [INFO] switch_core.c:2148 Shutting down
+2012-04-20 17:18:16.375440 [DEBUG] switch_console.c:1049 Editline thread exiting
+2012-04-20 17:18:17.255453 [DEBUG] switch_loadable_module.c:630 Chat Thread Ended
+2012-04-20 17:18:17.255453 [DEBUG] switch_loadable_module.c:630 Chat Thread Ended
+2012-04-20 17:18:17.255453 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'stop_local_stream'
+2012-04-20 17:18:17.255453 [DEBUG] switch_loadable_module.c:965 Write lock interface 'stop_local_stream' to wait for existing references.
+2012-04-20 17:18:17.255453 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'start_local_stream'
+2012-04-20 17:18:17.255453 [DEBUG] switch_loadable_module.c:965 Write lock interface 'start_local_stream' to wait for existing references.
+2012-04-20 17:18:17.255453 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'show_local_stream'
+2012-04-20 17:18:17.255453 [DEBUG] switch_loadable_module.c:965 Write lock interface 'show_local_stream' to wait for existing references.
+2012-04-20 17:18:17.255453 [DEBUG] switch_loadable_module.c:994 Write lock interface 'mod_local_stream' to wait for existing references.
+2012-04-20 17:18:17.255453 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'local_stream'
+2012-04-20 17:18:17.275493 [NOTICE] switch_event.c:1895 Event Binding deleted for mod_local_stream:SHUTDOWN
+2012-04-20 17:18:18.275443 [DEBUG] switch_loadable_module.c:994 Write lock interface 'mod_sndfile' to wait for existing references.
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'aiff'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'au'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'avr'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'caf'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'htk'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'iff'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'mat'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'paf'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'pvf'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'raw'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'sd2'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'sds'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'sf'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'voc'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'w64'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'wav'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'wve'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'xi'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'r8'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'r16'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'r24'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'r32'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'gsm'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'ul'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'ulaw'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'al'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'alaw'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'adpcm'
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:910 Deleting Application 'fifo'
+2012-04-20 17:18:18.295441 [DEBUG] switch_loadable_module.c:912 Write lock interface 'fifo' to wait for existing references.
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:910 Deleting Application 'fifo_track_call'
+2012-04-20 17:18:18.295441 [DEBUG] switch_loadable_module.c:912 Write lock interface 'fifo_track_call' to wait for existing references.
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'fifo'
+2012-04-20 17:18:18.295441 [DEBUG] switch_loadable_module.c:965 Write lock interface 'fifo' to wait for existing references.
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'fifo_member'
+2012-04-20 17:18:18.295441 [DEBUG] switch_loadable_module.c:965 Write lock interface 'fifo_member' to wait for existing references.
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'fifo_add_outbound'
+2012-04-20 17:18:18.295441 [DEBUG] switch_loadable_module.c:965 Write lock interface 'fifo_add_outbound' to wait for existing references.
+2012-04-20 17:18:18.295441 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'fifo_check_bridge'
+2012-04-20 17:18:18.295441 [DEBUG] switch_loadable_module.c:965 Write lock interface 'fifo_check_bridge' to wait for existing references.
+2012-04-20 17:18:18.295441 [NOTICE] switch_event.c:1935 Event Binding deleted for mod_fifo:PRESENCE_PROBE
+2012-04-20 17:18:18.295441 [NOTICE] switch_event.c:443 Subclass reservation deleted for /home/kwyrozumski/work/freeswitch/src/mod/applications/mod_fifo/mod_fifo.c:fifo::info
+2012-04-20 17:18:19.015445 [NOTICE] switch_loadable_module.c:910 Deleting Application 'db'
+2012-04-20 17:18:19.035442 [DEBUG] switch_loadable_module.c:912 Write lock interface 'db' to wait for existing references.
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:910 Deleting Application 'group'
+2012-04-20 17:18:19.035442 [DEBUG] switch_loadable_module.c:912 Write lock interface 'group' to wait for existing references.
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'db'
+2012-04-20 17:18:19.035442 [DEBUG] switch_loadable_module.c:965 Write lock interface 'db' to wait for existing references.
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'group'
+2012-04-20 17:18:19.035442 [DEBUG] switch_loadable_module.c:965 Write lock interface 'group' to wait for existing references.
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1167 Deleting Limit interface 'db'
+2012-04-20 17:18:19.035442 [DEBUG] switch_loadable_module.c:994 Write lock interface 'mod_native_file' to wait for existing references.
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'G7221'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'AMR'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'SPEEX'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'G729'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'G726-16'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'AAL2-G726-16'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'PCMA'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'DVI4'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'G726-24'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'PCMU'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'L16'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'PROXY'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'AAL2-G726-24'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'AAL2-G726-32'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'G726-32'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'G722'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'AAL2-G726-40'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'G726-40'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'GSM'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'LPC'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'H263'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'H263-2000'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'H264'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'H261'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'H263-1998'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'iLBC'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'G723'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'PROXY-VID'
+2012-04-20 17:18:19.035442 [DEBUG] switch_loadable_module.c:820 Write lock interface 'skinny' to wait for existing references.
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:828 Deleting Endpoint 'skinny'
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'skinny'
+2012-04-20 17:18:19.035442 [DEBUG] switch_loadable_module.c:965 Write lock interface 'skinny' to wait for existing references.
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:1935 Event Binding deleted for mod_skinny:CUSTOM
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:1935 Event Binding deleted for mod_skinny:CUSTOM
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:1935 Event Binding deleted for mod_skinny:MESSAGE_WAITING
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:1935 Event Binding deleted for mod_skinny:TRAP
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:443 Subclass reservation deleted for mod_skinny.c:skinny::register
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:443 Subclass reservation deleted for mod_skinny.c:skinny::unregister
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:443 Subclass reservation deleted for mod_skinny.c:skinny::expire
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:443 Subclass reservation deleted for mod_skinny.c:skinny::alarm
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:451 Subclass reservation skinny::call_state inuse by listeners, detaching..
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:451 Subclass reservation skinny::user_to_device inuse by listeners, detaching..
+2012-04-20 17:18:19.035442 [NOTICE] switch_event.c:443 Subclass reservation deleted for mod_skinny.c:skinny::device_to_user
+2012-04-20 17:18:19.035442 [NOTICE] mod_skinny.c:1592 Shutting Down
+2012-04-20 17:18:19.035442 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'expr'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'expr' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:910 Deleting Application 'voicemail'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:912 Write lock interface 'voicemail' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'voicemail'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'voicemail' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'voicemail_inject'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'voicemail_inject' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_inject'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_inject' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_boxcount'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_boxcount' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_prefs'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_prefs' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_delete'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_delete' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_read'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_read' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_list'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_list' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_auth_login'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_auth_login' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_msg_count'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_msg_count' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_msg_list'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_msg_list' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_msg_get'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_msg_get' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_msg_delete'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_msg_delete' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_msg_undelete'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_msg_undelete' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_msg_email'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_msg_email' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_msg_purge'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_msg_purge' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_msg_save'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_msg_save' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_msg_forward'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_msg_forward' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_pref_greeting_set'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_pref_greeting_set' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_pref_recname_set'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_pref_recname_set' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'vm_fsdb_pref_password_set'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:965 Write lock interface 'vm_fsdb_pref_password_set' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_event.c:443 Subclass reservation deleted for /home/kwyrozumski/work/freeswitch/src/mod/applications/mod_voicemail/mod_voicemail.c:vm::maintenance
+2012-04-20 17:18:19.055459 [NOTICE] switch_event.c:1895 Event Binding deleted for mod_voicemail:MESSAGE_QUERY
+2012-04-20 17:18:19.055459 [DEBUG] mod_voicemail.c:5959 Waiting for write lock (Profile default)
+2012-04-20 17:18:19.055459 [DEBUG] mod_voicemail.c:5962 Destroying Profile default
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:1126 Write lock interface 'en' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:1134 Deleting Say interface 'en'
+2012-04-20 17:18:19.055459 [DEBUG] switch_loadable_module.c:820 Write lock interface 'loopback' to wait for existing references.
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:828 Deleting Endpoint 'loopback'
+2012-04-20 17:18:19.055459 [NOTICE] switch_loadable_module.c:895 Deleting Timer 'soft'
+2012-04-23 09:57:31.075977 [NOTICE] switch_loadable_module.c:100 Thread ended for CORE_SOFTTIMER_MODULE
+2012-04-23 09:57:31.076508 [WARNING] switch_scheduler.c:114 Task was executed late by 232740 seconds 1 heartbeat (core)
+2012-04-23 09:57:31.076626 [WARNING] switch_scheduler.c:114 Task was executed late by 232745 seconds 2 check_ip (core)
+2012-04-23 09:57:31.076694 [WARNING] switch_scheduler.c:114 Task was executed late by 232023 seconds 3 limit_hash_cleanup (mod_hash)
+2012-04-23 09:57:31.083304 [NOTICE] switch_event.c:1935 Event Binding deleted for CORE_SOFTTIMER_MODULE:RELOADXML
+2012-04-23 09:57:31.083827 [NOTICE] switch_loadable_module.c:910 Deleting Application 'conference'
+2012-04-23 09:57:31.102796 [DEBUG] switch_loadable_module.c:912 Write lock interface 'conference' to wait for existing references.
+2012-04-23 09:57:31.102987 [NOTICE] switch_loadable_module.c:910 Deleting Application 'conference_set_auto_outcall'
+2012-04-23 09:57:31.103065 [DEBUG] switch_loadable_module.c:912 Write lock interface 'conference_set_auto_outcall' to wait for existing references.
+2012-04-23 09:57:31.103227 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'conference'
+2012-04-23 09:57:31.103282 [DEBUG] switch_loadable_module.c:965 Write lock interface 'conference' to wait for existing references.
+2012-04-23 09:57:31.103417 [DEBUG] switch_loadable_module.c:1101 Write lock interface 'conf' to wait for existing references.
+2012-04-23 09:57:31.103476 [NOTICE] switch_loadable_module.c:1110 Deleting Chat interface 'conf'
+2012-04-23 09:57:31.103675 [NOTICE] switch_event.c:1935 Event Binding deleted for mod_conference:PRESENCE_PROBE
+2012-04-23 09:57:31.103732 [NOTICE] switch_event.c:443 Subclass reservation deleted for /home/kwyrozumski/work/freeswitch/src/mod/applications/mod_conference/mod_conference.c:conference::maintenance
+2012-04-23 09:57:31.103793 [NOTICE] switch_loadable_module.c:854 Deleting Codec PROXY-VID 31 PROXY VIDEO PASS-THROUGH 90000hz 0ms
+2012-04-23 09:57:31.103956 [NOTICE] switch_loadable_module.c:854 Deleting Codec PROXY 0 PROXY PASS-THROUGH 8000hz 20ms
+2012-04-23 09:57:31.104110 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 11025hz 32ms
+2012-04-23 09:57:31.104177 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 11025hz 40ms
+2012-04-23 09:57:31.104239 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 22050hz 20ms
+2012-04-23 09:57:31.104299 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 48000hz 40ms
+2012-04-23 09:57:31.104359 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 48000hz 30ms
+2012-04-23 09:57:31.104420 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 48000hz 20ms
+2012-04-23 09:57:31.104480 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 32000hz 8ms
+2012-04-23 09:57:31.104540 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 32000hz 6ms
+2012-04-23 09:57:31.104649 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 32000hz 4ms
+2012-04-23 09:57:31.104718 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 32000hz 2ms
+2012-04-23 09:57:31.104773 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 16000hz 8ms
+2012-04-23 09:57:31.104828 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 16000hz 6ms
+2012-04-23 09:57:31.104883 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 16000hz 4ms
+2012-04-23 09:57:31.104937 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 16000hz 2ms
+2012-04-23 09:57:31.104991 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 8ms
+2012-04-23 09:57:31.105045 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 6ms
+2012-04-23 09:57:31.105099 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 4ms
+2012-04-23 09:57:31.105157 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 2ms
+2012-04-23 09:57:31.105211 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 48000hz 10ms
+2012-04-23 09:57:31.105266 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 48000hz 8ms
+2012-04-23 09:57:31.105320 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 48000hz 6ms
+2012-04-23 09:57:31.105373 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 48000hz 4ms
+2012-04-23 09:57:31.105427 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 48000hz 2ms
+2012-04-23 09:57:31.105481 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 24000hz 60ms
+2012-04-23 09:57:31.105549 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 24000hz 40ms
+2012-04-23 09:57:31.105603 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 24000hz 20ms
+2012-04-23 09:57:31.105658 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 12000hz 100ms
+2012-04-23 09:57:31.105712 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 12000hz 80ms
+2012-04-23 09:57:31.105766 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 12000hz 60ms
+2012-04-23 09:57:31.105819 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 12000hz 40ms
+2012-04-23 09:57:31.105873 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 12000hz 20ms
+2012-04-23 09:57:31.105927 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 32000hz 10ms
+2012-04-23 09:57:31.105981 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 32000hz 20ms
+2012-04-23 09:57:31.106035 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 32000hz 30ms
+2012-04-23 09:57:31.106089 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 32000hz 40ms
+2012-04-23 09:57:31.106144 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 32000hz 50ms
+2012-04-23 09:57:31.106197 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 32000hz 60ms
+2012-04-23 09:57:31.106546 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 16000hz 10ms
+2012-04-23 09:57:31.106721 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 16000hz 20ms
+2012-04-23 09:57:31.106891 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 16000hz 30ms
+2012-04-23 09:57:31.107063 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 16000hz 40ms
+2012-04-23 09:57:31.107236 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 16000hz 50ms
+2012-04-23 09:57:31.107408 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 16000hz 60ms
+2012-04-23 09:57:31.107591 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 10ms
+2012-04-23 09:57:31.107764 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 20ms
+2012-04-23 09:57:31.107934 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 30ms
+2012-04-23 09:57:31.108100 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 40ms
+2012-04-23 09:57:31.108264 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 50ms
+2012-04-23 09:57:31.108429 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 60ms
+2012-04-23 09:57:31.108647 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 70ms
+2012-04-23 09:57:31.108813 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 80ms
+2012-04-23 09:57:31.108978 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 90ms
+2012-04-23 09:57:31.109142 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 100ms
+2012-04-23 09:57:31.109308 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 110ms
+2012-04-23 09:57:31.109472 [NOTICE] switch_loadable_module.c:854 Deleting Codec L16 70 RAW Signed Linear (16 bit) 8000hz 120ms
+2012-04-23 09:57:31.109814 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 10ms
+2012-04-23 09:57:31.110000 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 20ms
+2012-04-23 09:57:31.110166 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 30ms
+2012-04-23 09:57:31.110327 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 40ms
+2012-04-23 09:57:31.110488 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 50ms
+2012-04-23 09:57:31.110648 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 60ms
+2012-04-23 09:57:31.110812 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 70ms
+2012-04-23 09:57:31.110975 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 80ms
+2012-04-23 09:57:31.111149 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 90ms
+2012-04-23 09:57:31.111322 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 100ms
+2012-04-23 09:57:31.111522 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 110ms
+2012-04-23 09:57:31.111660 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMU 0 G.711 ulaw 8000hz 120ms
+2012-04-23 09:57:31.111844 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 10ms
+2012-04-23 09:57:31.111979 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 20ms
+2012-04-23 09:57:31.112102 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 30ms
+2012-04-23 09:57:31.112223 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 40ms
+2012-04-23 09:57:31.112346 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 50ms
+2012-04-23 09:57:31.112471 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 60ms
+2012-04-23 09:57:31.112594 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 70ms
+2012-04-23 09:57:31.112716 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 80ms
+2012-04-23 09:57:31.112836 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 90ms
+2012-04-23 09:57:31.112956 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 100ms
+2012-04-23 09:57:31.113077 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 110ms
+2012-04-23 09:57:31.113197 [NOTICE] switch_loadable_module.c:854 Deleting Codec PCMA 8 G.711 alaw 8000hz 120ms
+2012-04-23 09:57:31.113488 [NOTICE] switch_loadable_module.c:910 Deleting Application 'socket'
+2012-04-23 09:57:31.118888 [DEBUG] switch_loadable_module.c:912 Write lock interface 'socket' to wait for existing references.
+2012-04-23 09:57:31.118955 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'event_sink'
+2012-04-23 09:57:31.118961 [DEBUG] switch_loadable_module.c:965 Write lock interface 'event_sink' to wait for existing references.
+2012-04-23 09:57:31.119326 [NOTICE] switch_event.c:1935 Event Binding deleted for mod_event_socket:ALL
+2012-04-23 09:57:31.119343 [NOTICE] switch_loadable_module.c:854 Deleting Codec AMR 96 AMR 8000hz 20ms
+2012-04-23 09:57:31.119351 [NOTICE] mod_event_socket.c:2808 Shutting Down
+2012-04-23 09:57:31.119363 [NOTICE] switch_loadable_module.c:100 Thread ended for mod_event_socket
+2012-04-23 09:57:31.119395 [DEBUG] switch_loadable_module.c:820 Write lock interface 'error' to wait for existing references.
+2012-04-23 09:57:31.119406 [NOTICE] switch_loadable_module.c:828 Deleting Endpoint 'error'
+2012-04-23 09:57:31.119439 [DEBUG] switch_loadable_module.c:820 Write lock interface 'group' to wait for existing references.
+2012-04-23 09:57:31.119445 [NOTICE] switch_loadable_module.c:828 Deleting Endpoint 'group'
+2012-04-23 09:57:31.119481 [DEBUG] switch_loadable_module.c:820 Write lock interface 'user' to wait for existing references.
+2012-04-23 09:57:31.119486 [NOTICE] switch_loadable_module.c:828 Deleting Endpoint 'user'
+2012-04-23 09:57:31.119511 [NOTICE] switch_loadable_module.c:879 Deleting Dialplan 'inline'
+2012-04-23 09:57:31.119567 [NOTICE] switch_loadable_module.c:910 Deleting Application 'bind_digit_action'
+2012-04-23 09:57:31.119581 [DEBUG] switch_loadable_module.c:912 Write lock interface 'bind_digit_action' to wait for existing references.
+2012-04-23 09:57:31.119633 [NOTICE] switch_loadable_module.c:910 Deleting Application 'capture'
+2012-04-23 09:57:31.119643 [DEBUG] switch_loadable_module.c:912 Write lock interface 'capture' to wait for existing references.
+2012-04-23 09:57:31.119692 [NOTICE] switch_loadable_module.c:910 Deleting Application 'clear_digit_action'
+2012-04-23 09:57:31.119702 [DEBUG] switch_loadable_module.c:912 Write lock interface 'clear_digit_action' to wait for existing references.
+2012-04-23 09:57:31.119752 [NOTICE] switch_loadable_module.c:910 Deleting Application 'digit_action_set_realm'
+2012-04-23 09:57:31.119761 [DEBUG] switch_loadable_module.c:912 Write lock interface 'digit_action_set_realm' to wait for existing references.
+2012-04-23 09:57:31.119811 [NOTICE] switch_loadable_module.c:910 Deleting Application 'privacy'
+2012-04-23 09:57:31.119820 [DEBUG] switch_loadable_module.c:912 Write lock interface 'privacy' to wait for existing references.
+2012-04-23 09:57:31.119869 [NOTICE] switch_loadable_module.c:910 Deleting Application 'set_audio_level'
+2012-04-23 09:57:31.119879 [DEBUG] switch_loadable_module.c:912 Write lock interface 'set_audio_level' to wait for existing references.
+2012-04-23 09:57:31.119929 [NOTICE] switch_loadable_module.c:910 Deleting Application 'set_mute'
+2012-04-23 09:57:31.119938 [DEBUG] switch_loadable_module.c:912 Write lock interface 'set_mute' to wait for existing references.
+2012-04-23 09:57:31.119987 [NOTICE] switch_loadable_module.c:910 Deleting Application 'flush_dtmf'
+2012-04-23 09:57:31.119997 [DEBUG] switch_loadable_module.c:912 Write lock interface 'flush_dtmf' to wait for existing references.
+2012-04-23 09:57:31.120046 [NOTICE] switch_loadable_module.c:910 Deleting Application 'hold'
+2012-04-23 09:57:31.120055 [DEBUG] switch_loadable_module.c:912 Write lock interface 'hold' to wait for existing references.
+2012-04-23 09:57:31.120103 [NOTICE] switch_loadable_module.c:910 Deleting Application 'unhold'
+2012-04-23 09:57:31.120112 [DEBUG] switch_loadable_module.c:912 Write lock interface 'unhold' to wait for existing references.
+2012-04-23 09:57:31.120161 [NOTICE] switch_loadable_module.c:910 Deleting Application 'transfer'
+2012-04-23 09:57:31.120169 [DEBUG] switch_loadable_module.c:912 Write lock interface 'transfer' to wait for existing references.
+2012-04-23 09:57:31.120218 [NOTICE] switch_loadable_module.c:910 Deleting Application 'check_acl'
+2012-04-23 09:57:31.120226 [DEBUG] switch_loadable_module.c:912 Write lock interface 'check_acl' to wait for existing references.
+2012-04-23 09:57:31.120275 [NOTICE] switch_loadable_module.c:910 Deleting Application 'verbose_events'
+2012-04-23 09:57:31.120285 [DEBUG] switch_loadable_module.c:912 Write lock interface 'verbose_events' to wait for existing references.
+2012-04-23 09:57:31.120334 [NOTICE] switch_loadable_module.c:910 Deleting Application 'cng_plc'
+2012-04-23 09:57:31.120343 [DEBUG] switch_loadable_module.c:912 Write lock interface 'cng_plc' to wait for existing references.
+2012-04-23 09:57:31.120392 [NOTICE] switch_loadable_module.c:910 Deleting Application 'early_hangup'
+2012-04-23 09:57:31.120401 [DEBUG] switch_loadable_module.c:912 Write lock interface 'early_hangup' to wait for existing references.
+2012-04-23 09:57:31.120451 [NOTICE] switch_loadable_module.c:910 Deleting Application 'sleep'
+2012-04-23 09:57:31.120460 [DEBUG] switch_loadable_module.c:912 Write lock interface 'sleep' to wait for existing references.
+2012-04-23 09:57:31.120508 [NOTICE] switch_loadable_module.c:910 Deleting Application 'delay_echo'
+2012-04-23 09:57:31.120517 [DEBUG] switch_loadable_module.c:912 Write lock interface 'delay_echo' to wait for existing references.
+2012-04-23 09:57:31.120566 [NOTICE] switch_loadable_module.c:910 Deleting Application 'strftime'
+2012-04-23 09:57:31.120575 [DEBUG] switch_loadable_module.c:912 Write lock interface 'strftime' to wait for existing references.
+2012-04-23 09:57:31.120623 [NOTICE] switch_loadable_module.c:910 Deleting Application 'phrase'
+2012-04-23 09:57:31.120632 [DEBUG] switch_loadable_module.c:912 Write lock interface 'phrase' to wait for existing references.
+2012-04-23 09:57:31.120681 [NOTICE] switch_loadable_module.c:910 Deleting Application 'eval'
+2012-04-23 09:57:31.120690 [DEBUG] switch_loadable_module.c:912 Write lock interface 'eval' to wait for existing references.
+2012-04-23 09:57:31.120738 [NOTICE] switch_loadable_module.c:910 Deleting Application 'stop'
+2012-04-23 09:57:31.120747 [DEBUG] switch_loadable_module.c:912 Write lock interface 'stop' to wait for existing references.
+2012-04-23 09:57:31.120798 [NOTICE] switch_loadable_module.c:910 Deleting Application 'set_zombie_exec'
+2012-04-23 09:57:31.120807 [DEBUG] switch_loadable_module.c:912 Write lock interface 'set_zombie_exec' to wait for existing references.
+2012-04-23 09:57:31.120858 [NOTICE] switch_loadable_module.c:910 Deleting Application 'pre_answer'
+2012-04-23 09:57:31.120867 [DEBUG] switch_loadable_module.c:912 Write lock interface 'pre_answer' to wait for existing references.
+2012-04-23 09:57:31.120918 [NOTICE] switch_loadable_module.c:910 Deleting Application 'answer'
+2012-04-23 09:57:31.120927 [DEBUG] switch_loadable_module.c:912 Write lock interface 'answer' to wait for existing references.
+2012-04-23 09:57:31.120976 [NOTICE] switch_loadable_module.c:910 Deleting Application 'hangup'
+2012-04-23 09:57:31.120987 [DEBUG] switch_loadable_module.c:912 Write lock interface 'hangup' to wait for existing references.
+2012-04-23 09:57:31.121036 [NOTICE] switch_loadable_module.c:910 Deleting Application 'set_name'
+2012-04-23 09:57:31.121045 [DEBUG] switch_loadable_module.c:912 Write lock interface 'set_name' to wait for existing references.
+2012-04-23 09:57:31.121094 [NOTICE] switch_loadable_module.c:910 Deleting Application 'presence'
+2012-04-23 09:57:31.121103 [DEBUG] switch_loadable_module.c:912 Write lock interface 'presence' to wait for existing references.
+2012-04-23 09:57:31.121152 [NOTICE] switch_loadable_module.c:910 Deleting Application 'log'
+2012-04-23 09:57:31.121161 [DEBUG] switch_loadable_module.c:912 Write lock interface 'log' to wait for existing references.
+2012-04-23 09:57:31.121210 [NOTICE] switch_loadable_module.c:910 Deleting Application 'info'
+2012-04-23 09:57:31.121219 [DEBUG] switch_loadable_module.c:912 Write lock interface 'info' to wait for existing references.
+2012-04-23 09:57:31.121269 [NOTICE] switch_loadable_module.c:910 Deleting Application 'event'
+2012-04-23 09:57:31.121278 [DEBUG] switch_loadable_module.c:912 Write lock interface 'event' to wait for existing references.
+2012-04-23 09:57:31.121327 [NOTICE] switch_loadable_module.c:910 Deleting Application 'sound_test'
+2012-04-23 09:57:31.121336 [DEBUG] switch_loadable_module.c:912 Write lock interface 'sound_test' to wait for existing references.
+2012-04-23 09:57:31.121387 [NOTICE] switch_loadable_module.c:910 Deleting Application 'export'
+2012-04-23 09:57:31.121396 [DEBUG] switch_loadable_module.c:912 Write lock interface 'export' to wait for existing references.
+2012-04-23 09:57:31.121445 [NOTICE] switch_loadable_module.c:910 Deleting Application 'bridge_export'
+2012-04-23 09:57:31.121455 [DEBUG] switch_loadable_module.c:912 Write lock interface 'bridge_export' to wait for existing references.
+2012-04-23 09:57:31.121505 [NOTICE] switch_loadable_module.c:910 Deleting Application 'set'
+2012-04-23 09:57:31.121514 [DEBUG] switch_loadable_module.c:912 Write lock interface 'set' to wait for existing references.
+2012-04-23 09:57:31.121562 [NOTICE] switch_loadable_module.c:910 Deleting Application 'push'
+2012-04-23 09:57:31.121577 [DEBUG] switch_loadable_module.c:912 Write lock interface 'push' to wait for existing references.
+2012-04-23 09:57:31.121626 [NOTICE] switch_loadable_module.c:910 Deleting Application 'unshift'
+2012-04-23 09:57:31.121635 [DEBUG] switch_loadable_module.c:912 Write lock interface 'unshift' to wait for existing references.
+2012-04-23 09:57:31.121683 [NOTICE] switch_loadable_module.c:910 Deleting Application 'set_global'
+2012-04-23 09:57:31.121692 [DEBUG] switch_loadable_module.c:912 Write lock interface 'set_global' to wait for existing references.
+2012-04-23 09:57:31.121740 [NOTICE] switch_loadable_module.c:910 Deleting Application 'set_profile_var'
+2012-04-23 09:57:31.121759 [DEBUG] switch_loadable_module.c:912 Write lock interface 'set_profile_var' to wait for existing references.
+2012-04-23 09:57:31.121810 [NOTICE] switch_loadable_module.c:910 Deleting Application 'unset'
+2012-04-23 09:57:31.121825 [DEBUG] switch_loadable_module.c:912 Write lock interface 'unset' to wait for existing references.
+2012-04-23 09:57:31.121875 [NOTICE] switch_loadable_module.c:910 Deleting Application 'ring_ready'
+2012-04-23 09:57:31.121890 [DEBUG] switch_loadable_module.c:912 Write lock interface 'ring_ready' to wait for existing references.
+2012-04-23 09:57:31.121941 [NOTICE] switch_loadable_module.c:910 Deleting Application 'remove_bugs'
+2012-04-23 09:57:31.121956 [DEBUG] switch_loadable_module.c:912 Write lock interface 'remove_bugs' to wait for existing references.
+2012-04-23 09:57:31.122008 [NOTICE] switch_loadable_module.c:910 Deleting Application 'break'
+2012-04-23 09:57:31.122022 [DEBUG] switch_loadable_module.c:912 Write lock interface 'break' to wait for existing references.
+2012-04-23 09:57:31.122073 [NOTICE] switch_loadable_module.c:910 Deleting Application 'detect_speech'
+2012-04-23 09:57:31.122093 [DEBUG] switch_loadable_module.c:912 Write lock interface 'detect_speech' to wait for existing references.
+2012-04-23 09:57:31.122145 [NOTICE] switch_loadable_module.c:910 Deleting Application 'play_and_detect_speech'
+2012-04-23 09:57:31.122159 [DEBUG] switch_loadable_module.c:912 Write lock interface 'play_and_detect_speech' to wait for existing references.
+2012-04-23 09:57:31.122211 [NOTICE] switch_loadable_module.c:910 Deleting Application 'ivr'
+2012-04-23 09:57:31.122226 [DEBUG] switch_loadable_module.c:912 Write lock interface 'ivr' to wait for existing references.
+2012-04-23 09:57:31.122276 [NOTICE] switch_loadable_module.c:910 Deleting Application 'redirect'
+2012-04-23 09:57:31.122291 [DEBUG] switch_loadable_module.c:912 Write lock interface 'redirect' to wait for existing references.
+2012-04-23 09:57:31.122341 [NOTICE] switch_loadable_module.c:910 Deleting Application 'send_info'
+2012-04-23 09:57:31.122356 [DEBUG] switch_loadable_module.c:912 Write lock interface 'send_info' to wait for existing references.
+2012-04-23 09:57:31.122412 [NOTICE] switch_loadable_module.c:910 Deleting Application 'jitterbuffer'
+2012-04-23 09:57:31.122429 [DEBUG] switch_loadable_module.c:912 Write lock interface 'jitterbuffer' to wait for existing references.
+2012-04-23 09:57:31.122480 [NOTICE] switch_loadable_module.c:910 Deleting Application 'send_display'
+2012-04-23 09:57:31.122495 [DEBUG] switch_loadable_module.c:912 Write lock interface 'send_display' to wait for existing references.
+2012-04-23 09:57:31.122546 [NOTICE] switch_loadable_module.c:910 Deleting Application 'respond'
+2012-04-23 09:57:31.122560 [DEBUG] switch_loadable_module.c:912 Write lock interface 'respond' to wait for existing references.
+2012-04-23 09:57:31.122610 [NOTICE] switch_loadable_module.c:910 Deleting Application 'deflect'
+2012-04-23 09:57:31.122641 [DEBUG] switch_loadable_module.c:912 Write lock interface 'deflect' to wait for existing references.
+2012-04-23 09:57:31.122690 [NOTICE] switch_loadable_module.c:910 Deleting Application 'recovery_refresh'
+2012-04-23 09:57:31.122700 [DEBUG] switch_loadable_module.c:912 Write lock interface 'recovery_refresh' to wait for existing references.
+2012-04-23 09:57:31.122750 [NOTICE] switch_loadable_module.c:910 Deleting Application 'queue_dtmf'
+2012-04-23 09:57:31.122759 [DEBUG] switch_loadable_module.c:912 Write lock interface 'queue_dtmf' to wait for existing references.
+2012-04-23 09:57:31.122808 [NOTICE] switch_loadable_module.c:910 Deleting Application 'send_dtmf'
+2012-04-23 09:57:31.122817 [DEBUG] switch_loadable_module.c:912 Write lock interface 'send_dtmf' to wait for existing references.
+2012-04-23 09:57:31.122865 [NOTICE] switch_loadable_module.c:910 Deleting Application 'sched_cancel'
+2012-04-23 09:57:31.122875 [DEBUG] switch_loadable_module.c:912 Write lock interface 'sched_cancel' to wait for existing references.
+2012-04-23 09:57:31.122923 [NOTICE] switch_loadable_module.c:910 Deleting Application 'sched_hangup'
+2012-04-23 09:57:31.122932 [DEBUG] switch_loadable_module.c:912 Write lock interface 'sched_hangup' to wait for existing references.
+2012-04-23 09:57:31.122981 [NOTICE] switch_loadable_module.c:910 Deleting Application 'sched_broadcast'
+2012-04-23 09:57:31.122993 [DEBUG] switch_loadable_module.c:912 Write lock interface 'sched_broadcast' to wait for existing references.
+2012-04-23 09:57:31.123042 [NOTICE] switch_loadable_module.c:910 Deleting Application 'sched_transfer'
+2012-04-23 09:57:31.123052 [DEBUG] switch_loadable_module.c:912 Write lock interface 'sched_transfer' to wait for existing references.
+2012-04-23 09:57:31.123101 [NOTICE] switch_loadable_module.c:910 Deleting Application 'execute_extension'
+2012-04-23 09:57:31.123111 [DEBUG] switch_loadable_module.c:912 Write lock interface 'execute_extension' to wait for existing references.
+2012-04-23 09:57:31.123160 [NOTICE] switch_loadable_module.c:910 Deleting Application 'sched_heartbeat'
+2012-04-23 09:57:31.123170 [DEBUG] switch_loadable_module.c:912 Write lock interface 'sched_heartbeat' to wait for existing references.
+2012-04-23 09:57:31.123218 [NOTICE] switch_loadable_module.c:910 Deleting Application 'enable_heartbeat'
+2012-04-23 09:57:31.123238 [DEBUG] switch_loadable_module.c:912 Write lock interface 'enable_heartbeat' to wait for existing references.
+2012-04-23 09:57:31.123289 [NOTICE] switch_loadable_module.c:910 Deleting Application 'mkdir'
+2012-04-23 09:57:31.123303 [DEBUG] switch_loadable_module.c:912 Write lock interface 'mkdir' to wait for existing references.
+2012-04-23 09:57:31.123353 [NOTICE] switch_loadable_module.c:910 Deleting Application 'soft_hold'
+2012-04-23 09:57:31.123369 [DEBUG] switch_loadable_module.c:912 Write lock interface 'soft_hold' to wait for existing references.
+2012-04-23 09:57:31.123420 [NOTICE] switch_loadable_module.c:910 Deleting Application 'bind_meta_app'
+2012-04-23 09:57:31.123881 [DEBUG] switch_loadable_module.c:912 Write lock interface 'bind_meta_app' to wait for existing references.
+2012-04-23 09:57:31.123951 [NOTICE] switch_loadable_module.c:910 Deleting Application 'unbind_meta_app'
+2012-04-23 09:57:31.123970 [DEBUG] switch_loadable_module.c:912 Write lock interface 'unbind_meta_app' to wait for existing references.
+2012-04-23 09:57:31.124023 [NOTICE] switch_loadable_module.c:910 Deleting Application 'block_dfmf'
+2012-04-23 09:57:31.124039 [DEBUG] switch_loadable_module.c:912 Write lock interface 'block_dfmf' to wait for existing references.
+2012-04-23 09:57:31.124091 [NOTICE] switch_loadable_module.c:910 Deleting Application 'unblock_dtmf'
+2012-04-23 09:57:31.124107 [DEBUG] switch_loadable_module.c:912 Write lock interface 'unblock_dtmf' to wait for existing references.
+2012-04-23 09:57:31.124158 [NOTICE] switch_loadable_module.c:910 Deleting Application 'intercept'
+2012-04-23 09:57:31.124174 [DEBUG] switch_loadable_module.c:912 Write lock interface 'intercept' to wait for existing references.
+2012-04-23 09:57:31.124224 [NOTICE] switch_loadable_module.c:910 Deleting Application 'eavesdrop'
+2012-04-23 09:57:31.124240 [DEBUG] switch_loadable_module.c:912 Write lock interface 'eavesdrop' to wait for existing references.
+2012-04-23 09:57:31.124291 [NOTICE] switch_loadable_module.c:910 Deleting Application 'three_way'
+2012-04-23 09:57:31.124305 [DEBUG] switch_loadable_module.c:912 Write lock interface 'three_way' to wait for existing references.
+2012-04-23 09:57:31.124355 [NOTICE] switch_loadable_module.c:910 Deleting Application 'set_user'
+2012-04-23 09:57:31.124371 [DEBUG] switch_loadable_module.c:912 Write lock interface 'set_user' to wait for existing references.
+2012-04-23 09:57:31.124422 [NOTICE] switch_loadable_module.c:910 Deleting Application 'stop_dtmf'
+2012-04-23 09:57:31.124440 [DEBUG] switch_loadable_module.c:912 Write lock interface 'stop_dtmf' to wait for existing references.
+2012-04-23 09:57:31.124493 [NOTICE] switch_loadable_module.c:910 Deleting Application 'start_dtmf'
+2012-04-23 09:57:31.124509 [DEBUG] switch_loadable_module.c:912 Write lock interface 'start_dtmf' to wait for existing references.
+2012-04-23 09:57:31.124562 [NOTICE] switch_loadable_module.c:910 Deleting Application 'stop_dtmf_generate'
+2012-04-23 09:57:31.124577 [DEBUG] switch_loadable_module.c:912 Write lock interface 'stop_dtmf_generate' to wait for existing references.
+2012-04-23 09:57:31.124627 [NOTICE] switch_loadable_module.c:910 Deleting Application 'start_dtmf_generate'
+2012-04-23 09:57:31.124642 [DEBUG] switch_loadable_module.c:912 Write lock interface 'start_dtmf_generate' to wait for existing references.
+2012-04-23 09:57:31.124694 [NOTICE] switch_loadable_module.c:910 Deleting Application 'stop_tone_detect'
+2012-04-23 09:57:31.124709 [DEBUG] switch_loadable_module.c:912 Write lock interface 'stop_tone_detect' to wait for existing references.
+2012-04-23 09:57:31.124760 [NOTICE] switch_loadable_module.c:910 Deleting Application 'fax_detect'
+2012-04-23 09:57:31.125319 [DEBUG] switch_loadable_module.c:912 Write lock interface 'fax_detect' to wait for existing references.
+2012-04-23 09:57:31.125395 [NOTICE] switch_loadable_module.c:910 Deleting Application 'tone_detect'
+2012-04-23 09:57:31.125447 [DEBUG] switch_loadable_module.c:912 Write lock interface 'tone_detect' to wait for existing references.
+2012-04-23 09:57:31.125518 [NOTICE] switch_loadable_module.c:910 Deleting Application 'echo'
+2012-04-23 09:57:31.125564 [DEBUG] switch_loadable_module.c:912 Write lock interface 'echo' to wait for existing references.
+2012-04-23 09:57:31.125632 [NOTICE] switch_loadable_module.c:910 Deleting Application 'park'
+2012-04-23 09:57:31.125678 [DEBUG] switch_loadable_module.c:912 Write lock interface 'park' to wait for existing references.
+2012-04-23 09:57:31.125747 [NOTICE] switch_loadable_module.c:910 Deleting Application 'park_state'
+2012-04-23 09:57:31.125795 [DEBUG] switch_loadable_module.c:912 Write lock interface 'park_state' to wait for existing references.
+2012-04-23 09:57:31.125866 [NOTICE] switch_loadable_module.c:910 Deleting Application 'gentones'
+2012-04-23 09:57:31.125916 [DEBUG] switch_loadable_module.c:912 Write lock interface 'gentones' to wait for existing references.
+2012-04-23 09:57:31.125986 [NOTICE] switch_loadable_module.c:910 Deleting Application 'playback'
+2012-04-23 09:57:31.126037 [DEBUG] switch_loadable_module.c:912 Write lock interface 'playback' to wait for existing references.
+2012-04-23 09:57:31.126106 [NOTICE] switch_loadable_module.c:910 Deleting Application 'endless_playback'
+2012-04-23 09:57:31.126152 [DEBUG] switch_loadable_module.c:912 Write lock interface 'endless_playback' to wait for existing references.
+2012-04-23 09:57:31.126219 [NOTICE] switch_loadable_module.c:910 Deleting Application 'att_xfer'
+2012-04-23 09:57:31.126267 [DEBUG] switch_loadable_module.c:912 Write lock interface 'att_xfer' to wait for existing references.
+2012-04-23 09:57:31.126337 [NOTICE] switch_loadable_module.c:910 Deleting Application 'read'
+2012-04-23 09:57:31.126391 [DEBUG] switch_loadable_module.c:912 Write lock interface 'read' to wait for existing references.
+2012-04-23 09:57:31.126463 [NOTICE] switch_loadable_module.c:910 Deleting Application 'play_and_get_digits'
+2012-04-23 09:57:31.126514 [DEBUG] switch_loadable_module.c:912 Write lock interface 'play_and_get_digits' to wait for existing references.
+2012-04-23 09:57:31.126806 [NOTICE] switch_loadable_module.c:910 Deleting Application 'stop_record_session'
+2012-04-23 09:57:31.126868 [DEBUG] switch_loadable_module.c:912 Write lock interface 'stop_record_session' to wait for existing references.
+2012-04-23 09:57:31.126941 [NOTICE] switch_loadable_module.c:910 Deleting Application 'record_session'
+2012-04-23 09:57:31.126989 [DEBUG] switch_loadable_module.c:912 Write lock interface 'record_session' to wait for existing references.
+2012-04-23 09:57:31.127076 [NOTICE] switch_loadable_module.c:910 Deleting Application 'record'
+2012-04-23 09:57:31.127127 [DEBUG] switch_loadable_module.c:912 Write lock interface 'record' to wait for existing references.
+2012-04-23 09:57:31.127198 [NOTICE] switch_loadable_module.c:910 Deleting Application 'preprocess'
+2012-04-23 09:57:31.127246 [DEBUG] switch_loadable_module.c:912 Write lock interface 'preprocess' to wait for existing references.
+2012-04-23 09:57:31.127315 [NOTICE] switch_loadable_module.c:910 Deleting Application 'stop_displace_session'
+2012-04-23 09:57:31.127362 [DEBUG] switch_loadable_module.c:912 Write lock interface 'stop_displace_session' to wait for existing references.
+2012-04-23 09:57:31.127444 [NOTICE] switch_loadable_module.c:910 Deleting Application 'displace_session'
+2012-04-23 09:57:31.127495 [DEBUG] switch_loadable_module.c:912 Write lock interface 'displace_session' to wait for existing references.
+2012-04-23 09:57:31.127565 [NOTICE] switch_loadable_module.c:910 Deleting Application 'speak'
+2012-04-23 09:57:31.127611 [DEBUG] switch_loadable_module.c:912 Write lock interface 'speak' to wait for existing references.
+2012-04-23 09:57:31.127678 [NOTICE] switch_loadable_module.c:910 Deleting Application 'clear_speech_cache'
+2012-04-23 09:57:31.127724 [DEBUG] switch_loadable_module.c:912 Write lock interface 'clear_speech_cache' to wait for existing references.
+2012-04-23 09:57:31.127792 [NOTICE] switch_loadable_module.c:910 Deleting Application 'bridge'
+2012-04-23 09:57:31.127856 [DEBUG] switch_loadable_module.c:912 Write lock interface 'bridge' to wait for existing references.
+2012-04-23 09:57:31.127925 [NOTICE] switch_loadable_module.c:910 Deleting Application 'system'
+2012-04-23 09:57:31.127969 [DEBUG] switch_loadable_module.c:912 Write lock interface 'system' to wait for existing references.
+2012-04-23 09:57:31.128035 [NOTICE] switch_loadable_module.c:910 Deleting Application 'say'
+2012-04-23 09:57:31.128078 [DEBUG] switch_loadable_module.c:912 Write lock interface 'say' to wait for existing references.
+2012-04-23 09:57:31.128146 [NOTICE] switch_loadable_module.c:910 Deleting Application 'wait_for_silence'
+2012-04-23 09:57:31.128192 [DEBUG] switch_loadable_module.c:912 Write lock interface 'wait_for_silence' to wait for existing references.
+2012-04-23 09:57:31.128261 [NOTICE] switch_loadable_module.c:910 Deleting Application 'session_loglevel'
+2012-04-23 09:57:31.128307 [DEBUG] switch_loadable_module.c:912 Write lock interface 'session_loglevel' to wait for existing references.
+2012-04-23 09:57:31.128376 [NOTICE] switch_loadable_module.c:910 Deleting Application 'limit'
+2012-04-23 09:57:31.128422 [DEBUG] switch_loadable_module.c:912 Write lock interface 'limit' to wait for existing references.
+2012-04-23 09:57:31.128489 [NOTICE] switch_loadable_module.c:910 Deleting Application 'limit_hash'
+2012-04-23 09:57:31.128532 [DEBUG] switch_loadable_module.c:912 Write lock interface 'limit_hash' to wait for existing references.
+2012-04-23 09:57:31.128600 [NOTICE] switch_loadable_module.c:910 Deleting Application 'limit_execute'
+2012-04-23 09:57:31.128699 [DEBUG] switch_loadable_module.c:912 Write lock interface 'limit_execute' to wait for existing references.
+2012-04-23 09:57:31.128902 [NOTICE] switch_loadable_module.c:910 Deleting Application 'limit_hash_execute'
+2012-04-23 09:57:31.128961 [DEBUG] switch_loadable_module.c:912 Write lock interface 'limit_hash_execute' to wait for existing references.
+2012-04-23 09:57:31.129035 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'strepoch'
+2012-04-23 09:57:31.129072 [DEBUG] switch_loadable_module.c:965 Write lock interface 'strepoch' to wait for existing references.
+2012-04-23 09:57:31.129140 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'strmicroepoch'
+2012-04-23 09:57:31.129178 [DEBUG] switch_loadable_module.c:965 Write lock interface 'strmicroepoch' to wait for existing references.
+2012-04-23 09:57:31.129246 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'chat'
+2012-04-23 09:57:31.129283 [DEBUG] switch_loadable_module.c:965 Write lock interface 'chat' to wait for existing references.
+2012-04-23 09:57:31.129362 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'strftime'
+2012-04-23 09:57:31.129399 [DEBUG] switch_loadable_module.c:965 Write lock interface 'strftime' to wait for existing references.
+2012-04-23 09:57:31.129463 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'presence'
+2012-04-23 09:57:31.129498 [DEBUG] switch_loadable_module.c:965 Write lock interface 'presence' to wait for existing references.
+2012-04-23 09:57:31.129563 [DEBUG] switch_loadable_module.c:994 Write lock interface 'mod_dptools' to wait for existing references.
+2012-04-23 09:57:31.129585 [NOTICE] switch_loadable_module.c:1004 Deleting File Format 'file_string'
+2012-04-23 09:57:31.129666 [DEBUG] switch_loadable_module.c:1101 Write lock interface 'event' to wait for existing references.
+2012-04-23 09:57:31.129688 [NOTICE] switch_loadable_module.c:1110 Deleting Chat interface 'event'
+2012-04-23 09:57:31.129768 [DEBUG] switch_loadable_module.c:1101 Write lock interface 'api' to wait for existing references.
+2012-04-23 09:57:31.129790 [NOTICE] switch_loadable_module.c:1110 Deleting Chat interface 'api'
+2012-04-23 09:57:31.129901 [NOTICE] switch_loadable_module.c:854 Deleting Codec G723 4 G.723.1 6.3k 8000hz 120ms
+2012-04-23 09:57:31.129958 [NOTICE] switch_loadable_module.c:854 Deleting Codec G723 4 G.723.1 6.3k 8000hz 90ms
+2012-04-23 09:57:31.130009 [NOTICE] switch_loadable_module.c:854 Deleting Codec G723 4 G.723.1 6.3k 8000hz 60ms
+2012-04-23 09:57:31.130055 [NOTICE] switch_loadable_module.c:854 Deleting Codec G723 4 G.723.1 6.3k 8000hz 30ms
+2012-04-23 09:57:31.130185 [NOTICE] switch_loadable_module.c:963 Deleting API Function 'console'
+2012-04-23 09:57:31.130220 [DEBUG] switch_loadable_module.c:965 Write lock interface 'console' to wait for existing references.

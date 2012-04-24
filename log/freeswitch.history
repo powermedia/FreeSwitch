@@ -88,3 +88,8 @@ reload\040mod_skinny\012
 reload\040mod_skinny\012
 shutdown\012
 shutdown\012
+reload\040mod_dialplan_\012
+exit\012
+/quit\012
+/exit\012
+shutdown\012
