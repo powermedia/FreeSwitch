@@ -330,10 +330,10 @@ switch_status_t skinny_session_send_call_info(switch_core_session_t *session, li
 	}
 
 	if (originatee != NULL){
-		caller_party_name = originatee->callee_id_name;
-		caller_party_number = originatee->callee_id_number;
-		called_party_name = originatee->caller_id_name;
-		called_party_number = originatee->caller_id_number;
+		caller_party_name = originatee->caller_id_name;
+		caller_party_number = originatee->caller_id_number;
+		called_party_name = originatee->callee_id_name;
+		called_party_number = originatee->callee_id_number;
 	}
 	else {
 		// Calling party
