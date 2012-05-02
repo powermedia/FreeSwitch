@@ -309,8 +309,8 @@ switch_status_t skinny_session_send_call_info(switch_core_session_t *session, li
 	const char *called_party_name;
 	const char *called_party_number;
 	uint32_t call_type = 0;
-	//	struct switch_caller_profile *originatee = NULL;
-	//	switch_caller_profile_t* caller_profile = NULL;
+	struct switch_caller_profile *originatee = NULL;
+	switch_caller_profile_t* caller_profile = NULL;
 
 	channel = switch_core_session_get_channel(session);
 	tech_pvt = switch_core_session_get_private(session);
@@ -323,7 +323,7 @@ switch_status_t skinny_session_send_call_info(switch_core_session_t *session, li
 		call_type = SKINNY_OUTBOUND_CALL;
 	}
 	
-	/*	if(channel != NULL){
+	if(channel != NULL){
 		caller_profile = channel->caller_profile;
 		if(caller_profile->originatee_caller_profile != NULL)
 			originatee = caller_profile->originatee_caller_profile;
@@ -336,7 +336,7 @@ switch_status_t skinny_session_send_call_info(switch_core_session_t *session, li
 		called_party_number = originatee->callee_id_number;
 	}
 	else {
-	*/
+		
 		// Calling party
 		if (zstr((caller_party_name = switch_channel_get_variable(channel, "effective_caller_id_name"))) &&
 			zstr((caller_party_name = switch_channel_get_variable(channel, "caller_id_name"))) &&
@@ -363,7 +363,7 @@ switch_status_t skinny_session_send_call_info(switch_core_session_t *session, li
 			zstr((called_party_number = switch_channel_get_variable_partner(channel, "callee_id_number"))) &&
 			zstr((called_party_number = switch_channel_get_variable(channel, "destination_number")))) {
 			called_party_number = "0000000000";
-			//	}
+		}
 	}
 
 	skinny_send_call_info(listener,
