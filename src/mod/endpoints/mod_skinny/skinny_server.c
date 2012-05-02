@@ -309,8 +309,8 @@ switch_status_t skinny_session_send_call_info(switch_core_session_t *session, li
 	const char *called_party_name;
 	const char *called_party_number;
 	uint32_t call_type = 0;
-	struct switch_caller_profile *originatee = NULL;
-	switch_caller_profile_t* caller_profile = NULL;
+	//	struct switch_caller_profile *originatee = NULL;
+	//	switch_caller_profile_t* caller_profile = NULL;
 
 	channel = switch_core_session_get_channel(session);
 	tech_pvt = switch_core_session_get_private(session);
