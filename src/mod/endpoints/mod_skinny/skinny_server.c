@@ -758,7 +758,7 @@ switch_status_t skinny_session_start_media(switch_core_session_t *session, liste
 				tech_pvt->call_id, /* uint32_t conference_id, */
 				tech_pvt->call_id, /* uint32_t pass_thru_party_id, */
 				20, /* uint32_t packets, */
-				SKINNY_CODEC_ALAW_64K, /* uint32_t payload_capacity, */
+				SKINNY_CODEC_ULAW_64K, /* uint32_t payload_capacity, */
 				0, /* uint32_t echo_cancel_type, */
 				0, /* uint32_t g723_bitrate, */
 				0, /* uint32_t conference_id2, */
@@ -1760,7 +1760,7 @@ switch_status_t skinny_handle_open_receive_channel_ack_message(listener_t *liste
 				addr.s_addr, /* uint32_t remote_ip, */
 				tech_pvt->local_sdp_audio_port, /* uint32_t remote_port, */
 				20, /* uint32_t ms_per_packet, */
-				SKINNY_CODEC_ALAW_64K, /* uint32_t payload_capacity, */
+				SKINNY_CODEC_ULAW_64K, /* uint32_t payload_capacity, */
 				184, /* uint32_t precedence, */
 				0, /* uint32_t silence_suppression, */
 				0, /* uint16_t max_frames_per_packet, */
