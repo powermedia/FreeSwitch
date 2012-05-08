@@ -309,7 +309,7 @@ switch_status_t skinny_session_send_call_info(switch_core_session_t *session, li
 	const char *called_party_name;
 	const char *called_party_number;
 	uint32_t call_type = 0;
-	struct switch_caller_profile *originatee = NULL;
+	struct switch_caller_profile *o_caller_profile = NULL;
 	switch_caller_profile_t* caller_profile = NULL;
 
 	channel = switch_core_session_get_channel(session);
@@ -326,14 +326,16 @@ switch_status_t skinny_session_send_call_info(switch_core_session_t *session, li
 	if(channel != NULL){
 		caller_profile = channel->caller_profile;
 		if(caller_profile->originatee_caller_profile != NULL)
-			originatee = caller_profile->originatee_caller_profile;
+			o_caller_profile = caller_profile->originatee_caller_profile;
+		else if(caller_profile->originator_caller_profile != NULL)
+			o_caller_profile = caller_profile->originator_caller_profile;
 	}
 
-	if (originatee != NULL){
-		caller_party_name = originatee->caller_id_name;
-		caller_party_number = originatee->caller_id_number;
-		called_party_name = originatee->callee_id_name;
-		called_party_number = originatee->callee_id_number;
+	if (o_caller_profile != NULL){
+		caller_party_name = o_caller_profile->caller_id_name;
+		caller_party_number = o_caller_profile->caller_id_number;
+		called_party_name = o_caller_profile->callee_id_name;
+		called_party_number = o_caller_profile->callee_id_number;
 	}
 	else {
 	
