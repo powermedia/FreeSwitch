@@ -2433,6 +2433,7 @@ SWITCH_STANDARD_APP(fifo_function)
 		int freq = 30;
 		int ftmp = 0;
 		int to = 60;
+		int announce_on_enter = 1;
 		switch_event_t *call_event;
 		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "fifo_chime_treshold: %s\n", chime_treshold);
 
@@ -2533,7 +2534,7 @@ SWITCH_STANDARD_APP(fifo_function)
 		}
 
 		send_presence(node);
-
+		
 		while (switch_channel_ready(channel)) {
 			switch_input_args_t args = { 0 };
 			char buf[25] = "";
@@ -2542,6 +2543,10 @@ SWITCH_STANDARD_APP(fifo_function)
 			args.input_callback = moh_on_dtmf;
 			args.buf = buf;
 			args.buflen = sizeof(buf);
+			if(announce_on_enter) {
+				cd.next = switch_epoch_time_now(NULL) - 1;
+				announce_on_enter = 0;
+			}
 
 			if (cd.total || cd.orbit_timeout) {
 				args.read_frame_callback = caller_read_frame_callback;
