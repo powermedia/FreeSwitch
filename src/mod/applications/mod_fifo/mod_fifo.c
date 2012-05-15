@@ -2543,10 +2543,14 @@ SWITCH_STANDARD_APP(fifo_function)
 			args.input_callback = moh_on_dtmf;
 			args.buf = buf;
 			args.buflen = sizeof(buf);
+
+			cd.next = switch_epoch_time_now(NULL) + cd.freq;
+
 			if(announce_on_enter) {
 				cd.next = switch_epoch_time_now(NULL) - 1;
 				announce_on_enter = 0;
 			}
+		   		  
 
 			if (cd.total || cd.orbit_timeout) {
 				args.read_frame_callback = caller_read_frame_callback;
