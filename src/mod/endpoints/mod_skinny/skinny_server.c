@@ -555,6 +555,8 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 			device_name, device_instance, &listener);
 	if(listener) {
 		switch_channel_t *channel = switch_core_session_get_channel(helper->tech_pvt->session);
+		switch_channel_set_state(channel, CS_ROUTING);
+
 		if ((sql = switch_mprintf(
 								  "SELECT device_name from skinny_active_lines "
 								  "where device_name='%s'", listener->device_name))) {
