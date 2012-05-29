@@ -560,6 +560,8 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 		switch_channel_t *channel = switch_core_session_get_channel(helper->tech_pvt->session);
 		switch_channel_t *rchannel = switch_core_session_get_channel(helper->remote_session);
 		const char* skinny_ring_silent = switch_channel_get_variable(rchannel, "skinny_ring_silent");
+		if(rchannel == NULL)
+			skinny_ring_silent = "false";
 
 		switch_channel_set_state(channel, CS_ROUTING);
 
@@ -610,7 +612,7 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 				"ring silent: %s on %s, remote session %s\n", skinny_ring_silent,
 				switch_core_session_get_uuid(helper->tech_pvt->session),
 				switch_core_session_get_uuid(helper->remote_session));
-
+		
 		if(listener->dnd || switch_true(skinny_ring_silent)) {
 			send_set_ringer(listener, SKINNY_RING_SILENT, SKINNY_RING_FOREVER, line_instance, helper->tech_pvt->call_id);
 		}
