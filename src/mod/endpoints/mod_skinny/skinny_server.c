@@ -559,8 +559,11 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 	if(listener) {
 		switch_channel_t *channel = switch_core_session_get_channel(helper->tech_pvt->session);
 		switch_channel_t *rchannel = switch_core_session_get_channel(helper->remote_session);
-		const char* skinny_ring_silent = switch_channel_get_variable(rchannel, "skinny_ring_silent");
-		if(rchannel == NULL)
+		const char* skinny_ring_silent;
+		if(rchannel != NULL) {
+			  skinny_ring_silent = switch_channel_get_variable(rchannel, "skinny_ring_silent");
+		}
+		if(skinny_ring_silent == NULL)
 			skinny_ring_silent = "false";
 
 		switch_channel_set_state(channel, CS_ROUTING);
