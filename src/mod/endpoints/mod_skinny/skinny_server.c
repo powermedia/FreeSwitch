@@ -526,7 +526,6 @@ static int skinny_active_lines_callback(void *pArg, int argc, char **argv, char 
 	return 0;
 }
 
-
 int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnNames)
 {
 	struct skinny_ring_lines_helper *helper = pArg;
@@ -559,6 +558,9 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 			device_name, device_instance, &listener);
 	if(listener) {
 		switch_channel_t *channel = switch_core_session_get_channel(helper->tech_pvt->session);
+		switch_channel_t *rchannel = switch_core_session_get_channel(helper->remote_session);
+		const char* skinny_ring_silent = switch_channel_get_variable(rchannel, "skinny_ring_silent");
+
 		switch_channel_set_state(channel, CS_ROUTING);
 
 		if ((sql = switch_mprintf(
@@ -604,7 +606,12 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 		skinny_session_send_call_info(helper->tech_pvt->session, listener, line_instance);
 		send_set_lamp(listener, SKINNY_BUTTON_LINE, line_instance, SKINNY_LAMP_BLINK);
 
-		if(listener->dnd){
+		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO,
+				"ring silent: %s on %s, remote session %s\n", skinny_ring_silent,
+				switch_core_session_get_uuid(helper->tech_pvt->session),
+				switch_core_session_get_uuid(helper->remote_session));
+
+		if(listener->dnd || switch_true(skinny_ring_silent)) {
 			send_set_ringer(listener, SKINNY_RING_SILENT, SKINNY_RING_FOREVER, line_instance, helper->tech_pvt->call_id);
 		}
 		else
