@@ -36,6 +36,10 @@
 #include "skinny_labels.h"
 #include "skinny_server.h"
 
+#define DEFAULT_CODEC SKINNY_CODEC_ALAW_64K
+#define CODEC_NAME "PCMA"
+#define CODEC_PAYLOAD_TYPE 8
+
 struct soft_key_template_definition soft_key_template_default[] = {
 	{ SKINNY_DISP_REDIAL, SOFTKEY_REDIAL },
 	{ SKINNY_DISP_NEWCALL, SOFTKEY_NEWCALL },
@@ -760,7 +764,7 @@ switch_status_t skinny_session_start_media(switch_core_session_t *session, liste
 				tech_pvt->call_id, /* uint32_t conference_id, */
 				tech_pvt->call_id, /* uint32_t pass_thru_party_id, */
 				20, /* uint32_t packets, */
-				SKINNY_CODEC_ULAW_64K, /* uint32_t payload_capacity, */
+				DEFAULT_CODEC, /* uint32_t payload_capacity, */
 				0, /* uint32_t echo_cancel_type, */
 				0, /* uint32_t g723_bitrate, */
 				0, /* uint32_t conference_id2, */
@@ -1711,14 +1715,14 @@ switch_status_t skinny_handle_open_receive_channel_ack_message(listener_t *liste
 		channel = switch_core_session_get_channel(session);
 
 		/* Codec */
-		tech_pvt->iananame = "PCMU"; /* TODO */
+		tech_pvt->iananame = CODEC_NAME; /* TODO */
 		tech_pvt->codec_ms = 10; /* TODO */
 		tech_pvt->rm_rate = 8000; /* TODO */
 		tech_pvt->rm_fmtp = NULL; /* TODO */
-		tech_pvt->agreed_pt = (switch_payload_t) 0; /* TODO */
+		tech_pvt->agreed_pt = (switch_payload_t) CODEC_PAYLOAD_TYPE; /* TODO */
 		tech_pvt->rm_encoding = switch_core_strdup(switch_core_session_get_pool(session), "");
-		skinny_tech_set_codec(tech_pvt, 0);
-		if ((status = skinny_tech_set_codec(tech_pvt, 0)) != SWITCH_STATUS_SUCCESS) {
+		skinny_tech_set_codec(tech_pvt, CODEC_PAYLOAD_TYPE);
+		if ((status = skinny_tech_set_codec(tech_pvt, CODEC_PAYLOAD_TYPE)) != SWITCH_STATUS_SUCCESS) {
 			goto end;
 		}
 
@@ -1762,7 +1766,7 @@ switch_status_t skinny_handle_open_receive_channel_ack_message(listener_t *liste
 				addr.s_addr, /* uint32_t remote_ip, */
 				tech_pvt->local_sdp_audio_port, /* uint32_t remote_port, */
 				20, /* uint32_t ms_per_packet, */
-				SKINNY_CODEC_ULAW_64K, /* uint32_t payload_capacity, */
+				DEFAULT_CODEC, /* uint32_t payload_capacity, */
 				184, /* uint32_t precedence, */
 				0, /* uint32_t silence_suppression, */
 				0, /* uint16_t max_frames_per_packet, */
