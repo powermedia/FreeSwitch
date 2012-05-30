@@ -516,7 +516,7 @@ static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream,
 				{					
 					skinny_profile_find_listener_by_device_name(profile, (const char*)(it->val), &listener);
 					if(listener)
-						stream->write_function(stream, fmt[i++], listener->dnd?"Y":"N");
+						stream->write_function(stream, fmt[i], listener->dnd?"Y":"N");
 					else
 						stream->write_function(stream, "|listener not found|\n");
 					i = 0;
@@ -529,6 +529,62 @@ static switch_status_t skinny_device_status_show(switch_stream_handle_t *stream,
 	}
 	return SWITCH_STATUS_SUCCESS;
 }
+
+static switch_status_t skinny_device_status_xmlshow(switch_stream_handle_t *stream, const char *profile_name)
+{
+	struct device_show_helper h = { 0 };
+	char *sql;
+	int i;
+	skinny_profile_t *profile = NULL;
+	switch_console_callback_device_node_t *it;
+
+	const int ind = 5;
+	char *fields[] = {"caller", "ip", "line", "port", "mac"};
+
+	const char *header = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>";
+
+	profile = skinny_find_profile(profile_name);
+
+	if(profile)
+	{
+		if((sql = switch_mprintf("SELECT "
+				"skinny_lines.caller_name, skinny_devices.ip, "
+				"skinny_lines.value, "
+				"skinny_devices.port, skinny_devices.name from skinny_lines "
+				"LEFT JOIN skinny_devices "
+				"ON skinny_lines.device_name = skinny_devices.name")))
+			{
+				skinny_execute_sql_callback(profile, profile->sql_mutex, sql, skinny_api_list_devices_show_callback, &h);
+				switch_safe_free(sql);
+			}
+	}
+
+	stream->write_function(stream, "%s\n", header);
+
+	stream->write_function(stream, "<devices>\n");
+
+	if(h.my_devices != NULL)
+	{
+
+
+		for (it = h.my_devices->head, i = 0;
+			it != NULL;
+			it = it->next, i = (i + 1) % ind) {
+			if (i == 0) {
+				stream->write_function(stream, "<device>\n");
+			}
+			stream->write_function(stream, "<%s>%s</%s>\n", fields[i], it->val, fields[i]);
+			if (i == ind - 1) {
+				stream->write_function(stream, "<device>\n");
+			}
+		}
+	}
+
+	stream->write_function(stream, "</devices>\n");
+
+	return SWITCH_STATUS_SUCCESS;
+}
+
 
 static switch_status_t skinny_api_set_dnd(switch_stream_handle_t *stream, const char *profile_name, const char* state, const char *device_name)
 {
@@ -601,6 +657,8 @@ SWITCH_STANDARD_API(skinny_function)
 		stream->write_function(stream, "%s", usage_string);
 	} else if (argc == 3 && !strcasecmp(argv[0], "show") && !strcasecmp(argv[1], "devices")) {
 		skinny_device_status_show(stream, argv[2]);
+	} else if (argc == 3 && !strcasecmp(argv[0], "xmlshow") && !strcasecmp(argv[1], "devices")) {
+		skinny_device_status_xmlshow(stream, argv[2]);
 	} else if(argc == 8 && !strcasecmp(argv[0], "profile") && !strcasecmp(argv[3], "DND")) {
 		skinny_api_set_dnd(stream, argv[1], argv[5], argv[7]);
 	} else if (argc == 3 && !strcasecmp(argv[0], "status") && !strcasecmp(argv[1], "profile")) {
