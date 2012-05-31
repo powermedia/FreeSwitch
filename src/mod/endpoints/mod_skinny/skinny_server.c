@@ -604,7 +604,7 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 		skinny_session_send_call_info(helper->tech_pvt->session, listener, line_instance);
 		send_set_lamp(listener, SKINNY_BUTTON_LINE, line_instance, SKINNY_LAMP_BLINK);
 
-		if(listener->dnd){
+		if(listener->dnd || switch_true(switch_channel_get_variable(channel, "skinny_silent_ring"))){
 			send_set_ringer(listener, SKINNY_RING_SILENT, SKINNY_RING_FOREVER, line_instance, helper->tech_pvt->call_id);
 		}
 		else

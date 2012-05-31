@@ -1044,6 +1044,9 @@ switch_call_cause_t channel_outgoing_channel(switch_core_session_t *session, swi
 	switch_channel_t *nchannel;
 	switch_caller_profile_t *caller_profile;
 
+    const char *skinny_silent_ring;
+
+
 	if (!outbound_profile || zstr(outbound_profile->destination_number)) {
 		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_CRIT, "Invalid Destination\n");
 		goto error;
@@ -1106,6 +1109,12 @@ switch_call_cause_t channel_outgoing_channel(switch_core_session_t *session, swi
 		switch_channel_set_variable(switch_core_session_get_channel(session), SWITCH_SIGNAL_BOND_VARIABLE, switch_core_session_get_uuid(nsession));
 		switch_channel_set_variable(nchannel, SWITCH_SIGNAL_BOND_VARIABLE, switch_core_session_get_uuid(session));
 	}
+
+    skinny_silent_ring = switch_event_get_header(var_event, "skinny_silent_ring");
+
+    if (skinny_silent_ring) {
+		switch_channel_set_variable(nchannel, "skinny_silent_ring", skinny_silent_ring);
+    }
 
 	cause = skinny_ring_lines(tech_pvt, session);
 
