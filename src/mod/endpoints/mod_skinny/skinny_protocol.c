@@ -578,6 +578,8 @@ switch_status_t send_start_media_transmission(listener_t *listener,
 	message->data.start_media.silence_suppression = silence_suppression;
 	message->data.start_media.max_frames_per_packet = max_frames_per_packet;
 	message->data.start_media.g723_bitrate = g723_bitrate;
+	message->data.start_media.lel_conferenceId1 = conference_id;
+	message->data.start_media.lel_rtptimeout = 10;
 	/* ... */
 	return skinny_send_reply(listener, message);
 }
@@ -744,6 +746,10 @@ switch_status_t send_open_receive_channel(listener_t *listener,
 	message->data.open_receive_channel.echo_cancel_type = echo_cancel_type;
 	message->data.open_receive_channel.g723_bitrate = g723_bitrate;
 	message->data.open_receive_channel.conference_id2 = conference_id2;
+
+	message->data.open_receive_channel.lel_rtptimeout = 10;
+	message->data.open_receive_channel.lel_unknown20 = 4000;
+
 	/*
 	   message->data.open_receive_channel.reserved[0] = reserved[0];
 	   message->data.open_receive_channel.reserved[1] = reserved[1];

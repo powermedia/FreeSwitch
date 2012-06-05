@@ -767,7 +767,7 @@ switch_status_t skinny_session_start_media(switch_core_session_t *session, liste
 				DEFAULT_CODEC, /* uint32_t payload_capacity, */
 				0, /* uint32_t echo_cancel_type, */
 				0, /* uint32_t g723_bitrate, */
-				0, /* uint32_t conference_id2, */
+				tech_pvt->call_id, /* uint32_t conference_id2, */
 				0 /* uint32_t reserved[10] */
 				);
 	}

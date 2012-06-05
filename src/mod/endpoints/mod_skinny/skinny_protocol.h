@@ -320,6 +320,27 @@ struct PACKED start_media_transmission_message {
 	uint16_t unknown1;
 	uint32_t g723_bitrate;
 	/* ... */
+	uint32_t lel_conferenceId1;					/*!< Conference ID 1 */
+	uint32_t lel_unknown2;						/*!< Unknown */
+	uint32_t lel_unknown3;						/*!< Unknown */
+	uint32_t lel_unknown4;						/*!< Unknown */
+	uint32_t lel_unknown5;						/*!< Unknown */
+	uint32_t lel_unknown6;						/*!< Unknown */
+	uint32_t lel_unknown7;						/*!< Unknown */
+	uint32_t lel_unknown8;						/*!< Unknown */
+	uint32_t lel_unknown9;						/*!< Unknown */
+	uint32_t lel_unknown10;						/*!< Unknown */
+	uint32_t lel_unknown11;						/*!< Unknown */
+	uint32_t lel_unknown12;						/*!< Unknown */
+	uint32_t lel_unknown13;						/*!< Unknown */
+	uint32_t lel_unknown14;						/*!< Unknown */
+	uint32_t lel_unknown15;						/*!< Unknown */
+	uint32_t lel_rtpDTMFPayload;					/*!< RTP DTMP PayLoad (this is often set to 0x65 (101)) */
+	uint32_t lel_rtptimeout;					/*!< RTP Timeout (this is set to 0x0A) */
+	uint32_t lel_mixingMode;					/*!< Unknown */
+	uint32_t lel_mixingParty;					/*!< Unknown */
+
+
 };
 
 /* StopMediaTransmissionMessage */
@@ -461,7 +482,28 @@ struct PACKED open_receive_channel_message {
 	uint32_t echo_cancel_type;
 	uint32_t g723_bitrate;
 	uint32_t conference_id2;
-	uint32_t reserved[10];
+	uint32_t unknown1;						/*!< Unknown */
+	uint32_t unknown2;						/*!< Unknown */
+	uint32_t unknown3;						/*!< Unknown */
+	uint32_t unknown4;						/*!< Unknown */
+	uint32_t unknown5;						/*!< Unknown */
+	uint32_t unknown6;						/*!< Unknown */
+	uint32_t unknown7;						/*!< Unknown */
+	uint32_t unknown8;						/*!< Unknown */
+	uint32_t unknown9;						/*!< Unknown */
+	uint32_t unknown10;						/*!< Unknown */
+	uint32_t unknown11;						/*!< Unknown */
+	uint32_t unknown12;						/*!< Unknown */
+	uint32_t unknown13;						/*!< Unknown */
+	uint32_t unknown14;						/*!< Unknown */
+	uint32_t lel_rtpDTMFPayload;					/*!< RTP DTMF PayLoad (this is often set to 0x65 (101)) */
+	uint32_t lel_rtptimeout;					/*!< RTP Timeout (this is always 0x0A) */
+	uint32_t lel_mixingMode;					/*!< Unknown */
+	uint32_t lel_mixingParty;					/*!< Unknown */
+	uint32_t unknown19;						/*!< Unknown */
+	char bel_remoteIpAddr[16];					/*!< Remote IP Address */
+	uint32_t lel_unknown20;						/*!< Unknown (this is always 0xFA0) */
+	uint32_t unknown21;						/*!< Unknown */
 };
 
 /* CloseReceiveChannelMessage */
