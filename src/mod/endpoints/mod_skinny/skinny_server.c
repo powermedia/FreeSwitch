@@ -39,6 +39,7 @@
 #define DEFAULT_CODEC SKINNY_CODEC_ALAW_64K
 #define CODEC_NAME "PCMA"
 #define CODEC_PAYLOAD_TYPE 8
+#define DIGIT_TIMEOUT 7
 
 struct soft_key_template_definition soft_key_template_default[] = {
 	{ SKINNY_DISP_REDIAL, SOFTKEY_REDIAL },
@@ -606,6 +607,7 @@ int skinny_ring_lines_callback(void *pArg, int argc, char **argv, char **columnN
 
 		if(listener->dnd || switch_true(switch_channel_get_variable(channel, "skinny_silent_ring"))){
 			send_set_ringer(listener, SKINNY_RING_SILENT, SKINNY_RING_FOREVER, line_instance, helper->tech_pvt->call_id);
+			switch_channel_set_variable(channel, "skinny_silent_ring", "false");
 		}
 		else
 			send_set_ringer(listener, SKINNY_RING_INSIDE, SKINNY_RING_FOREVER, line_instance, helper->tech_pvt->call_id);
@@ -1207,6 +1209,8 @@ switch_status_t skinny_handle_keypad_button_message(listener_t *listener, skinny
 			digit = '#';
 		} else if (request->data.keypad_button.button >= 0 && request->data.keypad_button.button <= 9) {
 			digit = '0' + request->data.keypad_button.button;
+			listener->digit_timeout = switch_epoch_time_now(NULL) + DIGIT_TIMEOUT;
+			/* switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "listener->digit_timeout = %s.\n", ctime(&(listener->digit_timeout))); */
 		} else {
 			switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_WARNING, "UNKNOW DTMF RECEIVED ON CALL %d [%d]\n", tech_pvt->call_id, request->data.keypad_button.button);
 		}
@@ -1434,6 +1438,38 @@ switch_status_t skinny_handle_line_stat_request(listener_t *listener, skinny_mes
 	skinny_send_reply(listener, message);
 
 	return SWITCH_STATUS_SUCCESS;
+}
+
+switch_status_t skinny_handle_digit_timeout_message(listener_t *listener, skinny_message_t *request)
+{
+	switch_status_t status = SWITCH_STATUS_SUCCESS;
+	uint32_t line_instance = 0;
+	uint32_t call_id = 0;
+	switch_core_session_t *session = NULL;
+	
+	session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
+
+	if(session) {
+		switch_channel_t *channel = NULL;
+		private_t *tech_pvt = NULL;
+		/* switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "Digit timeout function.\n"); */
+		channel = switch_core_session_get_channel(session);
+		tech_pvt = switch_core_session_get_private(session);
+
+		if (tech_pvt->transfer_from_call_id) { /* blind transfer */
+			status = skinny_session_transfer(session, listener, line_instance);
+		} else {
+			if (skinny_line_get_state(listener, line_instance, call_id) != SKINNY_IN_USE_REMOTELY) {
+				switch_channel_hangup(channel, SWITCH_CAUSE_NORMAL_CLEARING);
+			}
+		}
+	}
+
+	if(session) {
+		switch_core_session_rwunlock(session);
+	}
+
+	return status;
 }
 
 int skinny_config_stat_res_callback(void *pArg, int argc, char **argv, char **columnNames)
@@ -1838,6 +1874,7 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 			break;
 		case SOFTKEY_NEWCALL:
 			status = skinny_create_incoming_session(listener, &line_instance, &session);
+			listener->digit_timeout = switch_epoch_time_now(NULL) + 3;
 			skinny_session_process_dest(session, listener, line_instance, NULL, '\0', 0);
 			break;
 		case SOFTKEY_HOLD:
@@ -2176,6 +2213,7 @@ switch_status_t skinny_handle_request(listener_t *listener, skinny_message_t *re
 				"Device should send a register message first. Received %s (type=%x,length=%d).\n", skinny_message_type2str(request->type), request->type, request->length);
 		return SWITCH_STATUS_FALSE;
 	}
+	/* switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "skinny_handle_request. request type: %d\n", request->type); */
 	switch(request->type) {
 		case KEEP_ALIVE_MESSAGE:
 			return skinny_handle_keep_alive_message(listener, request);
@@ -2215,7 +2253,7 @@ switch_status_t skinny_handle_request(listener_t *listener, skinny_message_t *re
 			return skinny_handle_open_receive_channel_ack_message(listener, request);
 		case SOFT_KEY_SET_REQ_MESSAGE:
 			return skinny_handle_soft_key_set_request(listener, request);
-		case SOFT_KEY_EVENT_MESSAGE:
+		case SOFT_KEY_EVENT_MESSAGE:			
 			return skinny_handle_soft_key_event_message(listener, request);
 		case UNREGISTER_MESSAGE:
 			return skinny_handle_unregister(listener, request);
@@ -2243,6 +2281,10 @@ switch_status_t skinny_handle_request(listener_t *listener, skinny_message_t *re
 			return skinny_handle_accessory_status_message(listener, request);
 		case XML_ALARM_MESSAGE:
 			return skinny_handle_xml_alarm(listener, request);
+		case DIGIT_TIMEOUT_MESSAGE:
+			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer off (timeout).\n");
+			listener->digit_timeout = 0;
+			return skinny_handle_digit_timeout_message(listener, request);
 		default:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,
 					"Unhandled %s (type=%x,length=%d).\n", skinny_message_type2str(request->type), request->type, request->length);

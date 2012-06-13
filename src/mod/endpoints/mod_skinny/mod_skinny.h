@@ -152,6 +152,7 @@ struct listener {
 	time_t expire_time;
 	struct listener *next;
 	int dnd;
+	time_t digit_timeout;		// timeot for entering dialed numbers
 };
 
 typedef struct listener listener_t;

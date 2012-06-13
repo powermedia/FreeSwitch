@@ -30,6 +30,7 @@
  *
  */
 #include <switch.h>
+#include <time.h>
 #include "mod_skinny.h"
 #include "skinny_protocol.h"
 #include "skinny_server.h"
@@ -45,6 +46,8 @@ SWITCH_MODULE_DEFINITION(mod_skinny, mod_skinny_load, mod_skinny_shutdown, NULL)
 switch_endpoint_interface_t *skinny_endpoint_interface;
 
 skinny_globals_t globals;
+
+clock_t start;
 
 /*****************************************************************************/
 /* SQL TABLES */
@@ -683,6 +686,8 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 						switch_channel_get_variable(channel, "skinny_device_name"),
 						atoi(switch_channel_get_variable(channel, "skinny_device_instance")), &listener);
 				if (listener) {
+					switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "Timer off (matched).\n");
+					listener->digit_timeout = 0;
 					helper.tech_pvt = tech_pvt;
 					helper.listener = listener;
 					helper.line_instance = atoi(switch_channel_get_variable(channel, "skinny_line_instance"));
@@ -1428,7 +1433,6 @@ static void *SWITCH_THREAD_FUNC listener_run(switch_thread_t *thread, void *obj)
 	skinny_message_t *request = NULL;
 	skinny_profile_t *profile;
 	int destroy_pool = 1;
-
 	switch_assert(listener);
 	assert(listener->profile);
 	profile = listener->profile;
@@ -1461,23 +1465,25 @@ static void *SWITCH_THREAD_FUNC listener_run(switch_thread_t *thread, void *obj)
 
 	while (listener_is_ready(listener)) {
 		status = skinny_read_packet(listener, &request);
-
-		if (status != SWITCH_STATUS_SUCCESS) {
+		if(status == SWITCH_STATUS_DIGIT_TIMEOUT){
+			request->type = DIGIT_TIMEOUT_MESSAGE;
+		}
+		else if (status != SWITCH_STATUS_SUCCESS) {
 			switch(status) {
-				case SWITCH_STATUS_TIMEOUT:
-					switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "Communication Time Out with %s:%d.\n",
-							listener->remote_ip, listener->remote_port);
-
-					if(listener->expire_time < switch_epoch_time_now(NULL)) {
-						switch_event_t *event = NULL;
-						/* skinny::expire event */
-						skinny_device_event(listener, &event, SWITCH_EVENT_CUSTOM, SKINNY_EVENT_EXPIRE);
-						switch_event_fire(&event);
-					}
-					break;
-				default: 
-					switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_CRIT, "Communication Error with %s:%d.\n",
-							listener->remote_ip, listener->remote_port);
+			case SWITCH_STATUS_TIMEOUT:
+				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "Communication Time Out with %s:%d.\n",
+								  listener->remote_ip, listener->remote_port);
+				
+				if(listener->expire_time < switch_epoch_time_now(NULL)) {
+					switch_event_t *event = NULL;
+					/* skinny::expire event */
+					skinny_device_event(listener, &event, SWITCH_EVENT_CUSTOM, SKINNY_EVENT_EXPIRE);
+					switch_event_fire(&event);
+				}
+				break;
+			default: 
+				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_CRIT, "Communication Error with %s:%d.\n",
+								  listener->remote_ip, listener->remote_port);
 			}
 			switch_clear_flag_locked(listener, LFLAG_RUNNING);
 			break;
@@ -1486,10 +1492,12 @@ static void *SWITCH_THREAD_FUNC listener_run(switch_thread_t *thread, void *obj)
 			break;
 		}
 
+		/* switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "Request type: %d.\n", request->type); */
+
 		if (!request) {
 			continue;
 		}
-
+		
 		if (skinny_handle_request(listener, request) != SWITCH_STATUS_SUCCESS) {
 			switch_clear_flag_locked(listener, LFLAG_RUNNING);
 			break;

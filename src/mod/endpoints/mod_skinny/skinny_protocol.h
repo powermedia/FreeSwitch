@@ -646,6 +646,8 @@ struct PACKED dialed_phone_book_ack_message {
 	uint32_t unknown2;
 };
 
+#define DIGIT_TIMEOUT_MESSAGE 0xFFFF
+
 #ifdef _MSC_VER
 #pragma pack(pop, r1)
 #endif
