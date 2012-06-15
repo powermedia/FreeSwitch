@@ -153,6 +153,7 @@ struct listener {
 	struct listener *next;
 	int dnd;
 	time_t digit_timeout;		// timeot for entering dialed numbers
+	int dial;
 };
 
 typedef struct listener listener_t;

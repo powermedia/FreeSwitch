@@ -138,6 +138,12 @@ switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req)
 		if (listener->expire_time && listener->expire_time < switch_epoch_time_now(NULL)) {
 			return SWITCH_STATUS_TIMEOUT;
 		}
+		
+		if(listener->digit_timeout && listener->digit_timeout < switch_epoch_time_now(NULL)){
+			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer timeout: %s\n", ctime(&(listener)->digit_timeout));
+			return SWITCH_STATUS_DIGIT_TIMEOUT;
+		}
+
 
 		if (!listener_is_ready(listener)) {
 			break;
@@ -179,10 +185,6 @@ switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req)
 			}
 		}
 
-		if(listener->digit_timeout && listener->digit_timeout < switch_epoch_time_now(NULL)){
-			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "Timer timeout.\n");
-			return SWITCH_STATUS_DIGIT_TIMEOUT;
-		}
 
 		if (do_sleep) {
 			switch_cond_next();

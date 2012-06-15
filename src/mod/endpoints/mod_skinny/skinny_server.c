@@ -39,7 +39,6 @@
 #define DEFAULT_CODEC SKINNY_CODEC_ALAW_64K
 #define CODEC_NAME "PCMA"
 #define CODEC_PAYLOAD_TYPE 8
-#define DIGIT_TIMEOUT 7
 
 struct soft_key_template_definition soft_key_template_default[] = {
 	{ SKINNY_DISP_REDIAL, SOFTKEY_REDIAL },
@@ -1209,8 +1208,6 @@ switch_status_t skinny_handle_keypad_button_message(listener_t *listener, skinny
 			digit = '#';
 		} else if (request->data.keypad_button.button >= 0 && request->data.keypad_button.button <= 9) {
 			digit = '0' + request->data.keypad_button.button;
-			listener->digit_timeout = switch_epoch_time_now(NULL) + DIGIT_TIMEOUT;
-			/* switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "listener->digit_timeout = %s.\n", ctime(&(listener->digit_timeout))); */
 		} else {
 			switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_WARNING, "UNKNOW DTMF RECEIVED ON CALL %d [%d]\n", tech_pvt->call_id, request->data.keypad_button.button);
 		}
@@ -1451,24 +1448,17 @@ switch_status_t skinny_handle_digit_timeout_message(listener_t *listener, skinny
 
 	if(session) {
 		switch_channel_t *channel = NULL;
-		private_t *tech_pvt = NULL;
+		/* private_t *tech_pvt = NULL; */
 		/* switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "Digit timeout function.\n"); */
 		channel = switch_core_session_get_channel(session);
-		tech_pvt = switch_core_session_get_private(session);
+		/* tech_pvt = switch_core_session_get_private(session); */
 
-		if (tech_pvt->transfer_from_call_id) { /* blind transfer */
-			status = skinny_session_transfer(session, listener, line_instance);
-		} else {
-			if (skinny_line_get_state(listener, line_instance, call_id) != SKINNY_IN_USE_REMOTELY) {
-				switch_channel_hangup(channel, SWITCH_CAUSE_NORMAL_CLEARING);
-			}
-		}
+		switch_channel_set_state(channel, CS_ROUTING);
+		
 	}
-
 	if(session) {
 		switch_core_session_rwunlock(session);
 	}
-
 	return status;
 }
 
@@ -1874,7 +1864,6 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 			break;
 		case SOFTKEY_NEWCALL:
 			status = skinny_create_incoming_session(listener, &line_instance, &session);
-			listener->digit_timeout = switch_epoch_time_now(NULL) + 3;
 			skinny_session_process_dest(session, listener, line_instance, NULL, '\0', 0);
 			break;
 		case SOFTKEY_HOLD:
@@ -1900,6 +1889,9 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 			session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
 			if(session) {
 				channel = switch_core_session_get_channel(session);
+				listener->digit_timeout = 0;
+				listener->dial = 0;
+				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer off (manual endcall).\n");
 				switch_channel_hangup(channel, SWITCH_CAUSE_NORMAL_CLEARING);
 			}
 			break;
@@ -2284,6 +2276,7 @@ switch_status_t skinny_handle_request(listener_t *listener, skinny_message_t *re
 		case DIGIT_TIMEOUT_MESSAGE:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer off (timeout).\n");
 			listener->digit_timeout = 0;
+			listener->dial = 1;
 			return skinny_handle_digit_timeout_message(listener, request);
 		default:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,

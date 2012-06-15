@@ -674,20 +674,29 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 		char *data = NULL;
 		listener_t *listener = NULL;
 		struct channel_on_routing_helper helper = {0};
-
+		skinny_profile_find_listener_by_device_name_and_instance(tech_pvt->profile,
+																 switch_channel_get_variable(channel, "skinny_device_name"),
+																 atoi(switch_channel_get_variable(channel, "skinny_device_instance")), &listener);
+		
 		if(switch_test_flag(tech_pvt, TFLAG_FORCE_ROUTE)) {
 			action = SKINNY_ACTION_PROCESS;
 		} else {
-			action = skinny_session_dest_match_pattern(session, &data);
+			action = skinny_session_dest_match_pattern(session, &data);		   
+			if(listener && action == SKINNY_ACTION_PROCESS && listener->digit_timeout != 0){
+				action = SKINNY_ACTION_WAIT;
+			}
+			if(listener && action == SKINNY_ACTION_WAIT && listener->dial != 0){
+				action = SKINNY_ACTION_DROP;
+				listener->dial = 0;
+			}
+			
 		}
 		switch(action) {
 			case SKINNY_ACTION_PROCESS:
-				skinny_profile_find_listener_by_device_name_and_instance(tech_pvt->profile,
-						switch_channel_get_variable(channel, "skinny_device_name"),
-						atoi(switch_channel_get_variable(channel, "skinny_device_instance")), &listener);
 				if (listener) {
-					switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "Timer off (matched).\n");
+					switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer off (matched).\n");
 					listener->digit_timeout = 0;
+					listener->dial = 0;
 					helper.tech_pvt = tech_pvt;
 					helper.listener = listener;
 					helper.line_instance = atoi(switch_channel_get_variable(channel, "skinny_line_instance"));
@@ -701,7 +710,11 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 				switch_set_flag_locked(tech_pvt, TFLAG_FORCE_ROUTE);
 				break;
 			case SKINNY_ACTION_WAIT:
-				/* for now, wait forever */
+				/* wait "data" time */
+				if(listener){
+					switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_NOTICE, "Timer on (SKINNY_WAIT).\n");
+					listener->digit_timeout = switch_epoch_time_now(NULL) + 5;
+				}
 				switch_channel_set_state(channel, CS_HIBERNATE);
 				break;
 			case SKINNY_ACTION_DROP:
@@ -1436,7 +1449,6 @@ static void *SWITCH_THREAD_FUNC listener_run(switch_thread_t *thread, void *obj)
 	switch_assert(listener);
 	assert(listener->profile);
 	profile = listener->profile;
-
 	switch_mutex_lock(profile->listener_mutex);
 	profile->listener_threads++;
 	switch_mutex_unlock(profile->listener_mutex);
