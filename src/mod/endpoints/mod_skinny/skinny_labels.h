@@ -153,6 +153,7 @@
 #define SKINNY_DISP_DIRECTORIES_URL					"\200\175"
 #define SKINNY_DISP_MESSAGES_URL					"\200\176"
 #define SKINNY_DISP_SERVICES_URL					"\200\177"
+#define SKINNY_DISP_DIAL                            "Dial"
 
 #endif /* _SKINNY_LABELS_H */
 

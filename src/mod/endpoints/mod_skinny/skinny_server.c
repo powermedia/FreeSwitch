@@ -61,6 +61,7 @@ struct soft_key_template_definition soft_key_template_default[] = {
 	{ SKINNY_DISP_GRPCALLPICKUP, SOFTKEY_GRPCALLPICKUP },
 	{ SKINNY_DISP_DND, SOFTKEY_DND },
 	{ SKINNY_DISP_IDIVERT, SOFTKEY_IDIVERT },
+	{ SKINNY_DISP_DIAL, SOFTKEY_DIAL },
 };
 
 /*****************************************************************************/
@@ -1858,80 +1859,81 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 	}
 
 	switch(request->data.soft_key_event.event) {
-		case SOFTKEY_REDIAL:
-			status = skinny_create_incoming_session(listener, &line_instance, &session);
-			skinny_session_process_dest(session, listener, line_instance, "redial", '\0', 0);
-			break;
-		case SOFTKEY_NEWCALL:
-			status = skinny_create_incoming_session(listener, &line_instance, &session);
-			skinny_session_process_dest(session, listener, line_instance, NULL, '\0', 0);
-			break;
-		case SOFTKEY_HOLD:
-			session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
-			if(session) {
-				status = skinny_session_hold_line(session, listener, line_instance);
-			}
-			break;
-		case SOFTKEY_TRANSFER:
-			session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
-
-			if(session) {
-				status = skinny_session_transfer(session, listener, line_instance);
-			}
-			break;
-		case SOFTKEY_BACKSPACE:
-			session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
-			if(session) {
-				skinny_session_process_dest(session, listener, line_instance, NULL, '\0', 1);
-			}
-			break;
-		case SOFTKEY_ENDCALL:
-			session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
-			if(session) {
-				channel = switch_core_session_get_channel(session);
-				listener->digit_timeout = 0;
-				listener->dial = 0;
-				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer off (manual endcall).\n");
-				switch_channel_hangup(channel, SWITCH_CAUSE_NORMAL_CLEARING);
-			}
-			break;
-		case SOFTKEY_RESUME:
-			session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
-			if(session) {
-				status = skinny_session_unhold_line(session, listener, line_instance);
-			}
-			break;
-		case SOFTKEY_ANSWER:
-			session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
-			if(session) {
-				status = skinny_session_answer(session, listener, line_instance);
-			}
-			break;
-	    case SOFTKEY_DND:
-		/* DND soft key code. Set DND state, which is send when call is initiated */
-			send_clear_prompt_status(listener, line_instance, call_id);
-			if(!listener->dnd) {
-				listener->dnd = 1;
-				send_display_prompt_status(listener, 0, "DND ON", line_instance, call_id);
-				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG,
-								  "DND SoftKeyEvent: %d, DND state: %d.\n", request->data.soft_key_event.event,
-								  listener->dnd);
-				
-
-			}
-			else {
-				listener->dnd = 0;
-				send_display_prompt_status(listener, 2, "DND OFF", line_instance, call_id);
-				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG,
-								  "DND SoftKeyEvent: %d, DND state: %d.\n", request->data.soft_key_event.event,
-								  listener->dnd);
-			}
+	case SOFTKEY_REDIAL:
+		status = skinny_create_incoming_session(listener, &line_instance, &session);
+		skinny_session_process_dest(session, listener, line_instance, "redial", '\0', 0);
 		break;
-		default:
+	case SOFTKEY_NEWCALL:
+		status = skinny_create_incoming_session(listener, &line_instance, &session);
+		skinny_session_process_dest(session, listener, line_instance, NULL, '\0', 0);
+		break;
+	case SOFTKEY_HOLD:
+		session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
+		if(session) {
+			status = skinny_session_hold_line(session, listener, line_instance);
+		}
+		break;
+	case SOFTKEY_TRANSFER:
+		session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
+		
+		if(session) {
+			status = skinny_session_transfer(session, listener, line_instance);
+		}
+		break;
+	case SOFTKEY_BACKSPACE:
+		session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
+		if(session) {
+			skinny_session_process_dest(session, listener, line_instance, NULL, '\0', 1);
+		}
+		break;
+	case SOFTKEY_ENDCALL:
+		session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
+		if(session) {
+			channel = switch_core_session_get_channel(session);
+			listener->digit_timeout = 0;
+			listener->dial = 0;
+			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer off (manual endcall).\n");
+			switch_channel_hangup(channel, SWITCH_CAUSE_NORMAL_CLEARING);
+		}
+		break;
+	case SOFTKEY_RESUME:
+		session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
+		if(session) {
+			status = skinny_session_unhold_line(session, listener, line_instance);
+		}
+		break;
+	case SOFTKEY_ANSWER:
+		session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
+		if(session) {
+			status = skinny_session_answer(session, listener, line_instance);
+		}
+		break;
+	case SOFTKEY_DND:
+		/* DND soft key code. Set DND state, which is send when call is initiated */
+		send_clear_prompt_status(listener, line_instance, call_id);
+		if(!listener->dnd) {
+			listener->dnd = 1;
+			send_display_prompt_status(listener, 0, "DND ON", line_instance, call_id);
+			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG,
+							  "DND SoftKeyEvent: %d, DND state: %d.\n", request->data.soft_key_event.event,
+								  listener->dnd);
+		}
+		else {
+			listener->dnd = 0;
+			send_display_prompt_status(listener, 2, "DND OFF", line_instance, call_id);
+				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG,
+								  "DND SoftKeyEvent: %d, DND state: %d.\n", request->data.soft_key_event.event,
+								  listener->dnd);
+		}
+		break;
+	case SOFTKEY_DIAL:
+		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Dial button.\n");
+		break;
+	default:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,
-					"Unknown SoftKeyEvent type: %d.\n", request->data.soft_key_event.event);
+							  "Unknown SoftKeyEvent type: %d.\n", request->data.soft_key_event.event);
 	}
-
+	
 	if(session) {
 		if(listener->dnd) {
 			send_clear_prompt_status(listener, line_instance, call_id);

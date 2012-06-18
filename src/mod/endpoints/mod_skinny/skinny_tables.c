@@ -187,6 +187,7 @@ SKINNY_DECLARE_STR2ID(skinny_str2button, SKINNY_BUTTONS, -1)
 		{SOFTKEY_GRPCALLPICKUP, "SoftkeyGrpcallpickup"},
 		{SOFTKEY_DND, "SoftkeyDnd"},
 		{SOFTKEY_IDIVERT, "SoftkeyIdivert"},
+		{SOFTKEY_DIAL, "SoftkeyDial"},
 		{0, NULL}
 	};
 	SKINNY_DECLARE_ID2STR(skinny_soft_key_event2str, SKINNY_SOFT_KEY_EVENTS, "SoftkeyUnknown")
