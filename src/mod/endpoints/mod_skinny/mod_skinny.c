@@ -694,7 +694,7 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 		switch(action) {
 			case SKINNY_ACTION_PROCESS:
 				if (listener) {
-					switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer off (matched).\n");
+					switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Timer off (matched).\n");
 					listener->digit_timeout = 0;
 					listener->dial = 0;
 					helper.tech_pvt = tech_pvt;

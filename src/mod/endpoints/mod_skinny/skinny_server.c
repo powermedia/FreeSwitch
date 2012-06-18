@@ -1892,7 +1892,7 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 			channel = switch_core_session_get_channel(session);
 			listener->digit_timeout = 0;
 			listener->dial = 0;
-			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer off (manual endcall).\n");
+			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Timer off (manual endcall).\n");
 			switch_channel_hangup(channel, SWITCH_CAUSE_NORMAL_CLEARING);
 		}
 		break;
@@ -1928,6 +1928,7 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 		break;
 	case SOFTKEY_DIAL:
 		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Dial button.\n");
+		listener->dial = 1;
 		break;
 	default:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,
@@ -2276,7 +2277,7 @@ switch_status_t skinny_handle_request(listener_t *listener, skinny_message_t *re
 		case XML_ALARM_MESSAGE:
 			return skinny_handle_xml_alarm(listener, request);
 		case DIGIT_TIMEOUT_MESSAGE:
-			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer off (timeout).\n");
+			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Timer off (timeout).\n");
 			listener->digit_timeout = 0;
 			listener->dial = 1;
 			return skinny_handle_digit_timeout_message(listener, request);
