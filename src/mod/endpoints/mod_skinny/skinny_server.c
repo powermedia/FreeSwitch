@@ -1444,18 +1444,12 @@ switch_status_t skinny_handle_digit_timeout_message(listener_t *listener, skinny
 	uint32_t line_instance = 0;
 	uint32_t call_id = 0;
 	switch_core_session_t *session = NULL;
-	
 	session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
 
 	if(session) {
 		switch_channel_t *channel = NULL;
-		/* private_t *tech_pvt = NULL; */
-		/* switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "Digit timeout function.\n"); */
 		channel = switch_core_session_get_channel(session);
-		/* tech_pvt = switch_core_session_get_private(session); */
-
 		switch_channel_set_state(channel, CS_ROUTING);
-		
 	}
 	if(session) {
 		switch_core_session_rwunlock(session);
@@ -1864,6 +1858,8 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 		skinny_session_process_dest(session, listener, line_instance, "redial", '\0', 0);
 		break;
 	case SOFTKEY_NEWCALL:
+		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer on (new call).\n");
+		listener->digit_timeout = switch_epoch_time_now(NULL) + 5;
 		status = skinny_create_incoming_session(listener, &line_instance, &session);
 		skinny_session_process_dest(session, listener, line_instance, NULL, '\0', 0);
 		break;
@@ -2248,7 +2244,7 @@ switch_status_t skinny_handle_request(listener_t *listener, skinny_message_t *re
 			return skinny_handle_open_receive_channel_ack_message(listener, request);
 		case SOFT_KEY_SET_REQ_MESSAGE:
 			return skinny_handle_soft_key_set_request(listener, request);
-		case SOFT_KEY_EVENT_MESSAGE:			
+		case SOFT_KEY_EVENT_MESSAGE:
 			return skinny_handle_soft_key_event_message(listener, request);
 		case UNREGISTER_MESSAGE:
 			return skinny_handle_unregister(listener, request);
@@ -2278,8 +2274,6 @@ switch_status_t skinny_handle_request(listener_t *listener, skinny_message_t *re
 			return skinny_handle_xml_alarm(listener, request);
 		case DIGIT_TIMEOUT_MESSAGE:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Timer off (timeout).\n");
-			listener->digit_timeout = 0;
-			listener->dial = 1;
 			return skinny_handle_digit_timeout_message(listener, request);
 		default:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,

@@ -682,14 +682,12 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 			action = SKINNY_ACTION_PROCESS;
 		} else {
 			action = skinny_session_dest_match_pattern(session, &data);		   
-			if(listener && action == SKINNY_ACTION_PROCESS && listener->digit_timeout != 0){
+			if(listener && action == SKINNY_ACTION_PROCESS && listener->digit_timeout != 0){ // timeout not elapsed
 				action = SKINNY_ACTION_WAIT;
 			}
-			if(listener && action == SKINNY_ACTION_WAIT && listener->dial != 0){
+			if(listener && action == SKINNY_ACTION_WAIT && listener->digit_timeout == 0) { // timeout elapsed
 				action = SKINNY_ACTION_DROP;
-				listener->dial = 0;
 			}
-			
 		}
 		switch(action) {
 			case SKINNY_ACTION_PROCESS:
@@ -718,6 +716,7 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 				switch_channel_set_state(channel, CS_HIBERNATE);
 				break;
 			case SKINNY_ACTION_DROP:
+				listener->dial = 0;
 			default:
 				switch_channel_hangup(channel, SWITCH_CAUSE_UNALLOCATED_NUMBER);
 		}
