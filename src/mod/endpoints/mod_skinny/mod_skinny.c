@@ -1495,6 +1495,7 @@ static void *SWITCH_THREAD_FUNC listener_run(switch_thread_t *thread, void *obj)
 			if(session) {
 				switch_core_session_rwunlock(session);
 			}
+			is_timeout = 0;
 		}
 		else if (status != SWITCH_STATUS_SUCCESS) {
 			switch(status) {
