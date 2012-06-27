@@ -47,7 +47,7 @@ switch_endpoint_interface_t *skinny_endpoint_interface;
 
 skinny_globals_t globals;
 
-clock_t start;
+int digit_timeout;
 
 /*****************************************************************************/
 /* SQL TABLES */
@@ -681,7 +681,10 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 		if(switch_test_flag(tech_pvt, TFLAG_FORCE_ROUTE)) {
 			action = SKINNY_ACTION_PROCESS;
 		} else {
-			action = skinny_session_dest_match_pattern(session, &data);		   
+			action = skinny_session_dest_match_pattern(session, &data);
+			if(action == SKINNY_ACTION_WAIT && !digit_timeout ) {
+				digit_timeout = atoi(data);
+			}
 			if(listener && action == SKINNY_ACTION_PROCESS && listener->digit_timeout != 0){ // timeout not elapsed
 				action = SKINNY_ACTION_WAIT;
 			}
@@ -711,12 +714,13 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 				/* wait "data" time */
 				if(listener){
 					switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_NOTICE, "Timer on (SKINNY_WAIT).\n");
-					listener->digit_timeout = switch_epoch_time_now(NULL) + 5;
+					listener->digit_timeout = switch_epoch_time_now(NULL) + digit_timeout;
 				}
 				switch_channel_set_state(channel, CS_HIBERNATE);
 				break;
 			case SKINNY_ACTION_DROP:
 				listener->dial = 0;
+				listener->digit_timeout = 0;
 			default:
 				switch_channel_hangup(channel, SWITCH_CAUSE_UNALLOCATED_NUMBER);
 		}
@@ -1445,6 +1449,7 @@ static void *SWITCH_THREAD_FUNC listener_run(switch_thread_t *thread, void *obj)
 	skinny_message_t *request = NULL;
 	skinny_profile_t *profile;
 	int destroy_pool = 1;
+	int is_timeout = 0;
 	switch_assert(listener);
 	assert(listener->profile);
 	profile = listener->profile;
@@ -1475,9 +1480,21 @@ static void *SWITCH_THREAD_FUNC listener_run(switch_thread_t *thread, void *obj)
 
 
 	while (listener_is_ready(listener)) {
-		status = skinny_read_packet(listener, &request);
-		if(status == SWITCH_STATUS_DIGIT_TIMEOUT){
-			request->type = DIGIT_TIMEOUT_MESSAGE;
+		status = skinny_read_packet(listener, &request, &is_timeout);
+
+		if(is_timeout == 1){
+			switch_core_session_t *session = NULL;
+			uint32_t line_instance = 0;
+			session = skinny_profile_find_session(listener->profile, listener, &line_instance, 0);
+
+			if(session) {
+				switch_channel_t *channel = NULL;
+				channel = switch_core_session_get_channel(session);
+				switch_channel_set_state(channel, CS_ROUTING);
+			}
+			if(session) {
+				switch_core_session_rwunlock(session);
+			}
 		}
 		else if (status != SWITCH_STATUS_SUCCESS) {
 			switch(status) {

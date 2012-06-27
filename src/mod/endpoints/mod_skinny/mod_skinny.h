@@ -47,6 +47,8 @@
 #define SKINNY_EVENT_USER_TO_DEVICE "skinny::user_to_device"
 #define SKINNY_EVENT_DEVICE_TO_USER "skinny::device_to_user"
 
+#define DIGIT_TIMEOUT 5
+
 struct skinny_globals {
 	int running;
 	switch_memory_pool_t *pool;

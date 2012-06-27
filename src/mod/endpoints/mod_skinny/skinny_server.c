@@ -1859,7 +1859,7 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 		break;
 	case SOFTKEY_NEWCALL:
 		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer on (new call).\n");
-		listener->digit_timeout = switch_epoch_time_now(NULL) + 5;
+		listener->digit_timeout = switch_epoch_time_now(NULL) + DIGIT_TIMEOUT;
 		status = skinny_create_incoming_session(listener, &line_instance, &session);
 		skinny_session_process_dest(session, listener, line_instance, NULL, '\0', 0);
 		break;
@@ -2272,9 +2272,6 @@ switch_status_t skinny_handle_request(listener_t *listener, skinny_message_t *re
 			return skinny_handle_accessory_status_message(listener, request);
 		case XML_ALARM_MESSAGE:
 			return skinny_handle_xml_alarm(listener, request);
-		case DIGIT_TIMEOUT_MESSAGE:
-			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Timer off (timeout).\n");
-			return skinny_handle_digit_timeout_message(listener, request);
 		default:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,
 					"Unhandled %s (type=%x,length=%d).\n", skinny_message_type2str(request->type), request->type, request->length);

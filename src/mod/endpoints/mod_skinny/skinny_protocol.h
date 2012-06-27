@@ -819,7 +819,7 @@ char* skinny_codec2string(enum skinny_codecs skinnycodec);
 #define skinny_check_data_length_soft(message, len) \
 	(message->length >= len+4)
 
-switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req);
+switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req, int* is_timeout);
 
 switch_status_t skinny_device_event(listener_t *listener, switch_event_t **ev, switch_event_types_t event_id, const char *subclass_name);
 

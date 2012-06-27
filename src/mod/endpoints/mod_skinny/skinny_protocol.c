@@ -103,7 +103,7 @@ char* skinny_codec2string(enum skinny_codecs skinnycodec)
 }
 
 /*****************************************************************************/
-switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req)
+switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req, int *is_timeout)
 {
 	skinny_message_t *request;
 	switch_size_t mlen, bytes = 0;
@@ -122,19 +122,21 @@ switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req)
 
 	while (listener_is_ready(listener)) {
 		uint8_t do_sleep = 1;
+
 		if((listener->digit_timeout && listener->digit_timeout < switch_epoch_time_now(NULL))){
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Timer timeout, %s\n", ctime(&(listener)->digit_timeout));
 			listener->digit_timeout = 0;
-			return SWITCH_STATUS_DIGIT_TIMEOUT;
+			listener->dial = 0;
+			*is_timeout = 1;
 		}
 		
 		if(listener->dial != 0){
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Dial pressed, %d\n", listener->dial);
 			listener->dial = 0;
 			listener->digit_timeout = 0;
-			return SWITCH_STATUS_DIGIT_TIMEOUT;
+			*is_timeout = 1;
 		}
-			
+
 		if (listener->expire_time && listener->expire_time < switch_epoch_time_now(NULL)) {
 			return SWITCH_STATUS_TIMEOUT;
 		}
@@ -191,8 +193,7 @@ switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req)
 				}
 			}
 		}
-
-
+		
 		if (do_sleep) {
 			switch_cond_next();
 		}
