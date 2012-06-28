@@ -1449,7 +1449,6 @@ static void *SWITCH_THREAD_FUNC listener_run(switch_thread_t *thread, void *obj)
 	skinny_message_t *request = NULL;
 	skinny_profile_t *profile;
 	int destroy_pool = 1;
-	int is_timeout = 0;
 	switch_assert(listener);
 	assert(listener->profile);
 	profile = listener->profile;
@@ -1480,24 +1479,9 @@ static void *SWITCH_THREAD_FUNC listener_run(switch_thread_t *thread, void *obj)
 
 
 	while (listener_is_ready(listener)) {
-		status = skinny_read_packet(listener, &request, &is_timeout);
+		status = skinny_read_packet(listener, &request);
 
-		if(is_timeout == 1){
-			switch_core_session_t *session = NULL;
-			uint32_t line_instance = 0;
-			session = skinny_profile_find_session(listener->profile, listener, &line_instance, 0);
-
-			if(session) {
-				switch_channel_t *channel = NULL;
-				channel = switch_core_session_get_channel(session);
-				switch_channel_set_state(channel, CS_ROUTING);
-			}
-			if(session) {
-				switch_core_session_rwunlock(session);
-			}
-			is_timeout = 0;
-		}
-		else if (status != SWITCH_STATUS_SUCCESS) {
+		if (status != SWITCH_STATUS_SUCCESS) {
 			switch(status) {
 			case SWITCH_STATUS_TIMEOUT:
 				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_INFO, "Communication Time Out with %s:%d.\n",

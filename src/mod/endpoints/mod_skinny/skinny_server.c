@@ -1438,25 +1438,6 @@ switch_status_t skinny_handle_line_stat_request(listener_t *listener, skinny_mes
 	return SWITCH_STATUS_SUCCESS;
 }
 
-switch_status_t skinny_handle_digit_timeout_message(listener_t *listener, skinny_message_t *request)
-{
-	switch_status_t status = SWITCH_STATUS_SUCCESS;
-	uint32_t line_instance = 0;
-	uint32_t call_id = 0;
-	switch_core_session_t *session = NULL;
-	session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
-
-	if(session) {
-		switch_channel_t *channel = NULL;
-		channel = switch_core_session_get_channel(session);
-		switch_channel_set_state(channel, CS_ROUTING);
-	}
-	if(session) {
-		switch_core_session_rwunlock(session);
-	}
-	return status;
-}
-
 int skinny_config_stat_res_callback(void *pArg, int argc, char **argv, char **columnNames)
 {
 	skinny_message_t *message = pArg;

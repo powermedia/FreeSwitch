@@ -103,10 +103,13 @@ char* skinny_codec2string(enum skinny_codecs skinnycodec)
 }
 
 /*****************************************************************************/
-switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req, int *is_timeout)
+switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req)
 {
 	skinny_message_t *request;
 	switch_size_t mlen, bytes = 0;
+	switch_core_session_t *session = NULL;
+	uint32_t line_instance = 0;
+	int is_timeout = 0;
 	char mbuf[SKINNY_MESSAGE_MAXSIZE] = "";
 	char *ptr;
 	switch_status_t status = SWITCH_STATUS_SUCCESS;
@@ -127,14 +130,26 @@ switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req,
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Timer timeout, %s\n", ctime(&(listener)->digit_timeout));
 			listener->digit_timeout = 0;
 			listener->dial = 0;
-			*is_timeout = 1;
+			is_timeout = 1;
 		}
-		
+
 		if(listener->dial != 0){
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Dial pressed, %d\n", listener->dial);
 			listener->dial = 0;
 			listener->digit_timeout = 0;
-			*is_timeout = 1;
+			is_timeout = 1;
+		}
+		
+		if(is_timeout){
+			session = skinny_profile_find_session(listener->profile, listener, &line_instance, 0);
+
+			if(session) {
+				switch_channel_t *channel = NULL;
+				channel = switch_core_session_get_channel(session);
+				switch_channel_set_state(channel, CS_ROUTING);
+				switch_core_session_rwunlock(session);
+			}
+			is_timeout = 0;
 		}
 
 		if (listener->expire_time && listener->expire_time < switch_epoch_time_now(NULL)) {
