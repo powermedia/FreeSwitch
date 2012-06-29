@@ -129,13 +129,12 @@ switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req)
 		if((listener->digit_timeout && listener->digit_timeout < switch_epoch_time_now(NULL))){
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Timer timeout, %s\n", ctime(&(listener)->digit_timeout));
 			listener->digit_timeout = 0;
-			listener->dial = 0;
+			listener->dial = 1;
 			is_timeout = 1;
 		}
 
 		if(listener->dial != 0){
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Dial pressed, %d\n", listener->dial);
-			listener->dial = 0;
 			listener->digit_timeout = 0;
 			is_timeout = 1;
 		}

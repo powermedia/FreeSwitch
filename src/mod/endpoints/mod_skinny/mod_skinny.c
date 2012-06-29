@@ -688,7 +688,7 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 			if(listener && action == SKINNY_ACTION_PROCESS && listener->digit_timeout != 0){ // timeout not elapsed
 				action = SKINNY_ACTION_WAIT;
 			}
-			if(listener && action == SKINNY_ACTION_WAIT && listener->digit_timeout == 0) { // timeout elapsed
+			if(listener && action == SKINNY_ACTION_WAIT && listener->dial != 0) { // timeout elapsed
 				action = SKINNY_ACTION_DROP;
 			}
 		}
