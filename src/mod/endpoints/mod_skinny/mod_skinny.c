@@ -713,7 +713,7 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 			case SKINNY_ACTION_WAIT:
 				/* wait "data" time */
 				if(listener){
-					switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_NOTICE, "Timer on (SKINNY_WAIT).\n");
+					switch_log_printf(SWITCH_CHANNEL_SESSION_LOG(session), SWITCH_LOG_DEBUG, "Timer on (SKINNY_WAIT).\n");
 					listener->digit_timeout = switch_epoch_time_now(NULL) + digit_timeout;
 				}
 				switch_channel_set_state(channel, CS_HIBERNATE);
