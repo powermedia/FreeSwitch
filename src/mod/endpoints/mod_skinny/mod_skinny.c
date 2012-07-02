@@ -685,11 +685,10 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 			if(action == SKINNY_ACTION_WAIT && !digit_timeout ) {
 				digit_timeout = atoi(data);
 			}
-			if(listener && action == SKINNY_ACTION_PROCESS && listener->digit_timeout != 0){ // timeout not elapsed
-				action = SKINNY_ACTION_WAIT;
-			}
-			if(listener && action == SKINNY_ACTION_WAIT && listener->dial != 0) { // timeout elapsed
-				action = SKINNY_ACTION_DROP;
+			// timeout elapsed or dial button pressed
+			// process this call on demand anyway
+			if(listener && action == SKINNY_ACTION_WAIT && listener->dial) { 
+				action = SKINNY_ACTION_PROCESS;
 			}
 		}
 		switch(action) {
