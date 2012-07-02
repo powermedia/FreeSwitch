@@ -1851,7 +1851,6 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 		}
 		break;
 	case SOFTKEY_TRANSFER:
-		listener->digit_timeout = switch_epoch_time_now(NULL) + DIGIT_TIMEOUT;
 		session = skinny_profile_find_session(listener->profile, listener, &line_instance, call_id);
 		
 		if(session) {
