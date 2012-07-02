@@ -1907,6 +1907,7 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 	case SOFTKEY_DIAL:
 		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Dial button.\n");
 		listener->dial = 1;
+		listener->digit_timeout = 0;
 		break;
 	default:
 			switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_WARNING,
