@@ -1839,7 +1839,7 @@ switch_status_t skinny_handle_soft_key_event_message(listener_t *listener, skinn
 		skinny_session_process_dest(session, listener, line_instance, "redial", '\0', 0);
 		break;
 	case SOFTKEY_NEWCALL:
-		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "Timer on (new call).\n");
+		switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Timer on (new call).\n");
 		//listener->digit_timeout = switch_epoch_time_now(NULL) + DIGIT_TIMEOUT;
 		status = skinny_create_incoming_session(listener, &line_instance, &session);
 		skinny_session_process_dest(session, listener, line_instance, NULL, '\0', 0);

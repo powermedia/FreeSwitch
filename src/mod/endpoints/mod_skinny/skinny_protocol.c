@@ -149,6 +149,7 @@ switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req)
 				switch_core_session_rwunlock(session);
 			}
 			is_timeout = 0;
+			dial = 0;
 		}
 
 		if (listener->expire_time && listener->expire_time < switch_epoch_time_now(NULL)) {
