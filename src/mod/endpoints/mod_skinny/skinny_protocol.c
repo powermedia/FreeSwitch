@@ -148,6 +148,11 @@ switch_status_t skinny_read_packet(listener_t *listener, skinny_message_t **req)
 				switch_channel_set_state(channel, CS_ROUTING);
 				switch_core_session_rwunlock(session);
 			}
+			if(!session){
+				listener->dial = 0;
+				listener->digit_timeout = 0;
+				switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "Dial pressed, but no session was found\n");
+			}
 			is_timeout = 0;
 		}
 

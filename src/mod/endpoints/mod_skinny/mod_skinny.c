@@ -687,7 +687,7 @@ switch_status_t channel_on_routing(switch_core_session_t *session)
 			}
 			// timeout elapsed or dial button pressed
 			// process this call on demand anyway
-			if(listener && action == SKINNY_ACTION_WAIT && listener->dial) { 
+			if(listener && action == SKINNY_ACTION_WAIT && listener->dial) {
 				action = SKINNY_ACTION_PROCESS;
 			}
 		}
