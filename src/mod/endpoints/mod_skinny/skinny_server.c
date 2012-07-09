@@ -1718,7 +1718,7 @@ switch_status_t skinny_handle_open_receive_channel_ack_message(listener_t *liste
 
 		/* Codec */
 		tech_pvt->iananame = CODEC_NAME; /* TODO */
-		tech_pvt->codec_ms = 10; /* TODO */
+		tech_pvt->codec_ms = 20; /* TODO */
 		tech_pvt->rm_rate = 8000; /* TODO */
 		tech_pvt->rm_fmtp = NULL; /* TODO */
 		tech_pvt->agreed_pt = (switch_payload_t) CODEC_PAYLOAD_TYPE; /* TODO */
