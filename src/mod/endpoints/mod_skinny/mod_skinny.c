@@ -1021,10 +1021,13 @@ switch_status_t channel_answer_channel(switch_core_session_t *session)
 switch_status_t channel_receive_message(switch_core_session_t *session, switch_core_session_message_t *msg)
 {
 	private_t *tech_pvt = switch_core_session_get_private(session);
+	switch_channel_t *channel = NULL;
 
 	switch (msg->message_id) {
 		case SWITCH_MESSAGE_INDICATE_ANSWER:
 			switch_clear_flag_locked(tech_pvt, TFLAG_EARLY_MEDIA);
+			channel = switch_core_session_get_channel(session);
+			switch_channel_clear_flag(channel, CF_EARLY_MEDIA);
 			return channel_answer_channel(session);
 
 		case SWITCH_MESSAGE_INDICATE_DISPLAY:
